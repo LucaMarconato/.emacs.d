@@ -3,7 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "company-shell" "company-shell.el" (0 0 0 0))
+;;;### (autoloads nil "company-shell" "company-shell.el" (22523 40350
+;;;;;;  0 0))
 ;;; Generated autoloads from company-shell.el
 
 (autoload 'company-shell-rebuild-cache "company-shell" "\
@@ -20,8 +21,6 @@ Company backend for fish shell functions.
 Company mode backend for binaries found on the $PATH.
 
 \(fn COMMAND &optional ARG &rest IGNORED)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-shell" '("company-")))
 
 ;;;***
 

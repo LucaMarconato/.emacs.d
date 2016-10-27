@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "company-statistics" "company-statistics.el"
-;;;;;;  (0 0 0 0))
+;;;;;;  (22523 40263 0 0))
 ;;; Generated autoloads from company-statistics.el
 
 (defvar company-statistics-mode nil "\
@@ -30,19 +30,10 @@ configuration.  You can customize this behavior with
 
 \(fn &optional ARG)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-statistics" '("company-s")))
-
 ;;;***
 
-;;;### (autoloads nil "company-statistics-tests" "company-statistics-tests.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from company-statistics-tests.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-statistics-tests" '("cs-" "my/")))
-
-;;;***
-
-;;;### (autoloads nil nil ("company-statistics-pkg.el") (0 0 0 0))
+;;;### (autoloads nil nil ("company-statistics-pkg.el" "company-statistics-tests.el")
+;;;;;;  (22523 40263 0 0))
 
 ;;;***
 

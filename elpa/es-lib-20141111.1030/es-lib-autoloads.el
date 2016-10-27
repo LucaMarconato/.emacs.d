@@ -3,16 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "es-lib-buffer-local-set-key" "es-lib-buffer-local-set-key.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from es-lib-buffer-local-set-key.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "es-lib-buffer-local-set-key" '("es-buffer-local-")))
-
-;;;***
-
 ;;;### (autoloads nil "es-lib-core-functions" "es-lib-core-functions.el"
-;;;;;;  (0 0 0 0))
+;;;;;;  (22523 41195 0 0))
 ;;; Generated autoloads from es-lib-core-functions.el
 
 (autoload 'es-kill-buffer-dont-ask "es-lib-core-functions" "\
@@ -95,51 +87,12 @@ Ack won't prompt for a directory name in that buffer.
 
 \(fn FOLDER)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "es-lib-core-functions" '("es-")))
-
 ;;;***
 
-;;;### (autoloads nil "es-lib-core-macros" "es-lib-core-macros.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from es-lib-core-macros.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "es-lib-core-macros" '("es-")))
-
-;;;***
-
-;;;### (autoloads nil "es-lib-lexical" "es-lib-lexical.el" (0 0 0
-;;;;;;  0))
-;;; Generated autoloads from es-lib-lexical.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "es-lib-lexical" '("es-")))
-
-;;;***
-
-;;;### (autoloads nil "es-lib-readme-generator" "es-lib-readme-generator.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from es-lib-readme-generator.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "es-lib-readme-generator" '("es-")))
-
-;;;***
-
-;;;### (autoloads nil "es-lib-text-navigate" "es-lib-text-navigate.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from es-lib-text-navigate.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "es-lib-text-navigate" '("es-")))
-
-;;;***
-
-;;;### (autoloads nil "es-lib-total-line" "es-lib-total-line.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from es-lib-total-line.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "es-lib-total-line" '("es-total-")))
-
-;;;***
-
-;;;### (autoloads nil nil ("es-lib-pkg.el" "es-lib.el") (0 0 0 0))
+;;;### (autoloads nil nil ("es-lib-buffer-local-set-key.el" "es-lib-core-macros.el"
+;;;;;;  "es-lib-lexical.el" "es-lib-pkg.el" "es-lib-readme-generator.el"
+;;;;;;  "es-lib-text-navigate.el" "es-lib-total-line.el" "es-lib.el")
+;;;;;;  (22523 41195 0 0))
 
 ;;;***
 

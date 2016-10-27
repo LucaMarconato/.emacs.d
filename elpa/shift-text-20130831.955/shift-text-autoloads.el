@@ -3,7 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "shift-text" "shift-text.el" (0 0 0 0))
+;;;### (autoloads nil "shift-text" "shift-text.el" (22523 41196 0
+;;;;;;  0))
 ;;; Generated autoloads from shift-text.el
 
 (autoload 'shift-text-down "shift-text" "\
@@ -25,8 +26,6 @@ Move region or the current line left.
 Move region or the current line right.
 
 \(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "shift-text" '("st-")))
 
 ;;;***
 

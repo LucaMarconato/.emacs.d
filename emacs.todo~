@@ -1,0 +1,23 @@
+TODO TO EMACS -*- mode: org -*-
+* DONE shortcuts for latex, like "it -> textit"
+* TODO highlight all the identical words when clicking or with a search
+* TODO change the concept of word in order to integrate forward-word and forward-whitespace. Check the syntax table
+* DONE make c-u to be greater than 4
+* DONE make M-D to select the next word (done, use C-@)
+* TODO autocompletition for latex, C++, R, MATLAB and FORTRAN
+* TODO autosuggestion for reference in latex
+* TODO hex viewer
+* TODO ftp 
+* TODO console
+* TODO git
+* TODO MATLAB
+* TODO switch between windows
+* TODO markdown syntax
+* TODO my markdown syntax
+* TODO move and rename file 
+* TODO higlight current line without changing colors
+* TODO save spilt configuration when exiting emacs
+* TODO map shift up and shift down to windmove up and down
+* TODO make C-x b usable as in sublime: completition and if I am able even preview of the file that I am going to open
+* TODO change the highlighting color because I can't see blue with thre red screen
+* TODO faster multiple undos

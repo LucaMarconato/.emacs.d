@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "free-keys" "free-keys.el" (0 0 0 0))
+;;;### (autoloads nil "free-keys" "free-keys.el" (22526 24332 0 0))
 ;;; Generated autoloads from free-keys.el
 
 (autoload 'free-keys "free-keys" "\
@@ -19,8 +19,6 @@ hitting 'p' in the *Free keys* buffer.  Prefix is supplied in
 format recognized by `kbd', for example \"C-x\".
 
 \(fn &optional PREFIX BUFFER)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "free-keys" '("free-keys-")))
 
 ;;;***
 
