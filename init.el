@@ -69,7 +69,13 @@
 (setq comint-prompt-read-only t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(set-fringe-mode '(0 . 0))
+(if (display-graphic-p)
+    (progn
+    ;; if graphic
+    (set-fringe-mode '(0 . 0))  
+    )
+    ;; else (optional)
+    )
 ;--------YASNIPPET--------
 ;;;;;(require 'yasnippet)
 ;;;;;(setq yas-snippet-dirs '("~/.emacs.d/snippets/latex"))
