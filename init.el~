@@ -71,12 +71,6 @@
     ; something for OS X if true
     ; optional something if not
 )
-
-(if (display-graphic-p)
-    (progn
-    (set-default-font "Menlo 13")
-    ))
-
 (tool-bar-mode -1)
 (if (display-graphic-p)
     (progn
@@ -154,8 +148,7 @@
     ; optional something if not
 )
 ;; Only change sectioning colour
-(setq font-latex-fontify-sectioning 1.0)
-(setq font-latex-fontify-sectioning 'color)
+;(setq font-latex-fontify-sectioning 'color)
 (setq font-latex-slide-title-face 1.0)
 ;; super-/sub-script on baseline
 (setq font-latex-script-display (quote (nil)))

@@ -22,3 +22,4 @@ TODO TO EMACS -*- mode: org -*-
 * TODO change the highlighting color because I can't see blue with thre red screen
 * TODO faster multiple undos
 * TODO fix the indentation that does not work as expected
+* TODO fix the font issue in auctex when in emacs gui
