@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: min
+# key: min
+# --
+\min\left\lbrace${1:}\right\rbrace

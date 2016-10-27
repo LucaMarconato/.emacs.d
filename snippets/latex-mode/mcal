@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mcal
+# key: mcal
+# --
+\mathcal{${1:char}}

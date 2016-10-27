@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: limty
+# key: limty
+# --
+\lim_{${1:var}\to+\infty}

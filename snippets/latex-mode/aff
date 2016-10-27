@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: aff
+# key: aff
+# --
+\mathbb{A}^${1:dim}(\mathbb{${2:field}})

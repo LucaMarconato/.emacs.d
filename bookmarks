@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("prova"
+ (filename . "~/testingEmacs")
+ (front-context-string . "        \\frac{3}")
+ (rear-context-string . "}\n	\\label{wech}\n")
+ (position . 10788))
+("ntro ver"
+ (filename . "~/testingEmacs")
+ (front-context-string . "se and in which ")
+ (rear-context-string . " in a single pha")
+ (position . 432))
+("intro"
+ (filename . "~/testingEmacs")
+ (front-context-string . "\\frac{3}{\\sqrt{8")
+ (rear-context-string . "l{wech}\n        ")
+ (position . 10796))
+)

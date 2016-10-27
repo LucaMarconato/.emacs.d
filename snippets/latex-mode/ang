@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ang
+# key: ang
+# --
+\langle${1:}\rangle

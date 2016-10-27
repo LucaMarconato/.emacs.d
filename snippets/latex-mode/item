@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: item
+# key: item
+# expand-env: ((yas/indent-line t))
+# --
+\begin{itemize}
+    \item $1
+\end{itemize}

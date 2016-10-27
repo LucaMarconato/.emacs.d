@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: th
+# key: th
+# --
+\begin{teorema}
+	${0:}
+\end{teorema}
+\begin{proof}
+	
+\end{proof}

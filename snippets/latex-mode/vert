@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: vert
+# key: vert
+# --
+\left\vert${1:}\right\vert

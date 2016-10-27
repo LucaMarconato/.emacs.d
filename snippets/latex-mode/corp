@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: corp
+# key: corp
+# --
+\begin{corollary}
+	${0:}
+\end{corollary}
+\begin{proof}
+	
+\end{proof}

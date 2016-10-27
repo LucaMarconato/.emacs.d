@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: brace
+# key: brace
+# --
+\left\lbrace${1:}\right\rbrace
