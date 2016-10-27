@@ -75,6 +75,7 @@
 (if (display-graphic-p)
     (progn
     (set-default-font "Menlo 13")
+    (set-frame-font "Menlo 13" t t)
     ))
 
 (tool-bar-mode -1)
