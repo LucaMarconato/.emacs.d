@@ -19,16 +19,20 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(desktop-save-mode t nil (desktop))
- '(font-latex-fontify-sectioning 1)
+ '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (yasnippet auto-complete-auctex auto-complete-c-headers matlab-mode free-keys flyspell-correct-ivy smartparens shift-text multiple-cursors company-statistics company-shell company-math ac-math)))
+    (company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy smartparens shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
+(let ((default-directory  "~/.emacs.d/lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
+(add-to-list 'exec-path "/usr/local/bin/")
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:background nil))))
  '(font-latex-slide-title-face ((t (:inherit (variable-pitch font-lock-type-face) :height 1 :family "Andale Mono"))))
  '(font-latex-subscript-face ((t nil)))
  '(font-latex-superscript-face ((t nil))))
@@ -87,6 +91,42 @@
     ;; else (optional)
     )
 (setq ring-bell-function 'ignore)
+(windmove-default-keybindings)
+;--------COMPANY--------
+;(add-to-list 'company-backends 'company-sourcekit)
+;(add-to-list 'company-sourcekit)
+(require 'company-sourcekit)
+(add-to-list 'company-backends 'company-sourcekit)
+(add-hook 'swift-mode (lambda () (company-swift-init 1)))
+(setq company-idle-delay 0.07)
+(setq company-dabbrev-downcase 0.07)
+;(setq company-sourcekit-verbose f) ;how to set to false?
+
+;--------AUTOCOMPLETE--------
+(require 'auto-complete-config)
+(ac-config-default)
+;;;;initialize auto-complete-c-headers
+;;;(defun my:ac-c-header-init() ;
+;;;  (require 'auto-complete-c-headers)
+;;;  (add-to-list 'ac-sources 'ac-sources-c-headers)
+;;;  (add-to-list 'achead:include-directories '"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include") ;does not work
+;;;  )
+;;;(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+;;;(add-hook 'c-mode-hook 'my:ac-c-header-init)
+;--------IRONY--------
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; irony-mode's buffers by irony-mode's function
+;(defun my-irony-mode-hook ()
+;  (define-key irony-mode-map [remap completion-at-point]
+;    'irony-completion-at-point-async)
+;  (define-key irony-mode-map [remap complete-symbol]
+;    'irony-completion-at-point-async))
+;(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+;(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 ;--------YASNIPPET--------
 ;;;;;(require 'yasnippet)
 ;;;;;(setq yas-snippet-dirs '("~/.emacs.d/snippets/latex"))
@@ -147,6 +187,7 @@
 (setq matlab-shell-command "/Applications/MATLAB_R2016a.app/bin/matlab")
 (setq matlab-shell-command-switches (list "-nodesktop"))
 (matlab-cedet-setup)
+
 ;--------LATEX--------
 (if (eq system-type 'darwin)
     (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
@@ -154,6 +195,8 @@
     ; something for OS X if true
     ; optional something if not
 )
+(add-hook 'LaTeX-mode-hook (lambda () (company-auctex-init)))
+
 ;; Only change sectioning colour
 (setq font-latex-fontify-sectioning 1.0)
 (setq font-latex-fontify-sectioning 'color)
