@@ -22,7 +22,7 @@
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy smartparens shift-text multiple-cursors company-statistics company-shell company-math)))
+    (icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy smartparens shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -94,7 +94,7 @@
     )
 (setq ring-bell-function 'ignore)
 (windmove-default-keybindings)
-(subword-mode +1)
+(global-subword-mode 1)
 
 (defun universal-argument ()
   "Begin a numeric argument for the following command.
@@ -123,6 +123,14 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (global-set-key [(meta f7)] 'highlight-symbol-query-replace)
 
 (add-hook 'fundamental-mode (setq tab-width 4))
+(add-hook 'swift-mode (setq auto-revert-mode t))
+;(add-hook 'swift-mode (auto-revert-mode t))
+;--------AVY--------
+(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-set-key (kbd "C-'") 'avy-goto-char-2)
+(global-set-key (kbd "M-g f") 'avy-goto-line)
+(global-set-key (kbd "M-g w") 'avy-goto-word-1)
+(global-set-key (kbd "M-g e") 'avy-goto-word-0)
 ;--------COMPANY--------
 ;(add-to-list 'company-backends 'company-sourcekit)
 ;(add-to-list 'company-sourcekit)
@@ -136,6 +144,8 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;--------AUTOCOMPLETE--------
 (require 'auto-complete-config)
 (ac-config-default)
+(setq ac-delay 0.05)
+(setq ac-auto-show-menu 0.05)
 ;;;;initialize auto-complete-c-headers
 ;;;(defun my:ac-c-header-init() ;
 ;;;  (require 'auto-complete-c-headers)
