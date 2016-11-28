@@ -19,20 +19,27 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(desktop-save-mode t nil (desktop))
- '(font-latex-fontify-sectioning 1)
+ '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (auctex es-lib popup math-symbol-lists dash company auto-complete yasnippet auto-complete-auctex auto-complete-c-headers matlab-mode free-keys flyspell-correct-ivy smartparens shift-text multiple-cursors company-statistics company-shell company-math ac-math)))
+    (highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy smartparens shift-text multiple-cursors company-statistics company-shell company-math)))
+
  '(save-place t nil (saveplace)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(font-latex-slide-title-face ((t (:inherit (variable-pitch font-lock-type-face) :height 1 :family "Andale Mono"))))
- '(font-latex-subscript-face ((t nil)))
- '(font-latex-superscript-face ((t nil))))
-(setq-default electric-indent-mode nil)
+(let ((default-directory  "~/.emacs.d/lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
+(add-to-list 'exec-path "/usr/local/bin/")
+;(custom-set-faces
+; ;; custom-set-faces was added by Custom.
+; ;; If you edit it by hand, you could mess it up, so be careful.
+; ;; Your init file should contain only one such instance.
+; ;; If there is more than one, they won't work right.
+; '(default ((t (:background nil))))
+; '(font-latex-slide-title-face ((t (:inherit (variable-pitch font-lock-type-face) :height 1 :family "Andale Mono"))))
+; '(font-latex-subscript-face ((t nil)))
+; '(font-latex-superscript-face ((t nil))))
+(electric-indent-mode 1)
+(electric-pair-mode 1)
+(smartparens-mode 1)
 (xterm-mouse-mode 1)
 
 ;(global-unset-key (kbd "M-f"))
@@ -87,6 +94,71 @@
 ;    ;; else (optional)
 ;    )
 (setq ring-bell-function 'ignore)
+(windmove-default-keybindings)
+(subword-mode +1)
+
+(defun universal-argument ()
+  "Begin a numeric argument for the following command.
+Digits or minus sign following \\[universal-argument] make up the numeric argument.
+\\[universal-argument] following the digits or minus sign ends the argument.
+\\[universal-argument] without digits or minus sign provides 4 as argument.
+Repeating \\[universal-argument] without digits or minus sign
+ multiplies the argument by 4 each time.
+For some commands, just \\[universal-argument] by itself serves as a flag
+which is different in effect from any particular numeric argument.
+These commands include \\[set-mark-command] and \\[start-kbd-macro]."
+  (interactive)
+  (setq prefix-arg (list 4))
+  (universal-argument--mode))
+
+(defun my-universal-argument ()
+  (interactive)
+  (setq prefix-arg (list 10))
+  (universal-argument--mode))
+
+(global-set-key (kbd "C-u") 'my-universal-argument)
+
+(global-set-key [(control f7)] 'highlight-symbol)
+(global-set-key [f7] 'highlight-symbol-next)
+(global-set-key [(shift f7)] 'highlight-symbol-prev)
+(global-set-key [(meta f7)] 'highlight-symbol-query-replace)
+
+(add-hook 'fundamental-mode (setq tab-width 4))
+;--------COMPANY--------
+;(add-to-list 'company-backends 'company-sourcekit)
+;(add-to-list 'company-sourcekit)
+(require 'company-sourcekit)
+(add-to-list 'company-backends 'company-sourcekit)
+(add-hook 'swift-mode (lambda () (company-swift-init 1)))
+(setq company-idle-delay 0.01)
+(setq company-dabbrev-downcase 0.01)
+;(setq company-sourcekit-verbose f) ;how to set to false?
+
+;--------AUTOCOMPLETE--------
+(require 'auto-complete-config)
+(ac-config-default)
+;;;;initialize auto-complete-c-headers
+;;;(defun my:ac-c-header-init() ;
+;;;  (require 'auto-complete-c-headers)
+;;;  (add-to-list 'ac-sources 'ac-sources-c-headers)
+;;;  (add-to-list 'achead:include-directories '"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include") ;does not work
+;;;  )
+;;;(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+;;;(add-hook 'c-mode-hook 'my:ac-c-header-init)
+;--------IRONY--------
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; irony-mode's buffers by irony-mode's function
+;(defun my-irony-mode-hook ()
+;  (define-key irony-mode-map [remap completion-at-point]
+;    'irony-completion-at-point-async)
+;  (define-key irony-mode-map [remap complete-symbol]
+;    'irony-completion-at-point-async))
+;(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+;(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 ;--------YASNIPPET--------
 ;;;;;(require 'yasnippet)
 ;;;;;(setq yas-snippet-dirs '("~/.emacs.d/snippets/latex"))
@@ -147,7 +219,33 @@
 (setq matlab-shell-command "/Applications/MATLAB_R2016a.app/bin/matlab")
 (setq matlab-shell-command-switches (list "-nodesktop"))
 (matlab-cedet-setup)
-;--------LATEX--------
+
+;--------NEOTREE--------
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+;--------LATEX-------- 
+(if (eq system-type 'darwin)
+    (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
+    (setq exec-path (append exec-path '("/Library/TeX/texbin")))
+    ; something for OS X if true
+    ; optional something if not
+)
+(add-hook 'LaTeX-mode-hook (lambda () (company-auctex-init))) 
+;; Only change sectioning colour
+(setq font-latex-fontify-sectioning 1.0)
+(setq font-latex-fontify-sectioning 'color)
+(setq font-latex-slide-title-face 1.0)
+;; super-/sub-script on baseline
+(setq font-latex-script-display (quote (nil)))
+;; Do not change super-/sub-script font
+
+;; Exclude bold/italic from keywords
+(setq font-latex-deactivated-keyword-classes
+    '("italic-command" "bold-command" "italic-declaration" "bold-declaration"))
+
+;(setq exec-path (append exec-path '("/Library/TeX/texbin")))
+
 (require 'cl)
 ;(if (eq system-type 'darwin)
 ;    (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
@@ -306,3 +404,9 @@
 ;
 ;(global-set-key (kbd "C-u") 'my-universal-argument)
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

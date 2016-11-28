@@ -23,3 +23,4 @@ TODO TO EMACS -*- mode: org -*-
 * TODO faster multiple undos
 * TODO fix the indentation that does not work as expected
 * TODO fix the font issue in auctex when in emacs gui
+* TODO paste in emacs gui override what copied from os when pressing something like C-k
