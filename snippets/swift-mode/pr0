@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: pr0
+# key: pr0
+# --
+Swift.print("${1} = \\(${1})
