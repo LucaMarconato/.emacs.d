@@ -22,7 +22,7 @@
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy smartparens shift-text multiple-cursors company-statistics company-shell company-math)))
+    (icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -72,26 +72,26 @@
 
 (when (fboundp 'winner-mode)      (winner-mode 1))
 (setq comint-prompt-read-only t)
-(if (not (eq system-type 'darwin))
-    (menu-bar-mode -1)
+;(if (not (eq system-type 'darwin))
+;    (menu-bar-mode -1)
     ; something for OS X if true
     ; optional something if not
-)
-
-(if (display-graphic-p)
-    (progn
-    (set-default-font "Menlo 13")
-    (set-frame-font "Menlo 13" t t)
-    ))
-
-(tool-bar-mode -1)
-(if (display-graphic-p)
-    (progn
-    ;; if graphic
-    (set-fringe-mode '(0 . 0))  
-    )
-    ;; else (optional)
-    )
+;)
+;
+;(if (display-graphic-p)
+;    (progn
+;    (set-default-font "Menlo 13")
+;    (set-frame-font "Menlo 13" t t)
+;    ))
+;
+;(tool-bar-mode -1)
+;(if (display-graphic-p)
+;    (progn
+;    ;; if graphic
+;    (set-fringe-mode '(0 . 0))  
+;    )
+;    ;; else (optional)
+;    )
 (setq ring-bell-function 'ignore)
 (windmove-default-keybindings)
 (global-subword-mode 1)
@@ -261,15 +261,14 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
-;--------LATEX--------
+;--------LATEX-------- 
 (if (eq system-type 'darwin)
     (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
     (setq exec-path (append exec-path '("/Library/TeX/texbin")))
     ; something for OS X if true
     ; optional something if not
 )
-(add-hook 'LaTeX-mode-hook (lambda () (company-auctex-init)))
-
+(add-hook 'LaTeX-mode-hook (lambda () (company-auctex-init))) 
 ;; Only change sectioning colour
 (setq font-latex-fontify-sectioning 1.0)
 (setq font-latex-fontify-sectioning 'color)
@@ -283,7 +282,27 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
     '("italic-command" "bold-command" "italic-declaration" "bold-declaration"))
 
 ;(setq exec-path (append exec-path '("/Library/TeX/texbin")))
+
 (require 'cl)
+;(if (eq system-type 'darwin)
+;    (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
+;    (setq exec-path (append exec-path '("/Library/TeX/texbin")))
+;    ; something for OS X if true
+;    ; optional something if not
+;)
+;;; Only change sectioning colour
+;(setq font-latex-fontify-sectioning 1.0)
+;(setq font-latex-fontify-sectioning 'color)
+;(setq font-latex-slide-title-face 1.0)
+;;; super-/sub-script on baseline
+;(setq font-latex-script-display (quote (nil)))
+;;; Do not change super-/sub-script font
+;
+;;; Exclude bold/italic from keywords
+;(setq font-latex-deactivated-keyword-classes
+;    '("italic-command" "bold-command" "italic-declaration" "bold-declaration"))
+;
+;(setq exec-path (append exec-path '("/Library/TeX/texbin")))
 (add-hook 'LaTeX-mode-hook (lambda () (smartparens-mode 1)))
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
