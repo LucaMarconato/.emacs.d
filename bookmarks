@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("prova"
+(("example.tex"
+ (filename . "~/programming/cobal/example.tex")
+ (front-context-string . "\n\n%%% Local Vari")
+ (rear-context-string . "es.\nWe remind th")
+ (position . 7088))
+("prova"
  (filename . "~/testingEmacs")
  (front-context-string . "        \\frac{3}")
  (rear-context-string . "}\n	\\label{wech}\n")

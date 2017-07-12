@@ -1,8 +1,6 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;; Added by Package.el.  This must come before configurations of installed packages. 
 (package-initialize)
+
 (prefer-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -10,7 +8,6 @@
 ;(setq mac-control-modifier 'meta)
 (load-theme 'manoj-dark)
 (global-linum-mode 1)
-(put 'set-goal-column 'disabled nil)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (custom-set-variables
@@ -18,39 +15,27 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(desktop-save-mode t nil (desktop))
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (benchmark-init cl-print cl-lib smooth-scrolling company-sourcekit ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
+
+(server-start)
+
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'exec-path "/usr/local/bin/")
-;(custom-set-faces
-; ;; custom-set-faces was added by Custom.
-; ;; If you edit it by hand, you could mess it up, so be careful.
-; ;; Your init file should contain only one such instance.
-; ;; If there is more than one, they won't work right.
-; '(default ((t (:background nil))))
-; '(font-latex-slide-title-face ((t (:inherit (variable-pitch font-lock-type-face) :height 1 :family "Andale Mono"))))
-; '(font-latex-subscript-face ((t nil)))
-; '(font-latex-superscript-face ((t nil))))
-(electric-indent-mode 1)
-(electric-pair-mode 1)
-(smartparens-mode 1)
-(xterm-mouse-mode 1)
+(add-to-list 'exec-path "/Applications/Octave.app/Contents/Resources/usr/bin/")
+(add-to-list 'exec-path "/Applications/MATLAB_R2017a.app/bin/")
 
-;(global-unset-key (kbd "M-f"))
-(global-set-key (kbd "M-F") 'forward-whitespace)
-;(global-set-key (kbd "M-F") 'forward-word)
-;(global-unset-key (kbd "M-b"))
-(global-set-key (kbd "M-B") '(lambda () (interactive) (forward-whitespace -1)))
-;(global-set-key (kbd "M-B") 'backward-word)
+;--------VARIOUS--------
+
+(global-set-key (kbd "M-F") 'forward-whitespace) 
+(global-set-key (kbd "M-B") '(lambda () (interactive) (forward-whitespace -1))) 
 
 (global-hl-line-mode 1)
-(global-visual-line-mode 1)
-(show-paren-mode 1)
+(global-visual-line-mode 1) 
 
 (load-library "dired-x")
 
@@ -68,34 +53,57 @@
        (list (region-beginning) (region-end))
      (message "Copied line")
      (list (line-beginning-position) (line-beginning-position 2)))))
-(desktop-save-mode 1)
 
-(when (fboundp 'winner-mode)      (winner-mode 1))
+(when (fboundp 'winner-mode) (winner-mode 1))
+
 (setq comint-prompt-read-only t)
+
+(menu-bar-mode -1)
+(tool-bar-mode -1) 
+
 ;(if (not (eq system-type 'darwin))
 ;    (menu-bar-mode -1)
-    ; something for OS X if true
-    ; optional something if not
+   ; something for OS X if true
+   ; optional something if not
 ;)
 ;
-;(if (display-graphic-p)
-;    (progn
-;    (set-default-font "Menlo 13")
-;    (set-frame-font "Menlo 13" t t)
-;    ))
-;
-;(tool-bar-mode -1)
-;(if (display-graphic-p)
-;    (progn
-;    ;; if graphic
-;    (set-fringe-mode '(0 . 0))  
-;    )
-;    ;; else (optional)
-;    )
+(if (display-graphic-p)
+    (progn
+    ;; if graphic
+    (set-fringe-mode '(0 . 0))  
+    )
+    ;; else (optional)
+    )
 (setq ring-bell-function 'ignore)
 (windmove-default-keybindings)
-(global-subword-mode 1)
+(global-subword-mode 1) 
 
+(add-hook 'fundamental-mode (setq tab-width 4))
+;(add-hook 'c++-mode (setq tab-width 4))
+(setq-default c-basic-offset 4)
+(add-hook 'swift-mode (setq auto-revert-mode t)) 
+(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+(setq tab-stop-list (number-sequence 4 200 4))
+
+;--------OCTAVE MODE--------
+(add-hook 'octave-mode-hook (lambda ()
+  (setq indent-tabs-mode t)
+  (setq tab-stop-list (number-sequence 2 200 2))
+  (setq tab-width 2)
+  (setq indent-line-function 'insert-tab) ))
+
+;--------PARENTHESES--------
+(electric-indent-mode 1)
+(electric-pair-mode 1)
+(smartparens-mode 1)
+(xterm-mouse-mode 1)
+(show-paren-mode 1) 
+
+;--------UNIVERSAL ARGUMENT--------
 (defun universal-argument ()
   "Begin a numeric argument for the following command.
 Digits or minus sign following \\[universal-argument] make up the numeric argument.
@@ -117,15 +125,44 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 
 (global-set-key (kbd "C-u") 'my-universal-argument)
 
+;--------DEKSTOP--------
+(desktop-save-mode 1)
+(setq desktop-save t)
+(setq desktop-load-locked-desktop t)
+(setq desktop-dirname user-emacs-directory)
+
+;; Make sure that even if emacs or OS crashed, emacs
+    ;; still have last opened files.
+    (add-hook 'find-file-hook
+     (lambda ()
+       (run-with-timer 5 nil
+          (lambda ()
+            ;; Reset desktop modification time so the user is not bothered
+            (setq desktop-file-modtime (nth 5 (file-attributes (desktop-full-file-name))))
+            (desktop-save user-emacs-directory)))))
+
+    ;; Read default desktop
+    (if (file-exists-p (concat desktop-dirname desktop-base-file-name))
+        (desktop-read desktop-dirname))
+
+    ;; Add a hook when emacs is closed to we reset the desktop
+    ;; modification time (in this way the user does not get a warning
+    ;; message about desktop modifications)
+    (add-hook 'kill-emacs-hook
+              (lambda ()
+                ;; Reset desktop modification time so the user is not bothered
+                (setq desktop-file-modtime (nth 5 (file-attributes (desktop-full-file-name)))))) 
+
+;--------HIGHLIGHT SYMBOL--------
 (global-set-key [(control f7)] 'highlight-symbol)
 (global-set-key [f7] 'highlight-symbol-next)
 (global-set-key [(shift f7)] 'highlight-symbol-prev)
 (global-set-key [(meta f7)] 'highlight-symbol-query-replace)
 
-(add-hook 'fundamental-mode (setq tab-width 4))
-(add-hook 'swift-mode (setq auto-revert-mode t))
-;(add-hook 'swift-mode (auto-revert-mode t))
-(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
+;--------SCROLLING--------
+(setq mouse-wheel-scroll-amount '(5 ((shift) . 1) ((control) . nil)))
+;(setq mouse-wheel-progressive-speed nil)
+
 ;--------ACCENTS--------
 (define-prefix-command 'stress-map)
 (add-hook 'LaTeX-mode-hook (lambda () (global-set-key (kbd "#") 'stress-map)))
@@ -153,12 +190,15 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (define-key stress-map (kbd "' O") '(lambda () (interactive) (insert "Ó")))
 (define-key stress-map (kbd "' U") '(lambda () (interactive) (insert "Ú")))
 (define-key stress-map (kbd "' Y") '(lambda () (interactive) (insert "Ý")))
+
 ;--------AVY--------
 (global-set-key (kbd "C-:") 'avy-goto-char)
 (global-set-key (kbd "C-'") 'avy-goto-char-2)
-(global-set-key (kbd "M-g f") 'avy-goto-line)
-(global-set-key (kbd "M-g w") 'avy-goto-word-1)
-(global-set-key (kbd "M-g e") 'avy-goto-word-0)
+;(global-set-key (kbd "C-`") 'avy-goto-line) ;to use this when I will have remapped the keys
+(global-set-key (kbd "M-`") 'avy-goto-line) 
+;(global-set-key (kbd "M-g w") 'avy-goto-word-1)
+;(global-set-key (kbd "M-g e") 'avy-goto-word-0)
+
 ;--------COMPANY--------
 ;(add-to-list 'company-backends 'company-sourcekit)
 ;(add-to-list 'company-sourcekit)
@@ -167,54 +207,46 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (add-hook 'swift-mode (lambda () (company-swift-init 1)))
 (setq company-idle-delay 0.01)
 (setq company-dabbrev-downcase 0.01)
+(add-hook 'after-init-hook 'global-company-mode)
 ;(setq company-sourcekit-verbose f) ;how to set to false?
 
 ;--------AUTOCOMPLETE--------
-(require 'auto-complete-config)
+(require 'auto-complete)
+(add-to-list 'ac-modes 'latex-mode) ; beware of using 'LaTeX-mode instead
+(require 'ac-math) ; package should be installed first 
+(defun my-ac-latex-mode () ; add ac-sources for latex
+   (setq ac-sources
+         (append '(ac-source-math-unicode
+           ac-source-math-latex
+           ac-source-latex-commands)
+                 ac-sources)))
+(add-hook 'LaTeX-mode-hook 'my-ac-latex-mode)
+(setq ac-math-unicode-in-math-p t)
+(ac-flyspell-workaround) ; fixes a known bug of delay due to flyspell (if it is there)
+(add-to-list 'ac-modes 'org-mode) ; auto-complete for org-mode (optional)
+;(require 'org-expenses)
+(require 'auto-complete-config) ; should be after add-to-list 'ac-modes and hooks
 (ac-config-default)
+(setq ac-auto-start nil)            ; if t starts ac at startup automatically
+(setq ac-auto-show-menu t)
+(global-auto-complete-mode t) 
+
 (setq ac-delay 0.05)
 (setq ac-auto-show-menu 0.05)
-;;;;initialize auto-complete-c-headers
-;;;(defun my:ac-c-header-init() ;
-;;;  (require 'auto-complete-c-headers)
-;;;  (add-to-list 'ac-sources 'ac-sources-c-headers)
-;;;  (add-to-list 'achead:include-directories '"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include") ;does not work
-;;;  )
-;;;(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-;;;(add-hook 'c-mode-hook 'my:ac-c-header-init)
+
 ;--------IRONY--------
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 
-;; replace the `completion-at-point' and `complete-symbol' bindings in
-;; irony-mode's buffers by irony-mode's function
-;(defun my-irony-mode-hook ()
-;  (define-key irony-mode-map [remap completion-at-point]
-;    'irony-completion-at-point-async)
-;  (define-key irony-mode-map [remap complete-symbol]
-;    'irony-completion-at-point-async))
-;(add-hook 'irony-mode-hook 'my-irony-mode-hook)
-;(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
-;--------YASNIPPET--------
-;;;;;(require 'yasnippet)
-;;;;;(setq yas-snippet-dirs '("~/.emacs.d/snippets/latex"))
-;;;;;(yas/initialize)
-;;;;;;(setq yas/root-directory "~/.emacs.d/snippets")
-;;;;;;(yas/load-directory yas/root-directory)
-;;;;;;(yas-reload-all)
-;;;;;(add-hook 'LaTeX-mode-hook #'yas-minor-mode)
-;;;;;(setq yas/triggers-in-field t)
-;;;;;
+;--------YASNIPPET-------- 
 (add-to-list 'load-path
-              "~/.emacs.d/snippets/latex")
+             "~/.emacs.d/snippets/latex")
 (require 'yasnippet)
 (yas-reload-all)
 (yas-global-mode 1)
-;;; use popup menu for yas-choose-value
-(require 'popup)
-
-;; add some shotcuts in popup menu mode
+(require 'popup) ; use popup menu for yas-choose-value
+; add some shotcuts in popup menu mode
 (define-key popup-menu-keymap (kbd "M-n") 'popup-next)
 (define-key popup-menu-keymap (kbd "TAB") 'popup-next)
 (define-key popup-menu-keymap (kbd "<tab>") 'popup-next)
@@ -237,7 +269,8 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
      )))
 
 (setq yas-prompt-functions '(yas-popup-isearch-prompt yas-ido-prompt yas-no-prompt))
-(setq yas/indent-line nil)
+(setq yas/indent-line 'auto)
+(setq yas-also-auto-indent-first-line t)
 ;--------MULTPLE CURSORS--------
 (global-set-key (kbd "C-c m l") 'mc/edit-lines)
 (global-set-key (kbd "C-c m g") 'mc/mark-all-like-this)
@@ -440,10 +473,10 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;  (universal-argument--mode))
 ;
 ;(global-set-key (kbd "C-u") 'my-universal-argument)
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
