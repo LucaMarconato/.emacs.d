@@ -6,7 +6,9 @@
 (set-default-coding-systems 'utf-8)
 ;(setq mac-command-modifier 'control)
 ;(setq mac-control-modifier 'meta)
-(load-theme 'manoj-dark)
+;(setq sml/no-confirm-load-theme t)
+;(load-theme 'manoj-dark)
+(load-theme 'monokai)
 (global-linum-mode 1)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -209,7 +211,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
  ;; The most important setting of all! Make each scroll-event move 2 lines at
  ;; a time (instead of 5 at default). Simply hold down shift to move twice as
  ;; fast, or hold down control to move 3x as fast. Perfect for trackpads.
- mouse-wheel-scroll-amount '(2 ((shift) . 4) ((control) . 6)))
+ mouse-wheel-scroll-amount '(3 ((shift) . 4) ((control) . 5)))
 
 ;(setq mouse-wheel-scroll-amount '(5 ((shift) . 1) ((control) . nil)))
 ;(setq mouse-wheel-progressive-speed nil)
@@ -533,3 +535,9 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ; ;; If there is more than one, they won't work right.
 ; )
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
