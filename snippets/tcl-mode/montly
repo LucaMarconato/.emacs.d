@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: monthly
+# key: m
+# --
+>MONTLY_PAYMENT: BEGIN_TIME = ${1:} | END_TIME = ${2:} | AMOUNT = ${3:} | CURRENCY = ${4:$$(yas-choose-value '("NOK" "EUR"))} | DESCRIPTION = ${5:}

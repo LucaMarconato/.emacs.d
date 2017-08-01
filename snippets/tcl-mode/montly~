@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: monthly
+# key: m
+# --
+>MONTLY_PAYMENT: TIME = 

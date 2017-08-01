@@ -15,21 +15,28 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("a49760e39bd7d7876c94ee4bf483760e064002830a63e24c2842a536c6a52756" default)))
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (benchmark-init cl-print cl-lib smooth-scrolling company-sourcekit ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (monokai-theme benchmark-init cl-print cl-lib smooth-scrolling company-sourcekit ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
 
-(server-start)
+;(server-start)
 
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'exec-path "/usr/local/bin/")
 (add-to-list 'exec-path "/Applications/Octave.app/Contents/Resources/usr/bin/")
 (add-to-list 'exec-path "/Applications/MATLAB_R2017a.app/bin/")
-
+;;--------MY EXPENSES--------
+;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
+;      auto-mode-alist))
+;
 ;--------VARIOUS--------
+(put 'set-goal-column 'disabled nil)
 
 (global-set-key (kbd "M-F") 'forward-whitespace) 
 (global-set-key (kbd "M-B") '(lambda () (interactive) (forward-whitespace -1))) 
@@ -67,13 +74,13 @@
    ; optional something if not
 ;)
 ;
-(if (display-graphic-p)
+;(if (display-graphic-p)
     (progn
     ;; if graphic
     (set-fringe-mode '(0 . 0))  
     )
     ;; else (optional)
-    )
+;   )
 (setq ring-bell-function 'ignore)
 (windmove-default-keybindings)
 (global-subword-mode 1) 
@@ -88,6 +95,25 @@
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 (setq tab-stop-list (number-sequence 4 200 4))
+
+;--------TIMESTAMP--------
+(require 'calendar)
+ (defun insdate-insert-current-date (&optional omit-day-of-week-p)
+    "Insert today's date using the current locale.
+  With a prefix argument, the date is inserted without the day of
+  the week."
+    (interactive "P*")
+    (insert (calendar-date-string (calendar-current-date) nil
+                                  omit-day-of-week-p)))
+(defun timestamp ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d")))
+;   (insert (format-time-string "%Y-%m-%d,%H:%M:%S")))
+
+(defun month_timestamp ()
+   (interactive)
+   (insert (format-time-string "%Y-%m")))
+(global-set-key "\C-x\M-d" `month_timestamp)
 
 ;--------OCTAVE MODE--------
 (add-hook 'octave-mode-hook (lambda ()
@@ -160,7 +186,32 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (global-set-key [(meta f7)] 'highlight-symbol-query-replace)
 
 ;--------SCROLLING--------
-(setq mouse-wheel-scroll-amount '(5 ((shift) . 1) ((control) . nil)))
+;; GUI Settings for YAMAMOTO Mitsuharu's Mac port of GNU Emacs.
+;; https://github.com/railwaycat/homebrew-emacsmacport
+;;(when (and (spacemacs/system-is-mac) (display-graphic-p))
+;;  ;; Disable pixel-by-pixel scrolling, since it's extremely choppy.
+;;  (setq mac-mouse-wheel-smooth-scroll nil))
+;;
+;; Keyboard smooth scrolling: Prevent the awkward "snap to re-center" when
+;; the text cursor moves off-screen. Instead, only scroll the minimum amount
+;; necessary to show the new line. (A number of 101+ disables re-centering.)
+(setq scroll-conservatively 101)
+
+;; Optimize mouse wheel scrolling for smooth-scrolling trackpad use.
+;; Trackpads send a lot more scroll events than regular mouse wheels,
+;; so the scroll amount and acceleration must be tuned to smooth it out.
+(setq
+ ;; If the frame contains multiple windows, scroll the one under the cursor
+ ;; instead of the one that currently has keyboard focus.
+ mouse-wheel-follow-mouse 't
+ ;; Completely disable mouse wheel acceleration to avoid speeding away.
+ mouse-wheel-progressive-speed nil
+ ;; The most important setting of all! Make each scroll-event move 2 lines at
+ ;; a time (instead of 5 at default). Simply hold down shift to move twice as
+ ;; fast, or hold down control to move 3x as fast. Perfect for trackpads.
+ mouse-wheel-scroll-amount '(2 ((shift) . 4) ((control) . 6)))
+
+;(setq mouse-wheel-scroll-amount '(5 ((shift) . 1) ((control) . nil)))
 ;(setq mouse-wheel-progressive-speed nil)
 
 ;--------ACCENTS--------
@@ -271,6 +322,8 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (setq yas-prompt-functions '(yas-popup-isearch-prompt yas-ido-prompt yas-no-prompt))
 (setq yas/indent-line 'auto)
 (setq yas-also-auto-indent-first-line t)
+(require 'warnings)
+(add-to-list 'warning-suppress-types '(yasnippet backquote-change))
 ;--------MULTPLE CURSORS--------
 (global-set-key (kbd "C-c m l") 'mc/edit-lines)
 (global-set-key (kbd "C-c m g") 'mc/mark-all-like-this)
@@ -473,10 +526,10 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;  (universal-argument--mode))
 ;
 ;(global-set-key (kbd "C-u") 'my-universal-argument)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;(custom-set-faces
+; ;; custom-set-faces was added by Custom.
+; ;; If you edit it by hand, you could mess it up, so be careful.
+; ;; Your init file should contain only one such instance.
+; ;; If there is more than one, they won't work right.
+; )
 
