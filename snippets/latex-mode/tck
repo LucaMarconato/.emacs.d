@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tck
+# key: tck
+# --
+${2:}\textcolor{black}{${1:}}${3:}

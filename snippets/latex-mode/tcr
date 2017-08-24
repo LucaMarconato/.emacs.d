@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tcr
+# key: tcr
+# --
+${2:}\textcolor{red}{${1:}}${3:}

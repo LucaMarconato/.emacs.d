@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tr
+# key: tr
+# --
+${2:}\red{${1:}}${3:}

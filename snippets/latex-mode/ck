@@ -2,4 +2,4 @@
 # name: ck
 # key: ck
 # --
-\color{black}
+${1:}\color{black}

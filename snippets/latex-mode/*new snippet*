@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: matlab
-# key: matlab
+# name: nl
+# key: nl
 # --
-/Applications/MATLAB_R2016a.app/bin/matlab -nodesktop -nosplash
+\newline

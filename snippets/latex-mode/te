@@ -2,4 +2,4 @@
 # name: te
 # key: te
 # --
-\text{${1:}}
+test

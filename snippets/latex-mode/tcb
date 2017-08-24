@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tcb
+# key: tcb
+# --
+${2:}\textcolor{blue}{${1:}}${3:}

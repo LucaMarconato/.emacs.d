@@ -7,11 +7,13 @@
 ;(setq mac-command-modifier 'control)
 ;(setq mac-control-modifier 'meta)
 ;(setq sml/no-confirm-load-theme t)
-;(load-theme 'manoj-dark)
-(load-theme 'monokai)
+(setq custom-safe-themes t)
+(load-theme 'manoj-dark)
+;(load-theme 'monokai)
 (global-linum-mode 1)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -20,10 +22,10 @@
  '(custom-safe-themes
    (quote
     ("a49760e39bd7d7876c94ee4bf483760e064002830a63e24c2842a536c6a52756" default)))
- '(font-latex-fontify-sectioning 1 t)
+ '(font-latex-fontify-sectioning 1)
  '(package-selected-packages
    (quote
-    (monokai-theme benchmark-init cl-print cl-lib smooth-scrolling company-sourcekit ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling company-sourcekit ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
 
 ;(server-start)
@@ -33,6 +35,12 @@
 (add-to-list 'exec-path "/usr/local/bin/")
 (add-to-list 'exec-path "/Applications/Octave.app/Contents/Resources/usr/bin/")
 (add-to-list 'exec-path "/Applications/MATLAB_R2017a.app/bin/")
+
+(global-set-key (kbd "C-c n") 'recompile)
+
+(setq auto-save-file-name-transforms
+          `((".*" ,(concat user-emacs-directory "auto-save/") t))) 
+
 ;;--------MY EXPENSES--------
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
 ;      auto-mode-alist))
@@ -98,6 +106,9 @@
 (setq indent-line-function 'insert-tab)
 (setq tab-stop-list (number-sequence 4 200 4))
 
+;(global-set-key (kbd "C-j") #'newline-and-indent)
+;(global-set-key (kbd "<return>") #'newline)
+(add-to-list 'default-frame-alist '(fullscreen . fullheight))
 ;--------TIMESTAMP--------
 (require 'calendar)
  (defun insdate-insert-current-date (&optional omit-day-of-week-p)
@@ -153,7 +164,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 
 (global-set-key (kbd "C-u") 'my-universal-argument)
 
-;--------DEKSTOP--------
+;--------DESKTOP--------
 (desktop-save-mode 1)
 (setq desktop-save t)
 (setq desktop-load-locked-desktop t)
@@ -252,7 +263,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;(global-set-key (kbd "M-g w") 'avy-goto-word-1)
 ;(global-set-key (kbd "M-g e") 'avy-goto-word-0)
 
-;--------COMPANY--------
+;--------COMPANY (SWIFT)--------
 ;(add-to-list 'company-backends 'company-sourcekit)
 ;(add-to-list 'company-sourcekit)
 (require 'company-sourcekit)
@@ -263,7 +274,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (add-hook 'after-init-hook 'global-company-mode)
 ;(setq company-sourcekit-verbose f) ;how to set to false?
 
-;--------AUTOCOMPLETE--------
+;--------AUTOCOMPLETE (LATEX)--------
 (require 'auto-complete)
 (add-to-list 'ac-modes 'latex-mode) ; beware of using 'LaTeX-mode instead
 (require 'ac-math) ; package should be installed first 
@@ -287,10 +298,62 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (setq ac-delay 0.05)
 (setq ac-auto-show-menu 0.05)
 
-;--------IRONY--------
+;--------IRONY (C, C++, OBJC)--------
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
+
+;--------C, C++ --------
+(add-hook 'c-mode-hook 'rtags-start-process-unless-running)
+(add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
+(add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
+(add-hook 'c-mode-hook
+          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
+(add-hook 'c++-mode-hook
+          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
+
+;--------FLYCHECK--------
+;; ensure that we use only rtags checking
+;; https://github.com/Andersbakken/rtags#optional-1
+(add-hook 'c-mode-hook 'flycheck-mode)
+(add-hook 'c++-mode-hook 'flycheck-mode)
+
+(defun setup-flycheck-rtags ()
+  (interactive)
+  (flycheck-select-checker 'rtags)
+  ;; RTags creates more accurate overlays.
+  (setq-local flycheck-highlighting-mode nil)
+  (setq-local flycheck-check-syntax-automatically nil))
+
+;; only run this if rtags is installed
+(when (require 'rtags nil :noerror)
+  ;; make sure you have company-mode installed
+;  (require 'company)
+  (define-key c-mode-base-map (kbd "M-.")
+    (function rtags-find-symbol-at-point))
+  (define-key c-mode-base-map (kbd "M-,")
+    (function rtags-find-references-at-point))
+  ;; disable prelude's use of C-c r, as this is the rtags keyboard prefix
+  ;(define-key prelude-mode-map (kbd "C-c r") nil) ;TODO: fix does not work, fixit
+  ;; install standard rtags keybindings. Do M-. on the symbol below to
+  ;; jump to definition and see the keybindings.
+  (rtags-enable-standard-keybindings)
+  ;; comment this out if you don't have or don't use helm
+  (setq rtags-use-helm t)
+  ;; company completion setup
+  (setq rtags-autostart-diagnostics t)
+  (rtags-diagnostics)
+  (setq rtags-completions-enabled t)
+  (push 'company-rtags company-backends)
+  (global-company-mode)
+  (define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
+  ;; use rtags flycheck mode -- clang warnings shown inline
+  (require 'flycheck-rtags)
+  ;; c-mode-common-hook is also called by c++-mode
+  (add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
+  )
+
+
 
 ;--------YASNIPPET-------- 
 (add-to-list 'load-path
@@ -370,7 +433,16 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
     '("italic-command" "bold-command" "italic-declaration" "bold-declaration"))
 
 ;(setq exec-path (append exec-path '("/Library/TeX/texbin")))
+;Get emacs to find ghostscript.** For some reason emacs wouldn't find ghostscript by itself on my installation, and would return baloney like `pdf2dsc: command not found` and `No such file or directory, gs`. This is corrected by adding the location of the ghostscript bin to the PATH and executive path, with the following code (already in .emacs.d/init.el):
 
+	(setenv "PATH"
+	   (concat
+	   "/usr/texbin" ":"
+	   "/usr/local/bin" ":"
+	   (getenv "PATH")
+	   )
+   )
+   (setq exec-path (append exec-path '("/usr/local/bin")))
 (require 'cl)
 ;(if (eq system-type 'darwin)
 ;    (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
@@ -525,7 +597,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;(defun my-universal-argument ()
 ;  (interactive)
 ;  (setq prefix-arg (list 10))
-;  (universal-argument--mode))
+(setq custom-safe-themes t);  (universal-argument--mode))
 ;
 ;(global-set-key (kbd "C-u") 'my-universal-argument)
 ;(custom-set-faces
@@ -541,3 +613,31 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;--------PERSPECTIVE--------
+;(with-eval-after-load "persp-mode-autoloads"
+;(use-package persp-mode
+;             :init (setq-default persp-keymap-prefix (kbd "C-c p"))
+;             :config
+;             (persp-mode 1)
+;             (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
+;             (global-set-key (kbd "C-x k") #'persp-kill-buffer))
+;(setq persp-keymap-prefix (kbd "C-c p"))
+;;(setq-default persp-keymap-prefix (kbd "C-c p"))
+(require 'persp-mode)
+(setq wg-morph-on nil) ;; switch off animation ;TODO: check if working
+(setq persp-autokill-buffer-on-remove 'kill-weak) ;TODO: check if working
+;(with-eval-after-load "persp-mode"
+;  (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
+;  (global-set-key (kbd "C-x k") #'persp-kill-buffer))
+;(setq persp-mode 1)
+(add-hook 'after-init-hook #'(lambda ()
+                               (persp-mode 1)
+                               ;(persp-mode-set-prefix-key (kbd "C-c p"))
+                               (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
+                               (global-set-key (kbd "C-x k") #'persp-kill-buffer)
+                               (setq persp-autokill-buffer-on-remove 1)
+                               )) ;NOTE: this must be put at the end of the configuration of persp-mode
+;(add-hook 'after-init-hook #'(persp-mode-set-prefix-key (kbd "C-c p")))
+;(persp-mode-set-prefix-key (kbd "C-c p"))
+
