@@ -38,8 +38,8 @@
 
 (global-set-key (kbd "C-c n") 'recompile)
 
-(setq auto-save-file-name-transforms
-          `((".*" ,(concat user-emacs-directory "auto-save/") t))) 
+;(setq auto-save-file-name-transforms
+;          `((".*" ,(concat user-emacs-directory "auto-save/") t))) 
 
 ;;--------MY EXPENSES--------
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
@@ -109,6 +109,7 @@
 ;(global-set-key (kbd "C-j") #'newline-and-indent)
 ;(global-set-key (kbd "<return>") #'newline)
 (add-to-list 'default-frame-alist '(fullscreen . fullheight))
+
 ;--------TIMESTAMP--------
 (require 'calendar)
  (defun insdate-insert-current-date (&optional omit-day-of-week-p)
@@ -165,33 +166,33 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (global-set-key (kbd "C-u") 'my-universal-argument)
 
 ;--------DESKTOP--------
-(desktop-save-mode 1)
-(setq desktop-save t)
-(setq desktop-load-locked-desktop t)
-(setq desktop-dirname user-emacs-directory)
+;(desktop-save-mode 1)
+;(setq desktop-save t)
+;(setq desktop-load-locked-desktop t)
+;(setq desktop-dirname user-emacs-directory)
 
-;; Make sure that even if emacs or OS crashed, emacs
-    ;; still have last opened files.
-    (add-hook 'find-file-hook
-     (lambda ()
-       (run-with-timer 5 nil
-          (lambda ()
-            ;; Reset desktop modification time so the user is not bothered
-            (setq desktop-file-modtime (nth 5 (file-attributes (desktop-full-file-name))))
-            (desktop-save user-emacs-directory)))))
-
-    ;; Read default desktop
-    (if (file-exists-p (concat desktop-dirname desktop-base-file-name))
-        (desktop-read desktop-dirname))
-
-    ;; Add a hook when emacs is closed to we reset the desktop
-    ;; modification time (in this way the user does not get a warning
-    ;; message about desktop modifications)
-    (add-hook 'kill-emacs-hook
-              (lambda ()
-                ;; Reset desktop modification time so the user is not bothered
-                (setq desktop-file-modtime (nth 5 (file-attributes (desktop-full-file-name)))))) 
-
+;;; Make sure that even if emacs or OS crashed, emacs
+;    ;; still have last opened files.
+;    (add-hook 'find-file-hook
+;     (lambda ()
+;       (run-with-timer 5 nil
+;          (lambda ()
+;            ;; Reset desktop modification time so the user is not bothered
+;            (setq desktop-file-modtime (nth 5 (file-attributes (desktop-full-file-name))))
+;            (desktop-save user-emacs-directory)))))
+;
+;    ;; Read default desktop
+;    (if (file-exists-p (concat desktop-dirname desktop-base-file-name))
+;        (desktop-read desktop-dirname))
+;
+;    ;; Add a hook when emacs is closed to we reset the desktop
+;    ;; modification time (in this way the user does not get a warning
+;    ;; message about desktop modifications)
+;    (add-hook 'kill-emacs-hook
+;              (lambda ()
+;                ;; Reset desktop modification time so the user is not bothered
+;                (setq desktop-file-modtime (nth 5 (file-attributes (desktop-full-file-name)))))) 
+;
 ;--------HIGHLIGHT SYMBOL--------
 (global-set-key [(control f7)] 'highlight-symbol)
 (global-set-key [f7] 'highlight-symbol-next)
@@ -269,7 +270,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (require 'company-sourcekit)
 (add-to-list 'company-backends 'company-sourcekit)
 (add-hook 'swift-mode (lambda () (company-swift-init 1)))
-(setq company-idle-delay 0.01)
+(setq company-idle-delay 0.03)
 (setq company-dabbrev-downcase 0.01)
 (add-hook 'after-init-hook 'global-company-mode)
 ;(setq company-sourcekit-verbose f) ;how to set to false?
@@ -307,10 +308,11 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
 (add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
 (add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
-(add-hook 'c-mode-hook
-          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
-(add-hook 'c++-mode-hook
-          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
+(global-set-key (kbd "C-c C-k") 'ff-find-other-file)
+;(add-hook 'c-mode-hook
+;          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
+;(add-hook 'c++-mode-hook
+;          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
 
 ;--------FLYCHECK--------
 ;; ensure that we use only rtags checking
@@ -464,7 +466,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;
 ;(setq exec-path (append exec-path '("/Library/TeX/texbin")))
 (add-hook 'LaTeX-mode-hook (lambda () (smartparens-mode 1)))
-(setq TeX-auto-save t)
+;(setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
 (setq ispell-dictionary "english")
@@ -634,10 +636,38 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (add-hook 'after-init-hook #'(lambda ()
                                (persp-mode 1)
                                ;(persp-mode-set-prefix-key (kbd "C-c p"))
-                               (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
+;                               (global-set-key (kbd "C-x b") ;#'persp-switch-to-buffer)
                                (global-set-key (kbd "C-x k") #'persp-kill-buffer)
                                (setq persp-autokill-buffer-on-remove 1)
                                )) ;NOTE: this must be put at the end of the configuration of persp-mode
 ;(add-hook 'after-init-hook #'(persp-mode-set-prefix-key (kbd "C-c p")))
 ;(persp-mode-set-prefix-key (kbd "C-c p"))
 
+;(with-eval-after-load "persp-mode"
+;  (defvar after-switch-to-buffer-functions nil)
+;  (defvar after-display-buffer-functions nil)
+;
+;  (if (fboundp 'advice-add)
+;      ;;Modern way
+;      (progn
+;        (defun after-switch-to-buffer-adv (&rest r)
+;          (apply #'run-hook-with-args 'after-switch-to-buffer-functions r))
+;        (defun after-display-buffer-adv (&rest r)
+;          (apply #'run-hook-with-args 'after-display-buffer-functions r))
+;        (advice-add #'switch-to-buffer :after #'after-switch-to-buffer-adv)
+;        (advice-add #'display-buffer   :after #'after-display-buffer-adv))
+;
+;    ;;Old way
+;    (defadvice switch-to-buffer (after after-switch-to-buffer-adv)
+;      (run-hook-with-args 'after-switch-to-buffer-functions (ad-get-arg 0)))
+;    (defadvice display-buffer (after after-display-buffer-adv)
+;      (run-hook-with-args 'after-display-buffer-functions (ad-get-arg 0)))
+;    (ad-enable-advice #'switch-to-buffer 'after 'after-switch-to-buffer-adv)
+;    (ad-enable-advice #'display-buffer 'after 'after-display-buffer-adv)
+;    (ad-activate #'switch-to-buffer)
+;    (ad-activate #'display-buffer)))
+;
+;(add-hook 'after-switch-to-buffer-functions
+;          #'(lambda (bn) (when (and persp-mode
+;                                    (not persp-temporarily-display-buffer))
+;                           (persp-add-buffer bn))))
