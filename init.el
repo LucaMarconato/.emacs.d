@@ -25,13 +25,15 @@
  '(font-latex-fontify-sectioning 1)
  '(package-selected-packages
    (quote
-    (workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling company-sourcekit ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling company-sourcekit ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
 
 ;(server-start)
 
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
+(add-to-list 'load-path
+             "~/.emacs.d/lisp/")
 (add-to-list 'exec-path "/usr/local/bin/")
 (add-to-list 'exec-path "/Applications/Octave.app/Contents/Resources/usr/bin/")
 (add-to-list 'exec-path "/Applications/MATLAB_R2017a.app/bin/")
@@ -45,7 +47,7 @@
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
 ;      auto-mode-alist))
 ;
-;--------VARIOUS--------
+;--------various--------
 (put 'set-goal-column 'disabled nil)
 
 (global-set-key (kbd "M-F") 'forward-whitespace) 
@@ -92,7 +94,6 @@
     ;; else (optional)
 ;   )
 (setq ring-bell-function 'ignore)
-(windmove-default-keybindings)
 (global-subword-mode 1) 
 
 (add-hook 'fundamental-mode (setq tab-width 4))
@@ -109,6 +110,11 @@
 ;(global-set-key (kbd "C-j") #'newline-and-indent)
 ;(global-set-key (kbd "<return>") #'newline)
 (add-to-list 'default-frame-alist '(fullscreen . fullheight))
+
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
 ;--------TIMESTAMP--------
 (require 'calendar)
@@ -355,8 +361,6 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
   (add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
   )
 
-
-
 ;--------YASNIPPET-------- 
 (add-to-list 'load-path
              "~/.emacs.d/snippets/latex")
@@ -401,12 +405,19 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (global-set-key (kbd "M-Y") 'mc/unmark-previous-like-this)
 (global-set-key (kbd "M-J") 'mc/skip-to-previous-like-this)
 
+;--------WINDMOVE--------
+(windmove-default-keybindings)
+(global-set-key (kbd "M-P") 'windmove-up)
+(global-set-key (kbd "M-N") 'windmove-down)
+(global-set-key (kbd "M-L") 'windmove-right)
+(global-set-key (kbd "M-H") 'windmove-left)
+
 ;--------MATLAB--------
 ; CLI matlab from the shell:
-; /Applications/MATLAB_R2016a.app/bin/matlab -nodesktop
+; /Applications/MATLAB_R2017a.app/bin/matlab -nodesktop
 ;
 ; elisp setup for matlab-mode:
-(setq matlab-shell-command "/Applications/MATLAB_R2016a.app/bin/matlab")
+(setq matlab-shell-command "/Applications/MATLAB_R2017a.app/bin/matlab")
 (setq matlab-shell-command-switches (list "-nodesktop"))
 (matlab-cedet-setup)
 
@@ -636,10 +647,28 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (add-hook 'after-init-hook #'(lambda ()
                                (persp-mode 1)
                                ;(persp-mode-set-prefix-key (kbd "C-c p"))
-;                               (global-set-key (kbd "C-x b") ;#'persp-switch-to-buffer)
+                               (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
+                               (global-set-key (kbd "C-c p c") #'switch-to-buffer)
                                (global-set-key (kbd "C-x k") #'persp-kill-buffer)
                                (setq persp-autokill-buffer-on-remove 1)
                                )) ;NOTE: this must be put at the end of the configuration of persp-mode
+
+;not working:
+;; (with-eval-after-load "persp"
+;;   (add-to-list 'persp-save-buffer-functions
+;;                #'(lambda (b)
+;;                    (with-current-buffer b
+;;                      (when (equal major-mode 'shell-mode)
+;;                        `(def-shell-buffer ,(buffer-name) ,default-directory)))))
+;;   (add-to-list 'persp-load-buffer-functions
+;;                #'(lambda (savelist)
+;;                    (when (eq (car savelist) 'def-shell-buffer)
+;;                      (with-current-buffer (get-buffer-create (cadr savelist))
+;;                        (setq default-directory (caddr savelist))
+;;                        (shell-mode))))))
+
+
+;(define-key global-map (kbd "C-c C-p") (kbd "C-c p")) ;not working
 ;(add-hook 'after-init-hook #'(persp-mode-set-prefix-key (kbd "C-c p")))
 ;(persp-mode-set-prefix-key (kbd "C-c p"))
 
@@ -671,3 +700,94 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;          #'(lambda (bn) (when (and persp-mode
 ;                                    (not persp-temporarily-display-buffer))
 ;                           (persp-add-buffer bn))))
+
+;--------SHELL--------
+;(require 'rx)
+;(add-to-list 'display-buffer-alist
+;             `(,(rx bos "*shell*")
+;               switch-to-buffer
+;               (reusable-frames . visible)))
+;
+;(require 'shell-here)
+(defun visit-shell2 ()
+  "Create or visit a `shell' buffer."
+  (interactive)
+  (if (not (get-buffer "*shell*<2>"))
+      (progn
+        (split-window-sensibly (selected-window))
+        (other-window 1)
+        (lambda () (interactive) (switch-to-buffer "*shell*<2>")))
+    (switch-to-buffer-other-window "*shell*<2>")))
+(global-set-key (kbd "C-c s") 'shell)
+;(global-set-key (kbd "C-c d") #'(lambda () (interactive) (switch-to-buffer "*shell*<2>")))
+(global-set-key (kbd "C-c d") #'(lambda () (interactive) (visit-shell2)))
+
+;---------ESSH--------
+(require 'essh)                                                    
+(defun essh-sh-hook ()                                             
+  (define-key sh-mode-map "\C-c\C-r" 'pipe-region-to-shell)        
+  (define-key sh-mode-map "\C-c\C-b" 'pipe-buffer-to-shell)        
+  (define-key sh-mode-map "\C-c\C-j" 'pipe-line-to-shell)          
+  (define-key sh-mode-map "\C-c\C-n" 'pipe-line-to-shell-and-step) 
+  (define-key sh-mode-map "\C-c\C-f" 'pipe-function-to-shell)      
+  (define-key sh-mode-map "\C-c\C-d" 'shell-cd-current-directory)) 
+(add-hook 'sh-mode-hook 'essh-sh-hook)
+(add-hook 'matlab-mode-hook 'essh-sh-hook) ;maybe not working
+(defun activate-essh ()
+  (use-local-map sh-mode-map))
+(global-set-key (kbd "<f4>") 'activate-essh)
+
+;---------LAYOUTS--------
+(defun cpp-layout-1 ()
+  "Create 4-pane layout of windows in the current frame, for C/C++ coding"
+  (interactive)
+  (when (buffer-file-name)
+    (delete-other-windows)
+    (save-selected-window
+      (split-window-horizontally)
+      (split-window-horizontally)
+      (select-window (next-window) t)
+      (select-window (next-window) t)      
+;      (select-window (next-window) t)      
+;      (switch-to-buffer (shell))
+      ;(split-window-horizontally (- (or compilation-window-height 10)))
+      (switch-to-buffer (shell))
+      (split-window-vertically)
+      (select-window (next-window) t)
+      (balance-windows)
+      (switch-to-buffer (or (get-buffer "*compilation*")
+                            (get-buffer "*scratch*"))))))
+(global-set-key (kbd "C-c 1") 'cpp-layout-1)
+
+(defun matlab-layout-1 ()
+  "Create 4-pane layout of windows in the current frame, for C/C++ coding"
+  (interactive)
+  (when (buffer-file-name)
+    (delete-other-windows)
+    (save-selected-window
+      (split-window-horizontally)
+      (select-window (next-window) t)
+;      (select-window (next-window) t)      
+;      (switch-to-buffer (shell))
+      ;(split-window-horizontally (- (or compilation-window-height 10)))
+      (switch-to-buffer (shell))
+      (split-window-vertically)
+      (select-window (next-window) t)
+      (balance-windows))))
+
+(global-set-key (kbd "C-c 2") 'matlab-layout-1)
+
+
+
+;--------LISP FUNCTIONS--------
+(defun xah-insert-random-number (NUM)
+  "Insert NUM random digits.
+NUM default to 5.
+Call `universal-argument' before for different count.
+URL `http://ergoemacs.org/emacs/elisp_insert_random_number_string.html'
+Version 2017-05-24"
+  (interactive "P")
+  (let (($charset "1234567890" )
+        ($baseCount 10))
+    (dotimes (_ (if (numberp NUM) (abs NUM) 5 ))
+      (insert (elt $charset (random $baseCount))))))

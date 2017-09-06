@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: hl
+# key: hl
+# --
+\hl{${1:}}

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: c0
+# key: c0
+# --
+cout << "${1:}\n";
