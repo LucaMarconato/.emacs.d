@@ -25,9 +25,10 @@
  '(font-latex-fontify-sectioning 1)
  '(package-selected-packages
    (quote
-    (dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling company-sourcekit ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
 
+(setq server-socket-dir "/tmp/emacs_server")
 ;(server-start)
 
 (let ((default-directory  "~/.emacs.d/lisp/"))
@@ -42,6 +43,11 @@
 
 ;(setq auto-save-file-name-transforms
 ;          `((".*" ,(concat user-emacs-directory "auto-save/") t))) 
+(setq auto-save-file-name-transforms
+      `((".*" "~/.emacs-saves/" t)))
+(setq backup-directory-alist '(("." . "~/.emacs-backups")))
+
+(require 'revbufs)
 
 ;;--------MY EXPENSES--------
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
@@ -115,7 +121,8 @@
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-
+(when (string= system-type "darwin")       
+  (setq dired-use-ls-dired nil))
 ;--------TIMESTAMP--------
 (require 'calendar)
  (defun insdate-insert-current-date (&optional omit-day-of-week-p)
@@ -145,7 +152,7 @@
 ;--------PARENTHESES--------
 (electric-indent-mode 1)
 (electric-pair-mode 1)
-(smartparens-mode 1)
+;(smartparens-mode 1)
 (xterm-mouse-mode 1)
 (show-paren-mode 1) 
 
@@ -166,7 +173,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 
 (defun my-universal-argument ()
   (interactive)
-  (setq prefix-arg (list 10))
+  (setq prefix-arg (list 5))
   (universal-argument--mode))
 
 (global-set-key (kbd "C-u") 'my-universal-argument)
@@ -273,8 +280,8 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;--------COMPANY (SWIFT)--------
 ;(add-to-list 'company-backends 'company-sourcekit)
 ;(add-to-list 'company-sourcekit)
-(require 'company-sourcekit)
-(add-to-list 'company-backends 'company-sourcekit)
+;(require 'company-sourcekit)
+;(add-to-list 'company-backends 'company-sourcekit)
 (add-hook 'swift-mode (lambda () (company-swift-init 1)))
 (setq company-idle-delay 0.03)
 (setq company-dabbrev-downcase 0.01)
@@ -284,7 +291,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;--------AUTOCOMPLETE (LATEX)--------
 (require 'auto-complete)
 (add-to-list 'ac-modes 'latex-mode) ; beware of using 'LaTeX-mode instead
-(require 'ac-math) ; package should be installed first 
+;(require 'ac-math) ; package should be installed first 
 (defun my-ac-latex-mode () ; add ac-sources for latex
    (setq ac-sources
          (append '(ac-source-math-unicode
@@ -352,7 +359,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
   (setq rtags-autostart-diagnostics t)
   (rtags-diagnostics)
   (setq rtags-completions-enabled t)
-  (push 'company-rtags company-backends)
+;  (push 'company-rtags company-backends)
   (global-company-mode)
   (define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
   ;; use rtags flycheck mode -- clang warnings shown inline
@@ -421,10 +428,26 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (setq matlab-shell-command-switches (list "-nodesktop"))
 (matlab-cedet-setup)
 
-;--------NEOTREE--------
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+;--------NEOTREE and PROJECTILE--------
+(projectile-mode)
+(global-set-key (kbd "C-;") 'projectile-find-file)
+;(global-set-key [f8] 'neotree-toggle)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-window-width 40)
 
+(defun neotree-project-dir ()
+  "Open NeoTree using the git root."
+  (interactive)
+  (let ((project-dir (projectile-project-root))
+        (file-name (buffer-file-name)))
+    (neotree-toggle)
+    (if project-dir
+        (if (neo-global--window-exists-p)
+            (progn
+              (neotree-dir project-dir)
+              (neotree-find file-name)))
+      (message "Could not find git project root."))))
+(global-set-key [f8] 'neotree-project-dir)
 ;--------LATEX-------- 
 (if (eq system-type 'darwin)
     (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
@@ -637,22 +660,51 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;             (global-set-key (kbd "C-x k") #'persp-kill-buffer))
 ;(setq persp-keymap-prefix (kbd "C-c p"))
 ;;(setq-default persp-keymap-prefix (kbd "C-c p"))
-(require 'persp-mode)
+;(require 'persp-mode)
 (setq wg-morph-on nil) ;; switch off animation ;TODO: check if working
 (setq persp-autokill-buffer-on-remove 'kill-weak) ;TODO: check if working
 ;(with-eval-after-load "persp-mode"
 ;  (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
 ;  (global-set-key (kbd "C-x k") #'persp-kill-buffer))
-;(setq persp-mode 1)
-(add-hook 'after-init-hook #'(lambda ()
-                               (persp-mode 1)
-                               ;(persp-mode-set-prefix-key (kbd "C-c p"))
-                               (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
-                               (global-set-key (kbd "C-c p c") #'switch-to-buffer)
-                               (global-set-key (kbd "C-x k") #'persp-kill-buffer)
-                               (setq persp-autokill-buffer-on-remove 1)
-                               )) ;NOTE: this must be put at the end of the configuration of persp-mode
+                                        ;(setq persp-mode 1)
+(use-package persp-mode
+  :defer 1
+  :init (setq-default persp-keymap-prefix (kbd "s-;"))
+  :config
+  (persp-mode 1)
+  (add-to-list 'persp-before-save-state-to-file-functions
+               (lambda (file persps persp-file)
+                 (setq-local require-final-newline nil)))
+  (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
+  (global-set-key (kbd "s-.") #'switch-to-buffer)
+  (setq-default
+   persp-auto-resume-time 0.1
+   persp-autokill-buffer-on-remove 'kill-weak))
 
+;; (add-hook 'after-init-hook #'(lambda ()
+;;                                (persp-mode 1)
+;;                                ;(persp-mode-set-prefix-key (kbd "C-c p"))
+;;                                (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
+;;                                (global-set-key (kbd "s-.") #'switch-to-buffer)
+;;                                (global-set-key (kbd "C-x k") #'persp-kill-buffer)
+;;                                (setq persp-autokill-buffer-on-remove 1)
+;;                                )) ;NOTE: this must be put at the end of the configuration of persp-mode
+
+(with-eval-after-load "persp-mode-projectile-bridge-autoloads"
+  (add-hook 'persp-mode-projectile-bridge-mode-hook
+            #'(lambda ()
+                (if persp-mode-projectile-bridge-mode
+                    (persp-mode-projectile-bridge-find-perspectives-for-all-buffers)
+                  (persp-mode-projectile-bridge-kill-perspectives))))
+  (add-hook 'after-init-hook
+            #'(lambda ()
+                (persp-mode-projectile-bridge-mode 1))
+            t))
+
+(defun persp-list-buffers (&optional arg)
+  (interactive "P")
+  (with-persp-buffer-list () (list-buffers arg)))
+(global-set-key (kbd "C-x C-b") #'persp-list-buffers)
 ;not working:
 ;; (with-eval-after-load "persp"
 ;;   (add-to-list 'persp-save-buffer-functions
@@ -725,16 +777,18 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;---------ESSH--------
 (require 'essh)                                                    
 (defun essh-sh-hook ()                                             
-  (define-key sh-mode-map "\C-c\C-r" 'pipe-region-to-shell)        
-  (define-key sh-mode-map "\C-c\C-b" 'pipe-buffer-to-shell)        
-  (define-key sh-mode-map "\C-c\C-j" 'pipe-line-to-shell)          
-  (define-key sh-mode-map "\C-c\C-n" 'pipe-line-to-shell-and-step) 
-  (define-key sh-mode-map "\C-c\C-f" 'pipe-function-to-shell)      
-  (define-key sh-mode-map "\C-c\C-d" 'shell-cd-current-directory)) 
+  (define-key shell-mode-map "\C-c\C-r" 'pipe-region-to-shell)        
+  (define-key shell-mode-map "\C-c\C-b" 'pipe-buffer-to-shell)        
+  (define-key shell-mode-map "\C-c\C-j" 'pipe-line-to-shell)          
+  (define-key shell-mode-map "\C-c\C-n" 'pipe-line-to-shell-and-step) 
+  (define-key shell-mode-map "\C-c\C-f" 'pipe-function-to-shell)      
+  (define-key shell-mode-map "\C-c\C-d" 'shell-cd-current-directory)) 
 (add-hook 'sh-mode-hook 'essh-sh-hook)
 (add-hook 'matlab-mode-hook 'essh-sh-hook) ;maybe not working
 (defun activate-essh ()
-  (use-local-map sh-mode-map))
+  (use-local-map shell-mode-map)
+  (set-process-query-on-exit-flag ad-return-value nil)
+  )
 (global-set-key (kbd "<f4>") 'activate-essh)
 
 ;---------LAYOUTS--------
@@ -791,3 +845,8 @@ Version 2017-05-24"
         ($baseCount 10))
     (dotimes (_ (if (numberp NUM) (abs NUM) 5 ))
       (insert (elt $charset (random $baseCount))))))
+
+;--------COMMENTS--------
+;http://raebear.net/comp/emacscolors.html
+(set-face-foreground 'font-lock-comment-face "grey36")
+(set-face-foreground 'font-lock-string-face "orange red")

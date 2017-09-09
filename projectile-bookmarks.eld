@@ -1,0 +1,1 @@
+("~/" "~/programming/words_recogniser/" "~/.emacs.d/")
