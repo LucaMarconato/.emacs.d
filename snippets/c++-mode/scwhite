@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: scwhite
+# key: scwhite
+# --
+std::cout << "\033[0m";

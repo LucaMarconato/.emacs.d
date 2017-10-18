@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sc1
+# key: sc1
+# --
+std::cout << "${1:} = " << $1 << "

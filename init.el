@@ -1,16 +1,6 @@
-;; Added by Package.el.  This must come before configurations of installed packages. 
+ ;; Added by Package.el.  This must come before configurations of installed packages. 
 (package-initialize)
 
-(prefer-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-default-coding-systems 'utf-8)
-;(setq mac-command-modifier 'control)
-;(setq mac-control-modifier 'meta)
-;(setq sml/no-confirm-load-theme t)
-(setq custom-safe-themes t)
-(load-theme 'manoj-dark)
-;(load-theme 'monokai)
-(global-linum-mode 1)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 ;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -28,6 +18,18 @@
     (persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace)))
 
+(benchmark-init/activate)
+
+(prefer-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+;(setq mac-command-modifier 'control)
+;(setq mac-control-modifier 'meta)
+;(setq sml/no-confirm-load-theme t)
+(setq custom-safe-themes t)
+(load-theme 'manoj-dark)
+;(load-theme 'monokai)
+(global-linum-mode 1)
 (setq server-socket-dir "/tmp/emacs_server")
 ;(server-start)
 
@@ -48,6 +50,14 @@
 (setq backup-directory-alist '(("." . "~/.emacs-backups")))
 
 (require 'revbufs)
+
+(setq ess-smart-S-assign-key "§")
+;; (ess-toggle-S-assign nil)
+;; (ess-toggle-S-assign nil)
+;; (add-hook 'r-mode (local-set-key (kbd "C-=") (lambda () (interactive) (insert "<- "))))
+(global-set-key (kbd "C-=") (lambda () (interactive) (insert "<- ")))
+;; (ess-toggle-underscore nil)
+(setq comint-prompt-read-only nil)
 
 ;;--------MY EXPENSES--------
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
@@ -431,6 +441,12 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;--------NEOTREE and PROJECTILE--------
 (projectile-mode)
 (global-set-key (kbd "C-;") 'projectile-find-file)
+(setq projectile-ignored-projects '("/Users/macbook"))
+(setq projectile-ignored-projects '("~/"))
+(setq projectile-ignored-projects '("/Users/macbook/"))
+;; (setq projectile-ignored-projects "/Users/macbook")
+(setq projectile-globally-ignored-directories '("/Users/macbook"))
+;; (setq projectile-globally-ignored-directories "/Users/macbook")
 ;(global-set-key [f8] 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-window-width 40)
@@ -499,7 +515,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;    '("italic-command" "bold-command" "italic-declaration" "bold-declaration"))
 ;
 ;(setq exec-path (append exec-path '("/Library/TeX/texbin")))
-(add-hook 'LaTeX-mode-hook (lambda () (smartparens-mode 1)))
+;(add-hook 'LaTeX-mode-hook (lambda () (smartparens-mode 1)))
 ;(setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
@@ -616,6 +632,41 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;    TeX-command-list)))
 ;(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
 
+;; make latexmk available via C-c C-c
+;; Note: SyncTeX is setup via ~/.latexmkrc (see below)
+;; (add-hook 'LaTeX-mode-hook (lambda ()
+;;   (push
+;;     '("latexmk" "latexmk -pdf %s" TeX-run-TeX nil t
+;;       :help "Run latexmk on file")
+;;     TeX-command-list)))
+;; (add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
+
+;; use Skim as default pdf viewer
+;; Skim's displayline is used for forward search (from .tex to .pdf)
+;; option -b highlights the current line; option -g opens Skim in the background
+(setq
+ ;; Set the list of viewers for Mac OS X.
+ TeX-view-program-list
+ '(("Preview.app" "open -a Preview.app %o")
+   ;; ("Skim" "open -a Skim.app %o; exec osascript -e 'tell application \"Skim\" to revert front document'")
+   ("Skim" "open -a Skim.app %o")
+;;    exec osascript \
+;; -e "tell application \"Skim\"" \
+;; -e "activate" \
+;; -e "open ((POSIX file \"$filename_prefix/$*\") as string)" \
+;; -e "revert front document" \
+;; -e "end tell";
+   ("displayline" "displayline %n %o %b")
+   ("open" "open %o"))
+ ;; Select the viewers for each file type.
+ TeX-view-program-selection
+ '((output-dvi "open")
+   (output-pdf "Skim")
+   (output-html "open")))
+;; (setq TeX-view-program-selection '((output-pdf "skim-viewer")))
+;; (setq TeX-view-program-list
+;;       '(("skim-viewer" "/Applications/Skim.app/Contents/MacOS/Skim -o %(line-number) %(pdf-file-name) %(tex-file-name)")))
+
 ; use Skim as default pdf viewer
 ;; Skim's displayline is used for forward search (from .tex to .pdf)
 ;; option -b highlights the current line; option -g opens Skim in the background  
@@ -705,6 +756,19 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
   (interactive "P")
   (with-persp-buffer-list () (list-buffers arg)))
 (global-set-key (kbd "C-x C-b") #'persp-list-buffers)
+
+(with-eval-after-load "persp-mode-projectile-bridge-mode"
+(when persp-mode-projectile-bridge-mode
+  (remove-hook 'find-file-hook
+                 #'persp-mode-projectile-bridge-hook-find-file)
+  (remove-hook 'projectile-find-file-hook
+                 #'persp-mode-projectile-bridge-hook-switch))
+(add-hook 'persp-mode-projectile-bridge-mode
+ #'(lambda ()
+      (remove-hook 'find-file-hook
+                 #'persp-mode-projectile-bridge-hook-find-file)
+      (remove-hook 'projectile-find-file-hook
+                 #'persp-mode-projectile-bridge-hook-switch))))
 ;not working:
 ;; (with-eval-after-load "persp"
 ;;   (add-to-list 'persp-save-buffer-functions
@@ -831,8 +895,6 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 
 (global-set-key (kbd "C-c 2") 'matlab-layout-1)
 
-
-
 ;--------LISP FUNCTIONS--------
 (defun xah-insert-random-number (NUM)
   "Insert NUM random digits.
@@ -846,6 +908,10 @@ Version 2017-05-24"
     (dotimes (_ (if (numberp NUM) (abs NUM) 5 ))
       (insert (elt $charset (random $baseCount))))))
 
+(defun bmu() (interactive) (buf-move-up))
+(defun bmd() (interactive) (buf-move-down))
+(defun bmr() (interactive) (buf-move-right))
+(defun bml() (interactive) (buf-move-left))
 ;--------COMMENTS--------
 ;http://raebear.net/comp/emacscolors.html
 (set-face-foreground 'font-lock-comment-face "grey36")

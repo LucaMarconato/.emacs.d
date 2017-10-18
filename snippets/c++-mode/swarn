@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: swarn
+# key: swarn
+# --
+std::cout << "warning: ${1:} = " << $1 << "

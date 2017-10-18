@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: scred
+# key: scred
+# --
+std::cout << "\033[1;31m";

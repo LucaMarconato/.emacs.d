@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cwhite
+# key: cwhite
+# --
+cout << "\033[0m";

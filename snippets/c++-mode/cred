@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cred
+# key: cred
+# --
+cout << "\033[1;31m";
