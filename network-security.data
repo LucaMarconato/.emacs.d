@@ -1,0 +1,3 @@
+(
+ (:id "sha1:11683b1588d7b206ef598a9f4bd9d71fa636842d" :fingerprint "sha1:dd:31:f6:99:94:5b:84:77:6b:45:92:b7:ec:d9:76:94:11:5a:48:cd" :host "smtp.mail.me.com:587" :conditions (:insecure :unknown-ca :invalid))
+)

@@ -16,7 +16,10 @@
  '(package-selected-packages
    (quote
     (persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
- '(save-place t nil (saveplace)))
+ '(save-place t nil (saveplace))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "smtp.mail.me.com")
+ '(smtpmail-smtp-service 587))
 
 (benchmark-init/activate)
 
@@ -58,6 +61,11 @@
 (global-set-key (kbd "C-=") (lambda () (interactive) (insert "<- ")))
 ;; (ess-toggle-underscore nil)
 (setq comint-prompt-read-only nil)
+;; (setq transient-mark-mode nil)
+
+(global-set-key (kbd "<C-s-268632070>") 'toggle-frame-fullscreen)
+
+;; (add-to-list 'warning-suppress-types '(undo discard-info)) ;TODO: fix
 
 ;;--------MY EXPENSES--------
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
@@ -90,6 +98,8 @@
      (list (line-beginning-position) (line-beginning-position 2)))))
 
 (when (fboundp 'winner-mode) (winner-mode 1))
+(global-set-key (kbd "C-c h") 'winner-undo)
+(global-set-key (kbd "C-c l") 'winner-redo)
 
 (setq comint-prompt-read-only t)
 
@@ -133,6 +143,7 @@
       `((".*" ,temporary-file-directory t)))
 (when (string= system-type "darwin")       
   (setq dired-use-ls-dired nil))
+
 ;--------TIMESTAMP--------
 (require 'calendar)
  (defun insdate-insert-current-date (&optional omit-day-of-week-p)
@@ -217,9 +228,9 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;                (setq desktop-file-modtime (nth 5 (file-attributes (desktop-full-file-name)))))) 
 ;
 ;--------HIGHLIGHT SYMBOL--------
-(global-set-key [(control f7)] 'highlight-symbol)
-(global-set-key [f7] 'highlight-symbol-next)
-(global-set-key [(shift f7)] 'highlight-symbol-prev)
+(global-set-key (kbd "<f7>") 'highlight-symbol)
+(global-set-key [f6] 'highlight-symbol-next)
+(global-set-key [f5] 'highlight-symbol-prev)
 (global-set-key [(meta f7)] 'highlight-symbol-query-replace)
 
 ;--------SCROLLING--------
@@ -281,7 +292,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 
 ;--------AVY--------
 (global-set-key (kbd "C-:") 'avy-goto-char)
-(global-set-key (kbd "C-'") 'avy-goto-char-2)
+;; (global-set-key (kbd "C-'") 'avy-goto-char-2)
 ;(global-set-key (kbd "C-`") 'avy-goto-line) ;to use this when I will have remapped the keys
 (global-set-key (kbd "M-`") 'avy-goto-line) 
 ;(global-set-key (kbd "M-g w") 'avy-goto-word-1)
@@ -421,6 +432,9 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (global-set-key (kbd "M-S") 'mc/mark-previous-like-this)
 (global-set-key (kbd "M-Y") 'mc/unmark-previous-like-this)
 (global-set-key (kbd "M-J") 'mc/skip-to-previous-like-this)
+(require 'mc-hide-unmatched-lines-mode)
+(global-set-key (kbd "C-'") 'mc-hide-unmatched-lines-mode)
+
 
 ;--------WINDMOVE--------
 (windmove-default-keybindings)
@@ -699,7 +713,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(hl-line ((t (:background "grey10")))))
 
 ;--------PERSPECTIVE--------
 ;(with-eval-after-load "persp-mode-autoloads"
@@ -908,11 +922,38 @@ Version 2017-05-24"
     (dotimes (_ (if (numberp NUM) (abs NUM) 5 ))
       (insert (elt $charset (random $baseCount))))))
 
+(defun xah-insert-random-dna (NUM)
+  "Insert NUM random digits.
+NUM default to 5.
+Call `universal-argument' before for different count.
+based on URL `http://ergoemacs.org/emacs/elisp_insert_random_number_string.html'
+based on Version 2017-05-24"
+  (interactive "P")
+  (let (($charset "ACGT" )
+        ($baseCount 4))
+    (dotimes (_ (if (numberp NUM) (abs NUM) 5 ))
+      (insert (elt $charset (random $baseCount))))))
+
 (defun bmu() (interactive) (buf-move-up))
 (defun bmd() (interactive) (buf-move-down))
 (defun bmr() (interactive) (buf-move-right))
 (defun bml() (interactive) (buf-move-left))
+(global-set-key (kbd "C-c P") 'buf-move-up)
+(global-set-key (kbd "C-c N") 'buf-move-down)
+(global-set-key (kbd "C-c L") 'buf-move-right)
+(global-set-key (kbd "C-c H") 'buf-move-left)
+
 ;--------COMMENTS--------
 ;http://raebear.net/comp/emacscolors.html
 (set-face-foreground 'font-lock-comment-face "grey36")
 (set-face-foreground 'font-lock-string-face "orange red")
+
+
+
+
+;-----others----
+(set-face-foreground 'highlight nil)
+(set-face-background 'hl-line "#3e4446")
+
+;--------CODE FOLDING--------
+(add-hook 'prog-mode-hook #'hs-minor-mode)

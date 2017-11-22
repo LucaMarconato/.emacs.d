@@ -1,0 +1,26 @@
+;; -*- emacs-lisp -*- <17/11/08 02:03:59 /Users/macbook/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["scp" nil "idun.hpc.ntnu.no" nil nil]
+  nil)
+ (["scp" nil "dhcp-10-22-47-104.wlan.ntnu.no" nil nil]
+  nil)
+ (["scp" nil "129.241.110.224" nil nil]
+  nil)
+ (["scp" nil "vilje.hpc.ntnu.no" nil nil]
+  nil)
+ (["scp" nil "training.hpc.ntnu.no" nil nil]
+  nil)
+ (["scp" nil "storage.local" nil nil]
+  nil)
+ (["scp" nil "169.254.30.160" nil nil]
+  nil)
+ (["scp" nil "158.110.96.187" nil nil]
+  nil)
+ (["scp" nil "ec2-54-194-248-125.eu-west-1.compute.amazonaws.com" nil nil]
+  nil)
+ (["scp" nil "ec2-54-154-247-238.eu-west-1.compute.amazonaws.com" nil nil]
+  nil)
+ (["scp" nil "newton.fluid.tuwien.ac.at" nil nil]
+  nil))
