@@ -2,4 +2,4 @@
 # name: monthly
 # key: m
 # --
->MONTHLY_PAYMENT: BEGIN_TIME = ${1:} | END_TIME = ${2:} | AMOUNT = ${3:} | CURRENCY = ${4:$$(yas-choose-value '("NOK" "EUR"))} | CATEGORY = ${5:} | OPTIONAL_DESCRIPTION = ${6:}
+>MONTHLY_PAYMENT: BEGIN_TIME = ${1:} | END_TIME = ${2:} | AMOUNT = ${3:} | CURRENCY = ${4:$$(yas-choose-value '("EUR" "NOK" "DKK"))} | CATEGORY = ${5:$$(yas-choose-value '("supermarket" "fuel" "train" "flight" "tolls" "bar/snacks" "nightlife" "restaurant" "medical" "bus" "airport_bus" "sport_equipment" "training" "house_stuff" "electronic equipment" "telephone_plan" "books" "software/plans" "carelessness" "burocracy" "housing" "uncategorized" "gifts" "hotel/Airbnb"))} | OPTIONAL_DESCRIPTION = ${6:}

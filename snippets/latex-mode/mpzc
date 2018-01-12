@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mpzc 
+# key: mpzc
+# --
+\mathpzc{${1:char}}

@@ -15,7 +15,7 @@
  '(font-latex-fontify-sectioning 1)
  '(package-selected-packages
    (quote
-    (persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.mail.me.com")
@@ -44,23 +44,29 @@
 (add-to-list 'exec-path "/Applications/Octave.app/Contents/Resources/usr/bin/")
 (add-to-list 'exec-path "/Applications/MATLAB_R2017a.app/bin/")
 
-(global-set-key (kbd "C-c n") 'recompile)
+(global-set-key (kbd "C-c n") 'compile)
 (defun my_compile(command) (interactive)
        (bookmark-delete "my_compile")
        (bookmark-set "my_compile")
-       (recompile)
+       (add-hook 'compilation-finish-functions 'my-compilation-finish-function)
+       (compile)
+       (setq my_compilation_command command)
+       ;TODO: read the last characters, if they are "Stop.\nbash-3.2$ ", then call (my_compile2), the same if the string is ] "Error 1\nbash-3.2$"
+       )
+(defun my-compilation-finish-function(buffer desc) (interactive)
        (switch-to-buffer-other-window "*shell*")
        (comint-clear-buffer)
        (setq unread-command-events (listify-key-sequence (kbd "M->")))
        (setq unread-command-events (listify-key-sequence (kbd "C-a")))
        (setq unread-command-events (listify-key-sequence (kbd "C-k")))
-       (insert command)
-       (setq unread-command-events (listify-key-sequence (kbd "RET")))      
-       ;TODO: read the last characters, if they are "Stop.\nbash-3.2$ ", then call (my_compile2), the same if the string is ] "Error 1\nbash-3.2$"
+       (insert my_compilation_command)
+       (setq unread-command-events (listify-key-sequence (kbd "RET")))
+       (remove-hook 'compilation-finish-functions 'my-compilation-finish-function nil)
        )
+
 (defun my_compile2() (interactive)
        (bookmark-jump-other-window "my_compile"))
-(global-set-key (kbd "C-c [") 'my_compile("time ./a.out"))
+(global-set-key (kbd "C-c [") '(lambda () (interactive) (my_compile "time ./a.out")))
 (global-set-key (kbd "C-c {") '(lambda () (interactive) (my_compile "make run")))
 (global-set-key (kbd "C-c } }") '(lambda () (interactive) (my_compile "make ftp")))
 (global-set-key (kbd "C-c ]") 'my_compile2)
@@ -100,6 +106,41 @@
 (global-set-key (kbd "<C-s-268632070>") 'toggle-frame-fullscreen)
 
 ;; (add-to-list 'warning-suppress-types '(undo discard-info)) ;TODO: fix
+(global-unset-key (kbd "s-x"))
+
+(defun sync-with-el (name)
+  (message name)
+  "Syncing with el"
+  (interactive)
+  (let ((file name)
+        (script "sh sync_with_el.sh"))
+        ;; (script "touch ~/Desktop/ehiehiehiehi"))
+  (unless file (user-error "Buffer must be visiting a file"))
+    (shell-command (format "%s %s" script (shell-quote-argument file)))))
+
+;; (defun sweave-to-pdf ()
+;;   "Export a sweave file to pdf."
+;;   (interactive)
+;;   (let ((file buffer-file-name)
+;;         (script "~/Scripts/Shell/sweave_to_pdf.sh"))
+;;     (unless file (user-error "Buffer must be visiting a file"))
+;;     (shell-command (format "%s %s" script (shell-quote-argument file)))))
+
+;--------latex and el--------
+(defun sync-with-el-compilation-finish-function(file) (interactive)
+       (sync-with-el file)
+       ;; (insert "ehiehiehiehi")
+       (remove-hook 'TeX-after-compilation-finished-functions 'sync-with-el-compilation-finish-function nil)
+       )
+
+(global-set-key (kbd "s-<backspace>") '(lambda () (interactive)
+                                         (setq file buffer-file-name)
+                                         (add-hook 'TeX-after-compilation-finished-functions 'sync-with-el-compilation-finish-function) 
+                                         (TeX-command-master)))
+;; (call-process-shell-command "sync_with_el.sh" nil nil nil)
+;; (eval-after-load "tex-mode"
+;;   '(add-to-list 'tex-compile-commands
+                ;; '(sync-with-el) t))
 
 ;;--------MY EXPENSES--------
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))

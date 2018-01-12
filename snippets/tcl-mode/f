@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: f
+# key: f
+# --
+>EXPENSE: TIME = 2017-${1:}-${2:} | AMOUNT = ${3:} | CURRENCY = ${4:$$(yas-choose-value '("EUR" "NOK" "DKK"))} | CATEGORY = ${5:$$(yas-choose-value '("supermarket" "fuel" "train" "flight" "tolls" "bar/snacks" "nightlife" "restaurant" "medical" "bus" "airport_bus" "sport_equipment" "training" "house_stuff" "electronic_equipment" "telephone_plan" "books" "software/plans" "carelessness" "burocracy" "housing" "uncategorized" "gifts" "hotel/Airbnb"))} | OPTIONAL_DESCRIPTION = ${6:}
+$0

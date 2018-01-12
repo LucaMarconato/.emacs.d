@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("example.tex"
+(("my_compile"
+ (filename . "~/programming/c++/algorithms/kmp/kmp.cpp")
+ (front-context-string . "\n    for(int i =")
+ (rear-context-string . "\n    int k = -1;")
+ (position . 442))
+("my_swap"
+ (filename . "~/programming/c++/ova/0103/input.txt")
+ (front-context-string)
+ (rear-context-string . "5 26 84 56 94 35")
+ (position . 2394))
+("example.tex"
  (filename . "~/programming/cobal/example.tex")
  (front-context-string . "\n\n%%% Local Vari")
  (rear-context-string . "es.\nWe remind th")
