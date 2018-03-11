@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: r1
+# key: r1
+# --
+'${1:}': $1

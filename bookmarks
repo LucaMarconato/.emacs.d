@@ -3,10 +3,20 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("my_compile"
- (filename . "~/programming/c++/algorithms/kmp/kmp.cpp")
- (front-context-string . "\n    for(int i =")
- (rear-context-string . "\n    int k = -1;")
- (position . 442))
+ (filename . "~/programming/c++/google_hash/ride/main.cpp")
+ (front-context-string . "[best_i] == 221)")
+ (rear-context-string . "       if(rides0")
+ (position . 2356))
+("my_jumping_bookmark0"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . "\n               ")
+ (rear-context-string . "ping_bookmark0\")")
+ (position . 6144))
+("my_jumping_bookmark"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . "\n\n(global-set-ke")
+ (rear-context-string . "itched to 0\"))))")
+ (position . 6467))
 ("my_swap"
  (filename . "~/programming/c++/ova/0103/input.txt")
  (front-context-string)

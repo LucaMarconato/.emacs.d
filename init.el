@@ -1,5 +1,4 @@
- ;; Added by Package.el.  This must come before configurations of installed packages. 
-(package-initialize)
+;Added by Package.el.  This must come before configurations of installed packages. (package-initialize)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -12,16 +11,18 @@
  '(custom-safe-themes
    (quote
     ("a49760e39bd7d7876c94ee4bf483760e064002830a63e24c2842a536c6a52756" default)))
- '(font-latex-fontify-sectioning 1)
+ '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.mail.me.com")
  '(smtpmail-smtp-service 587))
 
-(benchmark-init/activate)
+;; (benchmark-init/activate)
+(package-initialize)
+(require 'use-package)
 
 (prefer-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -31,6 +32,11 @@
 ;(setq sml/no-confirm-load-theme t)
 (setq custom-safe-themes t)
 (load-theme 'manoj-dark)
+;; (setq-default mode-line-buffer-identification
+;;   '(:eval (ml-propertized-buffer-identification "%12b")))
+ ;; (mode-line-buffer-id ((t (:overline "red" :underline "red"))))
+(set-face-attribute 'mode-line-buffer-id nil :foreground "blue")
+(set-face-attribute 'mode-line-buffer-id nil :background "white")
 ;(load-theme 'monokai)
 (global-linum-mode 1)
 (setq server-socket-dir "/tmp/emacs_server")
@@ -49,7 +55,7 @@
        (bookmark-delete "my_compile")
        (bookmark-set "my_compile")
        (add-hook 'compilation-finish-functions 'my-compilation-finish-function)
-       (compile)
+       (recompile)
        (setq my_compilation_command command)
        ;TODO: read the last characters, if they are "Stop.\nbash-3.2$ ", then call (my_compile2), the same if the string is ] "Error 1\nbash-3.2$"
        )
@@ -98,7 +104,7 @@
 ;; (ess-toggle-S-assign nil)
 ;; (ess-toggle-S-assign nil)
 ;; (add-hook 'r-mode (local-set-key (kbd "C-=") (lambda () (interactive) (insert "<- "))))
-(global-set-key (kbd "C-=") (lambda () (interactive) (insert "<- ")))
+(global-set-key (kbd "C-=") (lambda () (interactive) (if (equal (char-before) (string-to-char " ")) (insert "<- ") (insert " <- "))))
 ;; (ess-toggle-underscore nil)
 (setq comint-prompt-read-only nil)
 ;; (setq transient-mark-mode nil)
@@ -107,6 +113,9 @@
 
 ;; (add-to-list 'warning-suppress-types '(undo discard-info)) ;TODO: fix
 (global-unset-key (kbd "s-x"))
+(global-unset-key (kbd "s-l"))
+
+(setq reb-change-syntax 'string)
 
 (defun sync-with-el (name)
   (message name)
@@ -125,6 +134,116 @@
 ;;         (script "~/Scripts/Shell/sweave_to_pdf.sh"))
 ;;     (unless file (user-error "Buffer must be visiting a file"))
 ;;     (shell-command (format "%s %s" script (shell-quote-argument file)))))
+
+;--------PYTHON, IPYTHON--------
+(require 'python)
+(setq python-indent-offset 4)
+(add-hook 'python-mode-hook
+      (lambda ()
+        (setq indent-tabs-mode t)
+        (setq tab-width 4)
+        (setq python-indent 4)))
+
+(setq scroll-down-aggressively 1)
+
+(setq py-split-window-on-execute nil)
+;; Make C-c C-c behave like C-u C-c C-c in Python mode
+(define-key python-mode-map (kbd "C-c C-c")
+  (lambda () (interactive) (python-shell-send-buffer t)))
+
+;; (elpy-enable)
+
+;--------PYTHON--------
+
+(defun python-shell-parse-command ()
+  "Return the string used to execute the inferior Python process."
+  "/usr/bin/python3 -i")
+
+(setq py-python-command "python3")
+(setq py-shell-name "python3")
+(setq python-shell-interpreter "python3")
+(global-set-key (kbd "C-c C-<backspace>") '(lambda () (interactive) (kill-process "*Python*")))
+(global-set-key (kbd "C-c <backspace>") '(lambda () (interactive) (kill-process "*Python*") (run-python (python-shell-calculate-
+
+(with-eval-after-load 'python
+  (defun python-shell-completion-native-try ()
+    "Return non-nil if can trigger native completion."
+    (let ((python-shell-completion-native-enable t)
+          (python-shell-completion-native-output-timeout
+           python-shell-completion-native-try-output-timeout))
+      (python-shell-completion-native-get-completions
+       (get-buffer-process (current-buffer))
+       nil "_"))))
+
+;--------IPYTHON--------
+
+;; (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
+
+;; (setq python-shell-interpreter "/usr/local/bin/ipython"
+;;    python-shell-interpreter-args "--profile=dev -i --simple-prompt --pprint")
+
+;; (defun python-shell-parse-command () "/usr/local/bin/ipython
+;; --profile=dev -i --simple-prompt --pprint")
+
+;; (setq py-python-command "ipython")
+;; (setq py-shell-name "ipython")
+;; (setq python-shell-interpreter "ipython")
+
+;--------WEB--------
+(require 'multi-web-mode)
+(setq mweb-default-major-mode 'html-mode)
+(setq mweb-tags 
+  '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
+    (js-mode  "<script[^>]*>" "</script>")))
+    ;; (css-mode "<style[^>]*>" "</style>")))
+(setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
+(multi-web-global-mode 1)
+
+;--------JUMP BETWEEN BOOKMARKS--------
+;; (defun my-bookmark-jump-other-frame (bookmark)
+;;   "Jump to BOOKMARK in another frame.  See `bookmark-jump' for more."
+;;   (interactive
+;;    (list (bookmark-completing-read "Jump to bookmark (in another frame)"
+;;                                    bookmark-current-bookmark)))
+;;   (bookmark-jump bookmark 'switch-to-buffer-other-frame))
+(defun my-jumping-bookmark-jump(bookmark_name)
+  (setq pop-up-frames t)
+  (bookmark-jump-other-window bookmark_name)
+  (setq pop-up-frames nil))
+
+(defun my-jumping-bookmark-set() (interactive)
+       (defvar my_jumping_bookmark_alternator)
+       (setq my_jumping_bookmark_alternator 0)
+       (bookmark-delete "my_jumping_bookmark0")
+       (bookmark-delete "my_jumping_bookmark1")
+       (bm-remove-all-all-buffers)
+       (bookmark-set "my_jumping_bookmark0")
+       (bm-toggle)
+       (message "set"))
+
+(defun my-jumping-bookmark-switch() (interactive)
+       (if (= (mod my_jumping_bookmark_alternator 2) 0)
+           (progn (bookmark-set "my_jumping_bookmark1")
+                  (bm-toggle)
+                  ;; (bookmark-jump "my_jumping_bookmark0") ;this does not jump between frames or windows, only between positions in the same buffer
+                  (my-jumping-bookmark-jump "my_jumping_bookmark0") ;this does not jump between windows or positions in the same buffer, only between frames
+                  ;; (bm-toggle) ;I used this in the beginning, so to remove the highlighting only in the current line, but there is a bug in bm so if you go to the last position in a buffer, the current line is not influenced by bm-toggle
+                  (bm-remove-all-current-buffer)
+                  (bookmark-delete "my_jumping_bookmark0")
+                  (setq my_jumping_bookmark_alternator 1)
+                  (message "switched to 1"))
+         (progn (bookmark-set "my_jumping_bookmark0")
+                (bm-toggle)
+                ;; (bookmark-jump "my_jumping_bookmark1")
+                (my-jumping-bookmark-jump "my_jumping_bookmark1")
+                ;; (bm-toggle)
+                (bm-remove-all-current-buffer)
+                (bookmark-delete "my_jumping_bookmark1")
+                (setq my_jumping_bookmark_alternator 0)
+                (message "switched to 0"))))
+
+(global-set-key (kbd "C-c C-,") 'my-jumping-bookmark-set)
+(global-set-key (kbd "C-c C-.") 'my-jumping-bookmark-switch)
 
 ;--------latex and el--------
 (defun sync-with-el-compilation-finish-function(file) (interactive)
@@ -385,7 +504,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;(setq company-sourcekit-verbose f) ;how to set to false?
 
 ;--------AUTOCOMPLETE (LATEX)--------
-(require 'auto-complete)
+(use-package auto-complete)
 (add-to-list 'ac-modes 'latex-mode) ; beware of using 'LaTeX-mode instead
 ;(require 'ac-math) ; package should be installed first 
 (defun my-ac-latex-mode () ; add ac-sources for latex
@@ -467,7 +586,7 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;--------YASNIPPET-------- 
 (add-to-list 'load-path
              "~/.emacs.d/snippets/latex")
-(require 'yasnippet)
+(use-package yasnippet)
 (yas-reload-all)
 (yas-global-mode 1)
 (require 'popup) ; use popup menu for yas-choose-value
@@ -498,6 +617,11 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 (setq yas-also-auto-indent-first-line t)
 (require 'warnings)
 (add-to-list 'warning-suppress-types '(yasnippet backquote-change))
+
+;; ;the next three lines are for using yasnippet in the minibuffer
+;; (add-hook 'minibuffer-setup-hook 'yas-minor-mode)
+;; (yas--define-parents 'minibuffer-inactive-mode '(org-mode))
+;; (define-key minibuffer-local-map (kbd "C-c y") 'yas-maybe-expand)
 ;--------MULTPLE CURSORS--------
 (global-set-key (kbd "C-c m l") 'mc/edit-lines)
 (global-set-key (kbd "C-c m g") 'mc/mark-all-like-this)
@@ -803,6 +927,8 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 ;(require 'persp-mode)
 (setq wg-morph-on nil) ;; switch off animation ;TODO: check if working
 (setq persp-autokill-buffer-on-remove 'kill-weak) ;TODO: check if working
+(setq persp-kill-foreign-buffer-behaviour-choices 'kill)
+(setq persp-kill-foreign-buffer-behaviour 'kill)
 ;(with-eval-after-load "persp-mode"
 ;  (global-set-key (kbd "C-x b") #'persp-switch-to-buffer)
 ;  (global-set-key (kbd "C-x k") #'persp-kill-buffer))
@@ -819,7 +945,8 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
   (global-set-key (kbd "s-.") #'switch-to-buffer)
   (setq-default
    persp-auto-resume-time 0.1
-   persp-autokill-buffer-on-remove 'kill-weak))
+   persp-autokill-buffer-on-remove 'kill-weak)
+   persp-kill-foreign-buffer-behaviour-choices 'kill)
 
 ;; (add-hook 'after-init-hook #'(lambda ()
 ;;                                (persp-mode 1)
@@ -984,6 +1111,28 @@ These commands include \\[set-mark-command] and \\[start-kbd-macro]."
 
 (global-set-key (kbd "C-c 2") 'matlab-layout-1)
 
+(defun python-layout-1 ()
+  "Create 4-pane layout of windows in the current frame, for Python coding"
+  (interactive)
+  (when (buffer-file-name)
+    (delete-other-windows)
+    (save-selected-window
+      (split-window-horizontally)
+      (split-window-horizontally)      
+      (balance-windows)
+      (select-window (next-window) t)
+      (select-window (next-window) t)
+      (delete-window)
+      (select-window (next-window) t)
+      (split-window-vertically)
+      (split-window-horizontally)      
+      (select-window (next-window) t)
+      (select-window (next-window) t)
+      (let ((current-prefix-arg -60)) (call-interactively 'enlarge-window))
+      (switch-to-buffer (get-buffer "*shell*")))))
+
+(global-set-key (kbd "C-c 3") 'python-layout-1)
+
 ;--------LISP FUNCTIONS--------
 (defun xah-insert-random-number (NUM)
   "Insert NUM random digits.
@@ -1032,3 +1181,4 @@ based on Version 2017-05-24"
 
 ;--------CODE FOLDING--------
 (add-hook 'prog-mode-hook #'hs-minor-mode)
+

@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: lmc
+# key: lmc
+# --
+\\section*{Pagina \$${1:}\$}
+\\begin{figure}[h!]
+  \\centering
+  \\begin{minipage}{\\linewidth}
+    \\centering
+    \\includegraphics[width=\\linewidth]{figures/$1.png}
+    \\label{fig:$1}
+  \\end{minipage}
+\\end{figure}
+${2:commento}
+\$\\\\ \$\\noindent\\rule{16cm}{0.4pt}
+\newpage
+
+${3:}

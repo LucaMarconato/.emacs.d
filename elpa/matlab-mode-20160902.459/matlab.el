@@ -292,7 +292,7 @@ additional cases as the need arrises."
   :group 'matlab
   :type 'boolean)
 
-(defcustom matlab-fill-fudge 10
+(defcustom matlab-fill-fudge 110 ;WARNING:MODIFIED:TODO: this was 10
   "Number of characters around `fill-column' we can fudge filling.
 Basically, there are places that are very convenient to fill at, but
 might not be the closest fill spot, or occur after `fill-column'.
@@ -303,7 +303,7 @@ move there to boost the amount of fill leverage we can get."
   :group 'matlab
   :type 'integer)
 
-(defcustom matlab-fill-fudge-hard-maximum 79
+(defcustom matlab-fill-fudge-hard-maximum 179 ;WARNING:MODIFIED:TODO: this was 79
   "The longest line allowed when auto-filling code.
 This overcomes situations where the `fill-column' plus the
 `matlab-fill-fudge' is greater than some hard desired limit."
