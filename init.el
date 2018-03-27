@@ -14,7 +14,7 @@
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (helm pdf-tools epc jedi evil vlf multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess undo-tree icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.mail.me.com")
@@ -135,6 +135,9 @@
 ;;     (unless file (user-error "Buffer must be visiting a file"))
 ;;     (shell-command (format "%s %s" script (shell-quote-argument file)))))
 
+;; (global-set-key (kbd "§") '(lambda () (interactive) (evil-mode) (message "toggling evil mode")))
+
+;load helm configuration from https://github.com/thierryvolpiatto/emacs-tv-config/blob/master/init-helm-thierry.el
 ;--------PYTHON, IPYTHON--------
 (require 'python)
 (setq python-indent-offset 4)
@@ -150,6 +153,7 @@
 ;; Make C-c C-c behave like C-u C-c C-c in Python mode
 (define-key python-mode-map (kbd "C-c C-c")
   (lambda () (interactive) (python-shell-send-buffer t)))
+;; (add-hook 'python-mode-hook 'jedi:setup)
 
 ;; (elpy-enable)
 
@@ -163,7 +167,7 @@
 (setq py-shell-name "python3")
 (setq python-shell-interpreter "python3")
 (global-set-key (kbd "C-c C-<backspace>") '(lambda () (interactive) (kill-process "*Python*")))
-(global-set-key (kbd "C-c <backspace>") '(lambda () (interactive) (kill-process "*Python*") (run-python (python-shell-calculate-
+;; (global-set-key (kbd "C-c <backspace>") '(lambda () (interactive) (kill-process "*Python*") (run-python (python-shell-calculate-
 
 (with-eval-after-load 'python
   (defun python-shell-completion-native-try ()

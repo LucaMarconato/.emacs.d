@@ -1,26 +1,39 @@
-;; -*- emacs-lisp -*- <17/11/08 02:03:59 /Users/macbook/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <18/03/22 00:58:10 /Users/macbook/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["scp" nil "idun.hpc.ntnu.no" nil nil]
-  nil)
- (["scp" nil "dhcp-10-22-47-104.wlan.ntnu.no" nil nil]
-  nil)
- (["scp" nil "129.241.110.224" nil nil]
-  nil)
- (["scp" nil "vilje.hpc.ntnu.no" nil nil]
-  nil)
- (["scp" nil "training.hpc.ntnu.no" nil nil]
-  nil)
- (["scp" nil "storage.local" nil nil]
-  nil)
- (["scp" nil "169.254.30.160" nil nil]
-  nil)
- (["scp" nil "158.110.96.187" nil nil]
-  nil)
- (["scp" nil "ec2-54-194-248-125.eu-west-1.compute.amazonaws.com" nil nil]
-  nil)
- (["scp" nil "ec2-54-154-247-238.eu-west-1.compute.amazonaws.com" nil nil]
-  nil)
- (["scp" nil "newton.fluid.tuwien.ac.at" nil nil]
-  nil))
+((["ssh" "lucamarconato" "158.110.96.195" nil nil]
+  ("uname" "Darwin 17.4.0")
+  ("locale" "LC_ALL=en_US.UTF-8")
+  ("test" "test")
+  ("remote-path"
+   ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("~" "/Users/lucamarconato")
+  ("readlink" nil)
+  ("stat" nil)
+  ("id" "/usr/bin/id")
+  ("gid-integer" 20))
+ (["ssh" "git_repo" "34.243.50.31" nil nil]
+  ("uname" "Linux 3.13.0-48-generic")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/git_repo")
+  ("file-exists" "test -e")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" nil)
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1001)
+  ("readlink" "\\readlink")
+  ("gid-string" "git_repo")
+  ("git" "\\git")))
