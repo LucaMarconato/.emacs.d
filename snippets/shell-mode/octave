@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: octave
+# key: octave
+# --
+/Applications/Octave.app/Contents/Resources/usr/bin/octave-cli

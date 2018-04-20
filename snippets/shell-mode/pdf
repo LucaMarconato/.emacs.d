@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: pdf
+# key: pdf
+# --
+cd ~/programming/c++/_projects/pdf-something/

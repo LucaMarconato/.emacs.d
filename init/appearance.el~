@@ -1,0 +1,17 @@
+(setq custom-safe-themes t)
+(load-theme 'manoj-dark)
+;; (setq-default mode-line-buffer-identification
+;;   '(:eval (ml-propertized-buffer-identification "%12b")))
+ ;; (mode-line-buffer-id ((t (:overline "red" :underline "red"))))
+(set-face-attribute 'mode-line-buffer-id nil :foreground "blue")
+(set-face-attribute 'mode-line-buffer-id nil :background "white")
+;(load-theme 'monokai)
+
+;--------COMMENTS--------
+;http://raebear.net/comp/emacscolors.html
+(set-face-foreground 'font-lock-comment-face "grey36")
+(set-face-foreground 'font-lock-string-face "orange red")
+
+;-----others----
+(set-face-foreground 'highlight nil)
+(set-face-background 'hl-line "#3e4446")

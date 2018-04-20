@@ -1,0 +1,15 @@
+;--------WINDMOVE--------
+(windmove-default-keybindings)
+(global-set-key (kbd "M-P") 'windmove-up)
+(global-set-key (kbd "M-N") 'windmove-down)
+(global-set-key (kbd "M-L") 'windmove-right)
+(global-set-key (kbd "M-H") 'windmove-left)
+
+(defun bmu() (interactive) (buf-move-up))
+(defun bmd() (interactive) (buf-move-down))
+(defun bmr() (interactive) (buf-move-right))
+(defun bml() (interactive) (buf-move-left))
+(global-set-key (kbd "C-c P") 'buf-move-up)
+(global-set-key (kbd "C-c N") 'buf-move-down)
+(global-set-key (kbd "C-c L") 'buf-move-right)
+(global-set-key (kbd "C-c H") 'buf-move-left)

@@ -2,4 +2,4 @@
 # name: swarn
 # key: swarn
 # --
-std::cout << "warning: ${1:} = " << $1 << "
+std::cerr << "warning: ${1:} = " << $1 << "

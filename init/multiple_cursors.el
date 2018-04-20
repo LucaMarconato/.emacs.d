@@ -1,0 +1,11 @@
+;--------MULTPLE CURSORS--------
+(global-set-key (kbd "C-c m l") 'mc/edit-lines)
+(global-set-key (kbd "C-c m g") 'mc/mark-all-like-this)
+(global-set-key (kbd "M-D") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-U") 'mc/unmark-next-like-this)
+(global-set-key (kbd "M-K") 'mc/skip-to-next-like-this)
+(global-set-key (kbd "M-S") 'mc/mark-previous-like-this)
+(global-set-key (kbd "M-Y") 'mc/unmark-previous-like-this)
+(global-set-key (kbd "M-J") 'mc/skip-to-previous-like-this)
+(require 'mc-hide-unmatched-lines-mode)
+(global-set-key (kbd "C-'") 'mc-hide-unmatched-lines-mode)

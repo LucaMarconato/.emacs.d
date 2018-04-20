@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <18/03/22 00:58:10 /Users/macbook/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <18/04/03 00:41:07 /Users/macbook/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -36,4 +36,25 @@
   ("gid-integer" 1001)
   ("readlink" "\\readlink")
   ("gid-string" "git_repo")
-  ("git" "\\git")))
+  ("git" "\\git"))
+ (["ssh" "ubuntu" "34.243.50.31" nil nil]
+  ("uname" "Linux 3.13.0-48-generic")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("file-exists" "test -e")
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("gid-string" "ubuntu")
+  ("readlink" "\\readlink")
+  ("env-u-option" t)
+  ("uid-integer" 1000)
+  ("~" "/home/ubuntu")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)))

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ss0
+# key: ss0
+# --
+ss << "${1:}\n";

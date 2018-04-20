@@ -2,4 +2,4 @@
 # name: c0
 # key: c0
 # --
-cout << "${1:}\n";
+std::cout << "${1:}\n";
