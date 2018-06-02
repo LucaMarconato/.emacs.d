@@ -1,0 +1,79 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_CONTAINER_DETAIL_STD_FWD_HPP" variable (:constant-flag t) nil [477 511])
+            ("boost/config.hpp" include (:system-flag t) nil [538 567])
+            ("boost/move/detail/std_ns_begin.hpp" include (:system-flag t) nil [844 889])
+            ("allocator" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :prototype t)
+                nil [913 947])
+            ("less" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :prototype t)
+                nil [949 979])
+            ("pair" type
+               (:template 
+                  ( ("T1" type (:type "class") nil nil)
+                    ("T2" type (:type "class") nil nil))                  
+                :type "struct"
+                :prototype t)
+                nil [981 1022])
+            ("char_traits" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :prototype t)
+                nil [1024 1061])
+            ("input_iterator_tag" type
+               (:prototype t
+                :type "struct")
+                nil [1063 1089])
+            ("forward_iterator_tag" type
+               (:prototype t
+                :type "struct")
+                nil [1090 1118])
+            ("bidirectional_iterator_tag" type
+               (:prototype t
+                :type "struct")
+                nil [1119 1153])
+            ("random_access_iterator_tag" type
+               (:prototype t
+                :type "struct")
+                nil [1154 1188])
+            ("insert_iterator" type
+               (:template 
+                  ( ("Container" type (:type "class") nil nil))                  
+                :type "class"
+                :prototype t)
+                nil [1190 1238])
+            ("allocator_arg_t" type
+               (:prototype t
+                :type "struct")
+                nil [1240 1263])
+            ("piecewise_construct_t" type
+               (:prototype t
+                :type "struct")
+                nil [1265 1294])
+            ("boost/move/detail/std_ns_end.hpp" include (:system-flag t) nil [1318 1361]))          
+      :file "std_fwd.hpp"
+      :pointmax 1415
+      :fsize 1414
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((symbol 1296 . 1317) (symbol 890 . 911))
+      :lexical-table 
+        '(("BOOST_CONTAINER_DETAIL_STD_FWD_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!container!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

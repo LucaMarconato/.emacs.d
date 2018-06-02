@@ -1,0 +1,89 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 19])
+            ("foo.hpp" include nil nil [21 39])
+            ("bar.hpp" include nil nil [40 58])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [69 78])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [79 93]))                  
+                :type "int")
+                nil [60 134]))          
+      :file "test0013.cpp"
+      :pointmax 135
+      :fsize 134
+      :lastmodtime '(23265 52530 132262 610000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("FOO_H" variable (:constant-flag t) nil [23 28])
+            ("bar.hpp" include nil nil [30 48])
+            ("Foo" type
+               (:members 
+                  ( ("a" variable
+                       (:default-value "2"
+                        :type "int")
+                        (reparse-symbol classsubparts) [66 76])
+                    ("f" function
+                       (:prototype-flag t
+                        :parent "Bar"
+                        :typemodifiers ("friend")
+                        :type "void")
+                        (reparse-symbol classsubparts) [81 102]))                  
+                :type "class")
+                nil [50 105]))          
+      :file "foo.hpp"
+      :pointmax 123
+      :fsize 122
+      :lastmodtime '(23265 52505 531227 151000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FOO_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BAR_H" variable (:constant-flag t) nil [23 28])
+            ("foo.hpp" include nil nil [30 48])
+            ("Bar" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [62 69])
+                    ("f" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [74 84]))                  
+                :type "class")
+                nil [50 87]))          
+      :file "bar.hpp"
+      :pointmax 106
+      :fsize 105
+      :lastmodtime '(23265 52559 174499 474000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BAR_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("build" function (:arguments ("test0013.cpp")) nil [1 50]))          
+      :file "Makefile"
+      :pointmax 50
+      :fsize 49
+      :lastmodtime '(23265 52480 773603 622000)
+      :unmatched-syntax '((shell-command 22 . 49) (bol 21 . 21))))
+  :file "!Users!macbook!programming!c++!test!test0013!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

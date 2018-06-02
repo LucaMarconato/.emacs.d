@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: fig2
+# key: fig2
+# --
+\begin{figure}
+	\centering
+	\begin{minipage}{0.5\textwidth}
+		\centering
+		\includegraphics[width=1\linewidth]{${1:file1}.png}
+		\captionof{figure}{${3:caption}}
+		\label{fig:$1}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\centering
+ 		\includegraphics[width=1\linewidth]{${2:file2}.png}
+		\captionof{figure}{${4:caption}}
+		\label{fig:$2}
+	\end{minipage}
+\end{figure}

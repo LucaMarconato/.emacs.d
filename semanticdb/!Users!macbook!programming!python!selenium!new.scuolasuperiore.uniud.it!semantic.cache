@@ -1,0 +1,184 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("Scuola Superiore" section nil nil [146 214])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [214 294])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [294 380])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [380 464])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [464 552])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [552 1329])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [1329 1751])
+            ("UNIUD" section (:members 
+              ( ("UNIUD" anchor nil nil [1994 1997])
+                ("servizi online" anchor nil nil [2065 2068])
+                ("cercapersone" anchor nil nil [2184 2187])
+                ("contatti" anchor nil nil [2292 2295])
+                ("login <i class=\"fa fa-user\">" anchor nil nil [2725 2728])
+                ("Università degli Studi di Udine" anchor nil nil [2968 2971])
+                ("Home" anchor nil nil [3053 3056])
+                ("Home" anchor nil nil [3270 3273])
+                ("Scuola" anchor nil nil [3311 3314])
+                ("La Scuola Superiore" anchor nil nil [3397 3400])
+                ("La sede: un po' di storia" anchor nil nil [3513 3516])
+                ("Lo studentato" anchor nil nil [3638 3641])
+                ("Organi direttivi" anchor nil nil [3754 3757])
+                ("Contatti" anchor nil nil [3868 3871])
+                ("Didattica" anchor nil nil [3991 3994])
+                ("Corsi superiori" anchor nil nil [4080 4083])
+                ("Formazione universitaria" anchor nil nil [4203 4206])
+                ("Materie d’esame" anchor nil nil [4344 4347])
+                ("Ammissione" anchor nil nil [4480 4483])
+                ("Il concorso di ammissione" anchor nil nil [4571 4574])
+                ("Futuri studenti" anchor nil nil [4712 4715])
+                ("Prove d’esame" anchor nil nil [4836 4839])
+                ("Agevolazioni e rimborsi" anchor nil nil [4955 4958])
+                ("Domande frequenti" anchor nil nil [5085 5088])
+                ("Allievi" anchor nil nil [5231 5234])
+                ("Adempimenti degli allievi" anchor nil nil [5316 5319])
+                ("Colloqui di metà anno" anchor nil nil [5457 5460])
+                ("Colloqui di fine anno" anchor nil nil [5590 5593])
+                ("Regolamento convitto" anchor nil nil [5723 5726])
+                ("Iniziative degli allievi" anchor nil nil [5854 5857])
+                ("Gli allievi dicono" anchor nil nil [5993 5996])
+                ("Tempo libero" anchor nil nil [6120 6123])
+                ("Mobilità" anchor nil nil [6235 6238])
+                ("Alumni" anchor nil nil [6377 6380])
+                ("Associazione Alumni della Scuola Superiore" anchor nil nil [6460 6463])
+                ("Dove sono i nostri laureati" anchor nil nil [6634 6637])
+                ("I laureati si raccontano" anchor nil nil [6778 6781])
+                ("La rivista degli allievi" anchor nil nil [6916 6919])
+                ("News" anchor nil nil [7051 7054])
+                ("Conferenze" anchor nil nil [7130 7133])
+                ("Notizie" anchor nil nil [7238 7241])
+                ("Bandi e concorsi" anchor nil nil [7340 7343])
+                ("Porte aperte <span>›" section nil nil [8481 8893])
+                ("Cos’è la Superiore?" section nil nil [8893 9298])
+                ("Cos’è la Superiore?" section nil nil [9298 9704])
+                ("Cos’è la Superiore?" section nil nil [9704 10108])
+                ("Cos’è la Superiore?" section nil nil [10108 10519])
+                ("Cos’è la Superiore?" section nil nil [10519 10824])
+                ("Ammissione" section nil nil [10824 11353])
+                ("Corsi superiori" section (:members 
+                  ( ("VAI AI CORSI SUPERIORI<br  />" anchor nil nil [11850 11853]))                  ) nil [11353 11994])
+                ("Lo studentato" section (:members 
+                  ( ("VISITA IL CONVITTO<br />" anchor nil nil [12552 12555]))                  ) nil [11994 12736])
+                ("Conferenze della Scuola Superiore" section (:members 
+                  ( ("Bioinformatica e sequenziamento di genomi" section (:members 
+                      ( ("Bioinformatica e sequenziamento di genomi" anchor nil nil [13013 13016])
+                        ("Locandina" anchor nil nil [13423 13426]))                      ) nil [13009 13671])
+                    ("Digital Scholarly Editing ovvero Della Filologia 2.0" section (:members 
+                      ( ("Digital Scholarly Editing ovvero Della Filologia 2.0" anchor nil nil [13675 13678])
+                        ("Locandina" anchor nil nil [14040 14043]))                      ) nil [13671 14299])
+                    ("Un manoscritto eccezionale, il rotolo di Patmos e il suo rapporto con gli altri testimoni del commento di  Proclo al Timeo" section (:members 
+                      ( ("Un manoscritto eccezionale, il rotolo di Patmos e il suo rapporto con gli altri testimoni del commento di  Proclo al Timeo" anchor nil nil [14303 14306])
+                        ("Locandina" anchor nil nil [14809 14812]))                      ) nil [14299 15093]))                  ) nil [12736 15093])
+                ("Video" section (:members 
+                  ( ("La Scuola Superiore" anchor nil nil [15243 15246])
+                    ("La Scuola Superiore" section (:members 
+                      ( ("Conferenza del professor Lucio Russo" anchor nil nil [15557 15560]))                      ) nil [15420 15734])
+                    ("Conferenza del professor Lucio Russo" section (:members 
+                      ( ("Intervista a Giulia Tagliabue" anchor nil nil [15877 15880]))                      ) nil [15734 16054])
+                    ("Intervista a Giulia Tagliabue" section nil nil [16054 16227]))                  ) nil [15093 16227])
+                ("Eventi e notizie" section (:members 
+                  ( ("Porte aperte 2018" section (:members 
+                      ( ("Porte aperte 2018" anchor nil nil [16393 16396])
+                        ("Locandina" anchor nil nil [16798 16801]))                      ) nil [16389 16921])
+                    ("Inaugurazione anno accademico 2017/2018" section (:members 
+                      ( ("Inaugurazione anno accademico 2017/2018" anchor nil nil [16925 16928])
+                        ("Invito" anchor nil nil [17218 17221]))                      ) nil [16921 17399])
+                    ("Tre nomi per un Palazzo: Polcenigo, Garzolini, Toppo Wassermann" section (:members 
+                      ( ("Tre nomi per un Palazzo: Polcenigo, Garzolini, Toppo Wassermann" anchor nil nil [17403 17406])
+                        ("Locandina" anchor nil nil [17713 17716]))                      ) nil [17399 17932]))                  ) nil [16227 17932])
+                ("Bandi e concorsi" section (:members 
+                  ( ("Bando di selezione per la mobilità europea ed extra europea per ricerche per tesi a.a. 2017/2018 dedicato agli allievi della Scuola Superiore" section (:members 
+                      ( ("Bando di selezione per la mobilità europea ed extra europea per ricerche per tesi a.a. 2017/2018 dedicato agli allievi della Scuola Superiore" anchor nil nil [18084 18087])
+                        ("Bando" anchor nil nil [18491 18494]))                      ) nil [18080 18778])
+                    ("Bandi di incarichi insegnamento vacanti a.a. 17/18" section (:members 
+                      ( ("Bandi di incarichi insegnamento vacanti a.a. 17/18" anchor nil nil [18782 18785])
+                        ("Bando n.1" anchor nil nil [19392 19395]))                      ) nil [18778 19562])
+                    ("Bando di selezione per la mobilità europea ed extra europea per ricerche per tesi a.a. 2016/2017 dedicato agli allievi della Scuola Superiore" section (:members 
+                      ( ("Bando di selezione per la mobilità europea ed extra europea per ricerche per tesi a.a. 2016/2017 dedicato agli allievi della Scuola Superiore" anchor nil nil [19566 19569])
+                        ("Bando" anchor nil nil [20175 20178]))                      ) nil [19562 20599]))                  ) nil [17932 20599])
+                ("Scuola <strong>Superiore" section nil nil [20599 20655])
+                ("Università <br>degli studi <br>di Udine" section (:members 
+                  ( ("info.scuolasuperiore@uniud.it" anchor nil nil [20804 20807])
+                    ("Albo ufficiale" anchor nil nil [20922 20925])
+                    ("Amministrazione trasparente" anchor nil nil [21014 21017])
+                    ("Privacy policy" anchor nil nil [21145 21148]))                  ) nil [20655 21275])
+                ("Scuola" section (:members 
+                  ( ("La Scuola Superiore" anchor nil nil [21310 21313])
+                    ("La sede: un po' di storia" anchor nil nil [21417 21420])
+                    ("Lo studentato" anchor nil nil [21533 21536])
+                    ("Organi direttivi" anchor nil nil [21640 21643])
+                    ("Contatti" anchor nil nil [21745 21748]))                  ) nil [21275 21859])
+                ("Didattica" section (:members 
+                  ( ("Corsi superiori" anchor nil nil [21897 21900])
+                    ("Formazione universitaria" anchor nil nil [22011 22014])
+                    ("Materie d’esame" anchor nil nil [22143 22146]))                  ) nil [21859 22270])
+                ("Ammissione" section (:members 
+                  ( ("Il concorso di ammissione" anchor nil nil [22309 22312])
+                    ("Futuri studenti" anchor nil nil [22441 22444])
+                    ("Prove d’esame" anchor nil nil [22556 22559])
+                    ("Agevolazioni e rimborsi" anchor nil nil [22666 22669])
+                    ("Domande frequenti" anchor nil nil [22787 22790]))                  ) nil [22270 22924])
+                ("Allievi" section (:members 
+                  ( ("Adempimenti degli allievi" anchor nil nil [22960 22963])
+                    ("Colloqui di metà anno" anchor nil nil [23092 23095])
+                    ("Colloqui di fine anno" anchor nil nil [23216 23219])
+                    ("Regolamento convitto" anchor nil nil [23340 23343])
+                    ("Iniziative degli allievi" anchor nil nil [23462 23465])
+                    ("Gli allievi dicono" anchor nil nil [23592 23595])
+                    ("Tempo libero" anchor nil nil [23710 23713])
+                    ("Mobilità" anchor nil nil [23816 23819]))                  ) nil [22924 23949])
+                ("Alumni" section (:members 
+                  ( ("Associazione Alumni della Scuola Superiore" anchor nil nil [23984 23987])
+                    ("Dove sono i nostri laureati" anchor nil nil [24149 24152])
+                    ("I laureati si raccontano" anchor nil nil [24284 24287])
+                    ("La rivista degli allievi" anchor nil nil [24413 24416]))                  ) nil [23949 24539])
+                ("News" section (:members 
+                  ( ("Conferenze" anchor nil nil [24572 24575])
+                    ("Notizie" anchor nil nil [24671 24674])
+                    ("Bandi e concorsi" anchor nil nil [24764 24767]))                  ) nil [24539 24936]))              ) nil [1751 24936]))          
+      :file "index.html"
+      :pointmax 24936
+      :fsize 25013
+      :lastmodtime '(23292 6605 223658 843000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!python!selenium!new.scuolasuperiore.uniud.it!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

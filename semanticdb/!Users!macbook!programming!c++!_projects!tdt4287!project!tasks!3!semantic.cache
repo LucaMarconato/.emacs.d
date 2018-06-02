@@ -1,0 +1,367 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("string" include (:system-flag t) nil [20 37])
+            ("string.h" include (:system-flag t) nil [38 57])
+            ("iostream" include (:system-flag t) nil [58 77])
+            ("iomanip" include (:system-flag t) nil [78 96])
+            ("fstream" include (:system-flag t) nil [97 115])
+            ("sstream" include (:system-flag t) nil [116 134])
+            ("algorithm" include (:system-flag t) nil [135 155])
+            ("math.h" include (:system-flag t) nil [156 173])
+            ("unordered_map" include (:system-flag t) nil [174 198])
+            ("map" include (:system-flag t) nil [199 213])
+            ("list" include (:system-flag t) nil [214 229])
+            ("vector" include (:system-flag t) nil [230 247])
+            ("assert.h" include (:system-flag t) nil [248 267])
+            ("cstdlib" include (:system-flag t) nil [268 286])
+            ("/usr/local/Cellar/llvm/4.0.1/lib/clang/4.0.1/include/omp.h" include (:system-flag t) nil [287 356])
+            ("../1/kmp.h" include nil nil [377 398])
+            ("../2/output_buffer.h" include nil nil [399 430])
+            ("../4/hash.h" include nil nil [431 453])
+            ("candidate_matching" type
+               (:typedef ("candidate_matching_" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [518 572])
+            ("reference_" type
+               (:members 
+                  ( ("referenced_by" variable (:type ("std::vector::iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [606 662])
+                    ("with_offset" variable (:type "int") (reparse-symbol classsubparts) [667 683]))                  
+                :type "struct")
+                nil [574 695])
+            ("reference" type
+               (:typedef ("reference_" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [574 695])
+            ("candidate_matching_" type
+               (:members 
+                  ( ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [742 756])
+                    ("references" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("reference" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [761 793])
+                    ("references_to" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("std::vector::iterator" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [798 865])
+                    ("printed" variable (:type "bool") (reparse-symbol classsubparts) [870 883]))                  
+                :type "struct")
+                nil [701 905])
+            ("candidate_matching" type
+               (:typedef ("candidate_matching_" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [701 905])
+            ("fill_maps" function
+               (:prototype-flag t
+                :type "void")
+                nil [907 924])
+            ("find_filtered_candidates_for_containing_the_as" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("filtered_candidates" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [977 1024]))                  
+                :type "void")
+                nil [925 1025])
+            ("find_final_candidates_for_containing_the_as" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("self_matched_candidates_for_containing_the_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("candidate_matching" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1075 1155])
+                    ("final_candidates_for_containing_the_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1156 1222]))                  
+                :type "void")
+                nil [1026 1223])
+            ("make_final_candidates_for_as_longer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("final_candidates_for_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1265 1316]))                  
+                :type "void")
+                nil [1224 1317])
+            ("give_score_to_candidates_for_as" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("final_candidates_for_containing_the_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1356 1422])
+                    ("final_score_for_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1423 1474]))                  
+                :type "void")
+                nil [1319 1475])
+            ("find_filtered_candidates_for_as" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("filtered_candidates_for_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1513 1567])
+                    ("final_score_for_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1568 1619])
+                    ("final_candidates_for_containing_the_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1620 1686]))                  
+                :type "void")
+                nil [1476 1687])
+            ("self_match" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("candidates" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1709 1747])
+                    ("matched_candidates" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("candidate_matching" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1748 1801])
+                    ("minimum_overlap" variable (:type "int") (reparse-symbol arg-sub-list) [1802 1822])
+                    ("hamming_threshold" variable (:type "int") (reparse-symbol arg-sub-list) [1823 1845]))                  
+                :type "void")
+                nil [1693 1846])
+            ("print_self_matched_candidate" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("std::vector::iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1881 1923])
+                    ("offset" variable (:type "int") (reparse-symbol arg-sub-list) [1924 1935])
+                    ("first_string" variable (:type "bool") (reparse-symbol arg-sub-list) [1936 1954]))                  
+                :type "void")
+                nil [1847 1955])
+            ("number_of_cores" variable (:type "int") nil [2130 2150])
+            ("buffer" variable
+               (:pointer 1
+                :type "char")
+                nil [2151 2165])
+            ("first_newline" variable (:type "int") nil [2166 2184])
+            ("substring_length" variable
+               (:default-value "20"
+                :type "int")
+                nil [2185 2211])
+            ("substrings" variable (:type ("std::vector" type
+                 (:template-specifier 
+                    ( ("std::unordered_map" type (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("int" type nil nil nil))                        ) nil nil))                    
+                  :type "class")
+                  nil nil)) nil [2212 2272])
+            ("file_size" variable (:type "int") nil [2273 2287])
+            ("max_candidates_for_as_count" variable
+               (:default-value "20"
+                :type "int")
+                nil [2288 2325])
+            ("file_info" variable (:type ("file_info_t" type (:type "class") nil nil)) nil [2326 2348])
+            ("filename" variable
+               (:pointer 1
+                :default-value "\"../../data/s_1-1_1M.txt\""
+                :type "char")
+                nil [2411 2461])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2667 2676])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2677 2689]))                  
+                :type "int")
+                nil [2658 5829])
+            ("fill_maps" function (:type "void") nil [5831 7847])
+            ("find_filtered_candidates_for_containing_the_as" function
+               (:arguments 
+                  ( ("filtered_candidates" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7901 7948]))                  
+                :type "void")
+                nil [7849 11495])
+            ("find_final_candidates_for_containing_the_as" function
+               (:arguments 
+                  ( ("self_matched_candidates_for_containing_the_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("candidate_matching" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11547 11627])
+                    ("final_candidates_for_containing_the_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11628 11694]))                  
+                :type "void")
+                nil [11498 11970])
+            ("print_self_matched_candidate" function
+               (:arguments 
+                  ( ("it" variable (:type ("std::vector::iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12006 12051])
+                    ("offset" variable (:type "int") (reparse-symbol arg-sub-list) [12052 12063])
+                    ("first_string" variable (:type "bool") (reparse-symbol arg-sub-list) [12064 12082]))                  
+                :type "void")
+                nil [11972 12692])
+            ("give_score_to_candidates_for_as" function
+               (:arguments 
+                  ( ("final_candidates_for_containing_the_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12735 12801])
+                    ("final_score_for_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12802 12853]))                  
+                :type "void")
+                nil [12698 16976])
+            ("find_filtered_candidates_for_as" function
+               (:arguments 
+                  ( ("filtered_candidates_for_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17015 17069])
+                    ("final_score_for_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::vector" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17070 17121])
+                    ("final_candidates_for_containing_the_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17122 17188]))                  
+                :type "void")
+                nil [16978 18853])
+            ("self_match" function
+               (:arguments 
+                  ( ("candidates" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18871 18909])
+                    ("matched_candidates" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("candidate_matching" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18910 18963])
+                    ("minimum_overlap" variable (:type "int") (reparse-symbol arg-sub-list) [18964 18984])
+                    ("hamming_threshold" variable (:type "int") (reparse-symbol arg-sub-list) [18985 19007]))                  
+                :type "void")
+                nil [18855 22606])
+            ("make_final_candidates_for_as_longer" function
+               (:arguments 
+                  ( ("final_candidates_for_as" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23520 23571]))                  
+                :type "void")
+                nil [23479 26601]))          
+      :file "main.cpp"
+      :pointmax 26602
+      :fsize 26602
+      :lastmodtime '(23031 31135 75617 656000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!c++!_projects!tdt4287!project!tasks!3!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

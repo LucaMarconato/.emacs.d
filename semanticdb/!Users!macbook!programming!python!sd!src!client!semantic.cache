@@ -1,0 +1,26 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("ipgetter" include nil nil [27 42])
+            ("socket" include nil nil [43 56])
+            ("subprocess" include nil nil [57 74])
+            ("logging" include nil nil [75 89])
+            ("os" include nil nil [90 99])
+            ("common.colorer" include nil nil [101 122])
+            ("common.common" include nil nil [123 150])
+            ("user_defined_ip_address" function nil nil [152 499])
+            ("get_ip_address" function nil nil [502 1179])
+            ("whoami" function nil nil [1306 1428]))          
+      :file "network_info.py"
+      :pointmax 1428
+      :fsize 1427
+      :lastmodtime '(23225 19218 988784 152000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!python!sd!src!client!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

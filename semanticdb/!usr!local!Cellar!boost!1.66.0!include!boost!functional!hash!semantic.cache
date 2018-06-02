@@ -1,0 +1,1595 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_FUNCTIONAL_HASH_HASH_HPP" variable (:constant-flag t) nil [609 639])
+            ("boost/functional/hash/hash_fwd.hpp" include (:system-flag t) nil [641 686])
+            ("functional" include (:system-flag t) nil [687 708])
+            ("boost/functional/hash/detail/hash_float.hpp" include (:system-flag t) nil [709 763])
+            ("string" include (:system-flag t) nil [764 781])
+            ("boost/limits.hpp" include (:system-flag t) nil [782 809])
+            ("boost/type_traits/is_enum.hpp" include (:system-flag t) nil [810 850])
+            ("boost/type_traits/is_integral.hpp" include (:system-flag t) nil [851 895])
+            ("boost/utility/enable_if.hpp" include (:system-flag t) nil [896 934])
+            ("boost/cstdint.hpp" include (:system-flag t) nil [935 963])
+            ("typeindex" include (:system-flag t) nil [1114 1134])
+            ("BOOST_HASH_CHAR_TRAITS" variable (:constant-flag t) nil [1604 1626])
+            ("BOOST_FUNCTIONAL_HASH_ROTL32" variable (:constant-flag t) nil [1743 1771])
+            ("boost" type
+               (:members 
+                  ( ("hash_detail" type
+                       (:members 
+                          ( ("hash_base" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("std::unary_function" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [2088 2176])
+                            ("enable_hash_value" type
+                               (:members 
+                                  ( ("type" type
+                                       (:typedef ("std::size_t" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [2220 2245]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [2193 2248])
+                            ("basic_numbers" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [2258 2304])
+                            ("long_numbers" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :prototype t)
+                                (reparse-symbol namespacesubparts) [2313 2355])
+                            ("ulong_numbers" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :prototype t)
+                                (reparse-symbol namespacesubparts) [2364 2407])
+                            ("float_numbers" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [2416 2462])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("bool" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [2472 2566])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("char" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [2575 2669])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("unsigned char" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [2678 2781])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("signed char" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [2790 2891])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("short" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [2900 2995])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("unsigned short" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3004 3108])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("int" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3117 3210])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("unsigned int" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3219 3321])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("long" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3330 3424])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("unsigned long" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3433 3536])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("wchar_t" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3587 3684])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("char16_t" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3739 3837])
+                            ("basic_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("char32_t" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3892 3990])
+                            ("long_numbers2" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [4165 4211])
+                            ("ulong_numbers2" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [4220 4267])
+                            ("long_numbers" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("long_numbers2" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [4276 4340])
+                            ("ulong_numbers" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("ulong_numbers2" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [4349 4415])
+                            ("long_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("boost::long_long_type" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [4458 4568])
+                            ("ulong_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("boost::ulong_long_type" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [4577 4689])
+                            ("float_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("float" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [4980 5075])
+                            ("float_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("double" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [5084 5180])
+                            ("float_numbers" type
+                               (:type "struct"
+                                :superclasses 
+                                  ( ("boost::hash_detail::enable_hash_value" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :template-specifier 
+                                  ( ("long double" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [5189 5290]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1835 5296])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::hash_detail::basic_numbers::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5391 5393]))                          
+                        :typemodifiers ("typename")
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [5302 5394])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::hash_detail::long_numbers::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5487 5489]))                          
+                        :typemodifiers ("typename")
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [5399 5490])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::hash_detail::ulong_numbers::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5584 5586]))                          
+                        :typemodifiers ("typename")
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [5495 5587])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::enable_if::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5702 5704]))                          
+                        :typemodifiers ("typename")
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [5593 5705])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5794 5803]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [5752 5805])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("unsigned int" type (:typevar "N") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5984 5996]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [5925 6001])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("unsigned int" type (:typevar "N") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6066 6072]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [6007 6077])
+                    ("hash_value" function
+                       (:template 
+                          ( ("Ch" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::basic_string" type
+                                     (:template-specifier 
+                                        ( ("Ch" type nil nil nil)
+                                          ("std::BOOST_HASH_CHAR_TRAITS" type (:template-specifier 
+                                            ( ("Ch" type nil nil nil))                                            ) nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6155 6220]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [6090 6221])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::hash_detail::float_numbers::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6316 6318]))                          
+                        :typemodifiers ("typename")
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [6227 6319])
+                    ("hash_value" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("std::type_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6391 6407]))                          
+                        :type ("std::size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6368 6408])
+                    ("hash_detail" type
+                       (:members 
+                          ( ("hash_value_signed" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("val" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6544 6550]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol namespacesubparts) [6480 7276])
+                            ("hash_value_unsigned" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("val" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7352 7358]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol namespacesubparts) [7286 8027])
+                            ("hash_combine_impl" function
+                               (:template 
+                                  ( ("SizeT" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("seed" variable
+                                       (:reference 1
+                                        :type ("SizeT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8101 8113])
+                                    ("value" variable (:type ("SizeT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8114 8126]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol namespacesubparts) [8037 8210])
+                            ("hash_combine_impl" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("h1" variable
+                                       (:reference 1
+                                        :type ("boost::uint32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8250 8270])
+                                    ("k1" variable (:type ("boost::uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8287 8306]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8220 8624])
+                            ("hash_combine_impl" function
+                               (:typemodifiers ("inline")
+                                :arguments 
+                                  ( ("h" variable
+                                       (:reference 1
+                                        :type ("boost::uint64_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8902 8921])
+                                    ("k" variable (:type ("boost::uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8938 8956]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [8872 9304]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [6444 9338])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::hash_detail::basic_numbers::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9433 9437]))                          
+                        :typemodifiers ("typename"))
+                        (reparse-symbol namespacesubparts) [9344 9493])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::hash_detail::long_numbers::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9587 9591]))                          
+                        :typemodifiers ("typename"))
+                        (reparse-symbol namespacesubparts) [9499 9653])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::hash_detail::ulong_numbers::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9748 9752]))                          
+                        :typemodifiers ("typename"))
+                        (reparse-symbol namespacesubparts) [9659 9816])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::enable_if::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9931 9935]))                          
+                        :typemodifiers ("typename"))
+                        (reparse-symbol namespacesubparts) [9822 9991])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10138 10147])
+                            ("" variable (:type ("v" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10148 10150]))                          )
+                        (reparse-symbol namespacesubparts) [10096 10607])
+                    ("hash_combine" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("seed" variable
+                               (:reference 1
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11010 11028])
+                            ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11029 11040]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [10962 11154])
+                    ("hash_range" function
+                       (:template 
+                          ( ("It" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("first" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11267 11276])
+                            ("last" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11277 11285]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [11213 11448])
+                    ("hash_range" function
+                       (:template 
+                          ( ("It" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("seed" variable
+                               (:reference 1
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11501 11519])
+                            ("first" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11520 11529])
+                            ("last" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11530 11538]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [11454 11648])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("unsigned int" type (:typevar "N") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12411 12423]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [12345 12476])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("unsigned int" type (:typevar "N") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12548 12554]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [12482 12607])
+                    ("hash_value" function
+                       (:template 
+                          ( ("Ch" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::basic_string" type
+                                     (:template-specifier 
+                                        ( ("Ch" type nil nil nil)
+                                          ("std::BOOST_HASH_CHAR_TRAITS" type (:template-specifier 
+                                            ( ("Ch" type nil nil nil))                                            ) nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12692 12759]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [12620 12818])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("boost::hash_detail::float_numbers::type" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12913 12917]))                          
+                        :typemodifiers ("typename"))
+                        (reparse-symbol namespacesubparts) [12824 12985])
+                    ("hash_value" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("v" variable (:type ("std::type_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13064 13082]))                          
+                        :type ("std::size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [13034 13124])
+                    ("BOOST_HASH_SPECIALIZE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [13629 13650])
+                    ("BOOST_HASH_SPECIALIZE_REF" variable (:constant-flag t) (reparse-symbol namespacesubparts) [13889 13914])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "bool") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("bool" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14156 14183])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "char") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("char" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14188 14215])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "signed int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("signed int" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14220 14254])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "unsigned int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("unsigned int" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14259 14295])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "wchar_t") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("wchar_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14341 14371])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type ("char16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("char16_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14421 14452])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type ("char32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("char32_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14502 14533])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "short") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("short" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14545 14573])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "unsigned int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("unsigned int" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14578 14615])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("int" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14620 14646])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "unsigned int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("unsigned int" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14651 14686])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "long") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("long" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14691 14718])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "unsigned int") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("unsigned int" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14723 14759])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "float") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("float" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14765 14793])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "double") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("double" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14798 14827])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type "long") (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("long" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14832 14866])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("std" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14872 14910])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("std" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [14990 15029])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("std" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [15079 15133])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("std" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [15183 15237])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type ("boost" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("boost" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [15283 15327])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type ("boost" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("boost" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [15332 15377])
+                    ("hash" type
+                       (:type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable (:type ("std" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) nil))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("std" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [15564 15602])
+                    ("hash" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("v" variable
+                                       (:pointer 1
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15904 15909]))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [15881 16176]))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :template-specifier 
+                          ( ("T" type (:pointer 1) nil nil))                          )
+                        (reparse-symbol namespacesubparts) [15777 16183]))                  
+                :type "namespace")
+                nil [1813 17365])
+            ("boost/functional/hash/extensions.hpp" include (:system-flag t) nil [17786 17833]))          
+      :file "hash.hpp"
+      :pointmax 17841
+      :fsize 17840
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 17747 . 17785) (symbol 17740 . 17747) (punctuation 17739 . 17740) (punctuation 17737 . 17738) (punctuation 17736 . 17737) (semantic-list 12554 . 12557) (semantic-list 12550 . 12554) (semantic-list 12423 . 12426) (semantic-list 12419 . 12423) (punctuation 10146 . 10147) (semantic-list 8816 . 8862) (punctuation 8815 . 8816) (semantic-list 6072 . 6075) (semantic-list 6068 . 6072) (semantic-list 5996 . 5999) (semantic-list 5992 . 5996) (punctuation 5802 . 5803))
+      :lexical-table 
+        '(("BOOST_FUNCTIONAL_HASH_HASH_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_FUNCTIONAL_HASH_FWD_HPP" variable (:constant-flag t) nil [369 398])
+            ("boost/config.hpp" include (:system-flag t) nil [400 427])
+            ("cstddef" include (:system-flag t) nil [484 502])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [503 541])
+            ("boost" type
+               (:members 
+                  ( ("hash" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :prototype t)
+                        (reparse-symbol namespacesubparts) [565 596])
+                    ("hash_combine" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("seed" variable
+                               (:reference 1
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [639 657])
+                            ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [658 669]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [602 670])
+                    ("hash_range" function
+                       (:template 
+                          ( ("It" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [719 722])
+                            ("" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [723 726]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [676 727])
+                    ("hash_range" function
+                       (:template 
+                          ( ("It" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [768 781])
+                            ("" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [782 785])
+                            ("" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [786 789]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [732 790]))                  
+                :type "namespace")
+                nil [543 990]))          
+      :file "hash_fwd.hpp"
+      :pointmax 999
+      :fsize 998
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_FUNCTIONAL_HASH_FWD_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_FUNCTIONAL_HASH_EXTENSIONS_HPP" variable (:constant-flag t) nil [478 514])
+            ("boost/config.hpp" include (:system-flag t) nil [516 543])
+            ("boost/functional/hash/hash.hpp" include (:system-flag t) nil [600 641])
+            ("boost/detail/container_fwd.hpp" include (:system-flag t) nil [642 683])
+            ("boost/utility/enable_if.hpp" include (:system-flag t) nil [684 722])
+            ("boost/static_assert.hpp" include (:system-flag t) nil [723 757])
+            ("boost/preprocessor/repetition/repeat_from_to.hpp" include (:system-flag t) nil [758 817])
+            ("boost/preprocessor/repetition/enum_params.hpp" include (:system-flag t) nil [818 874])
+            ("array" include (:system-flag t) nil [915 934])
+            ("tuple" include (:system-flag t) nil [982 1001])
+            ("memory" include (:system-flag t) nil [1050 1070])
+            ("boost" type
+               (:members 
+                  ( ("hash_value" function
+                       (:template 
+                          ( ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("A" type nil nil nil)
+                                          ("B" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1255 1278]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1200 1279])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1339 1364]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1284 1365])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1425 1450]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1370 1451])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::deque" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1511 1537]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1456 1538])
+                    ("hash_value" function
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("C" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("K" type nil nil nil)
+                                          ("C" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1607 1634]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1543 1635])
+                    ("hash_value" function
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("C" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::multiset" type
+                                     (:template-specifier 
+                                        ( ("K" type nil nil nil)
+                                          ("C" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1704 1736]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1640 1737])
+                    ("hash_value" function
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("T" type (:type "class") nil nil)
+                            ("C" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("K" type nil nil nil)
+                                          ("T" type nil nil nil)
+                                          ("C" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1815 1845]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1742 1846])
+                    ("hash_value" function
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("T" type (:type "class") nil nil)
+                            ("C" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::multimap" type
+                                     (:template-specifier 
+                                        ( ("K" type nil nil nil)
+                                          ("T" type nil nil nil)
+                                          ("C" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1924 1959]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1851 1960])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::complex" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2012 2035]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [1966 2036])
+                    ("hash_value" function
+                       (:template 
+                          ( ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::pair" type
+                                     (:template-specifier 
+                                        ( ("A" type nil nil nil)
+                                          ("B" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2097 2122]))                          )
+                        (reparse-symbol namespacesubparts) [2042 2274])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2335 2362]))                          )
+                        (reparse-symbol namespacesubparts) [2280 2428])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2489 2514]))                          )
+                        (reparse-symbol namespacesubparts) [2434 2580])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::deque" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2641 2667]))                          )
+                        (reparse-symbol namespacesubparts) [2586 2733])
+                    ("hash_value" function
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("C" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("K" type nil nil nil)
+                                          ("C" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2803 2830]))                          )
+                        (reparse-symbol namespacesubparts) [2739 2896])
+                    ("hash_value" function
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("C" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::multiset" type
+                                     (:template-specifier 
+                                        ( ("K" type nil nil nil)
+                                          ("C" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2966 2998]))                          )
+                        (reparse-symbol namespacesubparts) [2902 3064])
+                    ("hash_value" function
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("T" type (:type "class") nil nil)
+                            ("C" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("K" type nil nil nil)
+                                          ("T" type nil nil nil)
+                                          ("C" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3143 3173]))                          )
+                        (reparse-symbol namespacesubparts) [3070 3239])
+                    ("hash_value" function
+                       (:template 
+                          ( ("K" type (:type "class") nil nil)
+                            ("T" type (:type "class") nil nil)
+                            ("C" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::multimap" type
+                                     (:template-specifier 
+                                        ( ("K" type nil nil nil)
+                                          ("T" type nil nil nil)
+                                          ("C" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3318 3353]))                          )
+                        (reparse-symbol namespacesubparts) [3245 3419])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::complex" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3471 3496]))                          )
+                        (reparse-symbol namespacesubparts) [3425 3663])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("std::size_t" type (:typevar "N") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::array" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("N" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3769 3795]))                          )
+                        (reparse-symbol namespacesubparts) [3708 3861])
+                    ("hash_detail" type
+                       (:members 
+                          ( ("hash_combine_tuple" function
+                               (:template 
+                                  ( ("std::size_t" type (:typevar "I") nil nil)
+                                    ("T" type (:type "class") nil nil))                                  
+                                :type ("boost::enable_if_c::type" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("std::size_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4118 4131])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4132 4141]))                                  
+                                :typemodifiers ("inline" "typename"))
+                                (reparse-symbol namespacesubparts) [3945 4161])
+                            ("hash_combine_tuple" function
+                               (:template 
+                                  ( ("std::size_t" type (:typevar "I") nil nil)
+                                    ("T" type (:type "class") nil nil))                                  
+                                :type ("boost::enable_if_c::type" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("seed" variable
+                                       (:reference 1
+                                        :type ("std::size_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4343 4361])
+                                    ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4362 4373]))                                  
+                                :typemodifiers ("inline" "typename"))
+                                (reparse-symbol namespacesubparts) [4171 4516])
+                            ("hash_tuple" function
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type ("std::size_t" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("v" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4586 4597]))                                  
+                                :typemodifiers ("inline"))
+                                (reparse-symbol namespacesubparts) [4526 4740]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [3913 4746])
+                    ("hash_value" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("" variable (:type ("std::tuple" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4859 4870])
+                            ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4870 4872])
+                            ("" variable (:type ("v" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4883 4885]))                          
+                        :type ("std::size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4829 4947])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::shared_ptr" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5986 6014]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [5930 6065])
+                    ("hash_value" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("Deleter" type (:type "class") nil nil))                          
+                        :type ("std::size_t" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil)
+                                          ("Deleter" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6145 6182]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [6071 6233])
+                    ("hash" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("()" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("val" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7656 7669]))                                  
+                                :type ("std::size_t" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7633 7731]))                          
+                        :superclasses 
+                          ( ("boost::hash_detail::hash_base" type
+                               (:protection "unspecified"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [7495 7879]))                  
+                :type "namespace")
+                nil [1178 9132]))          
+      :file "extensions.hpp"
+      :pointmax 9141
+      :fsize 9140
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((punctuation 4881 . 4882) (CONST 4876 . 4881) (punctuation 4874 . 4875) (punctuation 4873 . 4874) (punctuation 4872 . 4873) (punctuation 4871 . 4872) (punctuation 4869 . 4870) (punctuation 4823 . 4824) (symbol 4822 . 4823) (punctuation 4820 . 4821) (punctuation 4819 . 4820) (punctuation 4818 . 4819) (TYPENAME 4810 . 4818) (punctuation 4809 . 4810) (TEMPLATE 4800 . 4808))
+      :lexical-table 
+        '(("BOOST_FUNCTIONAL_HASH_EXTENSIONS_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!functional!hash!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

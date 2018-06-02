@@ -1,0 +1,272 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("genann_blas.h" include nil nil [999 1023])
+            ("stdlib.h" include (:system-flag t) nil [1025 1044])
+            ("string.h" include (:system-flag t) nil [1045 1064])
+            ("math.h" include (:system-flag t) nil [1065 1082])
+            ("assert.h" include (:system-flag t) nil [1083 1102])
+            ("stdio.h" include (:system-flag t) nil [1103 1121])
+            ("cblas.h" include (:system-flag t) nil [1122 1140])
+            ("stdbool.h" include (:system-flag t) nil [1141 1161])
+            ("LOOKUP_SIZE" variable (:constant-flag t) nil [1188 1199])
+            ("walltime" function (:type "double") nil [1205 1319])
+            ("genann_act_sigmoid" function
+               (:arguments 
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [1347 1356]))                  
+                :type "double")
+                nil [1321 1449])
+            ("genann_act_sigmoid_cached" function
+               (:arguments 
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [1485 1494]))                  
+                :type "double")
+                nil [1452 2339])
+            ("genann_act_threshold" function
+               (:arguments 
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [2370 2379]))                  
+                :type "double")
+                nil [2342 2401])
+            ("genann_act_linear" function
+               (:arguments 
+                  ( ("a" variable (:type "double") (reparse-symbol arg-sub-list) [2429 2438]))                  
+                :type "double")
+                nil [2404 2456])
+            ("genann_init" function
+               (:pointer 1
+                :arguments 
+                  ( ("inputs" variable (:type "int") (reparse-symbol arg-sub-list) [2479 2490])
+                    ("hidden_layers" variable (:type "int") (reparse-symbol arg-sub-list) [2491 2509])
+                    ("hidden" variable (:type "int") (reparse-symbol arg-sub-list) [2510 2521])
+                    ("outputs" variable (:type "int") (reparse-symbol arg-sub-list) [2522 2534]))                  
+                :type ("genann" type (:type "class") nil nil))
+                nil [2459 3810])
+            ("genann_read" function
+               (:pointer 1
+                :arguments 
+                  ( ("in" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3833 3842]))                  
+                :type ("genann" type (:type "class") nil nil))
+                nil [3813 4168])
+            ("genann_copy" function
+               (:pointer 1
+                :arguments 
+                  ( ("ann" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("genann" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4191 4209]))                  
+                :type ("genann" type (:type "class") nil nil))
+                nil [4171 4636])
+            ("genann_randomize" function
+               (:arguments 
+                  ( ("ann" variable
+                       (:pointer 1
+                        :type ("genann" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4661 4673]))                  
+                :type "void")
+                nil [4639 4856])
+            ("genann_free" function
+               (:arguments 
+                  ( ("ann" variable
+                       (:pointer 1
+                        :type ("genann" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4876 4888]))                  
+                :type "void")
+                nil [4859 4979])
+            ("genann_run" function
+               (:pointer 1
+                :arguments 
+                  ( ("ann" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("genann" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5007 5025])
+                    ("inputs" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5026 5047]))                  
+                :type "double")
+                nil [4982 8683])
+            ("genann_train" function
+               (:arguments 
+                  ( ("ann" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("genann" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8704 8722])
+                    ("inputs" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [8723 8744])
+                    ("desired_outputs" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [8745 8775])
+                    ("learning_rate" variable (:type "double") (reparse-symbol arg-sub-list) [8776 8797]))                  
+                :type "void")
+                nil [8686 14917])
+            ("genann_write" function
+               (:arguments 
+                  ( ("ann" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("genann" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14938 14956])
+                    ("out" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14957 14967]))                  
+                :type "void")
+                nil [14920 15177]))          
+      :file "genann_blas.c"
+      :pointmax 15178
+      :fsize 15177
+      :lastmodtime '(23026 1339 676810 448000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LOOKUP_SIZE" . ((number "4096" 1200 . 1204)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "genann_blas.h"
+      :fsize 3310
+      :lastmodtime '(23026 463 718383 941000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("sys/time.h" include (:system-flag t) nil [20 41])
+            ("genann_blas.h" include nil nil [42 66])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [77 86])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [87 100]))                  
+                :type "int")
+                nil [68 1733]))          
+      :file "example1.c"
+      :pointmax 1734
+      :fsize 1733
+      :lastmodtime '(23026 1508 372607 330000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__MINCTEST_H__" variable (:constant-flag t) nil [1511 1525])
+            ("stdio.h" include (:system-flag t) nil [1527 1545])
+            ("math.h" include (:system-flag t) nil [1546 1563])
+            ("sys/time.h" include (:system-flag t) nil [1564 1585])
+            ("LTEST_FLOAT_TOLERANCE" variable (:constant-flag t) nil [1663 1684])
+            ("ltests" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [1789 1811])
+            ("lfails" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [1812 1834])
+            ("lresults" variable (:constant-flag t) nil [1877 1885])
+            ("lrun" variable (:constant-flag t) nil [2185 2189])
+            ("lok" variable (:constant-flag t) nil [2554 2557])
+            ("lequal" variable (:constant-flag t) nil [2743 2749])
+            ("lfequal" variable (:constant-flag t) nil [2981 2988]))          
+      :file "minctest.h"
+      :pointmax 3231
+      :fsize 3230
+      :lastmodtime '(23020 49548 559122 866000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LTEST_FLOAT_TOLERANCE" . ((number "0.001" 1685 . 1690)))
+          ("lequal" (spp-arg-list ("a" "b") 2749 . 2755) . 
+              ((DO "do" 2756 . 2758) (semantic-list "{\\
+    ++ltests;\\
+    if ((a) != (b)) {\\
+        ++lfails;\\
+        printf(\"%s:%d (%d != %d)\\n\", __FILE__, __LINE__, (a), (b));\\
+    }}" 2759 . 2894) (WHILE "while" 2895 . 2900) (semantic-list "(0)" 2901 . 2904)))
+          ("lresults" (spp-arg-list nil 1885 . 1887) . 
+              ((DO "do" 1888 . 1890) (semantic-list "{\\
+    if (lfails == 0) {\\
+        printf(\"ALL TESTS PASSED (%d/%d)\\n\", ltests, ltests);\\
+    } else {\\
+        printf(\"SOME TESTS FAILED (%d/%d)\\n\", ltests-lfails, ltests);\\
+    }\\
+}" 1891 . 2074) (WHILE "while" 2075 . 2080) (semantic-list "(0)" 2081 . 2084)))
+          ("lok" (spp-arg-list ("test") 2557 . 2563) . 
+              ((DO "do" 2564 . 2566) (semantic-list "{\\
+    ++ltests;\\
+    if (!(test)) {\\
+        ++lfails;\\
+        printf(\"%s:%d error \\n\", __FILE__, __LINE__);\\
+    }}" 2567 . 2685) (WHILE "while" 2686 . 2691) (semantic-list "(0)" 2692 . 2695)))
+          ("lfequal" (spp-arg-list ("a" "b") 2988 . 2994) . 
+              ((DO "do" 2995 . 2997) (semantic-list "{\\
+    ++ltests;\\
+    if (fabs((double)(a)-(double)(b)) > LTEST_FLOAT_TOLERANCE) {\\
+        ++lfails;\\
+        printf(\"%s:%d (%f != %f)\\n\", __FILE__, __LINE__, (double)(a), (double)(b));\\
+    }}" 2998 . 3192) (WHILE "while" 3193 . 3198) (semantic-list "(0)" 3199 . 3202)))
+          ("__MINCTEST_H__")
+          ("lrun" (spp-arg-list ("name" "test") 2189 . 2201) . 
+              ((DO "do" 2202 . 2204) (semantic-list "{\\
+    const int ts = ltests;\\
+    const int fs = lfails;\\
+    const clock_t start = clock();\\
+    printf(\"\\t%-14s\", name);\\
+    test();\\
+    printf(\"pass:%2d   fail:%2d   %4dms\\n\",\\
+            (ltests-ts)-(lfails-fs), lfails-fs,\\
+            (int)((clock() - start) * 1000 / CLOCKS_PER_SEC));\\
+}" 2205 . 2502) (WHILE "while" 2503 . 2508) (semantic-list "(0)" 2509 . 2512)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("genann_blas.h" include nil nil [999 1023])
+            ("minctest.h" include nil nil [1024 1045])
+            ("stdio.h" include (:system-flag t) nil [1046 1064])
+            ("math.h" include (:system-flag t) nil [1065 1082])
+            ("stdlib.h" include (:system-flag t) nil [1083 1102])
+            ("basic" function (:type "void") nil [1106 1699])
+            ("xor" function (:type "void") nil [1702 2516])
+            ("backprop" function (:type "void") nil [2519 2870])
+            ("train_and" function (:type "void") nil [2873 3470])
+            ("train_or" function (:type "void") nil [3473 4096])
+            ("train_xor" function (:type "void") nil [4100 4745])
+            ("persist" function (:type "void") nil [4749 5422])
+            ("copy" function (:type "void") nil [5425 5949])
+            ("sigmoid" function (:type "void") nil [5952 6160])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6172 6181])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6182 6195]))                  
+                :type "int")
+                nil [6163 6561]))          
+      :file "test.c"
+      :pointmax 6562
+      :fsize 6561
+      :lastmodtime '(23026 564 337806 541000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!c++!parallel_computing!ps4!code!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

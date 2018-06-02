@@ -1,0 +1,49 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("list" include (:system-flag t) nil [39 54])
+            ("string" include (:system-flag t) nil [55 72])
+            ("sstream" include (:system-flag t) nil [73 91])
+            ("utility" include (:system-flag t) nil [92 110])
+            ("algorithm" include (:system-flag t) nil [111 131])
+            ("map" include (:system-flag t) nil [132 146])
+            ("cmath" include (:system-flag t) nil [147 163])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [165 185])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [196 205])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [206 220]))                  
+                :type "int")
+                nil [187 675]))          
+      :file "1.cpp"
+      :pointmax 676
+      :fsize 675
+      :lastmodtime '(23269 62751 787962 493000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("build" function (:arguments ("1.cpp")) nil [1 58])
+            ("run" function (:arguments ("build")) nil [59 84]))          
+      :file "Makefile"
+      :pointmax 84
+      :fsize 83
+      :lastmodtime '(23269 47495 283619 625000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!c++!google_jam!round1b!1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

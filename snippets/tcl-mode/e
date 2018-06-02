@@ -2,5 +2,5 @@
 # name: exp
 # key: e
 # --
->EXPENSE: TIME = `(timestamp)` | AMOUNT = ${1:} | CURRENCY = ${2:$$(yas-choose-value '("EUR" "NOK" "DKK"))} | CATEGORY = ${3:$$(yas-choose-value '("supermarket" "fuel" "train" "flight" "tolls" "bar/snacks" "nightlife" "restraurant" "medical" "bus" "airport_bus" "sport_equipment" "training" "house_stuff" "electronic_equipment" "telephone_plan" "books" "software/plans" "carelessness" "burocracy" "housing" "uncategorized" "gifts" "hotel/Airbnb"))} | OPTIONAL_DESCRIPTION = ${4:}
+>EXPENSE: TIME = `(timestamp)` | AMOUNT = ${1:} | CURRENCY = ${2:$$(yas-choose-value '("EUR" "NOK" "DKK"))} | CATEGORY = ${3:$$(yas-choose-value '("supermarket" "fuel" "train" "flight" "tolls" "bar/snacks" "nightlife" "restraurant" "medical" "bus" "airport_bus" "sport_equipment" "training" "clothes" "house_stuff" "electronic_equipment" "telephone_plan" "books" "software/plans" "carelessness" "burocracy" "housing" "uncategorized" "gifts" "hotel/Airbnb" "haircut/beard" "lifestyle_equipment"))} | OPTIONAL_DESCRIPTION = ${4:}
 $0

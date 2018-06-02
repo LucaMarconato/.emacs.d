@@ -1,0 +1,192 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_TAGS_SUPPORT_DEFAULT_TAGGED_HPP" variable (:constant-flag t) nil [350 393])
+            ("boost/config.hpp" include (:system-flag t) nil [438 465])
+            ("boost/bimap/tags/tagged.hpp" include (:system-flag t) nil [467 505])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("tags" type
+                               (:members 
+                                  ( ("support" type
+                                       (:members 
+                                          ( ("default_tagged" type
+                                               (:template 
+                                                  ( ("Type" type (:type "class") nil nil)
+                                                    ("DefaultTag" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("type" type
+                                                       (:typedef ("tagged" type
+                                                             (:template-specifier 
+                                                                ( ("Type" type nil nil nil)
+                                                                  ("DefaultTag" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1266 1303]))                                                  )
+                                                (reparse-symbol namespacesubparts) [1197 1306])
+                                            ("default_tagged" type
+                                               (:template 
+                                                  ( ("Type" type (:type "class") nil nil)
+                                                    ("OldTag" type (:type "class") nil nil)
+                                                    ("NewTag" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("type" type
+                                                       (:typedef ("tagged" type
+                                                             (:template-specifier 
+                                                                ( ("Type" type nil nil nil)
+                                                                  ("OldTag" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1421 1454]))                                                  
+                                                :template-specifier 
+                                                  ( ("tagged" type (:template-specifier 
+                                                      ( ("Type" type nil nil nil)
+                                                        ("OldTag" type nil nil nil))                                                      ) nil nil)
+                                                    ("NewTag" type nil nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [1308 1457]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1085 1460]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1068 1483]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1049 1503]))                  
+                :type "namespace")
+                nil [1031 1525]))          
+      :file "default_tagged.hpp"
+      :pointmax 1671
+      :fsize 1670
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_BIMAP_TAGS_SUPPORT_DEFAULT_TAGGED_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_TAGS_SUPPORT_TAG_OF_HPP" variable (:constant-flag t) nil [357 392])
+            ("boost/config.hpp" include (:system-flag t) nil [437 464])
+            ("boost/bimap/tags/tagged.hpp" include (:system-flag t) nil [466 504])
+            ("boost/bimap/detail/debug/static_error.hpp" include (:system-flag t) nil [505 557])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("tags" type
+                               (:members 
+                                  ( ("support" type
+                                       (:members 
+                                          ( ("tag_of" type
+                                               (:template 
+                                                  ( ("Type" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("BOOST_BIMAP_STATIC_ERROR" function
+                                                       (:prototype-flag t
+                                                        :arguments 
+                                                          ( ("" variable (:type ("USING_TAG_OF_WITH_AN_UNTAGGED_TYPE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1259 1294]))                                                          
+                                                        :type "int")
+                                                        (reparse-symbol classsubparts) [1233 1304]))                                                  )
+                                                (reparse-symbol namespacesubparts) [1190 1307])
+                                            ("tag_of" type
+                                               (:template 
+                                                  ( ("Type" type (:type "class") nil nil)
+                                                    ("Tag" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("type" type
+                                                       (:typedef ("Tag" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1386 1403]))                                                  
+                                                :template-specifier 
+                                                  ( ("tagged" type (:template-specifier 
+                                                      ( ("Type" type nil nil nil)
+                                                        ("Tag" type nil nil nil))                                                      ) nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [1309 1406]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1144 1410]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1127 1433]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1108 1453]))                  
+                :type "namespace")
+                nil [1090 1475]))          
+      :file "tag_of.hpp"
+      :pointmax 1611
+      :fsize 1610
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1295 . 1301))
+      :lexical-table 
+        '(("BOOST_BIMAP_TAGS_SUPPORT_TAG_OF_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_TAGS_SUPPORT_VALUE_TYPE_OF_HPP" variable (:constant-flag t) nil [405 447])
+            ("boost/config.hpp" include (:system-flag t) nil [492 519])
+            ("boost/bimap/tags/tagged.hpp" include (:system-flag t) nil [521 559])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("tags" type
+                               (:members 
+                                  ( ("support" type
+                                       (:members 
+                                          ( ("value_type_of" type
+                                               (:template 
+                                                  ( ("Type" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("type" type
+                                                       (:typedef ("Type" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1298 1316]))                                                  )
+                                                (reparse-symbol namespacesubparts) [1248 1319])
+                                            ("value_type_of" type
+                                               (:template 
+                                                  ( ("Type" type (:type "class") nil nil)
+                                                    ("Tag" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("type" type
+                                                       (:typedef ("Type" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1405 1423]))                                                  
+                                                :template-specifier 
+                                                  ( ("tagged" type (:template-specifier 
+                                                      ( ("Type" type nil nil nil)
+                                                        ("Tag" type nil nil nil))                                                      ) nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [1321 1426]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1195 1430]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1178 1453]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1159 1473]))                  
+                :type "namespace")
+                nil [1141 1495]))          
+      :file "value_type_of.hpp"
+      :pointmax 1639
+      :fsize 1638
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_BIMAP_TAGS_SUPPORT_VALUE_TYPE_OF_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!bimap!tags!support!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,17 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("boost/functional/hash/hash.hpp" include (:system-flag t) nil [193 234]))          
+      :file "hash.hpp"
+      :pointmax 236
+      :fsize 235
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!functional!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

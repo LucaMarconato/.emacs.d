@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: codeforce
+# key: codeforce
+# --
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <algorithm>
+#include <utility>
+#include <map>
+#include <set>
+
+using namespace std;
+
+int main(int argc, char * argv[])
+\{
+    ${1:}
+    
+    return 0;
+\}

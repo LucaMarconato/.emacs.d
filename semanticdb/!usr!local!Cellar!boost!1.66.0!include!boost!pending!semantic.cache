@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_PENDING_INTEGER_LOG2_HPP" variable (:constant-flag t) nil [48 78])
+            ("boost/integer/integer_log2.hpp" include (:system-flag t) nil [175 216]))          
+      :file "integer_log2.hpp"
+      :pointmax 225
+      :fsize 224
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_PENDING_INTEGER_LOG2_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!pending!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

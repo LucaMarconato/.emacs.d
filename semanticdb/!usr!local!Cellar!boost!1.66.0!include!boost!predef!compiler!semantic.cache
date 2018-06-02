@@ -1,0 +1,609 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_BORLAND_H" variable (:constant-flag t) nil [235 266])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [268 308])
+            ("boost/predef/make.h" include (:system-flag t) nil [309 339])
+            ("BOOST_COMP_BORLAND" variable (:constant-flag t) nil [736 754])
+            ("BOOST_COMP_BORLAND_NAME" variable (:constant-flag t) nil [1539 1562])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1586 1623]))          
+      :file "borland.h"
+      :pointmax 1854
+      :fsize 1853
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1649 . 1693) (symbol 1624 . 1649) (string "\"Borland C++\"" 1669 . 1692))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_BORLAND_H")
+          ("BOOST_COMP_BORLAND" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 755 . 789)))
+          ("BOOST_COMP_BORLAND_NAME" . ((string "\"Borland C++\"" 1563 . 1576)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_CLANG_H" variable (:constant-flag t) nil [233 262])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [264 304])
+            ("boost/predef/make.h" include (:system-flag t) nil [305 335])
+            ("BOOST_COMP_CLANG" variable (:constant-flag t) nil [674 690])
+            ("BOOST_COMP_CLANG_DETECTION" variable (:constant-flag t) nil [761 787])
+            ("BOOST_COMP_CLANG" variable (:constant-flag t) nil [1078 1094])
+            ("BOOST_COMP_CLANG_AVAILABLE" variable (:constant-flag t) nil [1143 1169])
+            ("boost/predef/detail/comp_detected.h" include (:system-flag t) nil [1170 1219])
+            ("BOOST_COMP_CLANG_NAME" variable (:constant-flag t) nil [1236 1257])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1275 1312]))          
+      :file "clang.h"
+      :pointmax 1533
+      :fsize 1532
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1338 . 1378) (symbol 1313 . 1338) (string "\"Clang\"" 1356 . 1377) (semantic-list "(__clang_major__,__clang_minor__,__clang_patchlevel__)" 1339 . 1355))
+      :lexical-table 
+        '(("BOOST_COMP_CLANG_DETECTION" . ((symbol "BOOST_VERSION_NUMBER" 788 . 808) (semantic-list "(__clang_major__,__clang_minor__,__clang_patchlevel__)" 808 . 862)))
+          ("BOOST_COMP_CLANG" . ((symbol "BOOST_COMP_CLANG_DETECTION" 1095 . 1121)))
+          ("BOOST_PREDEF_COMPILER_CLANG_H")
+          ("BOOST_COMP_CLANG_AVAILABLE")
+          ("BOOST_COMP_CLANG_NAME" . ((string "\"Clang\"" 1258 . 1265)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_COMEAU_H" variable (:constant-flag t) nil [234 264])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [266 306])
+            ("boost/predef/make.h" include (:system-flag t) nil [307 337])
+            ("BOOST_COMP_COMO" variable (:constant-flag t) nil [347 362])
+            ("BOOST_COMP_COMO_NAME" variable (:constant-flag t) nil [1379 1399])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1422 1459]))          
+      :file "comeau.h"
+      :pointmax 1675
+      :fsize 1674
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1485 . 1523) (symbol 1460 . 1485) (string "\"Comeau C++\"" 1502 . 1522))
+      :lexical-table 
+        '(("BOOST_COMP_COMO" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 363 . 397)))
+          ("BOOST_COMP_COMO_NAME" . ((string "\"Comeau C++\"" 1400 . 1412)))
+          ("BOOST_PREDEF_COMPILER_COMEAU_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_COMPAQ_H" variable (:constant-flag t) nil [234 264])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [266 306])
+            ("boost/predef/make.h" include (:system-flag t) nil [307 337])
+            ("BOOST_COMP_DEC" variable (:constant-flag t) nil [726 740])
+            ("BOOST_COMP_DEC_NAME" variable (:constant-flag t) nil [1619 1638])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1663 1700]))          
+      :file "compaq.h"
+      :pointmax 1911
+      :fsize 1910
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1726 . 1762) (symbol 1701 . 1726) (string "\"Compaq C/C++\"" 1742 . 1761))
+      :lexical-table 
+        '(("BOOST_COMP_DEC" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 741 . 775)))
+          ("BOOST_PREDEF_COMPILER_COMPAQ_H")
+          ("BOOST_COMP_DEC_NAME" . ((string "\"Compaq C/C++\"" 1639 . 1653)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_DIAB_H" variable (:constant-flag t) nil [232 260])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [262 302])
+            ("boost/predef/make.h" include (:system-flag t) nil [303 333])
+            ("BOOST_COMP_DIAB" variable (:constant-flag t) nil [672 687])
+            ("BOOST_COMP_DIAB_NAME" variable (:constant-flag t) nil [1194 1214])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1237 1274]))          
+      :file "diab.h"
+      :pointmax 1490
+      :fsize 1489
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1300 . 1338) (symbol 1275 . 1300) (string "\"Diab C/C++\"" 1317 . 1337))
+      :lexical-table 
+        '(("BOOST_COMP_DIAB_NAME" . ((string "\"Diab C/C++\"" 1215 . 1227)))
+          ("BOOST_PREDEF_COMPILER_DIAB_H")
+          ("BOOST_COMP_DIAB" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 688 . 722)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_DIGITALMARS_H" variable (:constant-flag t) nil [239 274])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [276 316])
+            ("boost/predef/make.h" include (:system-flag t) nil [317 347])
+            ("BOOST_COMP_DMC" variable (:constant-flag t) nil [645 659])
+            ("BOOST_COMP_DMC_NAME" variable (:constant-flag t) nil [1146 1165])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1190 1227]))          
+      :file "digitalmars.h"
+      :pointmax 1438
+      :fsize 1437
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1253 . 1289) (symbol 1228 . 1253) (string "\"Digital Mars\"" 1269 . 1288))
+      :lexical-table 
+        '(("BOOST_COMP_DMC" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 660 . 694)))
+          ("BOOST_PREDEF_COMPILER_DIGITALMARS_H")
+          ("BOOST_COMP_DMC_NAME" . ((string "\"Digital Mars\"" 1166 . 1180)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_DIGNUS_H" variable (:constant-flag t) nil [234 264])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [266 306])
+            ("boost/predef/make.h" include (:system-flag t) nil [307 337])
+            ("BOOST_COMP_SYSC" variable (:constant-flag t) nil [634 649])
+            ("BOOST_COMP_SYSC_NAME" variable (:constant-flag t) nil [1152 1172])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1203 1240]))          
+      :file "dignus.h"
+      :pointmax 1456
+      :fsize 1455
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1266 . 1304) (symbol 1241 . 1266) (string "\"Dignus Systems/C++\"" 1283 . 1303))
+      :lexical-table 
+        '(("BOOST_COMP_SYSC_NAME" . ((string "\"Dignus Systems/C++\"" 1173 . 1193)))
+          ("BOOST_COMP_SYSC" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 650 . 684)))
+          ("BOOST_PREDEF_COMPILER_DIGNUS_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_EDG_H" variable (:constant-flag t) nil [231 258])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [260 300])
+            ("boost/predef/make.h" include (:system-flag t) nil [301 331])
+            ("BOOST_COMP_EDG" variable (:constant-flag t) nil [648 662])
+            ("BOOST_COMP_EDG_NAME" variable (:constant-flag t) nil [1157 1176])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1205 1242]))          
+      :file "edg.h"
+      :pointmax 1453
+      :fsize 1452
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1268 . 1304) (symbol 1243 . 1268) (string "\"EDG C++ Frontend\"" 1284 . 1303))
+      :lexical-table 
+        '(("BOOST_COMP_EDG_NAME" . ((string "\"EDG C++ Frontend\"" 1177 . 1195)))
+          ("BOOST_PREDEF_COMPILER_EDG_H")
+          ("BOOST_COMP_EDG" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 663 . 697)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_EKOPATH_H" variable (:constant-flag t) nil [235 266])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [268 308])
+            ("boost/predef/make.h" include (:system-flag t) nil [309 339])
+            ("BOOST_COMP_PATH" variable (:constant-flag t) nil [681 696])
+            ("BOOST_COMP_PATH_NAME" variable (:constant-flag t) nil [1242 1262])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1282 1319]))          
+      :file "ekopath.h"
+      :pointmax 1535
+      :fsize 1534
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1345 . 1383) (symbol 1320 . 1345) (string "\"EKOpath\"" 1362 . 1382))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_EKOPATH_H")
+          ("BOOST_COMP_PATH" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 697 . 731)))
+          ("BOOST_COMP_PATH_NAME" . ((string "\"EKOpath\"" 1263 . 1272)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_GCC_XML_H" variable (:constant-flag t) nil [235 266])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [268 308])
+            ("boost/predef/make.h" include (:system-flag t) nil [309 339])
+            ("BOOST_COMP_GCCXML" variable (:constant-flag t) nil [539 556])
+            ("BOOST_COMP_GCCXML_NAME" variable (:constant-flag t) nil [1067 1089])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1109 1146]))          
+      :file "gcc_xml.h"
+      :pointmax 1372
+      :fsize 1371
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1172 . 1214) (symbol 1147 . 1172) (string "\"GCC XML\"" 1191 . 1213))
+      :lexical-table 
+        '(("BOOST_COMP_GCCXML" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 557 . 591)))
+          ("BOOST_PREDEF_COMPILER_GCC_XML_H")
+          ("BOOST_COMP_GCCXML_NAME" . ((string "\"GCC XML\"" 1090 . 1099)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_GCC_H" variable (:constant-flag t) nil [231 258])
+            ("boost/predef/compiler/clang.h" include (:system-flag t) nil [332 372])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [374 414])
+            ("boost/predef/make.h" include (:system-flag t) nil [415 445])
+            ("BOOST_COMP_GNUC" variable (:constant-flag t) nil [859 874])
+            ("BOOST_COMP_GNUC_DETECTION" variable (:constant-flag t) nil [1023 1048])
+            ("BOOST_COMP_GNUC" variable (:constant-flag t) nil [1506 1521])
+            ("BOOST_COMP_GNUC_AVAILABLE" variable (:constant-flag t) nil [1569 1594])
+            ("boost/predef/detail/comp_detected.h" include (:system-flag t) nil [1595 1644])
+            ("BOOST_COMP_GNUC_NAME" variable (:constant-flag t) nil [1661 1681])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1707 1744]))          
+      :file "gcc.h"
+      :pointmax 1960
+      :fsize 1959
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1770 . 1808) (symbol 1745 . 1770) (string "\"Gnu GCC C/C++\"" 1787 . 1807) (semantic-list "(__GNUC__,__GNUC_MINOR__,__GNUC_PATCHLEVEL__)" 1771 . 1786))
+      :lexical-table 
+        '(("BOOST_COMP_GNUC" . ((symbol "BOOST_COMP_GNUC_DETECTION" 1522 . 1547)))
+          ("BOOST_COMP_GNUC_AVAILABLE")
+          ("BOOST_PREDEF_COMPILER_GCC_H")
+          ("BOOST_COMP_GNUC_NAME" . ((string "\"Gnu GCC C/C++\"" 1682 . 1697)))
+          ("BOOST_COMP_GNUC_DETECTION" . ((symbol "BOOST_VERSION_NUMBER" 1063 . 1083) (semantic-list "(__GNUC__,__GNUC_MINOR__,__GNUC_PATCHLEVEL__)" 1083 . 1128)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_GREENHILLS_H" variable (:constant-flag t) nil [238 272])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [274 314])
+            ("boost/predef/make.h" include (:system-flag t) nil [315 345])
+            ("BOOST_COMP_GHS" variable (:constant-flag t) nil [734 748])
+            ("BOOST_COMP_GHS_NAME" variable (:constant-flag t) nil [1624 1643])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1673 1710]))          
+      :file "greenhills.h"
+      :pointmax 1921
+      :fsize 1920
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1736 . 1772) (symbol 1711 . 1736) (string "\"Green Hills C/C++\"" 1752 . 1771))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_GREENHILLS_H")
+          ("BOOST_COMP_GHS" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 749 . 783)))
+          ("BOOST_COMP_GHS_NAME" . ((string "\"Green Hills C/C++\"" 1644 . 1663)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_HP_ACC_H" variable (:constant-flag t) nil [234 264])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [266 306])
+            ("boost/predef/make.h" include (:system-flag t) nil [307 337])
+            ("BOOST_COMP_HPACC" variable (:constant-flag t) nil [589 605])
+            ("BOOST_COMP_HPACC_NAME" variable (:constant-flag t) nil [1316 1337])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1357 1394]))          
+      :file "hp_acc.h"
+      :pointmax 1615
+      :fsize 1614
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1420 . 1460) (symbol 1395 . 1420) (string "\"HP aC++\"" 1438 . 1459))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_HP_ACC_H")
+          ("BOOST_COMP_HPACC_NAME" . ((string "\"HP aC++\"" 1338 . 1347)))
+          ("BOOST_COMP_HPACC" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 606 . 640)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_IAR_H" variable (:constant-flag t) nil [231 258])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [260 300])
+            ("boost/predef/make.h" include (:system-flag t) nil [301 331])
+            ("BOOST_COMP_IAR" variable (:constant-flag t) nil [593 607])
+            ("BOOST_COMP_IAR_NAME" variable (:constant-flag t) nil [1107 1126])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1148 1185]))          
+      :file "iar.h"
+      :pointmax 1396
+      :fsize 1395
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1211 . 1247) (symbol 1186 . 1211) (string "\"IAR C/C++\"" 1227 . 1246))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_IAR_H")
+          ("BOOST_COMP_IAR" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 608 . 642)))
+          ("BOOST_COMP_IAR_NAME" . ((string "\"IAR C/C++\"" 1127 . 1138)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_IBM_H" variable (:constant-flag t) nil [231 258])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [260 300])
+            ("boost/predef/make.h" include (:system-flag t) nil [301 331])
+            ("BOOST_COMP_IBM" variable (:constant-flag t) nil [801 815])
+            ("BOOST_COMP_IBM_NAME" variable (:constant-flag t) nil [1866 1885])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1910 1947]))          
+      :file "ibm.h"
+      :pointmax 2158
+      :fsize 2157
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1973 . 2009) (symbol 1948 . 1973) (string "\"IBM XL C/C++\"" 1989 . 2008))
+      :lexical-table 
+        '(("BOOST_COMP_IBM_NAME" . ((string "\"IBM XL C/C++\"" 1886 . 1900)))
+          ("BOOST_PREDEF_COMPILER_IBM_H")
+          ("BOOST_COMP_IBM" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 816 . 850)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_INTEL_H" variable (:constant-flag t) nil [233 262])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [264 304])
+            ("boost/predef/make.h" include (:system-flag t) nil [305 335])
+            ("BOOST_COMP_INTEL" variable (:constant-flag t) nil [833 849])
+            ("BOOST_COMP_INTEL_NAME" variable (:constant-flag t) nil [2369 2390])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [2414 2451]))          
+      :file "intel.h"
+      :pointmax 2672
+      :fsize 2671
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 2477 . 2517) (symbol 2452 . 2477) (string "\"Intel C/C++\"" 2495 . 2516))
+      :lexical-table 
+        '(("BOOST_COMP_INTEL" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 850 . 884)))
+          ("BOOST_PREDEF_COMPILER_INTEL_H")
+          ("BOOST_COMP_INTEL_NAME" . ((string "\"Intel C/C++\"" 2391 . 2404)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_KAI_H" variable (:constant-flag t) nil [231 258])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [260 300])
+            ("boost/predef/make.h" include (:system-flag t) nil [301 331])
+            ("BOOST_COMP_KCC" variable (:constant-flag t) nil [583 597])
+            ("BOOST_COMP_KCC_NAME" variable (:constant-flag t) nil [1089 1108])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1128 1165]))          
+      :file "kai.h"
+      :pointmax 1376
+      :fsize 1375
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1191 . 1227) (symbol 1166 . 1191) (string "\"Kai C++\"" 1207 . 1226))
+      :lexical-table 
+        '(("BOOST_COMP_KCC_NAME" . ((string "\"Kai C++\"" 1109 . 1118)))
+          ("BOOST_PREDEF_COMPILER_KAI_H")
+          ("BOOST_COMP_KCC" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 598 . 632)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_LLVM_H" variable (:constant-flag t) nil [232 260])
+            ("boost/predef/compiler/clang.h" include (:system-flag t) nil [334 374])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [376 416])
+            ("boost/predef/make.h" include (:system-flag t) nil [417 447])
+            ("BOOST_COMP_LLVM" variable (:constant-flag t) nil [651 666])
+            ("BOOST_COMP_LLVM_DETECTION" variable (:constant-flag t) nil [736 761])
+            ("BOOST_COMP_LLVM" variable (:constant-flag t) nil [1004 1019])
+            ("BOOST_COMP_LLVM_AVAILABLE" variable (:constant-flag t) nil [1067 1092])
+            ("boost/predef/detail/comp_detected.h" include (:system-flag t) nil [1093 1142])
+            ("BOOST_COMP_LLVM_NAME" variable (:constant-flag t) nil [1159 1179])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1196 1233]))          
+      :file "llvm.h"
+      :pointmax 1449
+      :fsize 1448
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1259 . 1297) (symbol 1234 . 1259) (string "\"LLVM\"" 1276 . 1296))
+      :lexical-table 
+        '(("BOOST_COMP_LLVM" . ((symbol "BOOST_COMP_LLVM_DETECTION" 1020 . 1045)))
+          ("BOOST_COMP_LLVM_AVAILABLE")
+          ("BOOST_COMP_LLVM_NAME" . ((string "\"LLVM\"" 1180 . 1186)))
+          ("BOOST_PREDEF_COMPILER_LLVM_H")
+          ("BOOST_COMP_LLVM_DETECTION" . ((symbol "BOOST_VERSION_NUMBER_AVAILABLE" 762 . 792)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_METAWARE_H" variable (:constant-flag t) nil [236 268])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [270 310])
+            ("boost/predef/make.h" include (:system-flag t) nil [311 341])
+            ("BOOST_COMP_HIGHC" variable (:constant-flag t) nil [525 541])
+            ("BOOST_COMP_HIGHC_NAME" variable (:constant-flag t) nil [1043 1064])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1096 1133]))          
+      :file "metaware.h"
+      :pointmax 1354
+      :fsize 1353
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1159 . 1199) (symbol 1134 . 1159) (string "\"MetaWare High C/C++\"" 1177 . 1198))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_METAWARE_H")
+          ("BOOST_COMP_HIGHC_NAME" . ((string "\"MetaWare High C/C++\"" 1065 . 1086)))
+          ("BOOST_COMP_HIGHC" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 542 . 576)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_METROWERKS_H" variable (:constant-flag t) nil [238 272])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [274 314])
+            ("boost/predef/make.h" include (:system-flag t) nil [315 345])
+            ("BOOST_COMP_MWERKS" variable (:constant-flag t) nil [797 814])
+            ("BOOST_COMP_MWERKS_NAME" variable (:constant-flag t) nil [2253 2275])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [2310 2347]))          
+      :file "metrowerks.h"
+      :pointmax 2573
+      :fsize 2572
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 2373 . 2415) (symbol 2348 . 2373) (string "\"Metrowerks CodeWarrior\"" 2392 . 2414))
+      :lexical-table 
+        '(("BOOST_COMP_MWERKS" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 815 . 849)))
+          ("BOOST_PREDEF_COMPILER_METROWERKS_H")
+          ("BOOST_COMP_MWERKS_NAME" . ((string "\"Metrowerks CodeWarrior\"" 2276 . 2300)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_MICROTEC_H" variable (:constant-flag t) nil [236 268])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [270 310])
+            ("boost/predef/make.h" include (:system-flag t) nil [311 341])
+            ("BOOST_COMP_MRI" variable (:constant-flag t) nil [548 562])
+            ("BOOST_COMP_MRI_NAME" variable (:constant-flag t) nil [1043 1062])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1089 1126]))          
+      :file "microtec.h"
+      :pointmax 1337
+      :fsize 1336
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1152 . 1188) (symbol 1127 . 1152) (string "\"Microtec C/C++\"" 1168 . 1187))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_MICROTEC_H")
+          ("BOOST_COMP_MRI" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 563 . 597)))
+          ("BOOST_COMP_MRI_NAME" . ((string "\"Microtec C/C++\"" 1063 . 1079)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_MPW_H" variable (:constant-flag t) nil [231 258])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [260 300])
+            ("boost/predef/make.h" include (:system-flag t) nil [301 331])
+            ("BOOST_COMP_MPW" variable (:constant-flag t) nil [720 734])
+            ("BOOST_COMP_MPW_NAME" variable (:constant-flag t) nil [1461 1480])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1500 1537]))          
+      :file "mpw.h"
+      :pointmax 1748
+      :fsize 1747
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1563 . 1599) (symbol 1538 . 1563) (string "\"MPW C++\"" 1579 . 1598))
+      :lexical-table 
+        '(("BOOST_COMP_MPW_NAME" . ((string "\"MPW C++\"" 1481 . 1490)))
+          ("BOOST_COMP_MPW" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 735 . 769)))
+          ("BOOST_PREDEF_COMPILER_MPW_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_PALM_H" variable (:constant-flag t) nil [232 260])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [262 302])
+            ("boost/predef/make.h" include (:system-flag t) nil [303 333])
+            ("BOOST_COMP_PALM" variable (:constant-flag t) nil [589 604])
+            ("BOOST_COMP_PALM_NAME" variable (:constant-flag t) nil [1108 1128])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1151 1188]))          
+      :file "palm.h"
+      :pointmax 1404
+      :fsize 1403
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1214 . 1252) (symbol 1189 . 1214) (string "\"Palm C/C++\"" 1231 . 1251))
+      :lexical-table 
+        '(("BOOST_COMP_PALM_NAME" . ((string "\"Palm C/C++\"" 1129 . 1141)))
+          ("BOOST_PREDEF_COMPILER_PALM_H")
+          ("BOOST_COMP_PALM" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 605 . 639)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_PGI_H" variable (:constant-flag t) nil [231 258])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [260 300])
+            ("boost/predef/make.h" include (:system-flag t) nil [301 331])
+            ("BOOST_COMP_PGI" variable (:constant-flag t) nil [630 644])
+            ("BOOST_COMP_PGI_NAME" variable (:constant-flag t) nil [1422 1441])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1474 1511]))          
+      :file "pgi.h"
+      :pointmax 1722
+      :fsize 1721
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1537 . 1573) (symbol 1512 . 1537) (string "\"Portland Group C/C++\"" 1553 . 1572))
+      :lexical-table 
+        '(("BOOST_COMP_PGI" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 645 . 679)))
+          ("BOOST_COMP_PGI_NAME" . ((string "\"Portland Group C/C++\"" 1442 . 1464)))
+          ("BOOST_PREDEF_COMPILER_PGI_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_SGI_MIPSPRO_H" variable (:constant-flag t) nil [239 274])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [276 316])
+            ("boost/predef/make.h" include (:system-flag t) nil [317 347])
+            ("BOOST_COMP_SGI" variable (:constant-flag t) nil [724 738])
+            ("BOOST_COMP_SGI_NAME" variable (:constant-flag t) nil [1632 1651])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1675 1712]))          
+      :file "sgi_mipspro.h"
+      :pointmax 1923
+      :fsize 1922
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1738 . 1774) (symbol 1713 . 1738) (string "\"SGI MIPSpro\"" 1754 . 1773))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_SGI_MIPSPRO_H")
+          ("BOOST_COMP_SGI_NAME" . ((string "\"SGI MIPSpro\"" 1652 . 1665)))
+          ("BOOST_COMP_SGI" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 739 . 773)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_SUNPRO_H" variable (:constant-flag t) nil [234 264])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [266 306])
+            ("boost/predef/make.h" include (:system-flag t) nil [307 337])
+            ("BOOST_COMP_SUNPRO" variable (:constant-flag t) nil [800 817])
+            ("BOOST_COMP_SUNPRO_NAME" variable (:constant-flag t) nil [2031 2053])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [2087 2124]))          
+      :file "sunpro.h"
+      :pointmax 2350
+      :fsize 2349
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 2150 . 2192) (symbol 2125 . 2150) (string "\"Oracle Solaris Studio\"" 2169 . 2191))
+      :lexical-table 
+        '(("BOOST_COMP_SUNPRO_NAME" . ((string "\"Oracle Solaris Studio\"" 2054 . 2077)))
+          ("BOOST_PREDEF_COMPILER_SUNPRO_H")
+          ("BOOST_COMP_SUNPRO" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 818 . 852)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_TENDRA_H" variable (:constant-flag t) nil [234 264])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [266 306])
+            ("boost/predef/make.h" include (:system-flag t) nil [307 337])
+            ("BOOST_COMP_TENDRA" variable (:constant-flag t) nil [564 581])
+            ("BOOST_COMP_TENDRA_NAME" variable (:constant-flag t) nil [1092 1114])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1139 1176]))          
+      :file "tendra.h"
+      :pointmax 1402
+      :fsize 1401
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1202 . 1244) (symbol 1177 . 1202) (string "\"TenDRA C/C++\"" 1221 . 1243))
+      :lexical-table 
+        '(("BOOST_COMP_TENDRA" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 582 . 616)))
+          ("BOOST_COMP_TENDRA_NAME" . ((string "\"TenDRA C/C++\"" 1115 . 1129)))
+          ("BOOST_PREDEF_COMPILER_TENDRA_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_VISUALC_H" variable (:constant-flag t) nil [235 266])
+            ("boost/predef/compiler/clang.h" include (:system-flag t) nil [340 380])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [382 422])
+            ("boost/predef/make.h" include (:system-flag t) nil [423 453])
+            ("BOOST_COMP_MSVC" variable (:constant-flag t) nil [998 1013])
+            ("BOOST_COMP_MSVC_NAME" variable (:constant-flag t) nil [3002 3022])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [3057 3094]))          
+      :file "visualc.h"
+      :pointmax 3310
+      :fsize 3309
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 3120 . 3158) (symbol 3095 . 3120) (string "\"Microsoft Visual C/C++\"" 3137 . 3157))
+      :lexical-table 
+        '(("BOOST_PREDEF_COMPILER_VISUALC_H")
+          ("BOOST_COMP_MSVC" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 1014 . 1048)))
+          ("BOOST_COMP_MSVC_NAME" . ((string "\"Microsoft Visual C/C++\"" 3023 . 3047)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("BOOST_PREDEF_COMPILER_WATCOM_H" variable (:constant-flag t) nil [234 264])
+            ("boost/predef/version_number.h" include (:system-flag t) nil [266 306])
+            ("boost/predef/make.h" include (:system-flag t) nil [307 337])
+            ("BOOST_COMP_WATCOM" variable (:constant-flag t) nil [631 648])
+            ("BOOST_COMP_WATCOM_NAME" variable (:constant-flag t) nil [1168 1190])
+            ("boost/predef/detail/test.h" include (:system-flag t) nil [1213 1250]))          
+      :file "watcom.h"
+      :pointmax 1476
+      :fsize 1475
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 1276 . 1318) (symbol 1251 . 1276) (string "\"Watcom C++\"" 1295 . 1317))
+      :lexical-table 
+        '(("BOOST_COMP_WATCOM_NAME" . ((string "\"Watcom C++\"" 1191 . 1203)))
+          ("BOOST_PREDEF_COMPILER_WATCOM_H")
+          ("BOOST_COMP_WATCOM" . ((symbol "BOOST_VERSION_NUMBER_NOT_AVAILABLE" 649 . 683)))
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!predef!compiler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

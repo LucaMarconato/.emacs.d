@@ -1,0 +1,69 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("subprocess" include nil nil [1617 1685])
+            ("argparse" include nil nil [1686 1701])
+            ("signal" include nil nil [1702 1715])
+            ("sys" include nil nil [1716 1726])
+            ("sortByOnDiskSize" variable nil nil [1728 1752])
+            ("main" function nil nil [1754 2219])
+            ("getTopBlobs" function (:arguments 
+              ( ("count" variable nil (reparse-symbol function_parameters) [2236 2241])
+                ("sizeLimit" variable nil (reparse-symbol function_parameters) [2243 2252]))              ) nil [2220 2864])
+            ("populateBlobPaths" function (:arguments 
+              ( ("blobs" variable nil (reparse-symbol function_parameters) [2888 2893]))              ) nil [2866 3460])
+            ("printOutBlobs" function (:arguments 
+              ( ("blobs" variable nil (reparse-symbol function_parameters) [3480 3485]))              ) nil [3462 3965])
+            ("parseArguments" function nil nil [3967 4701])
+            ("signal_handler" function (:arguments 
+              ( ("signal" variable nil (reparse-symbol function_parameters) [4722 4728])
+                ("frame" variable nil (reparse-symbol function_parameters) [4730 4735]))              ) nil [4703 4791])
+            ("Blob" type
+               (:superclasses ("object")
+                :members 
+                  ( ("sha1" variable nil (reparse-symbol indented_block_body) [4814 4823])
+                    ("size" variable nil (reparse-symbol indented_block_body) [4825 4833])
+                    ("packedSize" variable nil (reparse-symbol indented_block_body) [4835 4849])
+                    ("path" variable nil (reparse-symbol indented_block_body) [4851 4860])
+                    ("__init__" function
+                       (:suite 
+                          ( ("cols" variable nil (reparse-symbol indented_block_body) [4891 4910])
+                            ("self, self, self" code nil (reparse-symbol indented_block_body) [4913 4988]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4876 4880])
+                            ("line" variable nil (reparse-symbol function_parameters) [4882 4886]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4863 4989])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5004 5008]))                          )
+                        (reparse-symbol indented_block_body) [4991 5097])
+                    ("__lt__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5110 5114])
+                            ("other" variable nil (reparse-symbol function_parameters) [5116 5121]))                          )
+                        (reparse-symbol indented_block_body) [5099 5235])
+                    ("csvLine" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5249 5253]))                          )
+                        (reparse-symbol indented_block_body) [5237 5346]))                  
+                :type "class")
+                nil [4793 5346])
+            ("if" code nil nil [5377 5412]))          
+      :file "largestFiles.py"
+      :pointmax 5412
+      :fsize 5417
+      :lastmodtime '(23266 11775 203247 808000)
+      :unmatched-syntax '(($EOI 5412 . 5412))))
+  :file "!Users!macbook!programming!python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: t1
+# key: t1
+# --
+Timer::stop();

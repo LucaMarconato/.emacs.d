@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "info.json"
+      :pointmax 5226
+      :fsize 5225
+      :lastmodtime '(23266 14734 102412 210000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!_projects!pdf-something!frontends!canonical!data!84f3415d-4f59-4333-9f8b-b4f9f1e9a5fb!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

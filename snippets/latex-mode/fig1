@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: fig1
+# key: fig1
+# --
+\begin{figure}[h]
+    \center
+	\includegraphics[width=0.5\linewidth]{${1:file}.png}
+	\caption{${2:caption}}
+	\label{fig:$1}
+\end{figure}

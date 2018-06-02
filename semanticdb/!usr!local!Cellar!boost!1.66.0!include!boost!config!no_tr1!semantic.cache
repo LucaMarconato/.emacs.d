@@ -1,0 +1,40 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_CONFIG_CMATH" variable (:constant-flag t) nil [538 556])
+            ("BOOST_TR1_NO_RECURSION" variable (:constant-flag t) nil [604 626])
+            ("BOOST_CONFIG_NO_CMATH_RECURSION" variable (:constant-flag t) nil [640 671])
+            ("cmath" include (:system-flag t) nil [682 700]))          
+      :file "cmath.hpp"
+      :pointmax 839
+      :fsize 838
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_CONFIG_CMATH")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_CONFIG_MEMORY" variable (:constant-flag t) nil [541 560])
+            ("BOOST_TR1_NO_RECURSION" variable (:constant-flag t) nil [608 630])
+            ("BOOST_CONFIG_NO_MEMORY_RECURSION" variable (:constant-flag t) nil [644 676])
+            ("memory" include (:system-flag t) nil [687 706]))          
+      :file "memory.hpp"
+      :pointmax 847
+      :fsize 846
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_CONFIG_MEMORY")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!config!no_tr1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

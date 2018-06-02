@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: exp
-# key: e
-# --
-TIME = `(timestamp)` | AMOUNT = ${1:} | CURRENCY = ${2:$$(yas-choose-value '("NOK" "EUR" "DKK"))} | DESCRIPTION = ${3:$$(yas-choose-value '("supermarket" "fuel" "train" "tolls" "bar/snacks" "nightlife" "medical" "exceptional expenses"))}
-$0

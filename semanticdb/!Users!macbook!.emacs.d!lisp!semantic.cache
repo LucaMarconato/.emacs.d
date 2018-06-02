@@ -1,0 +1,103 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags 
+        '( ("cl" include nil nil [4785 4798])
+            ("mf--insert-commentary" variable (:user-visible-flag t) nil [4821 4929])
+            ("mf--user-name-function" variable
+               (:user-visible-flag t
+                :default-value (function user-login-name))
+                nil [4931 5129])
+            ("mf--checkout-if-readonly" variable (:user-visible-flag t) nil [5131 5332])
+            ("mf--header-file-extension" variable
+               (:user-visible-flag t
+                :default-value "hpp")
+                nil [5334 5447])
+            ("mf--source-file-extension" variable
+               (:user-visible-flag t
+                :default-value "cpp")
+                nil [5448 5561])
+            ("mf--version" variable
+               (:constant-flag t
+                :default-value "0.3.1")
+                nil [5579 5632])
+            ("c++-keywords" variable
+               (:constant-flag t
+                :default-value (sort (list "and" "bool" "compl" "do" "export" "goto" "namespace" "or_eq" "return" "struct" "try" "using" "xor" "and_eq" "break" "const" "double" "extern" "if" "new" "private" "short" "switch" "typedef" "virtual" "xor_eq" "asm" "case" "const_cast" "dynamic_cast" "false" "inline" "not" "protected" "signed" "template" "typeid" "void" "auto" "catch" "continue" "else" "float" "int" "not_eq" "public" "sizeof" "this" "typename" "volatile" "bitand" "char" "default" "enum" "for" "long" "operator" "register" "static" "throw" "union" "wchar_t" "bitor" "class" "delete" "explicit" "friend" "mutable" "or" "reinterpret_cast" "static_cast" "true" "unsigned" "while") (function (lambda (a b) (> (length a) (length b))))))
+                nil [5634 6453])
+            ("c++-operators" variable
+               (:constant-flag t
+                :default-value (sort (list "\\+" "-" "\\*" "/" "%" "\\^" "&" "|" "~" "!" "=" "<<" ">>" "\\+=" "-=" "\\*=" "/=" "%=" "^=" "&=" "|=" "<" ">" ">>=" "<<=" "==" "!=" "<=" ">=" "&&" "||" "\\+\\+" "--" "," "->\\*" "->" "\\.") (function (lambda (a b) (> (length a) (length b))))))
+                nil [6455 6819])
+            ("make-c++-keywords-regexp" function (:arguments ("keywords-list")) nil [6821 7030])
+            ("make-c++-operators-regexp" function (:arguments ("operators-list")) nil [7032 7213])
+            ("c++-token-regexp-alist" variable
+               (:constant-flag t
+                :default-value (\` ((keyword \, (make-c++-keywords-regexp c++-keywords)) (operator \, (make-c++-operators-regexp c++-operators)) (c++-comment-start . "//") (c-comment-start . "/\\*") (c-comment-end . "*/") (whitespace . "[ 	
+]+") (identifier . "[A-Za-z_][A-Za-z_0-9]*") (string-literal . "\"[^\"]*\"") (float-literal . "[+-]?[0-9]*\\.[0-9]+\\([eE][0-9]+\\)?[dDFf]?") (integer-literal . "[+-]?[0-9]+[Ll]?") (scope-resolution . "::") (open-paren . "(") (close-paren . ")") (open-brace . "{") (close-brace . "}") (open-bracket . "\\[") (close-bracket . "\\]") (statement-separator . ";") (include-directive . "^[ 	]*#[ 	]*include.*$") (macro-define . "^[ 	]*#[ 	]*define [A-Za-z_][A-Za-z_0-9]*[(].*$") (preproc-define . "^[ 	]*#[ 	]*define [A-Za-z_][A-Za-z_0-9]*[^(].*$") (preproc-directive . "^[ 	]*#.*$") (punctuation . "[:\\?]"))))
+                nil [7215 8219])
+            ("mf--looking-at-keyword-p" function nil nil [8326 8422])
+            ("mf--looking-at-token-p" function (:arguments ("token-type")) nil [8424 8530])
+            ("mf--skip-comments" function nil nil [8532 9058])
+            ("mf--next-token" function nil nil [9099 9691])
+            ("mf--tokenize" function nil nil [9693 9971])
+            ("mf--tokenize-to" function (:arguments ("where")) nil [9973 10109])
+            ("mf--tokenize-buffer" function (:arguments ("buffer")) nil [10111 10319])
+            ("mf--blockify" function (:arguments ("token-list")) nil [10321 11332])
+            ("mf--template-specify" function (:arguments ("token-list")) nil [11334 12592])
+            ("let" code nil nil [12594 13712])
+            ("mf--complete-class-decl-p" function (:arguments ("blockified-list")) nil [13714 14172])
+            ("mf--class-name" function (:arguments ("blockified-list")) nil [14174 14397])
+            ("mf--class-decl-block" function (:arguments ("blockified-list")) nil [14399 14684])
+            ("mf--tokens-after-class-decl-block" function (:arguments ("blockified-list")) nil [14686 15089])
+            ("mf--list-decls" function (:arguments ("class-decl-block-list")) nil [15091 16229])
+            ("mf--pure-virtual-p" function (:arguments ("decl")) nil [16231 16421])
+            ("mf--member-fn-decls" function (:arguments ("decls-list")) nil [16423 17099])
+            ("mf--prepend-class-scope-designators" function (:arguments ("class-name" "member-fn-decls-list")) nil [17101 17335])
+            ("mf--prepend-1-class-scope-designator" function (:arguments ("class-name" "member-fn")) nil [17337 19591])
+            ("mf--fn-dfns" function (:arguments ("decls-list")) nil [19593 20166])
+            ("mf--remove-preproc-dirs" function (:arguments ("token-list")) nil [20168 20532])
+            ("mf--remove-blocks" function (:arguments ("fn-defs-list")) nil [20534 20731])
+            ("mf--list-fn-defs-buffer" function (:arguments ("buffer-name")) nil [20733 20995])
+            ("mf--list-member-fn-decls-buffer" function (:arguments ("buffer-name")) nil [20997 21740])
+            ("mf--split-at-every" function (:arguments ("list" "test")) nil [21742 22032])
+            ("mf--split-at" function (:arguments ("list" "test")) nil [22034 22424])
+            ("mf--equal-param-decl" function (:arguments ("d1" "d2")) nil [22479 23752])
+            ("mf--equal-args" function (:arguments ("args1" "args2")) nil [23754 24523])
+            ("mf--equal-decls" function (:arguments ("decl1" "decl2")) nil [24525 25231])
+            ("mf--undefined-decls" function (:arguments ("decl-list" "dfn-list")) nil [25242 25699])
+            ("mf--remove-decl-specifiers" function (:arguments ("decl")) nil [25701 26070])
+            ("mf--remove-specifiers" function (:arguments ("decl-list")) nil [26072 26247])
+            ("mf--remove-default-args" function (:arguments ("decl-list")) nil [26249 27211])
+            ("mf--class-name-decl" function (:arguments ("decl")) nil [27213 27499])
+            ("mf--function-name-decl" function (:arguments ("decl")) nil [27501 27783])
+            ("mf--date-string" function nil nil [27786 27921])
+            ("mf--format-comment-block" function (:arguments ("decl" "date-string")) nil [27923 28443])
+            ("mf--format-empty-template-definition" function (:arguments ("decl")) nil [28445 29516])
+            ("mf--format-empty-definition" function (:arguments ("decl")) nil [29518 30756])
+            ("mf--format-parens" function (:arguments ("parens-list")) nil [30758 31515])
+            ("mf--undefined-decls-from-files" function (:arguments ("header-file" "dot-c-file")) nil [31517 31858])
+            ("mf--format-undefined-decls-from-files" function (:arguments ("header-file" "dot-c-file")) nil [31860 32200])
+            ("mf--infer-c-filename" function (:arguments ("header-filename")) nil [32202 32470])
+            ("mf--expand-member-functions-args" function (:arguments ("str1" "str2")) nil [32472 33143])
+            ("mf--in-comment-p" function nil nil [33145 33780])
+            ("mf--evacuate-blocks" function nil nil [33782 34173])
+            ("mf--make-temp-c-file" function (:arguments ("cfile")) nil [34175 34989])
+            ("mf--saved-string" variable nil nil [35008 35037])
+            ("expand-member-functions" function
+               (:user-visible-flag t
+                :arguments ("header" "c-file"))
+                nil [35039 36696])
+            ("member-functions" package nil nil [36698 36725]))          
+      :file "member-functions.el"
+      :pointmax 36761
+      :fsize 36760
+      :lastmodtime '(23249 61906 549133 64000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!.emacs.d!lisp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

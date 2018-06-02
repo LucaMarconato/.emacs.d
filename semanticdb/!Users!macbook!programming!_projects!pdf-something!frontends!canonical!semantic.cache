@@ -1,0 +1,136 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("backend.hpp" include (:system-flag t) nil [40 62])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [73 82])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [83 97]))                  
+                :type "int")
+                nil [64 3331]))          
+      :file "main.cpp"
+      :pointmax 3333
+      :fsize 3332
+      :lastmodtime '(23266 14806 329422 65000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("Windows_configuration:<BR>Windows_configuration::already_initialized = 1<BR>Windows_configuration::windows:<BR><blockindent>obj.fullscreen = false<BR>obj.x0 = 0, obj.y0 = 0, obj.x1 = 1920, obj.y1 = 1080<BR>obj.virtual_screen:<BR>obj.id = 32766<BR><BR>obj.monitor:<BR>obj.id = 32766
+obj.name = 
+
+obj.window_layout<BR>obj.number_of_rows = 0, obj.number_of_columns = 0<BR>obj.max_rows() = 6, obj.max_columns() = 6<BR>" section nil nil [29 733]))          
+      :file "output.html"
+      :pointmax 733
+      :fsize 3536893
+      :lastmodtime '(23266 14899 280922 904000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("default_target" function (:arguments ("all")) nil [164 184])
+            (".PHONY" function (:arguments ("default_target")) nil [185 209])
+            (".NOTPARALLEL" function nil nil [280 294])
+            (".SUFFIXES" function nil nil [470 481])
+            ("SUFFIXES" variable nil nil [546 557])
+            (".SUFFIXES" function (:arguments (".hpux_make_needs_suffix_list")) nil [558 598])
+            ("$(VERBOSE)" function nil nil [641 660])
+            ("cmake_force" function nil nil [701 714])
+            (".PHONY" function (:arguments ("cmake_force")) nil [715 736])
+            ("SHELL" variable (:default-value ("/bin/sh")) nil [904 920])
+            ("CMAKE_COMMAND" variable (:default-value ("/usr/local/Cellar/cmake/3.11.0/bin/cmake")) nil [945 1002])
+            ("RM" variable (:default-value ("/usr/local/Cellar/cmake/3.11.0/bin/cmake" "-E" "remove" "-f")) nil [1035 1094])
+            ("EQUALS" variable (:default-value ("=")) nil [1130 1141])
+            ("CMAKE_SOURCE_DIR" variable (:default-value ("/Users/macbook/programming/_projects/pdf-something")) nil [1199 1269])
+            ("CMAKE_BINARY_DIR" variable (:default-value ("/Users/macbook/programming/_projects/pdf-something")) nil [1326 1396])
+            ("rebuild_cache" function nil nil [1559 1770])
+            (".PHONY" function (:arguments ("rebuild_cache")) nil [1770 1793])
+            ("rebuild_cache/fast" function (:arguments ("rebuild_cache")) nil [1838 1872])
+            (".PHONY" function (:arguments ("rebuild_cache/fast")) nil [1873 1901])
+            ("edit_cache" function nil nil [1943 2174])
+            (".PHONY" function (:arguments ("edit_cache")) nil [2174 2194])
+            ("edit_cache/fast" function (:arguments ("edit_cache")) nil [2236 2264])
+            (".PHONY" function (:arguments ("edit_cache/fast")) nil [2265 2290])
+            ("all" function (:arguments ("cmake_check_build_system")) nil [2313 2821])
+            (".PHONY" function (:arguments ("all")) nil [2821 2834])
+            ("clean" function nil nil [2859 2982])
+            (".PHONY" function (:arguments ("clean")) nil [2982 2997])
+            ("clean/fast" function (:arguments ("clean")) nil [3022 3040])
+            (".PHONY" function (:arguments ("clean/fast")) nil [3041 3061])
+            ("preinstall" function (:arguments ("all")) nil [3098 3235])
+            (".PHONY" function (:arguments ("preinstall")) nil [3235 3255])
+            ("preinstall/fast" function nil nil [3292 3430])
+            (".PHONY" function (:arguments ("preinstall/fast")) nil [3430 3455])
+            ("depend" function nil nil [3472 3648])
+            (".PHONY" function (:arguments ("depend")) nil [3648 3664])
+            ("frontends/canonical/CMakeFiles/run.dir/rule" function nil nil [3696 3875])
+            (".PHONY" function (:arguments ("frontends/canonical/CMakeFiles/run.dir/rule")) nil [3875 3928])
+            ("run" function (:arguments ("frontends/canonical/CMakeFiles/run.dir/rule")) nil [3960 4009])
+            (".PHONY" function (:arguments ("run")) nil [4010 4023])
+            ("run/fast" function nil nil [4054 4228])
+            (".PHONY" function (:arguments ("run/fast")) nil [4228 4246])
+            ("frontends/canonical/CMakeFiles/canonical-frontend.dir/rule" function nil nil [4278 4487])
+            (".PHONY" function (:arguments ("frontends/canonical/CMakeFiles/canonical-frontend.dir/rule")) nil [4487 4555])
+            ("canonical-frontend" function (:arguments ("frontends/canonical/CMakeFiles/canonical-frontend.dir/rule")) nil [4587 4666])
+            (".PHONY" function (:arguments ("canonical-frontend")) nil [4667 4695])
+            ("canonical-frontend/fast" function nil nil [4726 4945])
+            (".PHONY" function (:arguments ("canonical-frontend/fast")) nil [4945 4978])
+            ("backend_implementations/canonical_window_layout.o" function (:arguments ("backend_implementations/canonical_window_layout.cpp.o")) nil [4979 5084])
+            (".PHONY" function (:arguments ("backend_implementations/canonical_window_layout.o")) nil [5085 5144])
+            ("backend_implementations/canonical_window_layout.cpp.o" function nil nil [5178 5475])
+            (".PHONY" function (:arguments ("backend_implementations/canonical_window_layout.cpp.o")) nil [5475 5538])
+            ("backend_implementations/canonical_window_layout.i" function (:arguments ("backend_implementations/canonical_window_layout.cpp.i")) nil [5539 5644])
+            (".PHONY" function (:arguments ("backend_implementations/canonical_window_layout.i")) nil [5645 5704])
+            ("backend_implementations/canonical_window_layout.cpp.i" function nil nil [5742 6039])
+            (".PHONY" function (:arguments ("backend_implementations/canonical_window_layout.cpp.i")) nil [6039 6102])
+            ("backend_implementations/canonical_window_layout.s" function (:arguments ("backend_implementations/canonical_window_layout.cpp.s")) nil [6103 6208])
+            (".PHONY" function (:arguments ("backend_implementations/canonical_window_layout.s")) nil [6209 6268])
+            ("backend_implementations/canonical_window_layout.cpp.s" function nil nil [6310 6607])
+            (".PHONY" function (:arguments ("backend_implementations/canonical_window_layout.cpp.s")) nil [6607 6670])
+            ("backend_implementations/io/canonical_file.o" function (:arguments ("backend_implementations/io/canonical_file.cpp.o")) nil [6671 6764])
+            (".PHONY" function (:arguments ("backend_implementations/io/canonical_file.o")) nil [6765 6818])
+            ("backend_implementations/io/canonical_file.cpp.o" function nil nil [6852 7137])
+            (".PHONY" function (:arguments ("backend_implementations/io/canonical_file.cpp.o")) nil [7137 7194])
+            ("backend_implementations/io/canonical_file.i" function (:arguments ("backend_implementations/io/canonical_file.cpp.i")) nil [7195 7288])
+            (".PHONY" function (:arguments ("backend_implementations/io/canonical_file.i")) nil [7289 7342])
+            ("backend_implementations/io/canonical_file.cpp.i" function nil nil [7380 7665])
+            (".PHONY" function (:arguments ("backend_implementations/io/canonical_file.cpp.i")) nil [7665 7722])
+            ("backend_implementations/io/canonical_file.s" function (:arguments ("backend_implementations/io/canonical_file.cpp.s")) nil [7723 7816])
+            (".PHONY" function (:arguments ("backend_implementations/io/canonical_file.s")) nil [7817 7870])
+            ("backend_implementations/io/canonical_file.cpp.s" function nil nil [7912 8197])
+            (".PHONY" function (:arguments ("backend_implementations/io/canonical_file.cpp.s")) nil [8197 8254])
+            ("main.o" function (:arguments ("main.cpp.o")) nil [8255 8274])
+            (".PHONY" function (:arguments ("main.o")) nil [8275 8291])
+            ("main.cpp.o" function nil nil [8325 8536])
+            (".PHONY" function (:arguments ("main.cpp.o")) nil [8536 8556])
+            ("main.i" function (:arguments ("main.cpp.i")) nil [8557 8576])
+            (".PHONY" function (:arguments ("main.i")) nil [8577 8593])
+            ("main.cpp.i" function nil nil [8631 8842])
+            (".PHONY" function (:arguments ("main.cpp.i")) nil [8842 8862])
+            ("main.s" function (:arguments ("main.cpp.s")) nil [8863 8882])
+            (".PHONY" function (:arguments ("main.s")) nil [8883 8899])
+            ("main.cpp.s" function nil nil [8941 9152])
+            (".PHONY" function (:arguments ("main.cpp.s")) nil [9152 9172])
+            ("help" function nil nil [9187 9880])
+            (".PHONY" function (:arguments ("help")) nil [9880 9894])
+            ("cmake_check_build_system" function nil nil [10201 10395])
+            (".PHONY" function (:arguments ("cmake_check_build_system")) nil [10395 10429]))          
+      :file "Makefile"
+      :pointmax 10430
+      :fsize 10429
+      :lastmodtime '(23266 14629 262417 48000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!_projects!pdf-something!frontends!canonical!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

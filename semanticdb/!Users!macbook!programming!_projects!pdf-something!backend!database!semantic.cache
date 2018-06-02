@@ -1,0 +1,564 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("database.hpp" include nil nil [1 24])
+            ("iostream" include (:system-flag t) nil [26 45])
+            ("../io/file.hpp" include nil nil [47 72])
+            ("Database::latest_opened_pdf" variable
+               (:default-value "\"84f3415d-4f59-4333-9f8b-b4f9f1e9a5fb\""
+                :type ("std::string" type (:type "class") nil nil))
+                nil [74 155])
+            ("read_document" function
+               (:pointer 1
+                :parent "Database"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [188 206]))                  
+                :type "char")
+                nil [157 693])
+            ("read_latest_windows_configuration" function
+               (:pointer 1
+                :parent "Database"
+                :type "char")
+                nil [695 1225]))          
+      :file "database.cpp"
+      :pointmax 1226
+      :fsize 1225
+      :lastmodtime '(23265 53971 730967 879000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DATABASE_H" variable (:constant-flag t) nil [28 38])
+            ("string" include (:system-flag t) nil [40 57])
+            ("memory" include (:system-flag t) nil [58 75])
+            ("../uuid.hpp" include nil nil [77 99])
+            ("../document.hpp" include nil nil [100 126])
+            ("../pdf_document.hpp" include nil nil [127 157])
+            ("../highlighting.hpp" include nil nil [158 188])
+            ("Database" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [207 214])
+                    ("protected" label nil (reparse-symbol classsubparts) [245 255])
+                    ("read_document" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [823 841]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [795 842])
+                    ("read_latest_windows_configuration" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type "char")
+                        (reparse-symbol classsubparts) [1162 1212])
+                    ("latest_opened_pdf" variable
+                       (:typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1217 1254]))                  
+                :type "class")
+                nil [190 1257]))          
+      :file "database.hpp"
+      :pointmax 1279
+      :fsize 1278
+      :lastmodtime '(23265 60360 387272 239000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DATABASE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("MEDIATOR_H" variable (:constant-flag t) nil [28 38])
+            ("database.hpp" include nil nil [40 63])
+            ("resources_manager.hpp" include nil nil [64 96])
+            ("../windows_configuration.hpp" include nil nil [97 136])
+            ("../uuid.hpp" include nil nil [137 159])
+            ("Mediator" type
+               (:superclasses 
+                  ( ("Database" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil)
+                    ("Resources_manager" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [408 415])
+                    ("document_for_uuid" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1283 1301]))                          
+                        :type ("Document" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1247 1302])
+                    ("pdf_page_for_uuid" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1343 1361]))                          
+                        :type ("Pdf_page" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1307 1362])
+                    ("highlighting_for_uuid" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1411 1429]))                          
+                        :type ("Highlighting" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1367 1430])
+                    ("highlighting_component_for_uuid" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1499 1517]))                          
+                        :type ("Highlighting_component" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1435 1518])
+                    ("load_latest_windows_configuration" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1524 1572])
+                    ("document_is_loaded" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1609 1621]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1578 1622])
+                    ("pdf_page_is_loaded" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1658 1670]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1627 1671])
+                    ("highlighting_is_loaded" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1711 1723]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1676 1724])
+                    ("highlighting_component_is_loaded" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uuid" variable
+                               (:reference 1
+                                :type ("Uuid" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1774 1786]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1729 1787])
+                    ("get_latest_opened_pdf" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1793 1829]))                  
+                :type "class")
+                nil [362 1832]))          
+      :file "mediator.hpp"
+      :pointmax 1855
+      :fsize 1854
+      :lastmodtime '(23265 50805 359174 13000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MEDIATOR_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("RESOURCES_MANAGER_H" variable (:constant-flag t) nil [37 56])
+            ("unordered_map" include (:system-flag t) nil [58 82])
+            ("../uuid.hpp" include nil nil [84 106])
+            ("../document.hpp" include nil nil [107 133])
+            ("../pdf_page.hpp" include nil nil [134 160])
+            ("../highlighting.hpp" include nil nil [161 191])
+            ("asynchronous_loader.hpp" include nil nil [192 226])
+            ("Resources_manager" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [254 261])
+                    ("initialize_resources_caching" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [586 629])
+                    ("protected" label nil (reparse-symbol classsubparts) [635 645])
+                    ("loaded_documents" variable
+                       (:typemodifiers ("static")
+                        :type ("std::unordered_map" type
+                             (:template-specifier 
+                                ( ("Uuid" type nil nil nil)
+                                  ("Document" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1026 1087])
+                    ("loaded_pdf_pages" variable
+                       (:typemodifiers ("static")
+                        :type ("std::unordered_map" type
+                             (:template-specifier 
+                                ( ("Uuid" type nil nil nil)
+                                  ("Pdf_page" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1350 1411])
+                    ("loaded_highlightings" variable
+                       (:typemodifiers ("static")
+                        :type ("std::unordered_map" type
+                             (:template-specifier 
+                                ( ("Uuid" type nil nil nil)
+                                  ("Highlighting" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1416 1485])
+                    ("loaded_highlighting_components" variable
+                       (:typemodifiers ("static")
+                        :type ("std::unordered_map" type
+                             (:template-specifier 
+                                ( ("Uuid" type nil nil nil)
+                                  ("Highlighting_component" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1490 1579])
+                    ("get_new_pdf_page" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type ("Pdf_page" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1865 1902])
+                    ("get_new_highlighting" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type ("Highlighting" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1907 1952])
+                    ("get_new_highlighting_component" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type ("Highlighting_component" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1957 2022]))                  
+                :type "class")
+                nil [228 2025]))          
+      :file "resources_manager.hpp"
+      :pointmax 2057
+      :fsize 2056
+      :lastmodtime '(23265 49953 24629 354000)
+      :unmatched-syntax '((punctuation 294 . 295) (DELETE 288 . 294) (punctuation 286 . 287) (semantic-list 283 . 285) (symbol 266 . 283))
+      :lexical-table 
+        '(("RESOURCES_MANAGER_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("resources_manager.hpp" include nil nil [1 33])
+            ("BUFFER_SIZE_PDF_PAGE" variable (:constant-flag t) nil [43 63])
+            ("BUFFER_SIZE_HIGHLIGHTING" variable (:constant-flag t) nil [76 100])
+            ("BUFFER_SIZE_HIGHLIGHTING_COMPONENT" variable (:constant-flag t) nil [114 148])
+            ("initialize_resources_caching" function
+               (:parent "Resources_manager"
+                :type "void")
+                nil [155 465])
+            ("Resources_manager::loaded_documents" variable (:type ("std::unordered_map" type
+                 (:template-specifier 
+                    ( ("Uuid" type nil nil nil)
+                      ("Document" type (:pointer 1) nil nil))                    
+                  :type "class")
+                  nil nil)) nil [467 540])
+            ("Resources_manager::loaded_pdf_pages" variable (:type ("std::unordered_map" type
+                 (:template-specifier 
+                    ( ("Uuid" type nil nil nil)
+                      ("Pdf_page" type (:pointer 1) nil nil))                    
+                  :type "class")
+                  nil nil)) nil [541 614])
+            ("Resources_manager::loaded_highlightings" variable (:type ("std::unordered_map" type
+                 (:template-specifier 
+                    ( ("Uuid" type nil nil nil)
+                      ("Highlighting" type (:pointer 1) nil nil))                    
+                  :type "class")
+                  nil nil)) nil [615 696])
+            ("Resources_manager::loaded_highlighting_components" variable (:type ("std::unordered_map" type
+                 (:template-specifier 
+                    ( ("Uuid" type nil nil nil)
+                      ("Highlighting_component" type (:pointer 1) nil nil))                    
+                  :type "class")
+                  nil nil)) nil [697 798])
+            ("get_new_pdf_page" function
+               (:pointer 1
+                :parent "Resources_manager"
+                :type ("Pdf_page" type (:type "class") nil nil))
+                nil [800 1173])
+            ("get_new_highlighting" function
+               (:pointer 1
+                :parent "Resources_manager"
+                :type ("Highlighting" type (:type "class") nil nil))
+                nil [1175 1441])
+            ("get_new_highlighting_component" function
+               (:pointer 1
+                :parent "Resources_manager"
+                :type ("Highlighting_component" type (:type "class") nil nil))
+                nil [1443 1809]))          
+      :file "resources_manager.cpp"
+      :pointmax 1810
+      :fsize 1809
+      :lastmodtime '(23264 45350 630377 769000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BUFFER_SIZE_HIGHLIGHTING_COMPONENT" . ((number "300" 149 . 152)))
+          ("BUFFER_SIZE_PDF_PAGE" . ((number "500" 64 . 67)))
+          ("BUFFER_SIZE_HIGHLIGHTING")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("mediator.hpp" include nil nil [1 24])
+            ("iostream" include (:system-flag t) nil [26 45])
+            ("nlohmann/json.hpp" include (:system-flag t) nil [47 75])
+            ("nlohmann::json" variable (:type "int") nil [89 104])
+            ("../io/file.hpp" include nil nil [106 131])
+            ("../windows_configuration.hpp" include nil nil [132 171])
+            ("../timer.hpp" include nil nil [172 195])
+            ("../pdf_document.hpp" include nil nil [196 226])
+            ("get_latest_opened_pdf" function
+               (:parent "Mediator"
+                :type ("Uuid" type (:type "class") nil nil))
+                nil [228 316])
+            ("document_for_uuid" function
+               (:pointer 1
+                :parent "Mediator"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [357 375]))                  
+                :type ("Document" type (:type "class") nil nil))
+                nil [318 1105])
+            ("pdf_page_for_uuid" function
+               (:pointer 1
+                :parent "Mediator"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1146 1164]))                  
+                :type ("Pdf_page" type (:type "class") nil nil))
+                nil [1107 1521])
+            ("highlighting_for_uuid" function
+               (:pointer 1
+                :parent "Mediator"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1570 1588]))                  
+                :type ("Highlighting" type (:type "class") nil nil))
+                nil [1523 1982])
+            ("highlighting_component_for_uuid" function
+               (:pointer 1
+                :parent "Mediator"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2051 2069]))                  
+                :type ("Highlighting_component" type (:type "class") nil nil))
+                nil [1984 2538])
+            ("load_latest_windows_configuration" function
+               (:parent "Mediator"
+                :type "void")
+                nil [2540 2729])
+            ("document_is_loaded" function
+               (:parent "Mediator"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2765 2777]))                  
+                :type "bool")
+                nil [2731 2961])
+            ("pdf_page_is_loaded" function
+               (:parent "Mediator"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2996 3008]))                  
+                :type "bool")
+                nil [2962 3192])
+            ("highlighting_is_loaded" function
+               (:parent "Mediator"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3231 3243]))                  
+                :type "bool")
+                nil [3193 3435])
+            ("highlighting_component_is_loaded" function
+               (:parent "Mediator"
+                :arguments 
+                  ( ("uuid" variable
+                       (:reference 1
+                        :type ("Uuid" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3484 3496]))                  
+                :type "bool")
+                nil [3436 3708]))          
+      :file "mediator.cpp"
+      :pointmax 3709
+      :fsize 3708
+      :lastmodtime '(23265 50980 345694 423000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("ASYNCHRONOUS_LOADER_H" variable (:constant-flag t) nil [39 60])
+            ("iostream" include (:system-flag t) nil [62 81])
+            ("vector" include (:system-flag t) nil [82 99])
+            ("thread" include (:system-flag t) nil [100 117])
+            ("mutex" include (:system-flag t) nil [118 134])
+            ("atomic" include (:system-flag t) nil [135 152])
+            ("chrono" include (:system-flag t) nil [153 170])
+            ("constants.hpp" include nil nil [172 196])
+            ("ensure_only_one_is_instanciated" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void")
+                nil [4622 5097])
+            ("Asynchronous_loader" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type (:typevar "buffer_size") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [5163 5170])
+                    ("get_instance" function
+                       (:typemodifiers ("static")
+                        :type ("Asynchronous_loader" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5297 5465])
+                    ("loader" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5470 5484])
+                    ("get_element" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5489 5507])
+                    ("threads" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::thread" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5513 5548])
+                    ("m" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5553 5566])
+                    ("loader_running_mutex" variable (:type ("std::mutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5571 5603])
+                    ("loader_running" variable (:type ("std::atomic" type
+                         (:template-specifier 
+                            ( ("bool" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5608 5641])
+                    ("loader_running_for_the_first_time" variable (:type ("std::atomic" type
+                         (:template-specifier 
+                            ( ("bool" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5646 5698])
+                    ("buffers" variable
+                       (:pointer 1
+                        :dereference 2
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5751 5780])
+                    ("current_buffer" variable
+                       (:default-value "0"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5785 5809])
+                    ("current_element_in_buffer" variable
+                       (:default-value "0"
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5814 5857])
+                    ("private" label nil (reparse-symbol classsubparts) [5859 5867])
+                    ("Asynchronous_loader" function
+                       (:constructor-flag t
+                        :type ("Asynchronous_loader" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5872 6277])
+                    ("Asynchronous_loader" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6282 6422]))                  )
+                nil [5099 6425])
+            ("loader" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type (:typevar "buffer_size") nil nil))                  
+                :type "void"
+                :parent "Asynchronous_loader")
+                nil [6427 8565])
+            ("get_element" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type (:typevar "buffer_size") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :parent "Asynchronous_loader"
+                :pointer 1)
+                nil [8567 10735]))          
+      :file "asynchronous_loader.hpp"
+      :pointmax 10768
+      :fsize 10767
+      :lastmodtime '(23265 53972 83888 54000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ASYNCHRONOUS_LOADER_H")
+          )
+))
+  :file "!Users!macbook!programming!_projects!pdf-something!backend!database!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

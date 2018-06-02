@@ -1,0 +1,90 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("Latex_document_begin" type
+               (:members 
+                  ( ("typeset" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [56 59]))                          )
+                        (reparse-symbol indented_block_body) [30 69]))                  
+                :type "class")
+                nil [1 69])
+            ("Latex_document_end" type
+               (:members 
+                  ( ("typeset" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [123 126]))                          )
+                        (reparse-symbol indented_block_body) [97 136]))                  
+                :type "class")
+                nil [70 136])
+            ("Main_personal_information" type
+               (:members 
+                  ( ("name_surname" variable nil (reparse-symbol indented_block_body) [171 202])
+                    ("country" variable nil (reparse-symbol indented_block_body) [204 221])
+                    ("email" variable nil (reparse-symbol indented_block_body) [223 261])
+                    ("typeset" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [290 293]))                          )
+                        (reparse-symbol indented_block_body) [264 303]))                  
+                :type "class")
+                nil [137 303])
+            ("Education" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [404 422])
+                            ("self" variable nil (reparse-symbol indented_block_body) [425 439])
+                            ("self" variable nil (reparse-symbol indented_block_body) [442 472])
+                            ("self" variable nil (reparse-symbol indented_block_body) [475 505])
+                            ("self" variable nil (reparse-symbol indented_block_body) [508 532])
+                            ("self" variable nil (reparse-symbol indented_block_body) [535 553])
+                            ("self" variable nil (reparse-symbol indented_block_body) [556 584]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [335 339])
+                            ("begin" variable nil (reparse-symbol function_parameters) [340 345])
+                            ("end" variable nil (reparse-symbol function_parameters) [346 349])
+                            ("school_type" variable nil (reparse-symbol function_parameters) [350 361])
+                            ("school_name" variable nil (reparse-symbol function_parameters) [362 373])
+                            ("location" variable nil (reparse-symbol function_parameters) [374 382])
+                            ("score" variable nil (reparse-symbol function_parameters) [383 388])
+                            ("discussion" variable nil (reparse-symbol function_parameters) [389 399]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [322 585])
+                    ("typeset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [599 603]))                          )
+                        (reparse-symbol indented_block_body) [587 613]))                  
+                :type "class")
+                nil [304 613])
+            ("Education_and_training" type
+               (:members 
+                  ( ("typeset" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [672 675]))                          )
+                        (reparse-symbol indented_block_body) [646 2055]))                  
+                :type "class")
+                nil [615 2055])
+            ("if" code nil nil [2063 2223]))          
+      :file "cv.py"
+      :pointmax 2225
+      :fsize 2226
+      :lastmodtime '(23276 47386 604516 552000)
+      :unmatched-syntax '(($EOI 2239 . 2239))))
+  :file "!Users!macbook!programming!python!cv!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

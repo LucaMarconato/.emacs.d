@@ -1,0 +1,184 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cstdio" include (:system-flag t) nil [222 239])
+            ("cstring" include (:system-flag t) nil [240 258])
+            ("iostream" include (:system-flag t) nil [259 278])
+            ("map" include (:system-flag t) nil [279 293])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [295 315])
+            ("V" variable (:constant-flag t) nil [326 327])
+            ("WHITE" variable (:constant-flag t) nil [377 382])
+            ("BLACK" variable (:constant-flag t) nil [433 438])
+            ("Node" type
+               (:members 
+                  ( ("data" variable (:type "int") (reparse-symbol classsubparts) [590 599])
+                    ("left" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [604 643])
+                    ("right" variable
+                       (:pointer 1
+                        :default-value "nullptr"
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [604 643]))                  
+                :type "struct")
+                nil [572 646])
+            ("<<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("o" variable
+                       (:reference 1
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [669 681])
+                    ("node" variable
+                       (:reference 1
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [682 694]))                  
+                :type ("ostream" type (:type "class") nil nil))
+                nil [648 1050])
+            ("subset" type
+               (:members 
+                  ( ("parent" variable (:type "int") (reparse-symbol classsubparts) [1467 1517])
+                    ("rank" variable (:type "int") (reparse-symbol classsubparts) [1467 1517])
+                    ("ancestor" variable (:type "int") (reparse-symbol classsubparts) [1467 1517])
+                    ("child" variable (:type "int") (reparse-symbol classsubparts) [1467 1517])
+                    ("sibling" variable (:type "int") (reparse-symbol classsubparts) [1467 1517])
+                    ("color" variable (:type "int") (reparse-symbol classsubparts) [1467 1517]))                  
+                :type "struct")
+                nil [1447 1520])
+            ("Query" type
+               (:members 
+                  ( ("L" variable (:type "int") (reparse-symbol classsubparts) [1686 1695])
+                    ("R" variable (:type "int") (reparse-symbol classsubparts) [1686 1695]))                  
+                :type "struct")
+                nil [1667 1698])
+            ("newNode" function
+               (:pointer 1
+                :arguments 
+                  ( ("data" variable (:type "int") (reparse-symbol arg-sub-list) [1820 1829]))                  
+                :type ("Node" type (:type "class") nil nil))
+                nil [1806 1938])
+            ("makeSet" function
+               (:arguments 
+                  ( ("subsets" variable
+                       (:dereference 1
+                        :type ("subset" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1987 2011])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2012 2018]))                  
+                :type "void")
+                nil [1974 2160])
+            ("findSet" function
+               (:arguments 
+                  ( ("subsets" variable
+                       (:dereference 1
+                        :type ("subset" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2262 2286])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2287 2293]))                  
+                :type "int")
+                nil [2250 2492])
+            ("unionSet" function
+               (:arguments 
+                  ( ("subsets" variable
+                       (:dereference 1
+                        :type ("subset" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2586 2610])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [2611 2617])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [2618 2624]))                  
+                :type "void")
+                nil [2572 3155])
+            ("lcaWalk" function
+               (:arguments 
+                  ( ("u" variable (:type "int") (reparse-symbol arg-sub-list) [3248 3254])
+                    ("q" variable
+                       (:dereference 1
+                        :type ("Query" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3255 3272])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [3273 3279])
+                    ("subsets" variable
+                       (:dereference 1
+                        :type ("subset" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3293 3317]))                  
+                :type "void")
+                nil [3235 4487])
+            ("preprocess" function
+               (:arguments 
+                  ( ("node" variable
+                       (:pointer 1
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4674 4686])
+                    ("subsets" variable
+                       (:dereference 1
+                        :type ("subset" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4687 4711]))                  
+                :type "void")
+                nil [4658 5795])
+            ("initialise" function
+               (:arguments 
+                  ( ("subsets" variable
+                       (:dereference 1
+                        :type ("subset" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5882 5906]))                  
+                :type "void")
+                nil [5866 6135])
+            ("printLCAs" function
+               (:arguments 
+                  ( ("root" variable
+                       (:pointer 1
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6225 6236])
+                    ("q" variable
+                       (:dereference 1
+                        :type ("Query" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6237 6247])
+                    ("m" variable (:type "int") (reparse-symbol arg-sub-list) [6248 6254]))                  
+                :type "void")
+                nil [6210 6595])
+            ("main" function (:type "int") nil [6632 8446]))          
+      :file "main.cpp"
+      :pointmax 8447
+      :fsize 8446
+      :lastmodtime '(23273 60602 243121 983000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("build" function (:arguments ("main.cpp")) nil [1 42])
+            ("run" function (:arguments ("build")) nil [43 75]))          
+      :file "Makefile"
+      :pointmax 75
+      :fsize 74
+      :lastmodtime '(23273 59681 130603 932000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!c++!hackerrank!travel_to_party!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

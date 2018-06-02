@@ -14,7 +14,7 @@
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (cmake-ide flymake-json cmake-mode elmacro helm pdf-tools epc jedi evil vlf multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess icicles avy highlight-symbol company-irony company-irony-c-headers flycheck-irony irony swift-mode auto-complete-c-headers auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (srefactor cmake-ide flymake-json cmake-mode elmacro helm pdf-tools epc jedi evil vlf multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess icicles avy highlight-symbol company-irony flycheck-irony irony swift-mode auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.mail.me.com")
@@ -38,6 +38,10 @@
   (load-file (expand-file-name file user-init-dir)))
 
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+;; (setenv "LANGUAGE" "it_US.UTF-8")
+;; (setenv "LANG" "it_US.UTF-8")
+;; (setenv "LC_ALL" "it_US.UTF-8")
+;; export LC_ALL=en_US.UTF-8
 (setq exec-path (append exec-path '("/usr/local/bin")))
 
 (prefer-coding-system 'utf-8)
@@ -48,7 +52,7 @@
 ;(setq sml/no-confirm-load-theme t)
 
 (setq server-socket-dir "/tmp/emacs_server")
-;(server-start)
+(server-start)
 
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -123,6 +127,11 @@
 (when (string= system-type "darwin")       
   (setq dired-use-ls-dired nil))
 
+(load-file "~/.emacs.d/lisp/emacs-grammarly/emacs-grammarly.el")
+(global-set-key (kbd "C-c C-;") 'grammarly-save-region-and-run)
+
+(global-visual-line-mode 1)
+
 (load-user-file "init/timestamp.el")
 (load-user-file "init/parenthesis.el")
 (load-user-file "init/universal_argument.el")
@@ -149,6 +158,7 @@
 (load-user-file "init/code_folding.el")
 (load-user-file "init/common_paths.el")
 (load-user-file "init/json.el")
+(load-user-file "init/perl.el")
 
 ;
 ;(server-start); start emacs in server mode so that skim can talk to it
@@ -158,9 +168,3 @@
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
 ;      auto-mode-alist))
 ;
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(hl-line ((t (:background "grey10")))))

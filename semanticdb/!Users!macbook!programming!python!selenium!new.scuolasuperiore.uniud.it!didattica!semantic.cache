@@ -1,0 +1,347 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("Formazione universitaria – Scuola Superiore" section nil nil [145 312])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [312 357])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [357 408])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [408 457])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [457 510])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [510 1107])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [1107 1529])
+            ("UNIUD" section (:members 
+              ( ("UNIUD" anchor nil nil [1823 1826])
+                ("servizi online" anchor nil nil [1894 1897])
+                ("cercapersone" anchor nil nil [2013 2016])
+                ("contatti" anchor nil nil [2121 2124])
+                ("login <i class=\"fa fa-user\">" anchor nil nil [2519 2522])
+                ("Università degli Studi di Udine" anchor nil nil [2727 2730])
+                ("Home" anchor nil nil [2812 2815])
+                ("Home" anchor nil nil [2970 2973])
+                ("Scuola" anchor nil nil [3002 3005])
+                ("La Scuola Superiore" anchor nil nil [3088 3091])
+                ("La sede: un po' di storia" anchor nil nil [3204 3207])
+                ("Lo studentato" anchor nil nil [3329 3332])
+                ("Organi direttivi" anchor nil nil [3445 3448])
+                ("Contatti" anchor nil nil [3559 3562])
+                ("Didattica" anchor nil nil [3697 3700])
+                ("Corsi superiori" anchor nil nil [3786 3789])
+                ("Formazione universitaria" anchor nil nil [3924 3927])
+                ("Materie d’esame" anchor nil nil [4065 4068])
+                ("Ammissione" anchor nil nil [4201 4204])
+                ("Il concorso di ammissione" anchor nil nil [4292 4295])
+                ("Futuri studenti" anchor nil nil [4433 4436])
+                ("Prove d’esame" anchor nil nil [4557 4560])
+                ("Agevolazioni e rimborsi" anchor nil nil [4676 4679])
+                ("Domande frequenti" anchor nil nil [4806 4809])
+                ("Allievi" anchor nil nil [4952 4955])
+                ("Adempimenti degli allievi" anchor nil nil [5037 5040])
+                ("Colloqui di metà anno" anchor nil nil [5178 5181])
+                ("Colloqui di fine anno" anchor nil nil [5311 5314])
+                ("Regolamento convitto" anchor nil nil [5444 5447])
+                ("Iniziative degli allievi" anchor nil nil [5575 5578])
+                ("Gli allievi dicono" anchor nil nil [5714 5717])
+                ("Tempo libero" anchor nil nil [5841 5844])
+                ("Mobilità" anchor nil nil [5956 5959])
+                ("Alumni" anchor nil nil [6098 6101])
+                ("Associazione Alumni della Scuola Superiore" anchor nil nil [6181 6184])
+                ("Dove sono i nostri laureati" anchor nil nil [6355 6358])
+                ("I laureati si raccontano" anchor nil nil [6499 6502])
+                ("La rivista degli allievi" anchor nil nil [6637 6640])
+                ("News" anchor nil nil [6772 6775])
+                ("Conferenze" anchor nil nil [6851 6854])
+                ("Notizie" anchor nil nil [6959 6962])
+                ("Bandi e concorsi" anchor nil nil [7061 7064])
+                ("Formazione universitaria" section (:members 
+                  ( ("CLASSE UMANISTICA:" section nil nil [8770 82595])
+                    ("CLASSE SCIENTIFICO &ndash; ECONOMICA:&nbsp;" section (:members 
+                      ( ("agraria1213" anchor nil nil [212018 212021])
+                        ("economia1213" anchor nil nil [212192 212195])
+                        ("formazione1213" anchor nil nil [212368 212371])
+                        ("giurisprudenza1213" anchor nil nil [212548 212551])
+                        ("ingegneria1213" anchor nil nil [212736 212739])
+                        ("lettere1213" anchor nil nil [212917 212920])
+                        ("lingue1213" anchor nil nil [213091 213094])
+                        ("biotecnologie1213" anchor nil nil [213263 213266])
+                        ("biotecnologie1213" anchor nil nil [213449 213452])
+                        ("medicina1213" anchor nil nil [213637 213640])
+                        ("veterinaria1213" anchor nil nil [213813 213816])
+                        ("scienze1213" anchor nil nil [213995 213998])
+                        ("Agraria 2013-14 guida.pdf" anchor nil nil [214169 214172])
+                        ("Biotecnologie 201-14.pdf" anchor nil nil [214371 214374])
+                        ("Economia 2013-14.pdf" anchor nil nil [214571 214574])
+                        ("FormazioneeComunicazione.pdf" anchor nil nil [214763 214766])
+                        ("Giurisprudenza 2013_14.pdf" anchor nil nil [214971 214974])
+                        ("Ingegneria 2013_14 ndr_agg150713.pdf" anchor nil nil [215175 215178])
+                        ("Lettere 2013_14.pdf" anchor nil nil [215399 215402])
+                        ("Lingue 2013_14.pdf" anchor nil nil [215589 215592])
+                        ("Lingue 2013_14.pdf" anchor nil nil [215777 215780])
+                        ("Medicina 2013_14.pdf" anchor nil nil [215966 215969])
+                        ("Scienze 2013_14.pdf" anchor nil nil [216158 216161])
+                        ("Agraria 2015/16" anchor nil nil [216348 216351])
+                        ("Medicina 2015/16" anchor nil nil [216530 216533])
+                        ("Lettere e beni culturali 2015/16" anchor nil nil [216714 216717])
+                        ("Scienze Matematiche 2015/16" anchor nil nil [216930 216933])
+                        ("Ingegneria ed Architettura 2015/16" anchor nil nil [217136 217139])
+                        ("Economia 2015/16" anchor nil nil [217356 217359])
+                        ("Lingue e Letterature straniere 2015/16" anchor nil nil [217540 217543])
+                        ("Giurisprudenza 2015/16" anchor nil nil [217768 217771])
+                        ("Comunicazione e Formazione 2015/16" anchor nil nil [217964 217967])
+                        ("Biotecnologie 2015/16" anchor nil nil [218184 218187]))                      ) nil [82595 218406])
+                    ("OFFERTA DIDATTICA UNIVERSITÀ DEGLI STUDI DI UDINE" section (:members 
+                      ( ("OFFERTA DIDATTICA UNIVERSITÀ DEGLI STUDI DI UDINE" anchor nil nil [218413 218416]))                      ) nil [218406 218732])
+                    ("Scuola <strong>Superiore" section nil nil [218732 218788])
+                    ("Università <br>degli studi <br>di Udine" section (:members 
+                      ( ("info.scuolasuperiore@uniud.it" anchor nil nil [218937 218940])
+                        ("Albo ufficiale" anchor nil nil [219055 219058])
+                        ("Amministrazione trasparente" anchor nil nil [219147 219150])
+                        ("Privacy policy" anchor nil nil [219278 219281]))                      ) nil [218788 219408])
+                    ("Scuola" section (:members 
+                      ( ("La Scuola Superiore" anchor nil nil [219443 219446])
+                        ("La sede: un po' di storia" anchor nil nil [219550 219553])
+                        ("Lo studentato" anchor nil nil [219666 219669])
+                        ("Organi direttivi" anchor nil nil [219773 219776])
+                        ("Contatti" anchor nil nil [219878 219881]))                      ) nil [219408 219992])
+                    ("Didattica" section (:members 
+                      ( ("Corsi superiori" anchor nil nil [220030 220033])
+                        ("Formazione universitaria" anchor nil nil [220159 220162])
+                        ("Materie d’esame" anchor nil nil [220291 220294]))                      ) nil [219992 220418])
+                    ("Ammissione" section (:members 
+                      ( ("Il concorso di ammissione" anchor nil nil [220457 220460])
+                        ("Futuri studenti" anchor nil nil [220589 220592])
+                        ("Prove d’esame" anchor nil nil [220704 220707])
+                        ("Agevolazioni e rimborsi" anchor nil nil [220814 220817])
+                        ("Domande frequenti" anchor nil nil [220935 220938]))                      ) nil [220418 221072])
+                    ("Allievi" section (:members 
+                      ( ("Adempimenti degli allievi" anchor nil nil [221108 221111])
+                        ("Colloqui di metà anno" anchor nil nil [221240 221243])
+                        ("Colloqui di fine anno" anchor nil nil [221364 221367])
+                        ("Regolamento convitto" anchor nil nil [221488 221491])
+                        ("Iniziative degli allievi" anchor nil nil [221610 221613])
+                        ("Gli allievi dicono" anchor nil nil [221740 221743])
+                        ("Tempo libero" anchor nil nil [221858 221861])
+                        ("Mobilità" anchor nil nil [221964 221967]))                      ) nil [221072 222097])
+                    ("Alumni" section (:members 
+                      ( ("Associazione Alumni della Scuola Superiore" anchor nil nil [222132 222135])
+                        ("Dove sono i nostri laureati" anchor nil nil [222297 222300])
+                        ("I laureati si raccontano" anchor nil nil [222432 222435])
+                        ("La rivista degli allievi" anchor nil nil [222561 222564]))                      ) nil [222097 222687])
+                    ("News" section (:members 
+                      ( ("Conferenze" anchor nil nil [222720 222723])
+                        ("Notizie" anchor nil nil [222819 222822])
+                        ("Bandi e concorsi" anchor nil nil [222912 222915]))                      ) nil [222687 223084]))                  ) nil [7733 223084]))              ) nil [1529 223084]))          
+      :file "formazione-universitaria.html"
+      :pointmax 223084
+      :fsize 223107
+      :lastmodtime '(23292 7498 386782 195000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("Corsi superiori – Scuola Superiore" section nil nil [145 294])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [294 339])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [339 390])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [390 439])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [439 492])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [492 1024])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31440510-5', 'uniud.it');
+  ga('send', 'pageview');" section nil nil [1024 1446])
+            ("UNIUD" section (:members 
+              ( ("UNIUD" anchor nil nil [1733 1736])
+                ("servizi online" anchor nil nil [1804 1807])
+                ("cercapersone" anchor nil nil [1923 1926])
+                ("contatti" anchor nil nil [2031 2034])
+                ("login <i class=\"fa fa-user\">" anchor nil nil [2429 2432])
+                ("Università degli Studi di Udine" anchor nil nil [2637 2640])
+                ("Home" anchor nil nil [2722 2725])
+                ("Home" anchor nil nil [2880 2883])
+                ("Scuola" anchor nil nil [2912 2915])
+                ("La Scuola Superiore" anchor nil nil [2998 3001])
+                ("La sede: un po' di storia" anchor nil nil [3114 3117])
+                ("Lo studentato" anchor nil nil [3239 3242])
+                ("Organi direttivi" anchor nil nil [3355 3358])
+                ("Contatti" anchor nil nil [3469 3472])
+                ("Didattica" anchor nil nil [3607 3610])
+                ("Corsi superiori" anchor nil nil [3711 3714])
+                ("Formazione universitaria" anchor nil nil [3834 3837])
+                ("Materie d’esame" anchor nil nil [3975 3978])
+                ("Ammissione" anchor nil nil [4111 4114])
+                ("Il concorso di ammissione" anchor nil nil [4202 4205])
+                ("Futuri studenti" anchor nil nil [4343 4346])
+                ("Prove d’esame" anchor nil nil [4467 4470])
+                ("Agevolazioni e rimborsi" anchor nil nil [4586 4589])
+                ("Domande frequenti" anchor nil nil [4716 4719])
+                ("Allievi" anchor nil nil [4862 4865])
+                ("Adempimenti degli allievi" anchor nil nil [4947 4950])
+                ("Colloqui di metà anno" anchor nil nil [5088 5091])
+                ("Colloqui di fine anno" anchor nil nil [5221 5224])
+                ("Regolamento convitto" anchor nil nil [5354 5357])
+                ("Iniziative degli allievi" anchor nil nil [5485 5488])
+                ("Gli allievi dicono" anchor nil nil [5624 5627])
+                ("Tempo libero" anchor nil nil [5751 5754])
+                ("Mobilità" anchor nil nil [5866 5869])
+                ("Alumni" anchor nil nil [6008 6011])
+                ("Associazione Alumni della Scuola Superiore" anchor nil nil [6091 6094])
+                ("Dove sono i nostri laureati" anchor nil nil [6265 6268])
+                ("I laureati si raccontano" anchor nil nil [6409 6412])
+                ("La rivista degli allievi" anchor nil nil [6547 6550])
+                ("News" anchor nil nil [6682 6685])
+                ("Conferenze" anchor nil nil [6761 6764])
+                ("Notizie" anchor nil nil [6869 6872])
+                ("Bandi e concorsi" anchor nil nil [6971 6974])
+                ("Corsi superiori" section (:members 
+                  ( ("2017/2018" anchor nil nil [7858 7861])
+                    ("2016/2017" anchor nil nil [7929 7932])
+                    ("2015/2016" anchor nil nil [7983 7986])
+                    ("2014/2015" anchor nil nil [8037 8040])
+                    ("2013/2014" anchor nil nil [8091 8094])
+                    ("Corsi disciplinari - classe scientifica" section (:members 
+                      ( ("Algebra commutativa (Disciplinare)  COMMUTATIVE ALGEBRA" anchor nil nil [8259 8262])
+                        ("Algoritmi sui grafi (Disciplinare) - mutuato su Corso di Dottorato" anchor nil nil [8446 8449])
+                        ("Bioarcheologia e antropologia (Disciplinare)" anchor nil nil [8644 8647])
+                        ("Corso di Mathematica (Disciplinare)" anchor nil nil [8831 8834])
+                        ("Esperimenti di biologia molecolare (Disciplinare) - Experiments in Molecular Biology" anchor nil nil [8999 9002])
+                        ("Geometria e teoria dei numeri (Disciplinare)" anchor nil nil [9230 9233])
+                        ("La bioinformatica nella ricerca in campo medico-biologico (Disciplinare)" anchor nil nil [9416 9419])
+                        ("Metabolismo delle cellule tumorali: ricerca di nuove strategie terapeutiche (Disciplinare)" anchor nil nil [9659 9662])
+                        ("NON OFFERTO - Genomi e Biologia: l'evoluzione delle organizzazioni cellulari (Disciplinare) - Genomes and Biology : Evolution of Cell Organization" anchor nil nil [9936 9939])
+                        ("NON OFFERTO - Modellazione e tecniche numeriche in alcuni problemi della meccanica dei solidi e dei fluidi (Disciplinare)" anchor nil nil [10255 10258])
+                        ("Probabilità in fisica (Disciplinare) Probability in Physics" anchor nil nil [10581 10584])
+                        ("Problem solving (Disciplinare)" anchor nil nil [10774 10777])
+                        ("Relatività generale (Disciplinare)  General Relativity" anchor nil nil [10932 10935])
+                        ("Seminario di Economia (Disciplinare) (Teoria dei giochi 2)" anchor nil nil [11118 11121])
+                        ("Seminario di Ingegneria Elettronica (Disciplinare) (Il consumo energetico degli apparati elettronici e dei sistemi internet of things) - Power consumption of electronic devices and IoT systems" anchor nil nil [11330 11333])
+                        ("Seminario di ingegneria matematica - Elementi di calcolo delle variazioni (Disciplinare) - Calculus of Variations and Elasticity" anchor nil nil [11752 11755])
+                        ("Teoria degli insiemi (Disciplinare) - MUTUATO SU CORSO DI DOTTORATO" anchor nil nil [12064 12067])
+                        ("Teoria delle categorie (Disciplinare) - Introduction to Category Theory" anchor nil nil [12264 12267]))                      ) nil [8187 12474])
+                    ("Corsi disciplinari - classe umanistica" section (:members 
+                      ( ("Miti greci al femminile (Disciplinare)" anchor nil nil [12545 12548])
+                        ("Seminario Dantesco (Disciplinare)" anchor nil nil [12720 12723])
+                        ("Seminario di Filosofia (Disciplinare) Image as truth. On the present of ancient paths" anchor nil nil [12885 12888])
+                        ("Seminario di Latino - Letteratura Latina (Disciplinare) - \"Leggere  Ovidio” (Reading Ovid)" anchor nil nil [13105 13108])
+                        ("Seminario di Lingue - Europa e la Weltliteratur" anchor nil nil [13327 13330])
+                        ("Seminario di Linguistica italiana - Storia della lingua italiana (Disciplinare)" anchor nil nil [13506 13509])
+                        ("Seminario di Scienze della Formazione - Educazione e globalizzazione (Disciplinare) - Seminar on Education : education and globalization" anchor nil nil [13732 13735])
+                        ("Seminario di Storia - Storia Medievale (Disciplinare)" anchor nil nil [14018 14021])
+                        ("Seminario di Storia dell'Arte (Disciplinare) - / XIX and XX Art History" anchor nil nil [14204 14207])
+                        ("Storia, ricezione e generi letterari (Disciplinare)" anchor nil nil [14416 14419]))                      ) nil [12474 14619])
+                    ("Corsi disciplinari comuni a entrambe le classi" section (:members 
+                      ( ("Industry 4.0 e Collaborative Economy - Sfide e opportunità per le imprese e i lavoratori (Disciplinare)  «INDUSTRY 4.0» AND «COLLABORATIVE ECONOMY»: CHALLENGES AND CHANCES FOR ENTERPRISES AND WORKERS" anchor nil nil [14698 14701]))                      ) nil [14619 15100])
+                    ("Corsi interdisciplinari" section (:members 
+                      ( ("Architettura udinese (Interdisciplinare) - Udine 1900-1970. Architects and Architectures" anchor nil nil [15156 15159])
+                        ("Neuroscienze (Interdisciplinare)" anchor nil nil [15382 15385])
+                        ("NON OFFERTO - G7 University - Il manifesto di Udine (Interdisciplinare)" anchor nil nil [15545 15548])
+                        ("Prevenzione, diagnosi e cenni di terapia del tabagismo (Interdisciplinare)" anchor nil nil [15770 15773])
+                        ("Seminario interdisciplinare per la classe Scientifico-Economica (Interdisciplinare)" anchor nil nil [16015 16018])
+                        ("Seminario interdisciplinare per la classe Umanistica - An informal introduction to formal logic" anchor nil nil [16279 16282]))                      ) nil [15100 16719])
+                    ("Scuola <strong>Superiore" section nil nil [16719 16775])
+                    ("Università <br>degli studi <br>di Udine" section (:members 
+                      ( ("info.scuolasuperiore@uniud.it" anchor nil nil [16924 16927])
+                        ("Albo ufficiale" anchor nil nil [17042 17045])
+                        ("Amministrazione trasparente" anchor nil nil [17134 17137])
+                        ("Privacy policy" anchor nil nil [17265 17268]))                      ) nil [16775 17395])
+                    ("Scuola" section (:members 
+                      ( ("La Scuola Superiore" anchor nil nil [17430 17433])
+                        ("La sede: un po' di storia" anchor nil nil [17537 17540])
+                        ("Lo studentato" anchor nil nil [17653 17656])
+                        ("Organi direttivi" anchor nil nil [17760 17763])
+                        ("Contatti" anchor nil nil [17865 17868]))                      ) nil [17395 17979])
+                    ("Didattica" section (:members 
+                      ( ("Corsi superiori" anchor nil nil [18032 18035])
+                        ("Formazione universitaria" anchor nil nil [18146 18149])
+                        ("Materie d’esame" anchor nil nil [18278 18281]))                      ) nil [17979 18405])
+                    ("Ammissione" section (:members 
+                      ( ("Il concorso di ammissione" anchor nil nil [18444 18447])
+                        ("Futuri studenti" anchor nil nil [18576 18579])
+                        ("Prove d’esame" anchor nil nil [18691 18694])
+                        ("Agevolazioni e rimborsi" anchor nil nil [18801 18804])
+                        ("Domande frequenti" anchor nil nil [18922 18925]))                      ) nil [18405 19059])
+                    ("Allievi" section (:members 
+                      ( ("Adempimenti degli allievi" anchor nil nil [19095 19098])
+                        ("Colloqui di metà anno" anchor nil nil [19227 19230])
+                        ("Colloqui di fine anno" anchor nil nil [19351 19354])
+                        ("Regolamento convitto" anchor nil nil [19475 19478])
+                        ("Iniziative degli allievi" anchor nil nil [19597 19600])
+                        ("Gli allievi dicono" anchor nil nil [19727 19730])
+                        ("Tempo libero" anchor nil nil [19845 19848])
+                        ("Mobilità" anchor nil nil [19951 19954]))                      ) nil [19059 20084])
+                    ("Alumni" section (:members 
+                      ( ("Associazione Alumni della Scuola Superiore" anchor nil nil [20119 20122])
+                        ("Dove sono i nostri laureati" anchor nil nil [20284 20287])
+                        ("I laureati si raccontano" anchor nil nil [20419 20422])
+                        ("La rivista degli allievi" anchor nil nil [20548 20551]))                      ) nil [20084 20674])
+                    ("News" section (:members 
+                      ( ("Conferenze" anchor nil nil [20707 20710])
+                        ("Notizie" anchor nil nil [20806 20809])
+                        ("Bandi e concorsi" anchor nil nil [20899 20902]))                      ) nil [20674 21071]))                  ) nil [7803 21071]))              ) nil [1446 21071]))          
+      :file "corsi-superiori.html"
+      :pointmax 21071
+      :fsize 21095
+      :lastmodtime '(23292 7498 135876 923000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!python!selenium!new.scuolasuperiore.uniud.it!didattica!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

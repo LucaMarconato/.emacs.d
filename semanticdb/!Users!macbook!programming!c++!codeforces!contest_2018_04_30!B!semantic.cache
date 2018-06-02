@@ -1,0 +1,48 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("vector" include (:system-flag t) nil [39 56])
+            ("list" include (:system-flag t) nil [57 72])
+            ("algorithm" include (:system-flag t) nil [73 93])
+            ("utility" include (:system-flag t) nil [94 112])
+            ("map" include (:system-flag t) nil [113 127])
+            ("set" include (:system-flag t) nil [128 142])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [144 164])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [175 184])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [185 199]))                  
+                :type "int")
+                nil [166 747]))          
+      :file "main.cpp"
+      :pointmax 748
+      :fsize 747
+      :lastmodtime '(23271 17764 192082 880000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("build" function (:arguments ("main.cpp")) nil [1 31])
+            ("run" function (:arguments ("build")) nil [32 139]))          
+      :file "Makefile"
+      :pointmax 139
+      :fsize 138
+      :lastmodtime '(23271 16630 40302 891000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!c++!codeforces!contest_2018_04_30!B!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

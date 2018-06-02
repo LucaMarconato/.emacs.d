@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ie
+# key: ie
+# --
+is_equal = is_equal && this->${1:} == obj.$1

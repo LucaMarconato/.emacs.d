@@ -1,0 +1,23 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags 
+        '( ("grammarly-file" variable nil nil [150 238])
+            ("grammarly-cmd" variable (:default-value "open -a Grammarly") nil [240 282])
+            ("grammarly-quit-cmd" variable (:default-value "osascript -e 'quit app \"Grammarly\"'") nil [284 351])
+            ("grammarly-do-unfill-paragraph" variable (:default-value t) nil [353 471])
+            ("grammarly-unfill-paragraph" function nil nil [473 597])
+            ("grammarly-save-region-and-run" function (:user-visible-flag t) nil [599 1257])
+            ("emacs-grammarly" package nil nil [1336 1362]))          
+      :file "emacs-grammarly.el"
+      :pointmax 1396
+      :fsize 1395
+      :lastmodtime '(23283 649 920717 546000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!.emacs.d!lisp!emacs-grammarly!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

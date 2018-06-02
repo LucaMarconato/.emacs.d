@@ -1,0 +1,50 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_NUMERIC_CONVERSION_CAST_25OCT2001_HPP" variable (:constant-flag t) nil [985 1028])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [1030 1068])
+            ("boost/type.hpp" include (:system-flag t) nil [1243 1268])
+            ("boost/numeric/conversion/converter.hpp" include (:system-flag t) nil [1269 1318])
+            ("boost/numeric/conversion/numeric_cast_traits.hpp" include (:system-flag t) nil [1319 1378])
+            ("boost" type
+               (:members 
+                  ( ("numeric_cast" function
+                       (:template 
+                          ( ("Target" type (:type "class") nil nil)
+                            ("Source" type (:type "class") nil nil))                          
+                        :type ("Target" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("arg" variable (:type ("Source" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1479 1491]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [1402 2084])
+                    ("numeric::bad_numeric_cast" using (:type ("numeric::bad_numeric_cast" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [2094 2126]))                  
+                :type "namespace")
+                nil [1380 2128]))          
+      :file "cast.hpp"
+      :pointmax 2164
+      :fsize 2163
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_NUMERIC_CONVERSION_CAST_25OCT2001_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "converter.hpp"
+      :fsize 2239
+      :lastmodtime '(23089 51066 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "numeric_cast_traits.hpp"
+      :fsize 983
+      :lastmodtime '(23089 51066 0 0)))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!numeric!conversion!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,160 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_BIMAP_HPP" variable (:constant-flag t) nil [1461 1482])
+            ("boost/config.hpp" include (:system-flag t) nil [1527 1554])
+            ("boost/bimap/detail/user_interface_config.hpp" include (:system-flag t) nil [1555 1610])
+            ("boost/mpl/aux_/na.hpp" include (:system-flag t) nil [1611 1643])
+            ("boost/serialization/nvp.hpp" include (:system-flag t) nil [1687 1729])
+            ("boost/bimap/detail/bimap_core.hpp" include (:system-flag t) nil [1790 1834])
+            ("boost/bimap/detail/map_view_base.hpp" include (:system-flag t) nil [1835 1882])
+            ("boost/bimap/detail/modifier_adaptor.hpp" include (:system-flag t) nil [1883 1933])
+            ("boost/bimap/relation/support/data_extractor.hpp" include (:system-flag t) nil [1934 1992])
+            ("boost/bimap/relation/support/member_with_tag.hpp" include (:system-flag t) nil [1993 2052])
+            ("boost/bimap/support/map_type_by.hpp" include (:system-flag t) nil [2054 2100])
+            ("boost/bimap/support/map_by.hpp" include (:system-flag t) nil [2101 2142])
+            ("boost/bimap/support/iterator_type_by.hpp" include (:system-flag t) nil [2143 2194])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol namespacesubparts) [4533 4541])
+                            ("public" label nil (reparse-symbol namespacesubparts) [4668 4676])
+                            ("public" label nil (reparse-symbol namespacesubparts) [4855 4863])
+                            ("public" label nil (reparse-symbol namespacesubparts) [5100 5108]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2458 12298]))                  
+                :type "namespace")
+                nil [2259 12320])
+            ("boost/bimap/tags/tagged.hpp" include (:system-flag t) nil [12798 12836])
+            ("boost/bimap/relation/member_at.hpp" include (:system-flag t) nil [12837 12882])
+            ("boost/multi_index/detail/unbounded.hpp" include (:system-flag t) nil [12883 12932])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("boost::bimaps::tags::tagged" variable (:type "int") (reparse-symbol namespacesubparts) [13050 13078])
+                            ("boost::bimaps::relation::member_at" variable (:type "int") (reparse-symbol namespacesubparts) [13104 13139])
+                            ("boost::multi_index::unbounded" variable (:type "int") (reparse-symbol namespacesubparts) [13149 13179]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [13022 13182]))                  
+                :type "namespace")
+                nil [13004 13204]))          
+      :file "bimap.hpp"
+      :pointmax 13258
+      :fsize 13257
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((punctuation 13148 . 13149) (punctuation 13147 . 13148) (USING 13141 . 13146) (punctuation 13103 . 13104) (punctuation 13102 . 13103) (punctuation 13100 . 13101) (symbol 13090 . 13099) (NAMESPACE 13080 . 13089) (punctuation 13049 . 13050) (punctuation 13048 . 13049) (USING 13042 . 13047) (punctuation 12294 . 12295) (semantic-list 5342 . 12294) (punctuation 5340 . 5341) (symbol 5331 . 5335) (punctuation 5330 . 5331) (punctuation 5329 . 5330) (punctuation 5328 . 5329) (punctuation 5318 . 5319) (symbol 5315 . 5318) (punctuation 5314 . 5315) (symbol 5311 . 5314) (punctuation 5310 . 5311) (symbol 5307 . 5310) (punctuation 5306 . 5307) (symbol 5298 . 5306) (punctuation 5297 . 5298) (symbol 5289 . 5297) (punctuation 5288 . 5289) (symbol 5278 . 5288) (punctuation 5277 . 5278) (punctuation 5276 . 5277) (symbol 5270 . 5276) (punctuation 5269 . 5270) (punctuation 5268 . 5269) (symbol 5262 . 5268) (punctuation 5261 . 5262) (punctuation 5260 . 5261) (symbol 5255 . 5260) (punctuation 5254 . 5255) (punctuation 5253 . 5254) (punctuation 5239 . 5240) (symbol 5220 . 5239) (punctuation 5219 . 5220) (punctuation 5218 . 5219) (symbol 5212 . 5218) (punctuation 5211 . 5212) (punctuation 5210 . 5211) (symbol 5204 . 5210) (punctuation 5203 . 5204) (punctuation 5202 . 5203) (symbol 5197 . 5202) (punctuation 5196 . 5197) (punctuation 5195 . 5196) (symbol 5172 . 5194) (punctuation 5161 . 5162) (symbol 5132 . 5161) (punctuation 5131 . 5132) (punctuation 5130 . 5131) (symbol 5124 . 5130) (punctuation 5123 . 5124) (punctuation 5122 . 5123) (symbol 5116 . 5122) (punctuation 5115 . 5116) (punctuation 5114 . 5115) (symbol 5109 . 5114) (punctuation 5108 . 5109) (punctuation 5094 . 5095) (punctuation 5093 . 5094) (symbol 5084 . 5088) (punctuation 5083 . 5084) (punctuation 5082 . 5083) (punctuation 5081 . 5082) (punctuation 5071 . 5072) (symbol 5068 . 5071) (punctuation 5067 . 5068) (symbol 5064 . 5067) (punctuation 5063 . 5064) (symbol 5060 . 5063) (punctuation 5059 . 5060) (symbol 5051 . 5059) (punctuation 5050 . 5051) (symbol 5042 . 5050) (punctuation 5041 . 5042) (symbol 5031 . 5041) (punctuation 5030 . 5031) (punctuation 5029 . 5030) (symbol 5023 . 5029) (punctuation 5022 . 5023) (punctuation 5021 . 5022) (symbol 5015 . 5021) (punctuation 5014 . 5015) (punctuation 5013 . 5014) (symbol 5008 . 5013) (punctuation 5007 . 5008) (punctuation 5006 . 5007) (punctuation 4992 . 4993) (symbol 4974 . 4992) (punctuation 4973 . 4974) (punctuation 4972 . 4973) (symbol 4966 . 4972) (punctuation 4965 . 4966) (punctuation 4964 . 4965) (symbol 4958 . 4964) (punctuation 4957 . 4958) (punctuation 4956 . 4957) (symbol 4951 . 4956) (punctuation 4950 . 4951) (punctuation 4949 . 4950) (symbol 4926 . 4948) (punctuation 4916 . 4917) (symbol 4888 . 4916) (punctuation 4886 . 4887) (punctuation 4885 . 4886) (symbol 4879 . 4885) (punctuation 4878 . 4879) (punctuation 4877 . 4878) (symbol 4871 . 4877) (punctuation 4870 . 4871) (punctuation 4869 . 4870) (symbol 4864 . 4869) (punctuation 4863 . 4864) (punctuation 4772 . 4773) (symbol 4760 . 4772) (punctuation 4759 . 4760) (punctuation 4758 . 4759) (punctuation 4740 . 4741) (symbol 4737 . 4740) (punctuation 4736 . 4737) (symbol 4733 . 4736) (punctuation 4732 . 4733) (symbol 4729 . 4732) (punctuation 4728 . 4729) (symbol 4720 . 4728) (punctuation 4719 . 4720) (symbol 4711 . 4719) (punctuation 4710 . 4711) (symbol 4700 . 4710) (punctuation 4699 . 4700) (punctuation 4698 . 4699) (symbol 4692 . 4698) (punctuation 4691 . 4692) (punctuation 4690 . 4691) (symbol 4684 . 4690) (punctuation 4683 . 4684) (punctuation 4682 . 4683) (symbol 4677 . 4682) (punctuation 4676 . 4677) (punctuation 4606 . 4607) (punctuation 4605 . 4606) (symbol 4602 . 4605) (punctuation 4601 . 4602) (symbol 4598 . 4601) (punctuation 4597 . 4598) (symbol 4594 . 4597) (punctuation 4593 . 4594) (symbol 4585 . 4593) (punctuation 4584 . 4585) (symbol 4576 . 4584) (punctuation 4575 . 4576) (symbol 4565 . 4575) (punctuation 4564 . 4565) (punctuation 4563 . 4564) (symbol 4557 . 4563) (punctuation 4556 . 4557) (punctuation 4555 . 4556) (symbol 4549 . 4555) (punctuation 4548 . 4549) (punctuation 4547 . 4548) (symbol 4542 . 4547) (punctuation 4541 . 4542) (punctuation 4462 . 4463) (symbol 4456 . 4461) (CLASS 4450 . 4455) (punctuation 4448 . 4449) (symbol 4445 . 4447) (punctuation 4444 . 4445) (punctuation 4443 . 4444) (symbol 4440 . 4443) (punctuation 4439 . 4440) (punctuation 4438 . 4439) (symbol 4433 . 4438) (punctuation 4432 . 4433) (punctuation 4431 . 4432) (punctuation 4429 . 4430) (symbol 4425 . 4428) (CLASS 4419 . 4424) (punctuation 4413 . 4414) (symbol 4411 . 4413) (punctuation 4410 . 4411) (punctuation 4409 . 4410) (symbol 4406 . 4409) (punctuation 4405 . 4406) (punctuation 4404 . 4405) (symbol 4399 . 4404) (punctuation 4398 . 4399) (punctuation 4397 . 4398) (punctuation 4395 . 4396) (symbol 4391 . 4394) (CLASS 4385 . 4390) (punctuation 4379 . 4380) (symbol 4377 . 4379) (punctuation 4376 . 4377) (punctuation 4375 . 4376) (symbol 4372 . 4375) (punctuation 4371 . 4372) (punctuation 4370 . 4371) (symbol 4365 . 4370) (punctuation 4364 . 4365) (punctuation 4363 . 4364) (punctuation 4361 . 4362) (symbol 4357 . 4360) (CLASS 4351 . 4356) (punctuation 4345 . 4346) (symbol 4337 . 4345) (CLASS 4331 . 4336) (punctuation 4329 . 4330) (symbol 4321 . 4329) (CLASS 4315 . 4320) (punctuation 4309 . 4310) (TEMPLATE 4300 . 4308))
+      :lexical-table 
+        '(("BOOST_BIMAP_BIMAP_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_SET_OF_HPP" variable (:constant-flag t) nil [354 376])
+            ("boost/config.hpp" include (:system-flag t) nil [421 448])
+            ("boost/bimap/detail/user_interface_config.hpp" include (:system-flag t) nil [450 505])
+            ("functional" include (:system-flag t) nil [507 528])
+            ("boost/mpl/bool.hpp" include (:system-flag t) nil [529 558])
+            ("boost/mpl/aux_/na.hpp" include (:system-flag t) nil [559 591])
+            ("boost/concept_check.hpp" include (:system-flag t) nil [593 627])
+            ("boost/bimap/detail/concept_tags.hpp" include (:system-flag t) nil [629 675])
+            ("boost/bimap/detail/generate_index_binder.hpp" include (:system-flag t) nil [677 732])
+            ("boost/bimap/detail/generate_view_binder.hpp" include (:system-flag t) nil [733 787])
+            ("boost/bimap/detail/generate_relation_binder.hpp" include (:system-flag t) nil [788 846])
+            ("boost/bimap/tags/support/value_type_of.hpp" include (:system-flag t) nil [848 901])
+            ("boost/multi_index/ordered_index.hpp" include (:system-flag t) nil [903 949])
+            ("boost/bimap/views/map_view.hpp" include (:system-flag t) nil [951 992])
+            ("boost/bimap/views/set_view.hpp" include (:system-flag t) nil [993 1034])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol namespacesubparts) [2735 2743])
+                            ("boost::bimaps::detail::set_type_of_tag" variable (:type "int") (reparse-symbol namespacesubparts) [2744 3793])
+                            ("public" label nil (reparse-symbol namespacesubparts) [4440 4448])
+                            ("boost::bimaps::detail::set_type_of_relation_tag" variable (:type "int") (reparse-symbol namespacesubparts) [4449 4801]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1054 4804]))                  
+                :type "namespace")
+                nil [1036 4826]))          
+      :file "set_of.hpp"
+      :pointmax 4882
+      :fsize 4881
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((punctuation 4448 . 4449) (punctuation 4438 . 4439) (symbol 4422 . 4437) (STRUCT 4415 . 4421) (punctuation 4413 . 4414) (punctuation 4411 . 4412) (symbol 4401 . 4410) (punctuation 4399 . 4400) (symbol 4395 . 4399) (punctuation 4394 . 4395) (punctuation 4393 . 4394) (symbol 4390 . 4393) (punctuation 4388 . 4389) (symbol 4377 . 4387) (CLASS 4371 . 4376) (punctuation 4369 . 4370) (TEMPLATE 4361 . 4369) (punctuation 2743 . 2744) (punctuation 2733 . 2734) (symbol 2726 . 2732) (STRUCT 2719 . 2725) (punctuation 2717 . 2718) (punctuation 2715 . 2716) (symbol 2710 . 2714) (punctuation 2709 . 2710) (punctuation 2708 . 2709) (punctuation 2707 . 2708) (symbol 2700 . 2707) (punctuation 2699 . 2700) (symbol 2686 . 2699) (punctuation 2685 . 2686) (punctuation 2684 . 2685) (symbol 2677 . 2684) (punctuation 2676 . 2677) (punctuation 2675 . 2676) (symbol 2671 . 2675) (punctuation 2670 . 2671) (punctuation 2669 . 2670) (symbol 2663 . 2669) (punctuation 2662 . 2663) (punctuation 2661 . 2662) (symbol 2656 . 2661) (punctuation 2655 . 2656) (punctuation 2654 . 2655) (symbol 2622 . 2644) (punctuation 2620 . 2621) (symbol 2616 . 2620) (punctuation 2615 . 2616) (punctuation 2614 . 2615) (symbol 2611 . 2614) (punctuation 2609 . 2610) (symbol 2598 . 2608) (CLASS 2592 . 2597) (punctuation 2586 . 2587) (symbol 2579 . 2586) (CLASS 2573 . 2578) (punctuation 2567 . 2568) (TEMPLATE 2558 . 2566))
+      :lexical-table 
+        '(("BOOST_BIMAP_SET_OF_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_UNCONSTRAINED_SET_OF_HPP" variable (:constant-flag t) nil [382 418])
+            ("boost/config.hpp" include (:system-flag t) nil [463 490])
+            ("boost/bimap/detail/user_interface_config.hpp" include (:system-flag t) nil [492 547])
+            ("boost/mpl/bool.hpp" include (:system-flag t) nil [549 578])
+            ("boost/concept_check.hpp" include (:system-flag t) nil [580 614])
+            ("boost/bimap/detail/concept_tags.hpp" include (:system-flag t) nil [616 662])
+            ("boost/bimap/tags/support/value_type_of.hpp" include (:system-flag t) nil [664 717])
+            ("boost/bimap/detail/generate_index_binder.hpp" include (:system-flag t) nil [719 774])
+            ("boost/bimap/detail/generate_view_binder.hpp" include (:system-flag t) nil [775 829])
+            ("boost/bimap/detail/generate_relation_binder.hpp" include (:system-flag t) nil [830 888])
+            ("boost/bimap/views/unconstrained_map_view.hpp" include (:system-flag t) nil [890 945])
+            ("boost/bimap/views/unconstrained_set_view.hpp" include (:system-flag t) nil [946 1001])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol namespacesubparts) [1660 1668])
+                            ("boost::bimaps::detail::set_type_of_tag" variable (:type "int") (reparse-symbol namespacesubparts) [1669 2453])
+                            ("public" label nil (reparse-symbol namespacesubparts) [2836 2844])
+                            ("boost::bimaps::detail::set_type_of_relation_tag" variable (:type "int") (reparse-symbol namespacesubparts) [2845 3097])
+                            ("detail" type
+                               (:members 
+                                  ( ("" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :superclasses 
+                                          ( ("boost::mpl::false_" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :parent "is_unconstrained_set_of")
+                                        (reparse-symbol namespacesubparts) [3185 3264])
+                                    ("" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :superclasses 
+                                          ( ("boost::mpl::true_" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :parent "is_unconstrained_set_of")
+                                        (reparse-symbol namespacesubparts) [3266 3371]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [3165 3374]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1021 3465]))                  
+                :type "namespace")
+                nil [1003 3487]))          
+      :file "unconstrained_set_of.hpp"
+      :pointmax 3822
+      :fsize 3821
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((punctuation 2844 . 2845) (punctuation 2834 . 2835) (symbol 2804 . 2833) (STRUCT 2797 . 2803) (punctuation 1668 . 1669) (punctuation 1658 . 1659) (symbol 1637 . 1657) (STRUCT 1630 . 1636) (punctuation 1628 . 1629) (symbol 1620 . 1627) (CLASS 1614 . 1619) (punctuation 1608 . 1609) (TEMPLATE 1599 . 1607))
+      :lexical-table 
+        '(("BOOST_BIMAP_UNCONSTRAINED_SET_OF_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!bimap!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1269 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_RANDOM_UNIFORM_INT_HPP" variable (:constant-flag t) nil [504 532])
+            ("boost/assert.hpp" include (:system-flag t) nil [534 561])
+            ("boost/random/uniform_int_distribution.hpp" include (:system-flag t) nil [562 614])
+            ("boost" type
+               (:members 
+                  ( ("uniform_int" type
+                       (:superclasses 
+                          ( ("random::uniform_int_distribution" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("base_type" type
+                               (:typedef ("random::uniform_int_distribution" type
+                                     (:template-specifier 
+                                        ( ("IntType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1129 1189])
+                            ("public" label nil (reparse-symbol classsubparts) [1190 1197])
+                            ("param_type" type
+                               (:superclasses 
+                                  ( ("base_type::param_type" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1261 1268])
+                                    ("distribution_type" type
+                                       (:typedef ("uniform_int" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1277 1315])
+                                    ("param_type" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("min_arg" variable
+                                               (:default-value "0"
+                                                :type ("IntType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1479 1498])
+                                            ("max_arg" variable
+                                               (:default-value "9"
+                                                :type ("IntType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1500 1519]))                                          
+                                        :type ("param_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1468 1583]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [1203 1590])
+                            ("uniform_int" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("min_arg" variable
+                                       (:default-value "0"
+                                        :type ("IntType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1773 1792])
+                                    ("max_arg" variable
+                                       (:default-value "9"
+                                        :type ("IntType" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1794 1813]))                                  
+                                :type ("uniform_int" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1761 1857])
+                            ("uniform_int" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("parm" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("param_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1954 1977]))                                  
+                                :type ("uniform_int" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1942 2008])
+                            ("param" function
+                               (:methodconst-flag t
+                                :type ("param_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2068 2137])
+                            ("param" function
+                               (:arguments 
+                                  ( ("parm" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("param_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2205 2228]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2194 2262])
+                            ("()" function
+                               (:template 
+                                  ( ("Engine" type (:type "class") nil nil))                                  
+                                :type ("IntType" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("eng" variable
+                                       (:reference 1
+                                        :type ("Engine" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2384 2396]))                                  
+                                :operator-flag t
+                                :methodconst-flag t)
+                                (reparse-symbol classsubparts) [2338 2472])
+                            ("()" function
+                               (:template 
+                                  ( ("Engine" type (:type "class") nil nil))                                  
+                                :type ("IntType" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("eng" variable
+                                       (:reference 1
+                                        :type ("Engine" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2524 2536])
+                                    ("parm" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("param_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2537 2560]))                                  
+                                :operator-flag t
+                                :methodconst-flag t)
+                                (reparse-symbol classsubparts) [2478 2642])
+                            ("()" function
+                               (:template 
+                                  ( ("Engine" type (:type "class") nil nil))                                  
+                                :type ("IntType" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("eng" variable
+                                       (:reference 1
+                                        :type ("Engine" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2694 2706])
+                                    ("n" variable (:type ("IntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2707 2717]))                                  
+                                :operator-flag t
+                                :methodconst-flag t)
+                                (reparse-symbol classsubparts) [2648 2844]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1054 2847]))                  
+                :type "namespace")
+                nil [616 2850]))          
+      :file "uniform_int.hpp"
+      :pointmax 2910
+      :fsize 2909
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((EXPLICIT 1933 . 1941) (EXPLICIT 1752 . 1760) (EXPLICIT 1459 . 1467) (EXPLICIT 1459 . 1467) (punctuation 1052 . 1053) (INT 1049 . 1052) (punctuation 1047 . 1048) (symbol 1039 . 1046) (CLASS 1033 . 1038) (punctuation 1032 . 1033) (TEMPLATE 1024 . 1032))
+      :lexical-table 
+        '(("BOOST_RANDOM_UNIFORM_INT_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_RANDOM_RANDOM_GENERATOR_HPP" variable (:constant-flag t) nil [423 456])
+            ("boost/random/detail/ptr_helper.hpp" include (:system-flag t) nil [458 503])
+            ("boost/random/detail/disable_warnings.hpp" include (:system-flag t) nil [505 556])
+            ("boost" type
+               (:members 
+                  ( ("random" type
+                       (:members 
+                          ( ("variate_generator" type
+                               (:template 
+                                  ( ("Engine" type (:type "class") nil nil)
+                                    ("Distribution" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [1523 1531])
+                                    ("helper_type" type
+                                       (:typedef ("boost::random::detail::ptr_helper" type
+                                             (:template-specifier 
+                                                ( ("Engine" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1536 1598])
+                                    ("public" label nil (reparse-symbol classsubparts) [1599 1606])
+                                    ("engine_value_type" type
+                                       (:typedef ("helper_type::value_type" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1611 1670])
+                                    ("engine_type" type
+                                       (:typedef ("Engine" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1675 1702])
+                                    ("distribution_type" type
+                                       (:typedef ("Distribution" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1707 1746])
+                                    ("result_type" type
+                                       (:typedef ("Distribution::result_type" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [1751 1806])
+                                    ("variate_generator" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("e" variable (:type ("Engine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2104 2113])
+                                            ("d" variable (:type ("Distribution" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2114 2129]))                                          
+                                        :type ("variate_generator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2086 2159])
+                                    ("()" function
+                                       (:operator-flag t
+                                        :type ("result_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2210 2262])
+                                    ("()" function
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type ("result_type" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("value" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("T" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2377 2392]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol classsubparts) [2332 2427])
+                                    ("engine" function (:type ("engine_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2528 2590])
+                                    ("engine" function
+                                       (:methodconst-flag t
+                                        :constant-flag t
+                                        :type ("engine_value_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2690 2764])
+                                    ("distribution" function (:type ("distribution_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2842 2893])
+                                    ("distribution" function
+                                       (:methodconst-flag t
+                                        :constant-flag t
+                                        :type ("distribution_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2981 3044])
+                                    ("BOOST_PREVENT_MACRO_SUBSTITUTION" function
+                                       (:methodconst-flag t
+                                        :type ("min" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3179 3259])
+                                    ("BOOST_PREVENT_MACRO_SUBSTITUTION" function
+                                       (:methodconst-flag t
+                                        :type ("max" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3393 3473])
+                                    ("private" label nil (reparse-symbol classsubparts) [3475 3483])
+                                    ("_eng" variable (:type ("Engine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3488 3500])
+                                    ("_dist" variable (:type ("distribution_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3505 3529]))                                  )
+                                (reparse-symbol namespacesubparts) [1454 3532]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [609 3535])
+                    ("random::variate_generator" using (:type ("random::variate_generator" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [3557 3589]))                  
+                :type "namespace")
+                nil [558 3592])
+            ("boost/random/detail/enable_warnings.hpp" include (:system-flag t) nil [3613 3663]))          
+      :file "variate_generator.hpp"
+      :pointmax 3709
+      :fsize 3708
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((symbol 3381 . 3392) (symbol 3167 . 3178))
+      :lexical-table 
+        '(("BOOST_RANDOM_RANDOM_GENERATOR_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_RANDOM_MERSENNE_TWISTER_HPP" variable (:constant-flag t) nil [556 589])
+            ("iosfwd" include (:system-flag t) nil [591 608])
+            ("istream" include (:system-flag t) nil [609 627])
+            ("stdexcept" include (:system-flag t) nil [628 648])
+            ("boost/config.hpp" include (:system-flag t) nil [649 676])
+            ("boost/cstdint.hpp" include (:system-flag t) nil [677 705])
+            ("boost/integer/integer_mask.hpp" include (:system-flag t) nil [706 747])
+            ("boost/random/detail/config.hpp" include (:system-flag t) nil [748 789])
+            ("boost/random/detail/ptr_helper.hpp" include (:system-flag t) nil [790 835])
+            ("boost/random/detail/seed.hpp" include (:system-flag t) nil [836 875])
+            ("boost/random/detail/seed_impl.hpp" include (:system-flag t) nil [876 920])
+            ("boost/random/detail/generator_seed_seq.hpp" include (:system-flag t) nil [921 974])
+            ("boost/random/detail/polynomial.hpp" include (:system-flag t) nil [975 1020])
+            ("boost/random/detail/disable_warnings.hpp" include (:system-flag t) nil [1022 1073])
+            ("boost" type
+               (:members 
+                  ( ("random" type
+                       (:members 
+                          ( ("mersenne_twister_engine" type
+                               (:template 
+                                  ( ("UIntType" type (:type "class") nil nil)
+                                    ("std::size_t" type (:typevar "w") nil nil)
+                                    ("std::size_t" type (:typevar "n") nil nil)
+                                    ("std::size_t" type (:typevar "m") nil nil)
+                                    ("std::size_t" type (:typevar "r") nil nil)
+                                    ("UIntType" type (:typevar "a") nil nil)
+                                    ("std::size_t" type (:typevar "u") nil nil)
+                                    ("UIntType" type (:typevar "d") nil nil)
+                                    ("std::size_t" type (:typevar "s") nil nil)
+                                    ("UIntType" type (:typevar "b") nil nil)
+                                    ("std::size_t" type (:typevar "t") nil nil)
+                                    ("UIntType" type (:typevar "c") nil nil)
+                                    ("std::size_t" type (:typevar "l") nil nil)
+                                    ("UIntType" type (:typevar "f") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2642 2649])
+                                    ("result_type" type
+                                       (:typedef ("UIntType" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [2654 2683])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2710 2722])
+                                            ("" variable (:type ("word_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2723 2736]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2688 2738])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2765 2777])
+                                            ("" variable (:type ("state_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2778 2792]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2743 2794])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2821 2833])
+                                            ("" variable (:type ("shift_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2834 2848]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2799 2850])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2877 2889])
+                                            ("" variable (:type ("mask_bits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2890 2903]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2855 2905])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2932 2941])
+                                            ("" variable (:type ("xor_mask" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2942 2954]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2910 2956])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2983 2995])
+                                            ("" variable (:type ("tempering_u" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2996 3011]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [2961 3013])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3040 3049])
+                                            ("" variable (:type ("tempering_d" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3050 3065]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3018 3067])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3094 3106])
+                                            ("" variable (:type ("tempering_s" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3107 3122]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3072 3124])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3151 3160])
+                                            ("" variable (:type ("tempering_b" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3161 3176]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3129 3178])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3205 3217])
+                                            ("" variable (:type ("tempering_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3218 3233]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3183 3235])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3262 3271])
+                                            ("" variable (:type ("tempering_c" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3272 3287]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3240 3289])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3316 3328])
+                                            ("" variable (:type ("tempering_l" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3329 3344]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3294 3346])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3373 3382])
+                                            ("" variable (:type ("initialization_multiplier" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3383 3412]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3351 3414])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3441 3450])
+                                            ("" variable (:type ("default_seed" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3451 3471]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3419 3473])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3532 3541])
+                                            ("" variable (:type ("parameter_a" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3542 3557]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3510 3559])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3586 3598])
+                                            ("" variable (:type ("output_u" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3599 3611]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3564 3613])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3640 3652])
+                                            ("" variable (:type ("output_s" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3653 3665]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3618 3667])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3694 3703])
+                                            ("" variable (:type ("output_b" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3704 3716]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3672 3718])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3745 3757])
+                                            ("" variable (:type ("output_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3758 3770]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3723 3772])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3799 3808])
+                                            ("" variable (:type ("output_c" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3809 3821]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3777 3823])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3850 3862])
+                                            ("" variable (:type ("output_l" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3863 3875]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3828 3877])
+                                    ("BOOST_STATIC_CONSTANT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [3950 3955])
+                                            ("" variable (:type ("has_fixed_range" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3956 3979]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [3928 3981])
+                                    ("mersenne_twister_engine" function
+                                       (:constructor-flag t
+                                        :type ("mersenne_twister_engine" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4072 4109])
+                                    ("BOOST_RANDOM_DETAIL_ARITHMETIC_CONSTRUCTOR" function
+                                       (:arguments 
+                                          ( ("" variable (:type ("mersenne_twister_engine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4247 4271])
+                                            ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4319 4328])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4329 4335]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4204 4356])
+                                    ("mersenne_twister_engine" function
+                                       (:template 
+                                          ( ("It" type (:type "class") nil nil))                                          
+                                        :type ("mersenne_twister_engine" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("first" variable
+                                               (:reference 1
+                                                :type ("It" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4404 4414])
+                                            ("last" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4415 4423]))                                          
+                                        :constructor-flag t)
+                                        (reparse-symbol classsubparts) [4361 4449])
+                                    ("BOOST_RANDOM_DETAIL_SEED_SEQ_CONSTRUCTOR" function
+                                       (:arguments 
+                                          ( ("" variable (:type ("mersenne_twister_engine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4714 4738])
+                                            ("" variable (:type ("SeedSeq" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4784 4792])
+                                            ("" variable (:type ("seq" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4793 4797]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4673 4816])
+                                    ("seed" function (:type "void") (reparse-symbol classsubparts) [4932 4967])
+                                    ("BOOST_RANDOM_DETAIL_ARITHMETIC_SEED" function
+                                       (:arguments 
+                                          ( ("" variable (:type ("mersenne_twister_engine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5251 5275])
+                                            ("" variable (:type ("UIntType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5276 5285])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5286 5292]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5215 5832])
+                                    ("BOOST_RANDOM_DETAIL_SEED_SEQ_SEED" function
+                                       (:arguments 
+                                          ( ("" variable (:type ("mersenne_twister_engine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5968 5992])
+                                            ("" variable (:type ("SeeqSeq" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5993 6001])
+                                            ("" variable (:type ("seq" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6002 6006]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5934 6104])
+                                    ("seed" function
+                                       (:template 
+                                          ( ("It" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("first" variable
+                                               (:reference 1
+                                                :type ("It" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6223 6233])
+                                            ("last" variable (:type ("It" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6234 6242]))                                          )
+                                        (reparse-symbol classsubparts) [6190 6348])
+                                    ("BOOST_PREVENT_MACRO_SUBSTITUTION" function (:type ("min" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6443 6500])
+                                    ("BOOST_PREVENT_MACRO_SUBSTITUTION" function (:type ("max" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6593 6684])
+                                    ("()" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :type ("result_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6743 6768])
+                                    ("generate" function
+                                       (:template 
+                                          ( ("Iter" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("first" variable (:type ("Iter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6857 6868])
+                                            ("last" variable (:type ("Iter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6869 6879]))                                          )
+                                        (reparse-symbol classsubparts) [6818 6934])
+                                    ("discard" function
+                                       (:arguments 
+                                          ( ("z" variable (:type ("boost::uintmax_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7156 7175]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7143 7532])
+                                    ("<<" function
+                                       (:template 
+                                          ( ("CharT" type (:type "class") nil nil)
+                                            ("Traits" type (:type "class") nil nil))                                          
+                                        :type ("std::basic_ostream" type
+                                             (:template-specifier 
+                                                ( ("CharT" type nil nil nil)
+                                                  ("Traits" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::basic_ostream" type
+                                                     (:template-specifier 
+                                                        ( ("CharT" type nil nil nil)
+                                                          ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [7740 7777])
+                                            ("mt" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("mersenne_twister_engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7793 7827]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol classsubparts) [7644 7880])
+                                    (">>" function
+                                       (:template 
+                                          ( ("CharT" type (:type "class") nil nil)
+                                            ("Traits" type (:type "class") nil nil))                                          
+                                        :type ("std::basic_istream" type
+                                             (:template-specifier 
+                                                ( ("CharT" type nil nil nil)
+                                                  ("Traits" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :arguments 
+                                          ( ("is" variable
+                                               (:reference 1
+                                                :type ("std::basic_istream" type
+                                                     (:template-specifier 
+                                                        ( ("CharT" type nil nil nil)
+                                                          ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [8048 8085])
+                                            ("mt" variable
+                                               (:reference 1
+                                                :type ("mersenne_twister_engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8101 8129]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol classsubparts) [7952 8492])
+                                    ("==" function
+                                       (:operator-flag t
+                                        :typemodifiers ("friend")
+                                        :arguments 
+                                          ( ("x_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("mersenne_twister_engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8659 8693])
+                                            ("y_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("mersenne_twister_engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8721 8755]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [8636 8854])
+                                    ("!=" function
+                                       (:operator-flag t
+                                        :typemodifiers ("friend")
+                                        :arguments 
+                                          ( ("x_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("mersenne_twister_engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8966 9000])
+                                            ("y_" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("mersenne_twister_engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9028 9062]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [8943 9090])
+                                    ("private" label nil (reparse-symbol classsubparts) [9092 9100])
+                                    ("twist" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [9133 9146])
+                                    ("equal_imp" function
+                                       (:methodconst-flag t
+                                        :arguments 
+                                          ( ("other" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("mersenne_twister_engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9467 9504]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [9452 9900])
+                                    ("print" function
+                                       (:template 
+                                          ( ("CharT" type (:type "class") nil nil)
+                                            ("Traits" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("os" variable
+                                               (:reference 1
+                                                :type ("std::basic_ostream" type
+                                                     (:template-specifier 
+                                                        ( ("CharT" type nil nil nil)
+                                                          ("Traits" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [10063 10101]))                                          
+                                        :methodconst-flag t)
+                                        (reparse-symbol classsubparts) [10012 10424])
+                                    ("rewind" function
+                                       (:methodconst-flag t
+                                        :arguments 
+                                          ( ("last" variable
+                                               (:pointer 1
+                                                :type ("UIntType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10561 10576])
+                                            ("z" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10577 10591]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [10549 11323])
+                                    ("normalize_state" function (:type "void") (reparse-symbol classsubparts) [11811 12393])
+                                    ("rewind_find" function
+                                       (:methodconst-flag t
+                                        :arguments 
+                                          ( ("last" variable
+                                               (:pointer 1
+                                                :type ("UIntType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12634 12649])
+                                            ("size" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12650 12667])
+                                            ("j" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12668 12682]))                                          
+                                        :type ("UIntType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [12609 12889])
+                                    ("discard_many" function
+                                       (:arguments 
+                                          ( ("z" variable (:type ("boost::uintmax_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13284 13303]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [13266 14710])
+                                    ("get_characteristic_polynomial" function
+                                       (:typemodifiers ("static")
+                                        :type ("detail::polynomial" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [14715 15819])
+                                    ("as_polynomial" function
+                                       (:arguments 
+                                          ( ("size" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15857 15874]))                                          
+                                        :type ("detail::polynomial" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [15824 16076])
+                                    ("reconstruct_state" function
+                                       (:arguments 
+                                          ( ("p" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::polynomial" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [16104 16132]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [16081 16804])
+                                    ("x" variable
+                                       (:dereference 1
+                                        :type ("UIntType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [16982 16996])
+                                    ("i" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17001 17015]))                                  )
+                                (reparse-symbol namespacesubparts) [2369 17018])
+                            ("BOOST_RANDOM_MT_DEFINE_CONSTANT" variable (:constant-flag t) (reparse-symbol namespacesubparts) [17163 17194])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17544 17600])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17601 17658])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17659 17716])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17717 17773])
+                            ("mersenne_twister_engine::xor_mask" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17774 17826])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17827 17885])
+                            ("mersenne_twister_engine::tempering_d" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17886 17941])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [17942 18000])
+                            ("mersenne_twister_engine::tempering_b" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18001 18056])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18057 18115])
+                            ("mersenne_twister_engine::tempering_c" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18116 18171])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18172 18230])
+                            ("mersenne_twister_engine::initialization_multiplier" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18231 18300])
+                            ("mersenne_twister_engine::default_seed" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18301 18357])
+                            ("mersenne_twister_engine::parameter_a" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18358 18413])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18414 18470])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18471 18526])
+                            ("mersenne_twister_engine::output_b" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18527 18579])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18580 18635])
+                            ("mersenne_twister_engine::output_c" variable
+                               (:constant-flag t
+                                :type ("UIntType" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18636 18688])
+                            ("mersenne_twister_engine::size_t" variable
+                               (:constant-flag t
+                                :type ("std" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [18689 18744])
+                            ("mersenne_twister_engine::has_fixed_range" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [18745 18800])
+                            ("twist" function
+                               (:template 
+                                  ( ("UIntType" type (:type "class") nil nil)
+                                    ("std::size_t" type (:typevar "w") nil nil)
+                                    ("std::size_t" type (:typevar "n") nil nil)
+                                    ("std::size_t" type (:typevar "m") nil nil)
+                                    ("std::size_t" type (:typevar "r") nil nil)
+                                    ("UIntType" type (:typevar "a") nil nil)
+                                    ("std::size_t" type (:typevar "u") nil nil)
+                                    ("UIntType" type (:typevar "d") nil nil)
+                                    ("std::size_t" type (:typevar "s") nil nil)
+                                    ("UIntType" type (:typevar "b") nil nil)
+                                    ("std::size_t" type (:typevar "t") nil nil)
+                                    ("UIntType" type (:typevar "c") nil nil)
+                                    ("std::size_t" type (:typevar "l") nil nil)
+                                    ("UIntType" type (:typevar "f") nil nil))                                  
+                                :type "void"
+                                :parent "mersenne_twister_engine")
+                                (reparse-symbol namespacesubparts) [18848 20545])
+                            ("()" function
+                               (:operator-flag t
+                                :parent "mersenne_twister_engine"
+                                :type ("result_type" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [20878 21153])
+                            ("mt11213b" type
+                               (:typedef ("mersenne_twister_engine" type
+                                     (:template-specifier 
+                                        ( ("uint32_t" type nil nil nil)
+                                          ("32")
+                                          ("351")
+                                          ("175")
+                                          ("19")
+                                          ("0xccab8ee7")
+                                          ("11")
+                                          ("0xffffffff")
+                                          ("7")
+                                          ("0x31b6ab00")
+                                          ("15")
+                                          ("0xffe50000")
+                                          ("17")
+                                          ("1812433253"))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [21555 21691])
+                            ("mt19937" type
+                               (:typedef ("mersenne_twister_engine" type
+                                     (:template-specifier 
+                                        ( ("uint32_t" type nil nil nil)
+                                          ("32")
+                                          ("624")
+                                          ("397")
+                                          ("31")
+                                          ("0x9908b0df")
+                                          ("11")
+                                          ("0xffffffff")
+                                          ("7")
+                                          ("0x9d2c5680")
+                                          ("15")
+                                          ("0xefc60000")
+                                          ("18")
+                                          ("1812433253"))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [22093 22228])
+                            ("mt19937_64" variable (:type "int") (reparse-symbol namespacesubparts) [22529 22540]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1093 23741])
+                    ("random::mt11213b" using (:type ("random::mt11213b" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [23763 23786])
+                    ("random::mt19937" using (:type ("random::mt19937" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [23787 23809])
+                    ("random::mt19937_64" using (:type ("random::mt19937_64" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol namespacesubparts) [23810 23835]))                  
+                :type "namespace")
+                nil [1075 23838])
+            ("boost/random/detail/enable_warnings.hpp" include (:system-flag t) nil [23999 24049]))          
+      :file "mersenne_twister.hpp"
+      :pointmax 24095
+      :fsize 24094
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 23978 . 23997) (symbol 23950 . 23978) (semantic-list 23933 . 23949) (symbol 23905 . 23933) (semantic-list 23887 . 23904) (symbol 23859 . 23887) (punctuation 23723 . 23724) (semantic-list 22886 . 23723) (punctuation 22884 . 22885) (number 22874 . 22884) (punctuation 22872 . 22873) (symbol 22871 . 22872) (punctuation 22869 . 22870) (symbol 22868 . 22869) (punctuation 22866 . 22867) (symbol 22865 . 22866) (punctuation 22863 . 22864) (symbol 22862 . 22863) (punctuation 22860 . 22861) (symbol 22859 . 22860) (punctuation 22857 . 22858) (number 22856 . 22857) (semantic-list 22846 . 22856) (punctuation 22845 . 22846) (punctuation 22843 . 22844) (symbol 22842 . 22843) (punctuation 22840 . 22841) (symbol 22839 . 22840) (punctuation 22837 . 22838) (symbol 22836 . 22837) (punctuation 22834 . 22835) (symbol 22833 . 22834) (punctuation 22831 . 22832) (symbol 22830 . 22831) (punctuation 22828 . 22829) (symbol 22827 . 22828) (punctuation 22817 . 22818) (symbol 22809 . 22817) (punctuation 22808 . 22809) (symbol 22785 . 22808) (PUBLIC 22778 . 22784) (punctuation 22772 . 22773) (symbol 22755 . 22771) (CLASS 22749 . 22754) (punctuation 22747 . 22748) (symbol 22746 . 22747) (symbol 22737 . 22745) (punctuation 22735 . 22736) (symbol 22734 . 22735) (INT 22730 . 22733) (punctuation 22728 . 22729) (symbol 22727 . 22728) (symbol 22718 . 22726) (punctuation 22707 . 22708) (symbol 22706 . 22707) (INT 22702 . 22705) (punctuation 22700 . 22701) (symbol 22699 . 22700) (symbol 22690 . 22698) (punctuation 22679 . 22680) (symbol 22678 . 22679) (symbol 22671 . 22677) (punctuation 22670 . 22671) (punctuation 22669 . 22670) (symbol 22666 . 22669) (punctuation 22664 . 22665) (symbol 22663 . 22664) (INT 22659 . 22662) (punctuation 22657 . 22658) (symbol 22656 . 22657) (symbol 22647 . 22655) (punctuation 22636 . 22637) (symbol 22635 . 22636) (INT 22631 . 22634) (punctuation 22629 . 22630) (symbol 22628 . 22629) (INT 22624 . 22627) (punctuation 22622 . 22623) (symbol 22621 . 22622) (INT 22617 . 22620) (punctuation 22615 . 22616) (symbol 22614 . 22615) (INT 22610 . 22613) (punctuation 22599 . 22600) (symbol 22591 . 22599) (CLASS 22585 . 22590) (punctuation 22584 . 22585) (TEMPLATE 22576 . 22584) (punctuation 22527 . 22528) (semantic-list 22506 . 22527) (symbol 22498 . 22506) (number 22507 . 22526) (punctuation 22492 . 22493) (number 22490 . 22492) (punctuation 22489 . 22490) (semantic-list 22469 . 22489) (symbol 22461 . 22469) (number 22470 . 22488) (punctuation 22460 . 22461) (number 22458 . 22460) (punctuation 22457 . 22458) (semantic-list 22437 . 22457) (symbol 22429 . 22437) (number 22438 . 22456) (punctuation 22423 . 22424) (number 22421 . 22423) (punctuation 22420 . 22421) (semantic-list 22400 . 22420) (symbol 22392 . 22400) (number 22401 . 22419) (punctuation 22391 . 22392) (number 22389 . 22391) (punctuation 22388 . 22389) (semantic-list 22368 . 22388) (symbol 22360 . 22368) (number 22369 . 22387) (punctuation 22354 . 22355) (number 22352 . 22354) (punctuation 22351 . 22352) (number 22348 . 22351) (punctuation 22347 . 22348) (number 22344 . 22347) (punctuation 22343 . 22344) (number 22341 . 22343) (punctuation 22340 . 22341) (symbol 22332 . 22340) (punctuation 22331 . 22332) (symbol 22308 . 22331) (TYPEDEF 22300 . 22307) (punctuation 20877 . 20878) (punctuation 20876 . 20877) (punctuation 20875 . 20876) (symbol 20874 . 20875) (punctuation 20873 . 20874) (symbol 20872 . 20873) (punctuation 20871 . 20872) (symbol 20870 . 20871) (punctuation 20869 . 20870) (symbol 20868 . 20869) (punctuation 20867 . 20868) (symbol 20866 . 20867) (punctuation 20865 . 20866) (symbol 20864 . 20865) (punctuation 20863 . 20864) (symbol 20862 . 20863) (punctuation 20861 . 20862) (symbol 20860 . 20861) (punctuation 20859 . 20860) (symbol 20858 . 20859) (punctuation 20857 . 20858) (symbol 20856 . 20857) (punctuation 20855 . 20856) (symbol 20854 . 20855) (punctuation 20853 . 20854) (symbol 20852 . 20853) (punctuation 20851 . 20852) (symbol 20850 . 20851) (punctuation 20849 . 20850) (symbol 20841 . 20849) (punctuation 20840 . 20841) (symbol 20817 . 20840) (TYPENAME 20808 . 20816) (INLINE 20801 . 20807) (punctuation 20799 . 20800) (symbol 20798 . 20799) (symbol 20789 . 20797) (punctuation 20787 . 20788) (symbol 20786 . 20787) (symbol 20779 . 20785) (punctuation 20778 . 20779) (punctuation 20777 . 20778) (symbol 20774 . 20777) (punctuation 20772 . 20773) (symbol 20771 . 20772) (symbol 20762 . 20770) (punctuation 20751 . 20752) (symbol 20750 . 20751) (symbol 20743 . 20749) (punctuation 20742 . 20743) (punctuation 20741 . 20742) (symbol 20738 . 20741) (punctuation 20736 . 20737) (symbol 20735 . 20736) (symbol 20726 . 20734) (punctuation 20715 . 20716) (symbol 20714 . 20715) (symbol 20707 . 20713) (punctuation 20706 . 20707) (punctuation 20705 . 20706) (symbol 20702 . 20705) (punctuation 20700 . 20701) (symbol 20699 . 20700) (symbol 20690 . 20698) (punctuation 20688 . 20689) (symbol 20687 . 20688) (symbol 20680 . 20686) (punctuation 20679 . 20680) (punctuation 20678 . 20679) (symbol 20675 . 20678) (punctuation 20673 . 20674) (symbol 20672 . 20673) (symbol 20663 . 20671) (punctuation 20652 . 20653) (symbol 20651 . 20652) (symbol 20644 . 20650) (punctuation 20643 . 20644) (punctuation 20642 . 20643) (symbol 20639 . 20642) (punctuation 20637 . 20638) (symbol 20636 . 20637) (symbol 20629 . 20635) (punctuation 20628 . 20629) (punctuation 20627 . 20628) (symbol 20624 . 20627) (punctuation 20622 . 20623) (symbol 20621 . 20622) (symbol 20614 . 20620) (punctuation 20613 . 20614) (punctuation 20612 . 20613) (symbol 20609 . 20612) (punctuation 20607 . 20608) (symbol 20606 . 20607) (symbol 20599 . 20605) (punctuation 20598 . 20599) (punctuation 20597 . 20598) (symbol 20594 . 20597) (punctuation 20583 . 20584) (symbol 20575 . 20583) (CLASS 20569 . 20574) (punctuation 20568 . 20569) (TEMPLATE 20560 . 20568) (symbol 6581 . 6592) (STATIC 6574 . 6580) (symbol 6431 . 6442) (STATIC 6424 . 6430))
+      :lexical-table 
+        '(("BOOST_RANDOM_MERSENNE_TWISTER_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_RANDOM_UNIFORM_INT_DISTRIBUTION_HPP" variable (:constant-flag t) nil [564 605])
+            ("iosfwd" include (:system-flag t) nil [607 624])
+            ("ios" include (:system-flag t) nil [625 639])
+            ("istream" include (:system-flag t) nil [640 658])
+            ("boost/config.hpp" include (:system-flag t) nil [659 686])
+            ("boost/limits.hpp" include (:system-flag t) nil [687 714])
+            ("boost/assert.hpp" include (:system-flag t) nil [715 742])
+            ("boost/random/detail/config.hpp" include (:system-flag t) nil [743 784])
+            ("boost/random/detail/operators.hpp" include (:system-flag t) nil [785 829])
+            ("boost/random/detail/uniform_int_float.hpp" include (:system-flag t) nil [830 882])
+            ("boost/random/detail/signed_unsigned_tools.hpp" include (:system-flag t) nil [883 939])
+            ("boost/random/traits.hpp" include (:system-flag t) nil [940 974])
+            ("boost/mpl/bool.hpp" include (:system-flag t) nil [975 1004])
+            ("boost" type
+               (:members 
+                  ( ("random" type
+                       (:members 
+                          ( ("detail" type
+                               (:members 
+                                  ( ("generate_uniform_int" function
+                                       (:template 
+                                          ( ("Engine" type (:type "class") nil nil)
+                                            ("T" type (:type "class") nil nil))                                          
+                                        :type ("T" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("eng" variable
+                                               (:reference 1
+                                                :type ("Engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1373 1385])
+                                            ("min_value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1386 1398])
+                                            ("max_value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1399 1411])
+                                            ("" variable (:type ("boost::mpl::true_" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1416 1474]))                                          )
+                                        (reparse-symbol namespacesubparts) [1313 10322])
+                                    ("generate_uniform_int" function
+                                       (:template 
+                                          ( ("Engine" type (:type "class") nil nil)
+                                            ("T" type (:type "class") nil nil))                                          
+                                        :type ("T" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("eng" variable
+                                               (:reference 1
+                                                :type ("Engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10438 10450])
+                                            ("min_value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10451 10463])
+                                            ("max_value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10464 10476])
+                                            ("" variable (:type ("boost::mpl::false_" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10481 10540]))                                          
+                                        :typemodifiers ("inline"))
+                                        (reparse-symbol namespacesubparts) [10371 10673])
+                                    ("generate_uniform_int" function
+                                       (:template 
+                                          ( ("Engine" type (:type "class") nil nil)
+                                            ("T" type (:type "class") nil nil))                                          
+                                        :type ("T" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("eng" variable
+                                               (:reference 1
+                                                :type ("Engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10737 10749])
+                                            ("min_value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10750 10762])
+                                            ("max_value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10763 10775]))                                          
+                                        :typemodifiers ("inline"))
+                                        (reparse-symbol namespacesubparts) [10675 10952]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1130 10955])
+                            ("uniform_int_distribution" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [11320 11327])
+                                    ("input_type" type
+                                       (:typedef ("IntType" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [11332 11359])
+                                    ("result_type" type
+                                       (:typedef ("IntType" type (:type "class") nil nil)
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [11364 11392])
+                                    ("param_type" type
+                                       (:members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [11425 11432])
+                                            ("distribution_type" type
+                                               (:typedef ("uniform_int_distribution" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [11442 11493])
+                                            ("param_type" function
+                                               (:constructor-flag t
+                                                :arguments 
+                                                  ( ("min_arg" variable
+                                                       (:default-value "0"
+                                                        :type ("IntType" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [11670 11689])
+                                                    ("max_arg" variable
+                                                       (:default-value "(std::numeric_limits<IntType>::max)()"
+                                                        :type ("IntType" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [11703 11758]))                                                  
+                                                :type ("param_type" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [11646 11860])
+                                            ("a" function
+                                               (:methodconst-flag t
+                                                :type ("IntType" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [11932 11966])
+                                            ("b" function
+                                               (:methodconst-flag t
+                                                :type ("IntType" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [12037 12071])
+                                            ("BOOST_RANDOM_DETAIL_OSTREAM_OPERATOR" function
+                                               (:arguments 
+                                                  ( ("" variable (:type ("os" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12177 12180])
+                                                    ("" variable (:type ("param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12181 12192])
+                                                    ("" variable (:type ("parm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12193 12198]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [12140 12290])
+                                            ("BOOST_RANDOM_DETAIL_ISTREAM_OPERATOR" function
+                                               (:arguments 
+                                                  ( ("" variable (:type ("is" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12397 12400])
+                                                    ("" variable (:type ("param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12401 12412])
+                                                    ("" variable (:type ("parm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12413 12418]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [12360 12782])
+                                            ("BOOST_RANDOM_DETAIL_EQUALITY_OPERATOR" function
+                                               (:arguments 
+                                                  ( ("" variable (:type ("param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12899 12910])
+                                                    ("" variable (:type ("lhs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12911 12915])
+                                                    ("" variable (:type ("rhs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12916 12920]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [12861 12985])
+                                            ("private" label nil (reparse-symbol classsubparts) [13125 13133])
+                                            ("_min" variable (:type ("IntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13143 13156])
+                                            ("_max" variable (:type ("IntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13165 13178]))                                          
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [11398 13185])
+                                    ("uniform_int_distribution" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("min_arg" variable
+                                               (:default-value "0"
+                                                :type ("IntType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13396 13415])
+                                            ("max_arg" variable
+                                               (:default-value "(std::numeric_limits<IntType>::max)()"
+                                                :type ("IntType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13425 13480]))                                          
+                                        :type ("uniform_int_distribution" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [13362 13572])
+                                    ("uniform_int_distribution" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("parm" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("param_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13681 13704]))                                          
+                                        :type ("uniform_int_distribution" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [13656 13746])
+                                    ("BOOST_PREVENT_MACRO_SUBSTITUTION" function
+                                       (:methodconst-flag t
+                                        :type ("min" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [13818 13880])
+                                    ("BOOST_PREVENT_MACRO_SUBSTITUTION" function
+                                       (:methodconst-flag t
+                                        :type ("max" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [13951 14013])
+                                    ("a" function
+                                       (:methodconst-flag t
+                                        :type ("IntType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [14077 14111])
+                                    ("b" function
+                                       (:methodconst-flag t
+                                        :type ("IntType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [14174 14208])
+                                    ("param" function
+                                       (:methodconst-flag t
+                                        :type ("param_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [14269 14328])
+                                    ("param" function
+                                       (:arguments 
+                                          ( ("parm" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("param_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14396 14419]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [14385 14481])
+                                    ("reset" function (:type "void") (reparse-symbol classsubparts) [14634 14650])
+                                    ("()" function
+                                       (:template 
+                                          ( ("Engine" type (:type "class") nil nil))                                          
+                                        :type ("result_type" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("eng" variable
+                                               (:reference 1
+                                                :type ("Engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14783 14795]))                                          
+                                        :operator-flag t
+                                        :methodconst-flag t)
+                                        (reparse-symbol classsubparts) [14733 14863])
+                                    ("()" function
+                                       (:template 
+                                          ( ("Engine" type (:type "class") nil nil))                                          
+                                        :type ("result_type" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("eng" variable
+                                               (:reference 1
+                                                :type ("Engine" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15027 15039])
+                                            ("parm" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("param_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [15040 15063]))                                          
+                                        :operator-flag t
+                                        :methodconst-flag t)
+                                        (reparse-symbol classsubparts) [14977 15139])
+                                    ("BOOST_RANDOM_DETAIL_OSTREAM_OPERATOR" function
+                                       (:arguments 
+                                          ( ("" variable (:type ("os" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15239 15242])
+                                            ("" variable (:type ("uniform_int_distribution" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15243 15268])
+                                            ("" variable (:type ("ud" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15269 15272]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [15202 15329])
+                                    ("BOOST_RANDOM_DETAIL_ISTREAM_OPERATOR" function
+                                       (:arguments 
+                                          ( ("" variable (:type ("is" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15430 15433])
+                                            ("" variable (:type ("uniform_int_distribution" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15434 15459])
+                                            ("" variable (:type ("ud" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15460 15463]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [15393 15582])
+                                    ("BOOST_RANDOM_DETAIL_EQUALITY_OPERATOR" function
+                                       (:arguments 
+                                          ( ("" variable (:type ("uniform_int_distribution" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15761 15786])
+                                            ("" variable (:type ("lhs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15787 15791])
+                                            ("" variable (:type ("rhs" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15792 15796]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [15723 15857])
+                                    ("private" label nil (reparse-symbol classsubparts) [16068 16076])
+                                    ("_min" variable (:type ("IntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16081 16094])
+                                    ("_max" variable (:type ("IntType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16099 16112]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [11287 16115]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1111 16118]))                  
+                :type "namespace")
+                nil [1093 16140]))          
+      :file "uniform_int_distribution.hpp"
+      :pointmax 16200
+      :fsize 16199
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((semantic-list 16040 . 16066) (symbol 16001 . 16040) (symbol 13943 . 13950) (symbol 13810 . 13817) (EXPLICIT 13647 . 13655) (EXPLICIT 13353 . 13361) (semantic-list 13107 . 13119) (symbol 13068 . 13107) (EXPLICIT 11637 . 11645) (semantic-list 13107 . 13119) (symbol 13068 . 13107) (EXPLICIT 11637 . 11645) (punctuation 11285 . 11286) (INT 11282 . 11285) (punctuation 11280 . 11281) (symbol 11272 . 11279) (CLASS 11266 . 11271) (punctuation 11265 . 11266) (TEMPLATE 11257 . 11265))
+      :lexical-table 
+        '(("BOOST_RANDOM_UNIFORM_INT_DISTRIBUTION_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_RANDOM_TRAITS_HPP" variable (:constant-flag t) nil [681 704])
+            ("boost/type_traits/is_signed.hpp" include (:system-flag t) nil [706 748])
+            ("boost/type_traits/is_integral.hpp" include (:system-flag t) nil [749 793])
+            ("boost/type_traits/make_unsigned.hpp" include (:system-flag t) nil [794 840])
+            ("boost/mpl/bool.hpp" include (:system-flag t) nil [841 870])
+            ("limits" include (:system-flag t) nil [871 888])
+            ("boost" type
+               (:members 
+                  ( ("random" type
+                       (:members 
+                          ( ("traits" type
+                               (:members 
+                                  ( ("make_unsigned_imp" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "intrinsic") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("type" type
+                                               (:typedef ("boost::make_unsigned::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1048 1100]))                                          )
+                                        (reparse-symbol namespacesubparts) [974 1106])
+                                    ("make_unsigned_imp" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("BOOST_STATIC_ASSERT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("std::numeric_limits::is_specialized" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1198 1237]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [1178 1238])
+                                            ("BOOST_STATIC_ASSERT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("std::numeric_limits::is_signed" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1265 1300])
+                                                    ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1302 1308]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [1245 1309])
+                                            ("BOOST_STATIC_ASSERT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("std::numeric_limits::is_integer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1336 1372])
+                                                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1374 1379]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [1316 1380])
+                                            ("type" type
+                                               (:typedef ("T" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1387 1402]))                                          
+                                        :template-specifier 
+                                          ( ("T" type nil nil nil)
+                                            ("false" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [1110 1408])
+                                    ("make_unsigned" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :superclasses 
+                                          ( ("make_unsigned_imp" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [1978 2140])
+                                    ("make_unsigned_or_unbounded_imp" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "intrinsic") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("type" type
+                                               (:typedef ("boost::make_unsigned::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2256 2308]))                                          )
+                                        (reparse-symbol namespacesubparts) [2169 2314])
+                                    ("make_unsigned_or_unbounded_imp" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("BOOST_STATIC_ASSERT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("std::numeric_limits::is_specialized" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2419 2458]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2399 2459])
+                                            ("BOOST_STATIC_ASSERT" function
+                                               (:prototype-flag t
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2466 2581])
+                                            ("BOOST_STATIC_ASSERT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type ("std::numeric_limits::is_integer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2608 2644])
+                                                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2646 2651]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [2588 2652])
+                                            ("type" type
+                                               (:typedef ("T" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [2659 2674]))                                          
+                                        :template-specifier 
+                                          ( ("T" type nil nil nil)
+                                            ("false" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [2318 2680])
+                                    ("make_unsigned_or_unbounded" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :superclasses 
+                                          ( ("make_unsigned_or_unbounded_imp" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [3431 3622]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [927 4153]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [908 4155]))                  
+                :type "namespace")
+                nil [890 4157]))          
+      :file "traits.hpp"
+      :pointmax 4166
+      :fsize 4165
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax '((punctuation 4149 . 4150) (semantic-list 4147 . 4149) (punctuation 4142 . 4143) (semantic-list 4027 . 4142) (punctuation 4025 . 4026) (punctuation 4024 . 4025) (symbol 4018 . 4023) (punctuation 4017 . 4018) (punctuation 4016 . 4017) (punctuation 4015 . 4016) (symbol 4014 . 4015) (punctuation 4013 . 4014) (symbol 4004 . 4013) (punctuation 4003 . 4004) (punctuation 4002 . 4003) (symbol 3997 . 4002) (punctuation 3995 . 3996) (symbol 3989 . 3994) (punctuation 3988 . 3989) (punctuation 3987 . 3988) (symbol 3984 . 3987) (PUBLIC 3977 . 3983) (punctuation 3975 . 3976) (symbol 3959 . 3968) (STRUCT 3952 . 3958) (punctuation 3950 . 3951) (symbol 3949 . 3950) (CLASS 3943 . 3948) (punctuation 3942 . 3943) (TEMPLATE 3933 . 3941) (punctuation 3845 . 3846) (semantic-list 3843 . 3845) (punctuation 3838 . 3839) (semantic-list 3802 . 3838) (punctuation 3800 . 3801) (punctuation 3799 . 3800) (symbol 3793 . 3798) (punctuation 3792 . 3793) (punctuation 3791 . 3792) (punctuation 3790 . 3791) (symbol 3789 . 3790) (punctuation 3788 . 3789) (symbol 3777 . 3788) (punctuation 3776 . 3777) (punctuation 3775 . 3776) (symbol 3770 . 3775) (punctuation 3769 . 3770) (symbol 3764 . 3769) (punctuation 3763 . 3764) (punctuation 3762 . 3763) (symbol 3759 . 3762) (PUBLIC 3752 . 3758) (punctuation 3750 . 3751) (symbol 3732 . 3743) (STRUCT 3725 . 3731) (punctuation 3720 . 3721) (symbol 3719 . 3720) (CLASS 3713 . 3718) (punctuation 3712 . 3713) (TEMPLATE 3703 . 3711) (punctuation 2644 . 2645) (punctuation 2643 . 2644) (semantic-list 2534 . 2579) (punctuation 2532 . 2533) (punctuation 2531 . 2532) (semantic-list 2486 . 2530) (punctuation 1372 . 1373) (punctuation 1371 . 1372) (punctuation 1300 . 1301) (punctuation 1299 . 1300))
+      :lexical-table 
+        '(("BOOST_RANDOM_TRAITS_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!random!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

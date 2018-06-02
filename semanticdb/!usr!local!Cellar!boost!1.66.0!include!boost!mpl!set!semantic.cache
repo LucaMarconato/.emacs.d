@@ -1,0 +1,37 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_MPL_SET_SET0_HPP_INCLUDED" variable (:constant-flag t) nil [50 81])
+            ("boost/mpl/set/aux_/at_impl.hpp" include (:system-flag t) nil [415 456])
+            ("boost/mpl/set/aux_/clear_impl.hpp" include (:system-flag t) nil [457 501])
+            ("boost/mpl/set/aux_/size_impl.hpp" include (:system-flag t) nil [546 589])
+            ("boost/mpl/set/aux_/empty_impl.hpp" include (:system-flag t) nil [590 634])
+            ("boost/mpl/set/aux_/insert_impl.hpp" include (:system-flag t) nil [635 680])
+            ("boost/mpl/set/aux_/insert_range_impl.hpp" include (:system-flag t) nil [681 732])
+            ("boost/mpl/set/aux_/erase_impl.hpp" include (:system-flag t) nil [733 777])
+            ("boost/mpl/set/aux_/erase_key_impl.hpp" include (:system-flag t) nil [778 826])
+            ("boost/mpl/set/aux_/has_key_impl.hpp" include (:system-flag t) nil [827 873])
+            ("boost/mpl/set/aux_/key_type_impl.hpp" include (:system-flag t) nil [874 921])
+            ("boost/mpl/set/aux_/value_type_impl.hpp" include (:system-flag t) nil [922 971])
+            ("boost/mpl/set/aux_/begin_end_impl.hpp" include (:system-flag t) nil [972 1020])
+            ("boost/mpl/set/aux_/iterator.hpp" include (:system-flag t) nil [1021 1063])
+            ("boost/mpl/set/aux_/item.hpp" include (:system-flag t) nil [1064 1102])
+            ("boost/mpl/set/aux_/set0.hpp" include (:system-flag t) nil [1103 1141])
+            ("boost/mpl/set/aux_/tag.hpp" include (:system-flag t) nil [1142 1179]))          
+      :file "set0.hpp"
+      :pointmax 1223
+      :fsize 1222
+      :lastmodtime '(23089 51066 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_MPL_SET_SET0_HPP_INCLUDED")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.66.0!include!boost!mpl!set!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -18,3 +18,4 @@
 (global-set-key (kbd "C-c s") 'shell)
 ;(global-set-key (kbd "C-c d") #'(lambda () (interactive) (switch-to-buffer "*shell*<2>")))
 (global-set-key (kbd "C-c d") #'(lambda () (interactive) (visit-shell2)))
+(setq comint-prompt-read-only t)

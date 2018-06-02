@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: scerr0
+# key: scerr0
+# --
+std::cerr << "error: ${1:}\n";

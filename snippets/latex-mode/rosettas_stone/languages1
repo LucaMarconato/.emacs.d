@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: languages1
+# key: languages1
+# --
+\subsubsection{C++}
+
+$\\ $\noindent\rule{16cm}{0.4pt}
+\subsubsection{R}
+
+$\\ $\noindent\rule{16cm}{0.4pt}
+\subsubsection{MATLAB}
+
+$\\ $\noindent\rule{16cm}{0.4pt}
+\subsubsection{phyton}
+
+$\\ $\noindent\rule{16cm}{0.4pt}
+\subsubsection{Wolfram Language}
+
+$\\ $\noindent\rule{16cm}{0.4pt}
+\subsubsection{ROOT}
+
+$\\ $\noindent\rule{16cm}{0.4pt}
+\subsubsection{Swift}
+
+$\\ $\noindent\rule{16cm}{0.4pt}
+\subsubsection{Bash}
+
+$\\ $\noindent\rule{16cm}{0.4pt}
+\newpage

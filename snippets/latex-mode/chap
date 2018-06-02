@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: chap
+# key: chap
+# --
+\chapter{${1:name}}
+\label{ch:${2:label}}
+
+$0

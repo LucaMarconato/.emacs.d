@@ -47,7 +47,6 @@
       (split-window-vertically)
       (select-window (next-window) t)
       (balance-windows))))
-
 (global-set-key (kbd "C-c 2") 'matlab-layout-1)
 
 (defun python-layout-1 ()
@@ -69,5 +68,25 @@
       (select-window (next-window) t)
       (let ((current-prefix-arg -60)) (call-interactively 'enlarge-window))
       (switch-to-buffer (get-buffer "*shell*")))))
-
 (global-set-key (kbd "C-c 3") 'python-layout-1)
+
+(defun thesis-layout-1 ()
+  "Create 4-pane layout of windows in the current frame, for writing the thesis in latex"
+  (interactive)
+  (when (buffer-file-name)
+    (delete-other-windows)
+    (save-selected-window
+      (split-window-horizontally)
+      (split-window-horizontally)
+      (find-file "~/bioinformatics/thesis/latex/molecular_biology.tex")
+      (select-window (next-window) t)
+      (find-file "~/bioinformatics/thesis/latex/tools.tex")
+      (select-window (next-window) t)
+      (split-window-vertically)
+      ;; (split-window-vertically)
+      (reftex-toc)
+      (balance-windows)
+      (select-window (next-window) t)      
+      (select-window (next-window) t))))
+      ;; (switch-to-buffer (get-buffer "*shell*")))))
+(global-set-key (kbd "C-c 4") 'thesis-layout-1)

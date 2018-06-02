@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: tal
+# key: tal
+# --
+template <class T, int buffer_size>
+Asynchronous_loader<T, buffer_size>::

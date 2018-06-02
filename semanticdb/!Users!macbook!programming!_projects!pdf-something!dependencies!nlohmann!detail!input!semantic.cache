@@ -1,0 +1,682 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [15 35])
+            ("array" include (:system-flag t) nil [43 59])
+            ("cassert" include (:system-flag t) nil [69 87])
+            ("cstddef" include (:system-flag t) nil [98 116])
+            ("cstring" include (:system-flag t) nil [127 145])
+            ("ios" include (:system-flag t) nil [156 170])
+            ("istream" include (:system-flag t) nil [207 225])
+            ("iterator" include (:system-flag t) nil [237 256])
+            ("memory" include (:system-flag t) nil [332 349])
+            ("numeric" include (:system-flag t) nil [388 406])
+            ("string" include (:system-flag t) nil [421 438])
+            ("type_traits" include (:system-flag t) nil [462 484])
+            ("utility" include (:system-flag t) nil [551 569])
+            ("nlohmann/detail/macro_scope.hpp" include (:system-flag t) nil [588 630])
+            ("nlohmann" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("input_adapter_protocol" type
+                               (:members 
+                                  ( ("get_character" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type ("std::char_traits::int_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1395 1456])
+                                    ("unget_character" function
+                                       (:pure-virtual-flag t
+                                        :prototype-flag t
+                                        :typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1515 1550]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1293 1602])
+                            ("std::shared_ptr" variable (:type "int") (reparse-symbol namespacesubparts) [1662 1702])
+                            ("input_stream_adapter" type
+                               (:superclasses 
+                                  ( ("input_adapter_protocol" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2271 2278])
+                                    ("input_stream_adapter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("i" variable
+                                               (:reference 1
+                                                :type ("std::istream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2489 2505]))                                          
+                                        :type ("input_stream_adapter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2468 3339])
+                                    ("private" label nil (reparse-symbol classsubparts) [3938 3946])
+                                    ("is" variable (:type ("std::istream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3987 4004])
+                                    ("sb" variable (:type ("std::streambuf" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4009 4028]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [2208 4031])
+                            ("input_buffer_adapter" type
+                               (:superclasses 
+                                  ( ("input_adapter_protocol" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [4131 4138])
+                                    ("input_buffer_adapter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("b" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [4164 4178])
+                                            ("l" variable
+                                               (:constant-flag t
+                                                :type ("std::size_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4179 4199]))                                          
+                                        :type ("input_buffer_adapter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4143 4409])
+                                    ("private" label nil (reparse-symbol classsubparts) [4990 4998])
+                                    ("cursor" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol classsubparts) [5044 5063])
+                                    ("limit" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol classsubparts) [5108 5126])
+                                    ("start" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol classsubparts) [5170 5188]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [4068 5191])
+                            ("input_adapter" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [5217 5224])
+                                    ("input_adapter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("i" variable
+                                               (:reference 1
+                                                :type ("std::istream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5305 5321]))                                          
+                                        :type ("input_adapter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5291 5380])
+                                    ("input_adapter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :type ("std::istream" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5439 5453])
+                                            ("" variable (:type ("i" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5454 5456]))                                          
+                                        :type ("input_adapter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5425 5515])
+                                    ("input_adapter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("b" variable (:type ("CharT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5880 5888])
+                                            ("l" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5889 5903]))                                          
+                                        :type ("input_adapter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5866 5996])
+                                    ("input_adapter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("b" variable (:type ("CharT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6393 6401]))                                          
+                                        :type ("input_adapter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6379 6533])
+                                    ("input_adapter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("first" variable (:type ("IteratorType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6857 6876])
+                                            ("last" variable (:type ("IteratorType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6877 6895]))                                          
+                                        :type ("input_adapter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6843 8092])
+                                    ("input_adapter" function
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil)
+                                            ("std::size_t" type (:typevar "N") nil nil))                                          
+                                        :type ("input_adapter" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8181 8191]))                                          
+                                        :constructor-flag t)
+                                        (reparse-symbol classsubparts) [8130 8258])
+                                    ("input_adapter" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("c" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("ContiguousContainer" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8698 8727]))                                          
+                                        :type ("input_adapter" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8684 8782])
+                                    ("input_adapter_t" function (:type "int") (reparse-symbol classsubparts) [8797 8845])
+                                    ("private" label nil (reparse-symbol classsubparts) [8849 8857])
+                                    ("ia" variable
+                                       (:default-value "nullptr"
+                                        :type ("input_adapter_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8889 8918]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [5193 8921]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [653 8923]))                  
+                :type "namespace")
+                nil [632 8925]))          
+      :file "input_adapters.hpp"
+      :pointmax 8926
+      :fsize 8925
+      :lastmodtime '(23254 8838 648335 302000)
+      :unmatched-syntax '((OPERATOR 8788 . 8796) (punctuation 8678 . 8679) (number 8677 . 8678) (punctuation 8675 . 8676) (symbol 8670 . 8674) (punctuation 8669 . 8670) (punctuation 8668 . 8669) (punctuation 8667 . 8668) (INT 8664 . 8667) (punctuation 8634 . 8635) (symbol 8629 . 8634) (punctuation 8628 . 8629) (punctuation 8627 . 8628) (punctuation 8626 . 8627) (symbol 8609 . 8626) (punctuation 8608 . 8609) (punctuation 8607 . 8608) (punctuation 8606 . 8607) (semantic-list 8551 . 8606) (symbol 8543 . 8551) (semantic-list 8562 . 8605) (punctuation 8542 . 8543) (symbol 8527 . 8542) (punctuation 8526 . 8527) (punctuation 8525 . 8526) (symbol 8522 . 8525) (TYPENAME 8513 . 8521) (punctuation 8511 . 8512) (symbol 8485 . 8511) (punctuation 8484 . 8485) (punctuation 8483 . 8484) (symbol 8480 . 8483) (punctuation 8479 . 8480) (symbol 8469 . 8479) (punctuation 8468 . 8469) (punctuation 8467 . 8468) (symbol 8464 . 8467) (symbol 8432 . 8435) (symbol 8426 . 8431) (punctuation 8425 . 8426) (punctuation 8424 . 8425) (punctuation 8423 . 8424) (symbol 8404 . 8423) (punctuation 8403 . 8404) (symbol 8393 . 8403) (punctuation 8392 . 8393) (punctuation 8391 . 8392) (symbol 8388 . 8391) (symbol 8384 . 8387) (punctuation 8383 . 8384) (symbol 8374 . 8383) (punctuation 8373 . 8374) (punctuation 8372 . 8373) (symbol 8369 . 8372) (TYPENAME 8347 . 8355) (punctuation 8345 . 8346) (symbol 8326 . 8345) (CLASS 8320 . 8325) (punctuation 8319 . 8320) (TEMPLATE 8311 . 8319) (semantic-list 8191 . 8194) (semantic-list 8183 . 8191) (punctuation 6837 . 6838) (number 6836 . 6837) (punctuation 6834 . 6835) (symbol 6829 . 6833) (punctuation 6828 . 6829) (punctuation 6827 . 6828) (punctuation 6826 . 6827) (INT 6823 . 6826) (punctuation 6804 . 6805) (symbol 6799 . 6804) (punctuation 6798 . 6799) (punctuation 6797 . 6798) (punctuation 6796 . 6797) (symbol 6770 . 6796) (punctuation 6769 . 6770) (punctuation 6768 . 6769) (symbol 6765 . 6768) (punctuation 6763 . 6764) (symbol 6746 . 6763) (punctuation 6745 . 6746) (punctuation 6744 . 6745) (punctuation 6743 . 6744) (symbol 6731 . 6743) (punctuation 6730 . 6731) (symbol 6715 . 6730) (punctuation 6714 . 6715) (punctuation 6713 . 6714) (symbol 6710 . 6713) (TYPENAME 6701 . 6709) (punctuation 6700 . 6701) (symbol 6693 . 6700) (punctuation 6692 . 6693) (punctuation 6691 . 6692) (symbol 6688 . 6691) (punctuation 6669 . 6670) (symbol 6660 . 6669) (punctuation 6659 . 6660) (punctuation 6658 . 6659) (symbol 6655 . 6658) (TYPENAME 6646 . 6654) (punctuation 6631 . 6632) (symbol 6619 . 6631) (CLASS 6613 . 6618) (punctuation 6612 . 6613) (TEMPLATE 6604 . 6612) (punctuation 6373 . 6374) (number 6372 . 6373) (punctuation 6370 . 6371) (symbol 6365 . 6369) (punctuation 6364 . 6365) (punctuation 6363 . 6364) (punctuation 6362 . 6363) (INT 6359 . 6362) (punctuation 6340 . 6341) (number 6339 . 6340) (punctuation 6337 . 6338) (punctuation 6336 . 6337) (semantic-list 6292 . 6335) (SIZEOF 6286 . 6292) (symbol 6265 . 6268) (symbol 6259 . 6264) (punctuation 6258 . 6259) (punctuation 6257 . 6258) (punctuation 6256 . 6257) (symbol 6252 . 6256) (punctuation 6251 . 6252) (punctuation 6250 . 6251) (punctuation 6249 . 6250) (symbol 6244 . 6249) (punctuation 6243 . 6244) (symbol 6229 . 6243) (punctuation 6228 . 6229) (punctuation 6227 . 6228) (symbol 6224 . 6227) (TYPENAME 6215 . 6223) (punctuation 6214 . 6215) (symbol 6203 . 6214) (punctuation 6202 . 6203) (punctuation 6201 . 6202) (symbol 6198 . 6201) (symbol 6177 . 6180) (symbol 6171 . 6176) (punctuation 6170 . 6171) (punctuation 6169 . 6170) (punctuation 6168 . 6169) (symbol 6163 . 6168) (punctuation 6162 . 6163) (symbol 6152 . 6162) (punctuation 6151 . 6152) (punctuation 6150 . 6151) (symbol 6147 . 6150) (punctuation 6128 . 6129) (symbol 6119 . 6128) (punctuation 6118 . 6119) (punctuation 6117 . 6118) (symbol 6114 . 6117) (TYPENAME 6105 . 6113) (punctuation 6090 . 6091) (symbol 6085 . 6090) (TYPENAME 6076 . 6084) (punctuation 6075 . 6076) (TEMPLATE 6067 . 6075) (punctuation 5860 . 5861) (number 5859 . 5860) (punctuation 5857 . 5858) (symbol 5852 . 5856) (punctuation 5851 . 5852) (punctuation 5850 . 5851) (punctuation 5849 . 5850) (INT 5846 . 5849) (punctuation 5827 . 5828) (number 5826 . 5827) (punctuation 5824 . 5825) (punctuation 5823 . 5824) (semantic-list 5779 . 5822) (SIZEOF 5773 . 5779) (symbol 5752 . 5755) (symbol 5746 . 5751) (punctuation 5745 . 5746) (punctuation 5744 . 5745) (punctuation 5743 . 5744) (symbol 5739 . 5743) (punctuation 5738 . 5739) (punctuation 5737 . 5738) (punctuation 5736 . 5737) (symbol 5731 . 5736) (punctuation 5730 . 5731) (symbol 5716 . 5730) (punctuation 5715 . 5716) (punctuation 5714 . 5715) (symbol 5711 . 5714) (TYPENAME 5702 . 5710) (punctuation 5701 . 5702) (symbol 5690 . 5701) (punctuation 5689 . 5690) (punctuation 5688 . 5689) (symbol 5685 . 5688) (symbol 5664 . 5667) (symbol 5658 . 5663) (punctuation 5657 . 5658) (punctuation 5656 . 5657) (punctuation 5655 . 5656) (symbol 5650 . 5655) (punctuation 5649 . 5650) (symbol 5639 . 5649) (punctuation 5638 . 5639) (punctuation 5637 . 5638) (symbol 5634 . 5637) (punctuation 5615 . 5616) (symbol 5606 . 5615) (punctuation 5605 . 5606) (punctuation 5604 . 5605) (symbol 5601 . 5604) (TYPENAME 5592 . 5600) (punctuation 5577 . 5578) (symbol 5572 . 5577) (TYPENAME 5563 . 5571) (punctuation 5562 . 5563) (TEMPLATE 5554 . 5562) (punctuation 5452 . 5453) (semantic-list 4896 . 4986) (symbol 4883 . 4891) (symbol 4874 . 4882) (semantic-list 4871 . 4873) (symbol 4856 . 4871) (VOID 4851 . 4855) (semantic-list 4661 . 4845) (symbol 4648 . 4656) (symbol 4639 . 4647) (semantic-list 4636 . 4638) (symbol 4623 . 4636) (symbol 4614 . 4622) (punctuation 4613 . 4614) (punctuation 4612 . 4613) (punctuation 4611 . 4612) (CHAR 4607 . 4611) (punctuation 4606 . 4607) (symbol 4595 . 4606) (punctuation 4594 . 4595) (punctuation 4593 . 4594) (symbol 4590 . 4593) (punctuation 4583 . 4584) (DELETE 4577 . 4583) (punctuation 4575 . 4576) (semantic-list 4551 . 4574) (punctuation 4550 . 4551) (OPERATOR 4542 . 4550) (punctuation 4540 . 4541) (symbol 4520 . 4540) (punctuation 4514 . 4515) (DELETE 4508 . 4514) (punctuation 4506 . 4507) (semantic-list 4476 . 4505) (symbol 4456 . 4476) (semantic-list 3866 . 3934) (symbol 3853 . 3861) (semantic-list 3850 . 3852) (symbol 3835 . 3850) (VOID 3830 . 3834) (semantic-list 3789 . 3824) (symbol 3776 . 3784) (semantic-list 3773 . 3775) (symbol 3760 . 3773) (symbol 3751 . 3759) (punctuation 3750 . 3751) (punctuation 3749 . 3750) (punctuation 3748 . 3749) (CHAR 3744 . 3748) (punctuation 3743 . 3744) (symbol 3732 . 3743) (punctuation 3731 . 3732) (punctuation 3730 . 3731) (symbol 3727 . 3730) (punctuation 3513 . 3514) (DELETE 3507 . 3513) (punctuation 3505 . 3506) (semantic-list 3481 . 3504) (punctuation 3480 . 3481) (OPERATOR 3472 . 3480) (punctuation 3470 . 3471) (symbol 3450 . 3470) (punctuation 3444 . 3445) (DELETE 3438 . 3444) (punctuation 3436 . 3437) (semantic-list 3406 . 3435) (symbol 3386 . 3406) (EXPLICIT 2459 . 2467) (semantic-list 2320 . 2453) (symbol 2307 . 2315) (semantic-list 2304 . 2306) (symbol 2284 . 2304) (punctuation 2283 . 2284) (punctuation 1660 . 1661) (symbol 1644 . 1659) (USING 1638 . 1643) (punctuation 1598 . 1599) (DEFAULT 1591 . 1598) (punctuation 1589 . 1590) (semantic-list 1586 . 1588) (symbol 1564 . 1586) (punctuation 1563 . 1564) (VIRTUAL 1555 . 1562) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("clocale" include (:system-flag t) nil [15 33])
+            ("cstddef" include (:system-flag t) nil [48 66])
+            ("cstdlib" include (:system-flag t) nil [77 95])
+            ("initializer_list" include (:system-flag t) nil [142 169])
+            ("ios" include (:system-flag t) nil [190 204])
+            ("iomanip" include (:system-flag t) nil [223 241])
+            ("sstream" include (:system-flag t) nil [259 277])
+            ("string" include (:system-flag t) nil [294 311])
+            ("vector" include (:system-flag t) nil [335 352])
+            ("nlohmann/detail/macro_scope.hpp" include (:system-flag t) nil [364 406])
+            ("nlohmann/detail/input/input_adapters.hpp" include (:system-flag t) nil [407 458])
+            ("nlohmann" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("lexer" type
+                               (:template 
+                                  ( ("BasicJsonType" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("BasicJsonType::number_integer_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [716 757])
+                                    ("BasicJsonType::number_unsigned_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [788 830])
+                                    ("BasicJsonType::number_float_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [858 897])
+                                    ("BasicJsonType::string_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [919 952])
+                                    ("public" label nil (reparse-symbol classsubparts) [956 963])
+                                    ("token_type" type (:type "class") (reparse-symbol classsubparts) [1008 2206])
+                                    ("lexer" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("adapter" variable (:type ("detail::input_adapter_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3831 3863]))                                          
+                                        :type ("lexer" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3825 3940])
+                                    ("private" label nil (reparse-symbol classsubparts) [4059 4067])
+                                    ("get_codepoint" function (:type "int") (reparse-symbol classsubparts) [5120 5984])
+                                    ("next_byte_in_range" function
+                                       (:arguments 
+                                          ( ("ranges" variable (:type ("std::initializer_list" type
+                                                 (:template-specifier 
+                                                    ( ("int" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [6662 6696]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [6638 7226])
+                                    ("scan_string" function (:type ("token_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7825 23100])
+                                    ("scan_number" function (:type ("token_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [25764 33871])
+                                    ("scan_literal" function
+                                       (:arguments 
+                                          ( ("literal_text" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [34104 34129])
+                                            ("length" variable
+                                               (:constant-flag t
+                                                :type ("std::size_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [34130 34155])
+                                            ("return_type" variable (:type ("token_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34184 34207]))                                          
+                                        :type ("token_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [34080 34544])
+                                    ("get" function (:type ("std::char_traits::int_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [35223 35528])
+                                    ("unget" function (:type "void") (reparse-symbol classsubparts) [35596 35847])
+                                    ("add" function
+                                       (:arguments 
+                                          ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [35902 35908]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [35893 35993])
+                                    ("public" label nil (reparse-symbol classsubparts) [35997 36004])
+                                    ("move_string" function (:type "int") (reparse-symbol classsubparts) [36608 36673])
+                                    ("get_token_string" function
+                                       (:methodconst-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [37126 37783])
+                                    ("scan" function (:type ("token_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [38004 39801])
+                                    ("private" label nil (reparse-symbol classsubparts) [39805 39813])
+                                    ("ia" variable
+                                       (:default-value "nullptr"
+                                        :type ("detail::input_adapter_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [39840 39877])
+                                    ("current" variable
+                                       (:default-value "std::char_traits<char>::eof()"
+                                        :type ("std::char_traits::int_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [39913 39986])
+                                    ("chars_read" variable
+                                       (:default-value "0"
+                                        :type ("std::size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [40030 40057])
+                                    ("token_string" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("char" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [40115 40149])
+                                    ("token_buffer" variable (:type ("string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [40216 40241])
+                                    ("error_message" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :default-value "\"\""
+                                        :type "char")
+                                        (reparse-symbol classsubparts) [40294 40325])
+                                    ("value_integer" variable
+                                       (:default-value "0"
+                                        :type ("number_integer_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [40352 40387])
+                                    ("value_unsigned" variable
+                                       (:default-value "0"
+                                        :type ("number_unsigned_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [40392 40429])
+                                    ("value_float" variable
+                                       (:default-value "0"
+                                        :type ("number_float_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [40434 40465])
+                                    ("decimal_point_char" variable
+                                       (:constant-flag t
+                                        :default-value "'.'"
+                                        :type "char")
+                                        (reparse-symbol classsubparts) [40497 40533]))                                  )
+                                (reparse-symbol namespacesubparts) [640 40536]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [481 40538]))                  
+                :type "namespace")
+                nil [460 40540]))          
+      :file "lexer.hpp"
+      :pointmax 40541
+      :fsize 40540
+      :lastmodtime '(23254 8838 649128 181000)
+      :unmatched-syntax '((semantic-list 37886 . 37923) (symbol 37873 . 37881) (CONST 37867 . 37872) (semantic-list 37864 . 37866) (symbol 37847 . 37864) (punctuation 37845 . 37846) (CHAR 37841 . 37845) (CONST 37835 . 37840) (symbol 37825 . 37834) (semantic-list 36850 . 36884) (symbol 36837 . 36845) (CONST 36831 . 36836) (semantic-list 36828 . 36830) (symbol 36816 . 36828) (symbol 36809 . 36815) (punctuation 36808 . 36809) (punctuation 36807 . 36808) (symbol 36804 . 36807) (symbol 36794 . 36803) (punctuation 36606 . 36607) (punctuation 36605 . 36606) (symbol 36597 . 36605) (semantic-list 36472 . 36507) (symbol 36459 . 36467) (CONST 36453 . 36458) (semantic-list 36450 . 36452) (symbol 36434 . 36450) (symbol 36419 . 36433) (symbol 36409 . 36418) (semantic-list 36329 . 36367) (symbol 36316 . 36324) (CONST 36310 . 36315) (semantic-list 36307 . 36309) (symbol 36288 . 36307) (symbol 36270 . 36287) (symbol 36260 . 36269) (semantic-list 36179 . 36216) (symbol 36166 . 36174) (CONST 36160 . 36165) (semantic-list 36157 . 36159) (symbol 36139 . 36157) (symbol 36122 . 36138) (symbol 36112 . 36121) (semantic-list 34721 . 34867) (symbol 34708 . 34716) (semantic-list 34705 . 34707) (symbol 34700 . 34705) (VOID 34695 . 34699) (semantic-list 23437 . 23483) (symbol 23424 . 23432) (semantic-list 23375 . 23423) (symbol 23369 . 23375) (VOID 23364 . 23368) (STATIC 23357 . 23363) (semantic-list 23306 . 23351) (symbol 23293 . 23301) (semantic-list 23249 . 23292) (symbol 23243 . 23249) (VOID 23238 . 23242) (STATIC 23231 . 23237) (semantic-list 23180 . 23225) (symbol 23167 . 23175) (semantic-list 23124 . 23166) (symbol 23118 . 23124) (VOID 23113 . 23117) (STATIC 23106 . 23112) (semantic-list 4235 . 4391) (symbol 4222 . 4230) (semantic-list 4219 . 4221) (symbol 4202 . 4219) (CHAR 4197 . 4201) (STATIC 4190 . 4196) (punctuation 4054 . 4055) (DELETE 4048 . 4054) (punctuation 4046 . 4047) (semantic-list 4037 . 4045) (punctuation 4036 . 4037) (OPERATOR 4028 . 4036) (punctuation 4026 . 4027) (symbol 4021 . 4026) (punctuation 4015 . 4016) (DELETE 4009 . 4015) (punctuation 4007 . 4008) (semantic-list 3992 . 4006) (symbol 3987 . 3992) (EXPLICIT 3816 . 3824) (semantic-list 2352 . 3810) (symbol 2339 . 2347) (semantic-list 2318 . 2338) (symbol 2303 . 2318) (punctuation 2301 . 2302) (CHAR 2297 . 2301) (CONST 2291 . 2296) (STATIC 2284 . 2290) (symbol 2120 . 2136) (punctuation 2062 . 2063) (symbol 2050 . 2062) (punctuation 2005 . 2006) (symbol 1994 . 2005) (punctuation 1954 . 1955) (symbol 1939 . 1954) (punctuation 1899 . 1900) (symbol 1885 . 1899) (punctuation 1831 . 1832) (symbol 1821 . 1831) (punctuation 1767 . 1768) (symbol 1758 . 1767) (punctuation 1704 . 1705) (symbol 1692 . 1704) (punctuation 1638 . 1639) (symbol 1627 . 1638) (punctuation 1539 . 1540) (symbol 1528 . 1539) (punctuation 1448 . 1449) (symbol 1435 . 1448) (punctuation 1352 . 1353) (symbol 1338 . 1352) (punctuation 1273 . 1274) (symbol 1261 . 1273) (punctuation 1223 . 1224) (symbol 1211 . 1223) (punctuation 1173 . 1174) (symbol 1160 . 1173) (punctuation 1122 . 1123) (symbol 1110 . 1122) (punctuation 1052 . 1053) (symbol 1039 . 1052) (symbol 2120 . 2136) (punctuation 2062 . 2063) (symbol 2050 . 2062) (punctuation 2005 . 2006) (symbol 1994 . 2005) (punctuation 1954 . 1955) (symbol 1939 . 1954) (punctuation 1899 . 1900) (symbol 1885 . 1899) (punctuation 1831 . 1832) (symbol 1821 . 1831) (punctuation 1767 . 1768) (symbol 1758 . 1767) (punctuation 1704 . 1705) (symbol 1692 . 1704) (punctuation 1638 . 1639) (symbol 1627 . 1638) (punctuation 1539 . 1540) (symbol 1528 . 1539) (punctuation 1448 . 1449) (symbol 1435 . 1448) (punctuation 1352 . 1353) (symbol 1338 . 1352) (punctuation 1273 . 1274) (symbol 1261 . 1273) (punctuation 1223 . 1224) (symbol 1211 . 1223) (punctuation 1173 . 1174) (symbol 1160 . 1173) (punctuation 1122 . 1123) (symbol 1110 . 1122) (punctuation 1052 . 1053) (symbol 1039 . 1052) (ENUM 1003 . 1007) (punctuation 917 . 918) (symbol 908 . 916) (USING 902 . 907) (punctuation 856 . 857) (symbol 841 . 855) (USING 835 . 840) (punctuation 786 . 787) (symbol 768 . 785) (USING 762 . 767) (punctuation 714 . 715) (symbol 697 . 713) (USING 691 . 696) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cassert" include (:system-flag t) nil [15 33])
+            ("cmath" include (:system-flag t) nil [44 60])
+            ("cstdint" include (:system-flag t) nil [73 91])
+            ("functional" include (:system-flag t) nil [103 124])
+            ("string" include (:system-flag t) nil [137 154])
+            ("utility" include (:system-flag t) nil [165 183])
+            ("nlohmann/detail/exceptions.hpp" include (:system-flag t) nil [193 234])
+            ("nlohmann/detail/macro_scope.hpp" include (:system-flag t) nil [235 277])
+            ("nlohmann/detail/input/input_adapters.hpp" include (:system-flag t) nil [278 329])
+            ("nlohmann/detail/input/lexer.hpp" include (:system-flag t) nil [330 372])
+            ("nlohmann/detail/value_t.hpp" include (:system-flag t) nil [373 411])
+            ("nlohmann" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("parser" type
+                               (:template 
+                                  ( ("BasicJsonType" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("BasicJsonType::number_integer_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [650 691])
+                                    ("BasicJsonType::number_unsigned_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [722 764])
+                                    ("BasicJsonType::number_float_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [792 831])
+                                    ("BasicJsonType::string_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [853 886])
+                                    ("lexer" variable (:type "int") (reparse-symbol classsubparts) [907 928])
+                                    ("lexer_t::token_type" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [952 981])
+                                    ("public" label nil (reparse-symbol classsubparts) [985 992])
+                                    ("parse_event_t" type
+                                       (:superclasses 
+                                          ( ("uint8_t" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [1002 1540])
+                                    ("parser" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("adapter" variable (:type ("detail::input_adapter_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1724 1756])
+                                            ("cb" variable
+                                               (:constant-flag t
+                                                :default-value "nullptr"
+                                                :type ("parser_callback_t" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1777 1813])
+                                            ("allow_exceptions_" variable
+                                               (:constant-flag t
+                                                :default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [1835 1870]))                                          
+                                        :type ("parser" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1717 1956])
+                                    ("parse" function
+                                       (:arguments 
+                                          ( ("strict" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [2311 2329])
+                                            ("result" variable
+                                               (:reference 1
+                                                :type ("BasicJsonType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2330 2352]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2300 2995])
+                                    ("accept" function
+                                       (:arguments 
+                                          ( ("strict" variable
+                                               (:constant-flag t
+                                                :default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [3182 3206]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3170 3467])
+                                    ("private" label nil (reparse-symbol classsubparts) [3471 3479])
+                                    ("parse_internal" function
+                                       (:arguments 
+                                          ( ("keep" variable (:type "bool") (reparse-symbol arg-sub-list) [3719 3729])
+                                            ("result" variable
+                                               (:reference 1
+                                                :type ("BasicJsonType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3730 3752]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3699 12623])
+                                    ("accept_internal" function (:type "bool") (reparse-symbol classsubparts) [13042 15974])
+                                    ("get_token" function (:type ("token_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16014 16094])
+                                    ("expect" function
+                                       (:arguments 
+                                          ( ("t" variable (:type ("token_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16186 16199]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [16174 16523])
+                                    ("throw_exception" function
+                                       (:methodconst-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [16542 17219])
+                                    ("private" label nil (reparse-symbol classsubparts) [17223 17231])
+                                    ("depth" variable
+                                       (:default-value "0"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [17271 17285])
+                                    ("callback" variable
+                                       (:constant-flag t
+                                        :default-value "nullptr"
+                                        :type ("parser_callback_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [17316 17359])
+                                    ("token_type::uninitialized" variable (:type "int") (reparse-symbol classsubparts) [17428 17454])
+                                    ("m_lexer" variable (:type ("lexer_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17477 17493])
+                                    ("errored" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [17538 17559])
+                                    ("token_type::uninitialized" variable (:type "int") (reparse-symbol classsubparts) [17631 17657])
+                                    ("allow_exceptions" variable
+                                       (:constant-flag t
+                                        :default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [17716 17751]))                                  )
+                                (reparse-symbol namespacesubparts) [573 17754]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [434 17756]))                  
+                :type "namespace")
+                nil [413 17758]))          
+      :file "parser.hpp"
+      :pointmax 17759
+      :fsize 17758
+      :lastmodtime '(23254 8838 649792 833000)
+      :unmatched-syntax '((punctuation 17629 . 17630) (symbol 17620 . 17628) (symbol 17609 . 17619) (punctuation 17426 . 17427) (symbol 17415 . 17425) (symbol 17404 . 17414) (semantic-list 16529 . 16541) (EXPLICIT 1708 . 1716) (punctuation 1654 . 1655) (punctuation 1653 . 1654) (semantic-list 1598 . 1653) (BOOL 1594 . 1598) (punctuation 1593 . 1594) (symbol 1585 . 1593) (punctuation 1584 . 1585) (punctuation 1583 . 1584) (symbol 1580 . 1583) (punctuation 1570 . 1571) (symbol 1552 . 1569) (USING 1546 . 1551) (symbol 1528 . 1533) (punctuation 1465 . 1466) (symbol 1462 . 1465) (punctuation 1394 . 1395) (symbol 1385 . 1394) (punctuation 1306 . 1307) (symbol 1295 . 1306) (punctuation 1217 . 1218) (symbol 1207 . 1217) (punctuation 1127 . 1128) (symbol 1115 . 1127) (symbol 1528 . 1533) (punctuation 1465 . 1466) (symbol 1462 . 1465) (punctuation 1394 . 1395) (symbol 1385 . 1394) (punctuation 1306 . 1307) (symbol 1295 . 1306) (punctuation 1217 . 1218) (symbol 1207 . 1217) (punctuation 1127 . 1128) (symbol 1115 . 1127) (ENUM 997 . 1001) (punctuation 950 . 951) (symbol 939 . 949) (USING 933 . 938) (punctuation 905 . 906) (symbol 897 . 904) (USING 891 . 896) (punctuation 851 . 852) (symbol 842 . 850) (USING 836 . 841) (punctuation 790 . 791) (symbol 775 . 789) (USING 769 . 774) (punctuation 720 . 721) (symbol 702 . 719) (USING 696 . 701) (punctuation 648 . 649) (symbol 631 . 647) (USING 625 . 630) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [15 35])
+            ("array" include (:system-flag t) nil [50 66])
+            ("cassert" include (:system-flag t) nil [76 94])
+            ("cmath" include (:system-flag t) nil [105 121])
+            ("cstddef" include (:system-flag t) nil [131 149])
+            ("cstdint" include (:system-flag t) nil [160 178])
+            ("cstring" include (:system-flag t) nil [220 238])
+            ("iomanip" include (:system-flag t) nil [249 267])
+            ("ios" include (:system-flag t) nil [285 299])
+            ("iterator" include (:system-flag t) nil [307 326])
+            ("limits" include (:system-flag t) nil [344 361])
+            ("sstream" include (:system-flag t) nil [380 398])
+            ("string" include (:system-flag t) nil [415 432])
+            ("utility" include (:system-flag t) nil [456 474])
+            ("nlohmann/detail/input/input_adapters.hpp" include (:system-flag t) nil [495 546])
+            ("nlohmann/detail/exceptions.hpp" include (:system-flag t) nil [547 588])
+            ("nlohmann/detail/macro_scope.hpp" include (:system-flag t) nil [589 631])
+            ("nlohmann/detail/value_t.hpp" include (:system-flag t) nil [632 670])
+            ("nlohmann" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("binary_reader" type
+                               (:template 
+                                  ( ("BasicJsonType" type (:type "class") nil nil))                                  
+                                :type "class"
+                                :members 
+                                  ( ("BasicJsonType::number_integer_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [918 959])
+                                    ("BasicJsonType::number_unsigned_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [990 1032])
+                                    ("BasicJsonType::string_t" variable
+                                       (:typemodifiers ("typename")
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1054 1087])
+                                    ("public" label nil (reparse-symbol classsubparts) [1091 1098])
+                                    ("binary_reader" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("adapter" variable (:type ("input_adapter_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1227 1251]))                                          
+                                        :type ("binary_reader" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1213 1308])
+                                    ("parse_cbor" function
+                                       (:arguments 
+                                          ( ("strict" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [1730 1748]))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1705 1913])
+                                    ("parse_msgpack" function
+                                       (:arguments 
+                                          ( ("strict" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [2352 2370]))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2324 2538])
+                                    ("parse_ubjson" function
+                                       (:arguments 
+                                          ( ("strict" variable
+                                               (:constant-flag t
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [2966 2984]))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2939 3163])
+                                    ("private" label nil (reparse-symbol classsubparts) [3481 3489])
+                                    ("parse_cbor_internal" function
+                                       (:arguments 
+                                          ( ("get_char" variable
+                                               (:constant-flag t
+                                                :default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [3757 3783]))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3723 13367])
+                                    ("parse_msgpack_internal" function (:type ("BasicJsonType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13373 21279])
+                                    ("parse_ubjson_internal" function
+                                       (:arguments 
+                                          ( ("get_char" variable
+                                               (:constant-flag t
+                                                :default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [21550 21576]))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [21514 21662])
+                                    ("get" function (:type "int") (reparse-symbol classsubparts) [21969 22060])
+                                    ("get_ignore_noop" function (:type "int") (reparse-symbol classsubparts) [22154 22294])
+                                    ("get_number" function
+                                       (:template 
+                                          ( ("NumberType" type (:type "class") nil nil))                                          
+                                        :type ("NumberType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [22742 23563])
+                                    ("get_string" function
+                                       (:template 
+                                          ( ("NumberType" type (:type "class") nil nil))                                          
+                                        :type ("string_t" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("len" variable
+                                               (:constant-flag t
+                                                :type ("NumberType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [24068 24089]))                                          )
+                                        (reparse-symbol classsubparts) [24014 24331])
+                                    ("get_cbor_string" function (:type ("string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24717 26736])
+                                    ("get_cbor_array" function
+                                       (:template 
+                                          ( ("NumberType" type (:type "class") nil nil))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("len" variable
+                                               (:constant-flag t
+                                                :type ("NumberType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [26805 26826]))                                          )
+                                        (reparse-symbol classsubparts) [26742 27053])
+                                    ("get_cbor_object" function
+                                       (:template 
+                                          ( ("NumberType" type (:type "class") nil nil))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("len" variable
+                                               (:constant-flag t
+                                                :type ("NumberType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [27123 27144]))                                          )
+                                        (reparse-symbol classsubparts) [27059 27592])
+                                    ("get_msgpack_string" function (:type ("string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [27913 29580])
+                                    ("get_msgpack_array" function
+                                       (:template 
+                                          ( ("NumberType" type (:type "class") nil nil))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("len" variable
+                                               (:constant-flag t
+                                                :type ("NumberType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [29652 29673]))                                          )
+                                        (reparse-symbol classsubparts) [29586 29903])
+                                    ("get_msgpack_object" function
+                                       (:template 
+                                          ( ("NumberType" type (:type "class") nil nil))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("len" variable
+                                               (:constant-flag t
+                                                :type ("NumberType" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [29976 29997]))                                          )
+                                        (reparse-symbol classsubparts) [29909 30451])
+                                    ("get_ubjson_string" function
+                                       (:arguments 
+                                          ( ("get_char" variable
+                                               (:constant-flag t
+                                                :default-value "true"
+                                                :type "bool")
+                                                (reparse-symbol arg-sub-list) [31034 31060]))                                          
+                                        :type ("string_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [31007 31960])
+                                    ("get_ubjson_size_type" function (:type ("std::pair" type
+                                         (:template-specifier 
+                                            ( ("std::size_t" type nil nil nil)
+                                              ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [32198 33092])
+                                    ("get_ubjson_value" function
+                                       (:arguments 
+                                          ( ("prefix" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [33129 33146]))                                          
+                                        :type ("BasicJsonType" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [33098 35183])
+                                    ("get_ubjson_array" function (:type ("BasicJsonType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [35189 36603])
+                                    ("get_ubjson_object" function (:type ("BasicJsonType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [36609 38382])
+                                    ("expect_eof" function
+                                       (:methodconst-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [38497 38708])
+                                    ("unexpect_eof" function
+                                       (:methodconst-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [38814 39029])
+                                    ("private" label nil (reparse-symbol classsubparts) [39033 39041])
+                                    ("ia" variable
+                                       (:default-value "nullptr"
+                                        :type ("input_adapter_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [39068 39097])
+                                    ("current" variable
+                                       (:default-value "std::char_traits<char>::eof()"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [39133 39177])
+                                    ("chars_read" variable
+                                       (:default-value "0"
+                                        :type ("std::size_t" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [39221 39248])
+                                    ("is_little_endian" variable
+                                       (:constant-flag t
+                                        :default-value "little_endianess()"
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [39301 39350]))                                  )
+                                (reparse-symbol namespacesubparts) [834 39353]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [693 39355]))                  
+                :type "namespace")
+                nil [672 39357]))          
+      :file "binary_reader.hpp"
+      :pointmax 39358
+      :fsize 39357
+      :lastmodtime '(23254 8838 647396 608000)
+      :unmatched-syntax '((semantic-list 3416 . 3477) (symbol 3403 . 3411) (semantic-list 3389 . 3402) (symbol 3373 . 3389) (BOOL 3368 . 3372) (symbol 3358 . 3367) (STATIC 3351 . 3357) (EXPLICIT 1204 . 1212) (punctuation 1052 . 1053) (symbol 1043 . 1051) (USING 1037 . 1042) (punctuation 988 . 989) (symbol 970 . 987) (USING 964 . 969) (punctuation 916 . 917) (symbol 899 . 915) (USING 893 . 898) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))))
+  :file "!Users!macbook!programming!_projects!pdf-something!dependencies!nlohmann!detail!input!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
