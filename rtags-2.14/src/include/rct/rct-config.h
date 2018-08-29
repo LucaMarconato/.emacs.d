@@ -1,0 +1,28 @@
+#ifndef RCT_CONFIG_H
+#define RCT_CONFIG_H
+
+#define HAVE_BACKTRACE
+#define HAVE_CLOCK_MONOTONIC_RAW
+#define HAVE_CLOCK_MONOTONIC
+#define HAVE_MACH_ABSOLUTE_TIME
+/* #undef HAVE_INOTIFY */
+#define HAVE_KQUEUE
+/* #undef HAVE_CHANGENOTIFICATION */
+/* #undef HAVE_PROCESSORINFORMATION */
+/* #undef HAVE_CYGWIN */
+/* #undef HAVE_EPOLL */
+#define HAVE_NOSIGPIPE
+/* #undef HAVE_NOSIGNAL */
+#define HAVE_FSEVENTS
+/* #undef HAVE_STATMTIM */
+#define HAVE_CLOEXEC
+/* #undef HAVE_SCHEDIDLE */
+/* #undef HAVE_SHMDEST */
+/* #undef HAVE_SCRIPTENGINE */
+/* #undef HAVE_UNORDERDED_MAP_WORKING_MOVE_CONSTRUCTOR */
+/* #undef HAVE_HAVE_STRING_ITERATOR_ERASE */
+#if !defined(HAVE_EPOLL) && !defined(HAVE_KQUEUE)
+#define HAVE_SELECT
+#endif
+
+#endif

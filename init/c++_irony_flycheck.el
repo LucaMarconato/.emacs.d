@@ -10,27 +10,26 @@
 ;; (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
 ;; (add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
 ;; (add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
-;; (global-set-key (kbd "C-c C-k") 'ff-find-other-file)
-;; ;(add-hook 'c-mode-hook
-;; ;          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
-;; ;(add-hook 'c++-mode-hook
-;; ;          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
+;; (add-hook 'c-mode-hook
+;;          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
+;; (add-hook 'c++-mode-hook
+;;          (lambda () (global-set-key (kbd "C-c C-k") #'ff-find-other-file)))
 
 ;; (autoload 'expand-member-functions "member-functions" "Expand C++ member function declarations" t)
 ;; (add-hook 'c++-mode-hook (lambda () (local-set-key "\C-ce" #'expand-member-functions)))
 
-;; ;--------FLYCHECK--------
+;; ;; ;--------FLYCHECK--------
 ;; ;; ensure that we use only rtags checking
 ;; ;; https://github.com/Andersbakken/rtags#optional-1
-;; (add-hook 'c-mode-hook 'flycheck-mode)
-;; (add-hook 'c++-mode-hook 'flycheck-mode)
+(add-hook 'c-mode-hook 'flycheck-mode)
+(add-hook 'c++-mode-hook 'flycheck-mode)
 
-;; (defun setup-flycheck-rtags ()
-;;   (interactive)
-;;   (flycheck-select-checker 'rtags)
-;;   ;; RTags creates more accurate overlays.
-;;   (setq-local flycheck-highlighting-mode nil)
-;;   (setq-local flycheck-check-syntax-automatically nil))
+(defun setup-flycheck-rtags ()
+  (interactive)
+  (flycheck-select-checker 'rtags)
+  ;; RTags creates more accurate overlays.
+  (setq-local flycheck-highlighting-mode nil)
+  (setq-local flycheck-check-syntax-automatically nil))
 
 ;; ;; only run this if rtags is installed
 ;; (when (require 'rtags nil :noerror)
@@ -137,10 +136,15 @@
 ;  (add-hook 'c-mode-common-hook #'setup-flycheck-rtags))
 
 ;--------FLYCHECK--------
-
+; unfortunately it gives me an error with cmake-ide
+(setq-default flycheck-disabled-checkers '(c/c++-clang))
 ;; (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++11")))
 ;(add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'c++-mode-hook #'flycheck-mode)
+;; (add-hook 'c++-mode-hook #'global-flycheck-mode)
+;; (global-flycheck-mode)
+;; (use-package flycheck
+;; :ensure t
+;; :init (global-flycheck-mode))
 
 ; TODO: to try in the future: 
 ;; (defun my-flycheck-rtags-setup ()
@@ -208,10 +212,12 @@
 
 (require 'rtags) ;; optional, must have rtags installed
 (require 'subr-x)
+(setq cmake-ide-header-search-other-file nil)
+(setq cmake-ide-header-search-first-including nil)
 (cmake-ide-setup)
 
 ;--------OTHER--------
-(global-set-key (kbd "C-c C-k") 'ff-find-other-file)
+(global-set-key (kbd "C-c C-j") 'ff-find-other-file)
 (autoload 'expand-member-functions "member-functions" "Expand C++ member function declarations" t)
 (delete 'company-dabbrev company-backends)
 (delete 'company-capf company-backends)

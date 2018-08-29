@@ -1,0 +1,204 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("socket" include nil nil [27 40])
+            ("sys" include nil nil [41 51])
+            ("builtins" include nil nil [52 67])
+            ("time" include nil nil [68 79])
+            ("os" include nil nil [80 89])
+            ("threading" include nil nil [90 106])
+            ("server.server_message_handler" include nil nil [181 224])
+            ("common.json_manager" include nil nil [225 258])
+            ("common.update_server_ip" include nil nil [259 296])
+            ("client.network_info" include nil nil [297 330])
+            ("common.logger" include nil nil [331 358])
+            ("common.workspace" include nil nil [359 389])
+            ("server_listener_barrier" variable nil nil [391 435])
+            ("server_listener_need_to_wait" variable nil nil [436 470])
+            ("start_server_listener_asyncronously" function nil nil [472 733])
+            ("server_start_listener" function nil nil [735 1785])
+            ("if" code nil nil [1786 1857]))          
+      :file "server_listener.py"
+      :pointmax 1857
+      :fsize 1856
+      :lastmodtime '(23226 3325 37563 922000)
+      :unmatched-syntax '((INDENT_BLOCK 1560 . 1747) (NEWLINE 1559 . 1560) (COLON 1558 . 1559) (ELSE 1554 . 1558) (INDENT_BLOCK 1543 . 1552) (NEWLINE 1542 . 1543) (STRING_LITERAL 1534 . 1541) (COLON 1541 . 1542) (ELIF 1520 . 1524) (INDENT_BLOCK 1506 . 1518) (NEWLINE 1505 . 1506) (IF 1490 . 1492) (STRING_LITERAL 1502 . 1504) (COLON 1504 . 1505)))
+    (semanticdb-table "semanticdb-table"
+      :file "server_message_handler.py"
+      :fsize 2816
+      :lastmodtime '(23225 17356 690541 496000))
+    (semanticdb-table "semanticdb-table"
+      :file "console.py"
+      :fsize 4661
+      :lastmodtime '(23227 52893 620149 393000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [27 36])
+            ("threading" include nil nil [37 53])
+            ("time" include nil nil [54 65])
+            ("logging" include nil nil [66 80])
+            ("common.colorer" include nil nil [82 103])
+            ("common.instance" include nil nil [104 133])
+            ("server.rsyncer" include nil nil [202 230])
+            ("server.check_online" include nil nil [231 264])
+            ("client.machine_info" include nil nil [265 323])
+            ("server.rsyncer" include nil nil [324 352])
+            ("server.initialize_computation" include nil nil [353 447])
+            ("server.server_sender" include nil nil [448 482])
+            ("server_computation_manager" type
+               (:superclasses ("object")
+                :members 
+                  ( ("execute_computation" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [566 569]))                          )
+                        (reparse-symbol indented_block_body) [528 3381])
+                    ("get_results_asynchronously" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [3428 3431])
+                            ("instance_number" variable nil (reparse-symbol function_parameters) [3433 3448])
+                            ("client_ip" variable nil (reparse-symbol function_parameters) [3450 3459]))                          )
+                        (reparse-symbol indented_block_body) [3383 4157])
+                    ("find_paths_associated_with_next_instance" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [4218 4221]))                          )
+                        (reparse-symbol indented_block_body) [4159 4564])
+                    ("dispatch_instances" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [4606 4609])
+                            ("des_ip" variable nil (reparse-symbol function_parameters) [4610 4616]))                          )
+                        (reparse-symbol indented_block_body) [4569 6136])
+                    ("asyncrounsly_dispatch_instances" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [6231 6234])
+                            ("des_ip" variable nil (reparse-symbol function_parameters) [6235 6241])
+                            ("start" variable nil (reparse-symbol function_parameters) [6242 6247])
+                            ("end" variable nil (reparse-symbol function_parameters) [6248 6251])
+                            ("paths_to_sync" variable nil (reparse-symbol function_parameters) [6252 6265])
+                            ("reset_generator" variable nil (reparse-symbol function_parameters) [6266 6281]))                          )
+                        (reparse-symbol indented_block_body) [6181 6782])
+                    ("instance_solved" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [6899 6902])
+                            ("instance_number" variable nil (reparse-symbol function_parameters) [6903 6918])
+                            ("client_ip" variable nil (reparse-symbol function_parameters) [6919 6928]))                          )
+                        (reparse-symbol indented_block_body) [6865 7355]))                  
+                :type "class")
+                nil [484 7355]))          
+      :file "server_computation_manager.py"
+      :pointmax 7494
+      :fsize 7493
+      :lastmodtime '(23221 39383 178035 911000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "rsyncer.py"
+      :fsize 2704
+      :lastmodtime '(23226 13478 51662 305000))
+    (semanticdb-table "semanticdb-table"
+      :file "check_online.py"
+      :fsize 5802
+      :lastmodtime '(23227 52149 905583 758000))
+    (semanticdb-table "semanticdb-table"
+      :file "initialize_computation.py"
+      :fsize 7065
+      :lastmodtime '(23225 4608 263376 508000))
+    (semanticdb-table "semanticdb-table"
+      :file "server_sender.py"
+      :fsize 1094
+      :lastmodtime '(23225 16943 925745 372000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("enum" include nil nil [26 47])
+            ("logging" include nil nil [48 62])
+            ("threading" include nil nil [63 79])
+            ("subprocess" include nil nil [80 97])
+            ("uuid" include nil nil [98 109])
+            ("common.colorer" include nil nil [111 132])
+            ("common.json_manager" include nil nil [133 166])
+            ("common.common" include nil nil [167 194])
+            ("common.useful_functions" include nil nil [195 248])
+            ("server.check_online" include nil nil [249 282])
+            ("common.workspace" include nil nil [283 313])
+            ("targets_type" type
+               (:superclasses ("Enum")
+                :members 
+                  ( ("all_clients" variable nil (reparse-symbol indented_block_body) [342 355])
+                    ("connected_clients" variable nil (reparse-symbol indented_block_body) [357 376])
+                    ("online_clients" variable nil (reparse-symbol indented_block_body) [378 394]))                  
+                :type "class")
+                nil [315 395])
+            ("target" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [477 501])
+                            ("self" variable nil (reparse-symbol indented_block_body) [504 528])
+                            ("self" variable nil (reparse-symbol indented_block_body) [531 567]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [432 436])
+                            ("target_ip" variable nil (reparse-symbol function_parameters) [437 446])
+                            ("target_id" variable nil (reparse-symbol function_parameters) [447 456])
+                            ("target_username" variable nil (reparse-symbol function_parameters) [457 472]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [419 568]))                  
+                :type "class")
+                nil [396 568])
+            ("remote_execute" type
+               (:superclasses ("object")
+                :members 
+                  ( ("already_executing" variable nil (reparse-symbol indented_block_body) [600 623])
+                    ("execute_command_remotely" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [668 671])
+                            ("command" variable nil (reparse-symbol function_parameters) [673 680])
+                            ("asynchronously" variable nil (reparse-symbol function_parameters) [682 696])
+                            ("who_is_target" variable nil (reparse-symbol function_parameters) [698 711]))                          )
+                        (reparse-symbol indented_block_body) [625 1232])
+                    ("get_targets_details" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [1272 1275])
+                            ("who_is_target" variable nil (reparse-symbol function_parameters) [1276 1289]))                          )
+                        (reparse-symbol indented_block_body) [1234 2948])
+                    ("execute_command_on_target" function
+                       (:decorators 
+                          ( ("classmethod" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("cls" variable nil (reparse-symbol function_parameters) [2996 2999])
+                            ("t" variable nil (reparse-symbol function_parameters) [3001 3002])
+                            ("command" variable nil (reparse-symbol function_parameters) [3004 3011]))                          )
+                        (reparse-symbol indented_block_body) [2952 3631]))                  
+                :type "class")
+                nil [569 3631])
+            ("if" code nil nil [3728 3842]))          
+      :file "execute_command_remotely.py"
+      :pointmax 3842
+      :fsize 3841
+      :lastmodtime '(23229 13758 710013 274000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!python!sd!src!server!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

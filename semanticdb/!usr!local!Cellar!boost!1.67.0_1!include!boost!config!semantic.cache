@@ -1,0 +1,155 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_CONFIG_HELPER_MACROS_HPP_INCLUDED" variable (:constant-flag t) nil [57 96])
+            ("BOOST_STRINGIZE" variable (:constant-flag t) nil [559 574])
+            ("BOOST_DO_STRINGIZE" variable (:constant-flag t) nil [608 626])
+            ("BOOST_JOIN" variable (:constant-flag t) nil [951 961])
+            ("BOOST_DO_JOIN" variable (:constant-flag t) nil [996 1009])
+            ("BOOST_DO_JOIN2" variable (:constant-flag t) nil [1044 1058]))          
+      :file "helper_macros.hpp"
+      :pointmax 1121
+      :fsize 1120
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_DO_STRINGIZE" (spp-arg-list ("X") 626 . 629) . ((punctuation "#" 630 . 631) (symbol "X" 631 . 632)))
+          ("BOOST_DO_JOIN2" (spp-arg-list ("X" "Y") 1058 . 1064) . ((spp-symbol-merge ((symbol "X" 1065 . 1066) (symbol "Y" 1068 . 1069)) 1065 . 1069)))
+          ("BOOST_DO_JOIN" (spp-arg-list ("X" "Y") 1009 . 1015) . ((symbol "BOOST_DO_JOIN2" 1016 . 1030) (semantic-list "(X,Y)" 1030 . 1035)))
+          ("BOOST_CONFIG_HELPER_MACROS_HPP_INCLUDED")
+          ("BOOST_JOIN" (spp-arg-list ("X" "Y") 961 . 967) . ((symbol "BOOST_DO_JOIN" 968 . 981) (semantic-list "(X, Y)" 981 . 987)))
+          ("BOOST_STRINGIZE" (spp-arg-list ("X") 574 . 577) . ((symbol "BOOST_DO_STRINGIZE" 578 . 596) (semantic-list "(X)" 596 . 599)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_CONFIG_WORKAROUND_HPP" variable (:constant-flag t) nil [235 262])
+            ("boost/config.hpp" include (:system-flag t) nil [1503 1530])
+            ("__BORLANDC___WORKAROUND_GUARD" variable (:constant-flag t) nil [1561 1590])
+            ("__CODEGEARC___WORKAROUND_GUARD" variable (:constant-flag t) nil [1676 1706])
+            ("_MSC_VER_WORKAROUND_GUARD" variable (:constant-flag t) nil [1788 1813])
+            ("_MSC_FULL_VER_WORKAROUND_GUARD" variable (:constant-flag t) nil [1895 1925])
+            ("BOOST_MSVC_WORKAROUND_GUARD" variable (:constant-flag t) nil [2009 2036])
+            ("BOOST_MSVC_FULL_VER_WORKAROUND_GUARD" variable (:constant-flag t) nil [2126 2162])
+            ("__GNUC___WORKAROUND_GUARD" variable (:constant-flag t) nil [2292 2317])
+            ("__GNUC_MINOR___WORKAROUND_GUARD" variable (:constant-flag t) nil [2406 2437])
+            ("__GNUC_PATCHLEVEL___WORKAROUND_GUARD" variable (:constant-flag t) nil [2536 2572])
+            ("BOOST_GCC_WORKAROUND_GUARD" variable (:constant-flag t) nil [2608 2634])
+            ("BOOST_GCC_VERSION_WORKAROUND_GUARD" variable (:constant-flag t) nil [2645 2679])
+            ("BOOST_XLCPP_ZOS_WORKAROUND_GUARD" variable (:constant-flag t) nil [2809 2841])
+            ("__IBMCPP___WORKAROUND_GUARD" variable (:constant-flag t) nil [2927 2954])
+            ("__SUNPRO_CC_WORKAROUND_GUARD" variable (:constant-flag t) nil [3036 3064])
+            ("__DECCXX_VER_WORKAROUND_GUARD" variable (:constant-flag t) nil [3148 3177])
+            ("__MWERKS___WORKAROUND_GUARD" variable (:constant-flag t) nil [3260 3287])
+            ("__EDG___WORKAROUND_GUARD" variable (:constant-flag t) nil [3365 3389])
+            ("__EDG_VERSION___WORKAROUND_GUARD" variable (:constant-flag t) nil [3472 3504])
+            ("__HP_aCC_WORKAROUND_GUARD" variable (:constant-flag t) nil [3588 3613])
+            ("__hpxstd98_WORKAROUND_GUARD" variable (:constant-flag t) nil [3692 3719])
+            ("_CRAYC_WORKAROUND_GUARD" variable (:constant-flag t) nil [3796 3819])
+            ("__DMC___WORKAROUND_GUARD" variable (:constant-flag t) nil [3893 3917])
+            ("MPW_CPLUS_WORKAROUND_GUARD" variable (:constant-flag t) nil [3994 4020])
+            ("__COMO___WORKAROUND_GUARD" variable (:constant-flag t) nil [4098 4123])
+            ("__COMO_VERSION___WORKAROUND_GUARD" variable (:constant-flag t) nil [4208 4241])
+            ("__INTEL_COMPILER_WORKAROUND_GUARD" variable (:constant-flag t) nil [4334 4367])
+            ("__ICL_WORKAROUND_GUARD" variable (:constant-flag t) nil [4449 4471])
+            ("_COMPILER_VERSION_WORKAROUND_GUARD" variable (:constant-flag t) nil [4554 4588])
+            ("_RWSTD_VER_WORKAROUND_GUARD" variable (:constant-flag t) nil [4677 4704])
+            ("BOOST_RWSTD_VER_WORKAROUND_GUARD" variable (:constant-flag t) nil [4790 4822])
+            ("__GLIBCPP___WORKAROUND_GUARD" variable (:constant-flag t) nil [4909 4937])
+            ("_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC_WORKAROUND_GUARD" variable (:constant-flag t) nil [5043 5094])
+            ("__SGI_STL_PORT_WORKAROUND_GUARD" variable (:constant-flag t) nil [5203 5234])
+            ("_STLPORT_VERSION_WORKAROUND_GUARD" variable (:constant-flag t) nil [5325 5358])
+            ("__LIBCOMO_VERSION___WORKAROUND_GUARD" variable (:constant-flag t) nil [5454 5490])
+            ("_CPPLIB_VER_WORKAROUND_GUARD" variable (:constant-flag t) nil [5581 5609])
+            ("BOOST_INTEL_CXX_VERSION_WORKAROUND_GUARD" variable (:constant-flag t) nil [5705 5745])
+            ("BOOST_INTEL_WIN_WORKAROUND_GUARD" variable (:constant-flag t) nil [5844 5876])
+            ("BOOST_DINKUMWARE_STDLIB_WORKAROUND_GUARD" variable (:constant-flag t) nil [5975 6015])
+            ("BOOST_INTEL_WORKAROUND_GUARD" variable (:constant-flag t) nil [6110 6138])
+            ("BOOST_MPL_CFG_GCC_WORKAROUND_GUARD" variable (:constant-flag t) nil [6265 6299])
+            ("BOOST_WORKAROUND" variable (:constant-flag t) nil [6311 6327])
+            ("BOOST_TESTED_AT" variable (:constant-flag t) nil [7412 7427]))          
+      :file "workaround.hpp"
+      :pointmax 7559
+      :fsize 7558
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__INTEL_COMPILER_WORKAROUND_GUARD" . ((number "1" 4368 . 4369)))
+          ("BOOST_DINKUMWARE_STDLIB_WORKAROUND_GUARD" . ((number "1" 6016 . 6017)))
+          ("BOOST_INTEL_WORKAROUND_GUARD" . ((number "1" 6139 . 6140)))
+          ("BOOST_WORKAROUND" (spp-arg-list ("symbol" "test") 6327 . 6341) . ((semantic-list "((symbol ## _WORKAROUND_GUARD + 0 == 0) &&     \\
+       (symbol != 0) && (1 % (( (symbol test) ) + 1)))" 6366 . 6469)))
+          ("_MSC_VER_WORKAROUND_GUARD" . ((number "1" 1814 . 1815)))
+          ("BOOST_MSVC_WORKAROUND_GUARD" . ((number "1" 2037 . 2038)))
+          ("BOOST_GCC_VERSION_WORKAROUND_GUARD" . ((number "1" 2680 . 2681)))
+          ("__GNUC___WORKAROUND_GUARD" . ((number "0" 2318 . 2319)))
+          ("__IBMCPP___WORKAROUND_GUARD" . ((number "1" 2955 . 2956)))
+          ("_COMPILER_VERSION_WORKAROUND_GUARD" . ((number "1" 4589 . 4590)))
+          ("BOOST_TESTED_AT" (spp-arg-list ("value") 7427 . 7434) . 
+              ((punctuation "!" 7435 . 7436) (punctuation "=" 7436 . 7437) (semantic-list "((value)-(value))" 7438 . 7455)))
+          ("_CRAYC_WORKAROUND_GUARD" . ((number "1" 3820 . 3821)))
+          ("__GNUC_PATCHLEVEL___WORKAROUND_GUARD" . ((number "0" 2573 . 2574)))
+          ("BOOST_GCC_WORKAROUND_GUARD" . ((number "1" 2635 . 2636)))
+          ("BOOST_XLCPP_ZOS_WORKAROUND_GUARD" . ((number "1" 2842 . 2843)))
+          ("__hpxstd98_WORKAROUND_GUARD" . ((number "1" 3720 . 3721)))
+          ("BOOST_INTEL_WIN_WORKAROUND_GUARD" . ((number "1" 5877 . 5878)))
+          ("_MSC_FULL_VER_WORKAROUND_GUARD" . ((number "1" 1926 . 1927)))
+          ("__DECCXX_VER_WORKAROUND_GUARD" . ((number "1" 3178 . 3179)))
+          ("__EDG___WORKAROUND_GUARD" . ((number "1" 3390 . 3391)))
+          ("__HP_aCC_WORKAROUND_GUARD" . ((number "1" 3614 . 3615)))
+          ("_STLPORT_VERSION_WORKAROUND_GUARD" . ((number "1" 5359 . 5360)))
+          ("__LIBCOMO_VERSION___WORKAROUND_GUARD" . ((number "1" 5491 . 5492)))
+          ("_CPPLIB_VER_WORKAROUND_GUARD" . ((number "1" 5610 . 5611)))
+          ("BOOST_MSVC_FULL_VER_WORKAROUND_GUARD" . ((number "1" 2163 . 2164)))
+          ("__DMC___WORKAROUND_GUARD" . ((number "1" 3918 . 3919)))
+          ("BOOST_CONFIG_WORKAROUND_HPP")
+          ("__COMO_VERSION___WORKAROUND_GUARD" . ((number "1" 4242 . 4243)))
+          ("BOOST_INTEL_CXX_VERSION_WORKAROUND_GUARD" . ((number "1" 5746 . 5747)))
+          ("__MWERKS___WORKAROUND_GUARD" . ((number "1" 3288 . 3289)))
+          ("__COMO___WORKAROUND_GUARD" . ((number "1" 4124 . 4125)))
+          ("__GNUC_MINOR___WORKAROUND_GUARD" . ((number "0" 2438 . 2439)))
+          ("BOOST_RWSTD_VER_WORKAROUND_GUARD" . ((number "1" 4823 . 4824)))
+          ("__BORLANDC___WORKAROUND_GUARD" . ((number "1" 1591 . 1592)))
+          ("__SUNPRO_CC_WORKAROUND_GUARD" . ((number "1" 3065 . 3066)))
+          ("__ICL_WORKAROUND_GUARD" . ((number "1" 4472 . 4473)))
+          ("BOOST_MPL_CFG_GCC_WORKAROUND_GUARD" . ((number "0" 6300 . 6301)))
+          ("__CODEGEARC___WORKAROUND_GUARD" . ((number "1" 1707 . 1708)))
+          ("_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC_WORKAROUND_GUARD" . ((number "1" 5095 . 5096)))
+          ("__EDG_VERSION___WORKAROUND_GUARD" . ((number "1" 3505 . 3506)))
+          ("MPW_CPLUS_WORKAROUND_GUARD" . ((number "1" 4021 . 4022)))
+          ("_RWSTD_VER_WORKAROUND_GUARD" . ((number "1" 4705 . 4706)))
+          ("__GLIBCPP___WORKAROUND_GUARD" . ((number "1" 4938 . 4939)))
+          ("__SGI_STL_PORT_WORKAROUND_GUARD" . ((number "1" 5235 . 5236)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_CONFIG_ABI_PREFIX_HPP" variable (:constant-flag t) nil [357 384])
+            ("boost/config.hpp" include (:system-flag t) nil [474 501]))          
+      :file "abi_prefix.hpp"
+      :pointmax 699
+      :fsize 698
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_CONFIG_ABI_PREFIX_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "abi_suffix.hpp"
+      :pointmax 782
+      :fsize 781
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((symbol 553 . 556) (punctuation 552 . 553) (symbol 542 . 552) (punctuation 541 . 542) (symbol 535 . 541) (punctuation 534 . 535) (symbol 529 . 534) (symbol 523 . 528) (symbol 518 . 522) (symbol 515 . 517) (symbol 510 . 514) (symbol 505 . 509) (symbol 501 . 504) (punctuation 500 . 501) (symbol 490 . 500) (punctuation 489 . 490) (symbol 483 . 489) (punctuation 482 . 483) (symbol 477 . 482) (symbol 470 . 476) (symbol 464 . 469) (punctuation 462 . 463))))
+  :file "!usr!local!Cellar!boost!1.67.0_1!include!boost!config!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

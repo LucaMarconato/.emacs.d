@@ -88,5 +88,27 @@
       (balance-windows)
       (select-window (next-window) t)      
       (select-window (next-window) t))))
-      ;; (switch-to-buffer (get-buffer "*shell*")))))
+
 (global-set-key (kbd "C-c 4") 'thesis-layout-1)
+
+(defun thesis-layout-2 ()
+  "Create 4-pane layout of windows in the current frame, for writing a program for the thesis"
+  (interactive)
+  (when (buffer-file-name)
+    (delete-other-windows)
+    (save-selected-window
+      (split-window-horizontally)
+      (split-window-horizontally)
+      (find-file "~/bioinformatics/thesis/simulations/expression_profiles/main.cpp")
+      (select-window (next-window) t)
+      (find-file "~/bioinformatics/thesis/simulations/expression_profiles/mirna.cpp")
+      (select-window (next-window) t)
+      (switch-to-buffer (shell))
+      ;; (split-window-vertically)
+      (select-window (previous-window) t)
+      (balance-windows)
+      (switch-to-buffer (or (get-buffer "*compilation*")
+                            (get-buffer "*scratch*")))
+      ;; (buf-move-up)
+      )))
+(global-set-key (kbd "C-c 5") 'thesis-layout-2)

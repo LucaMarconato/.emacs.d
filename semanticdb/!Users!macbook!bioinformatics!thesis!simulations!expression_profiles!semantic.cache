@@ -1,0 +1,277 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("fstream" include (:system-flag t) nil [21 39])
+            ("unordered_map" include (:system-flag t) nil [40 64])
+            ("boost/unordered_map.hpp" include (:system-flag t) nil [66 100])
+            ("boost/bimap.hpp" include (:system-flag t) nil [101 127])
+            ("mirna.hpp" include nil nil [129 149])
+            ("gene.hpp" include nil nil [150 169])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [180 189])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [190 204]))                  
+                :type "int")
+                nil [171 455]))          
+      :file "main.cpp"
+      :pointmax 457
+      :fsize 456
+      :lastmodtime '(23430 53822 677809 443000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("INCLUDE" variable (:default-value ("-I./dependencies/")) nil [1 29])
+            ("SRCS" variable (:default-value ("main.cpp" "mirna.cpp" "matching.cpp")) nil [30 69])
+            ("build" function (:arguments ("$(SRCS)")) nil [70 120])
+            ("run" function (:arguments ("build")) nil [121 141]))          
+      :file "Makefile"
+      :pointmax 142
+      :fsize 7903
+      :lastmodtime '(23430 54735 604831 941000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "mirna.cpp"
+      :pointmax 2773
+      :fsize 2772
+      :lastmodtime '(23430 55082 162488 852000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("MIRNA_H" variable (:constant-flag t) nil [25 32])
+            ("string" include (:system-flag t) nil [34 51])
+            ("boost/unordered_map.hpp" include (:system-flag t) nil [52 86])
+            ("boost/bimap.hpp" include (:system-flag t) nil [87 113])
+            ("boost/functional/hash.hpp" include (:system-flag t) nil [114 150])
+            ("Mirna" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [170 178])
+                    ("public" label nil (reparse-symbol classsubparts) [179 186])
+                    ("mirna_id_dictionary" variable
+                       (:typemodifiers ("static")
+                        :type ("boost::bimap" type
+                             (:template-specifier 
+                                ( ("Mirna" type nil nil nil)
+                                  ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [195 247])
+                    ("mirna_family" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [257 282])
+                    ("Mirna" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("mirna_family" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [294 319]))                          
+                        :type ("Mirna" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [288 320])
+                    ("initialize_mirna_dictionary" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [325 367])
+                    ("print_mirna_dictionary" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("max_rows" variable
+                               (:default-value "-1"
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [407 433]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [372 435])
+                    ("<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("lhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Mirna" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [467 485])
+                            ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Mirna" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [486 504]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [445 505]))                  
+                :type "class")
+                nil [152 1171])
+            ("std" type
+               (:members 
+                  ( ("hash" type
+                       (:type "struct"
+                        :template-specifier 
+                          ( ("Mirna" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1193 1382]))                  
+                :type "namespace")
+                nil [1173 1384]))          
+      :file "mirna.hpp"
+      :pointmax 1404
+      :fsize 1403
+      :lastmodtime '(23430 52853 57281 630000)
+      :unmatched-syntax '((semantic-list 1301 . 1375) (symbol 1284 . 1292) (CONST 1278 . 1283) (semantic-list 1260 . 1277) (semantic-list 1257 . 1259) (OPERATOR 1248 . 1256) (symbol 1241 . 1247))
+      :lexical-table 
+        '(("MIRNA_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GENE_H" variable (:constant-flag t) nil [24 30])
+            ("string" include (:system-flag t) nil [32 49])
+            ("boost/unordered_map.hpp" include (:system-flag t) nil [51 85])
+            ("boost/bimap.hpp" include (:system-flag t) nil [86 112])
+            ("boost/functional/hash.hpp" include (:system-flag t) nil [113 149])
+            ("Gene" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [164 171])
+                    ("gene_id_dictionary" variable
+                       (:typemodifiers ("static")
+                        :type ("boost::bimap" type
+                             (:template-specifier 
+                                ( ("Gene" type nil nil nil)
+                                  ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [176 226])
+                    ("gene_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [236 256])
+                    ("gene_id_version" variable (:type "int") (reparse-symbol classsubparts) [261 281])
+                    ("gene_symbol" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [286 310])
+                    ("transcript_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [315 341])
+                    ("transcript_id_version" variable (:type "int") (reparse-symbol classsubparts) [346 372])
+                    ("Gene" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("gene_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [387 407])
+                            ("gene_id_version" variable (:type "int") (reparse-symbol arg-sub-list) [408 428])
+                            ("gene_symbol" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [429 453])
+                            ("transcript_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [454 480])
+                            ("transcript_id_version" variable (:type "int") (reparse-symbol arg-sub-list) [481 507]))                          
+                        :type ("Gene" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [382 508])
+                    ("initialize_gene_dictionary" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [513 554])
+                    ("print_gene_dictionary" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("max_rows" variable
+                               (:default-value "-1"
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [593 619]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [559 621])
+                    ("<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("lhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Gene" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [648 665])
+                            ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Gene" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [666 683]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [626 684]))                  
+                :type "class")
+                nil [151 687])
+            ("Site" type (:type "class") nil [689 709])
+            ("std" type
+               (:members 
+                  ( ("hash" type
+                       (:type "struct"
+                        :template-specifier 
+                          ( ("Gene" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [731 1043]))                  
+                :type "namespace")
+                nil [711 1045]))          
+      :file "gene.hpp"
+      :pointmax 1064
+      :fsize 1063
+      :lastmodtime '(23430 53543 251013 837000)
+      :unmatched-syntax '((semantic-list 837 . 1036) (symbol 820 . 828) (CONST 814 . 819) (semantic-list 797 . 813) (semantic-list 794 . 796) (OPERATOR 785 . 793) (symbol 778 . 784))
+      :lexical-table 
+        '(("GENE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gene.hpp" include nil nil [1 20])
+            ("iostream" include (:system-flag t) nil [22 41])
+            ("fstream" include (:system-flag t) nil [42 60])
+            ("sstream" include (:system-flag t) nil [61 79])
+            ("Gene::gene_id_dictionary" variable (:type ("boost::bimap" type
+                 (:template-specifier 
+                    ( ("Gene" type nil nil nil)
+                      ("int" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [81 130])
+            ("Gene" function
+               (:constructor-flag t
+                :parent "Gene"
+                :arguments 
+                  ( ("gene_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [143 163])
+                    ("gene_id_version" variable (:type "int") (reparse-symbol arg-sub-list) [164 184])
+                    ("gene_symbol" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [185 209])
+                    ("transcript_id" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [210 236])
+                    ("transcript_id_version" variable (:type "int") (reparse-symbol arg-sub-list) [237 263]))                  
+                :type ("Gene" type (:type "class") nil nil))
+                nil [132 473])
+            ("initialize_gene_dictionary" function
+               (:parent "Gene"
+                :type "void")
+                nil [475 2593])
+            ("print_gene_dictionary" function
+               (:parent "Gene"
+                :arguments 
+                  ( ("max_rows" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2628 2650]))                  
+                :type "void")
+                nil [2595 3275])
+            ("<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("lhs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Gene" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3292 3309])
+                    ("rhs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Gene" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3310 3327]))                  
+                :type "bool")
+                nil [3277 3369]))          
+      :file "gene.cpp"
+      :pointmax 3370
+      :fsize 3369
+      :lastmodtime '(23430 55097 45759 552000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!bioinformatics!thesis!simulations!expression_profiles!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

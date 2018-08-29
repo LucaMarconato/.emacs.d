@@ -1,6 +1,6 @@
 #!/bin/bash -x
-FILE="rtags-2.12.tar.bz2"
-URL="https://andersbakken.github.io/rtags-releases/$FILE"
+FILE="rtags-2.14.tar.gz"
+URL="https://github.com/Andersbakken/rtags-releases/$FILE"
 ARGS="--progress -L -o $FILE"
 CMAKEARGS=
 [ -e "$FILE" ] && ARGS="$ARGS -C -"
@@ -11,17 +11,19 @@ if ! curl $ARGS; then
     exit 1
 fi
 
-if ! tar xfj "$FILE"; then
-    echo "Failed to untar $FILE" >&2
-    rm "$FILE"
-    exit 2
-fi
-
-cd "`echo $FILE | sed -e 's,.tar.bz2,,'`"
-if ! cmake . ${CMAKEARGS}; then
-    echo Failed to cmake
-    rm -rf CMakeCache.txt
-    exit 3
-fi
-make
-exit $?
+##if ! tar xfj "$FILE"; then
+#if ! tar -xvf "$FILE"; then
+#    echo "Failed to untar $FILE" >&2
+#    rm "$FILE"
+#    exit 2
+#fi
+#
+#cd "`echo $FILE | sed -e 's,.tar.bz2,,'`"
+#if ! cmake . ${CMAKEARGS}; then
+#    echo Failed to cmake
+#    rm -rf CMakeCache.txt
+#    exit 3
+#fi
+#make
+#exit $?
+#

@@ -1,0 +1,75 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_CONTAINER_ADAPTOR_DETAIL_ITERATOR_FACADE_CONVERTERS_HPP" variable (:constant-flag t) nil [433 500])
+            ("boost/config.hpp" include (:system-flag t) nil [545 572])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("container_adaptor" type
+                               (:members 
+                                  ( ("support" type
+                                       (:members 
+                                          ( ("iterator_facade_to_base" type
+                                               (:template 
+                                                  ( ("Iterator" type (:type "class") nil nil)
+                                                    ("ConstIterator" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("Iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1167 1181]))                                                          
+                                                        :type ("Iterator::base_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1136 1227])
+                                                    ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("ConstIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1292 1311]))                                                          
+                                                        :type ("ConstIterator::base_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1256 1357]))                                                  )
+                                                (reparse-symbol namespacesubparts) [1019 1360])
+                                            ("iterator_facade_to_base" type
+                                               (:template 
+                                                  ( ("Iterator" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("Iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1570 1584]))                                                          
+                                                        :type ("Iterator::base_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1539 1630]))                                                  
+                                                :template-specifier 
+                                                  ( ("Iterator" type nil nil nil)
+                                                    ("Iterator" type nil nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [1428 1633]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [715 1777]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [611 1800]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [592 1833]))                  
+                :type "namespace")
+                nil [574 1855]))          
+      :file "iterator_facade_converters.hpp"
+      :pointmax 1955
+      :fsize 1954
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((symbol 1516 . 1538) (symbol 1233 . 1255) (symbol 1113 . 1135))
+      :lexical-table 
+        '(("BOOST_BIMAP_CONTAINER_ADAPTOR_DETAIL_ITERATOR_FACADE_CONVERTERS_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.67.0_1!include!boost!bimap!container_adaptor!support!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

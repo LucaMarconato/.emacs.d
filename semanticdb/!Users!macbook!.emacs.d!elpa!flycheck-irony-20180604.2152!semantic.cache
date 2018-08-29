@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "flycheck-irony-autoloads.el"
+      :pointmax 367
+      :fsize 743
+      :lastmodtime '(23422 27731 624730 938000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!.emacs.d!elpa!flycheck-irony-20180604.2152!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

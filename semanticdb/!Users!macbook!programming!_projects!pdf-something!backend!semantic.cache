@@ -2299,50 +2299,50 @@
       :tags 
         '( ("uuid.hpp" include nil nil [1 20])
             ("iostream" include (:system-flag t) nil [22 41])
-            ("cstdio" include (:system-flag t) nil [42 42])
-            ("boost/lexical_cast.hpp" include (:system-flag t) nil [42 42])
-            ("boost/uuid/uuid_generators.hpp" include (:system-flag t) nil [42 42])
-            ("boost/uuid/uuid_io.hpp" include (:system-flag t) nil [42 42])
-            ("constants.hpp" include nil nil [42 42])
+            ("cstdio" include (:system-flag t) nil [42 59])
+            ("boost/lexical_cast.hpp" include (:system-flag t) nil [60 93])
+            ("boost/uuid/uuid_generators.hpp" include (:system-flag t) nil [94 135])
+            ("boost/uuid/uuid_io.hpp" include (:system-flag t) nil [152 185])
+            ("constants.hpp" include nil nil [209 233])
             ("Uuid" function
                (:constructor-flag t
                 :parent "Uuid"
                 :type ("Uuid" type (:type "class") nil nil))
-                nil [42 42])
-            ("Uuid" function
-               (:constructor-flag t
-                :parent "Uuid"
-                :arguments 
-                  ( ("boost_uuid" variable (:type ("boost::uuids::uuid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42 42]))                  
-                :type ("Uuid" type (:type "class") nil nil))
-                nil [42 42])
+                nil [235 250])
             ("Uuid" function
                (:constructor-flag t
                 :parent "Uuid"
                 :arguments 
-                  ( ("uuid_string" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42 42]))                  
+                  ( ("boost_uuid" variable (:type ("boost::uuids::uuid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [263 293]))                  
                 :type ("Uuid" type (:type "class") nil nil))
-                nil [42 42])
+                nil [252 362])
+            ("Uuid" function
+               (:constructor-flag t
+                :parent "Uuid"
+                :arguments 
+                  ( ("uuid_string" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [375 399]))                  
+                :type ("Uuid" type (:type "class") nil nil))
+                nil [364 510])
             ("is_valid" function
                (:methodconst-flag t
                 :parent "Uuid"
                 :type "bool")
-                nil [42 42])
+                nil [512 720])
             ("generate_uuids" function
                (:parent "Uuid"
                 :arguments 
-                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [42 42]))                  
+                  ( ("count" variable (:type "int") (reparse-symbol arg-sub-list) [761 771]))                  
                 :type ("std::vector" type
                      (:template-specifier 
                         ( ("Uuid" type nil nil nil))                        
                       :type "class")
                       nil nil))
-                nil [42 42])
+                nil [722 1012])
             ("to_string" function
                (:methodconst-flag t
                 :parent "Uuid"
                 :type ("std::string" type (:type "class") nil nil))
-                nil [42 42])
+                nil [1014 1116])
             ("==" function
                (:methodconst-flag t
                 :operator-flag t
@@ -2352,9 +2352,9 @@
                        (:reference 1
                         :constant-flag t
                         :type ("Uuid" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [42 42]))                  
+                        (reparse-symbol arg-sub-list) [1140 1155]))                  
                 :type "bool")
-                nil [42 42])
+                nil [1118 1210])
             ("!=" function
                (:methodconst-flag t
                 :operator-flag t
@@ -2364,9 +2364,9 @@
                        (:reference 1
                         :constant-flag t
                         :type ("Uuid" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [42 42]))                  
+                        (reparse-symbol arg-sub-list) [1234 1249]))                  
                 :type "bool")
-                nil [42 42])
+                nil [1212 1294])
             ("<" function
                (:operator-flag t
                 :arguments 
@@ -2374,30 +2374,30 @@
                        (:reference 1
                         :constant-flag t
                         :type ("Uuid" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [42 42])
+                        (reparse-symbol arg-sub-list) [1311 1328])
                     ("rhs" variable
                        (:reference 1
                         :constant-flag t
                         :type ("Uuid" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [42 42]))                  
+                        (reparse-symbol arg-sub-list) [1329 1346]))                  
                 :type "bool")
-                nil [42 42])
+                nil [1296 1394])
             ("<<" function
                (:operator-flag t
                 :arguments 
                   ( ("stream" variable
                        (:reference 1
                         :type ("std::ostream" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [42 42])
+                        (reparse-symbol arg-sub-list) [1422 1444])
                     ("obj" variable
                        (:reference 1
                         :constant-flag t
                         :type ("Uuid" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [42 42]))                  
+                        (reparse-symbol arg-sub-list) [1445 1462]))                  
                 :type ("std::ostream" type (:type "class") nil nil))
-                nil [42 3008]))          
+                nil [1396 1615]))          
       :file "uuid.cpp"
-      :pointmax 3009
+      :pointmax 1616
       :fsize 1615
       :lastmodtime '(23266 14835 804055 793000)
       :unmatched-syntax nil)
@@ -2819,10 +2819,7 @@
       :pointmax 975
       :fsize 974
       :lastmodtime '(23266 13833 391243 815000)
-      :unmatched-syntax nil)
-
-
-)
+      :unmatched-syntax nil))
   :file "!Users!macbook!programming!_projects!pdf-something!backend!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

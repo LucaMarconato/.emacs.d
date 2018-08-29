@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ull
+# key: ull
+# --
+unsigned long long 

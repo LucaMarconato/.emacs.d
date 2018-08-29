@@ -1,0 +1,1488 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_RELATION_MEMBER_AT_HPP" variable (:constant-flag t) nil [366 400])
+            ("boost/config.hpp" include (:system-flag t) nil [445 472])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("relation" type
+                               (:members 
+                                  ( ("member_at" type
+                                       (:members 
+                                          ( ("left" type (:type "struct") (reparse-symbol namespacesubparts) [1438 1454])
+                                            ("right" type (:type "struct") (reparse-symbol namespacesubparts) [1582 1598])
+                                            ("info" type (:type "struct") (reparse-symbol namespacesubparts) [1729 1745]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1289 1748]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [511 1751]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [492 1775]))                  
+                :type "namespace")
+                nil [474 1797]))          
+      :file "member_at.hpp"
+      :pointmax 1863
+      :fsize 1862
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_BIMAP_RELATION_MEMBER_AT_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_RELATION_MUTANT_RELATION_HPP" variable (:constant-flag t) nil [365 405])
+            ("boost/config.hpp" include (:system-flag t) nil [450 477])
+            ("boost/mpl/vector.hpp" include (:system-flag t) nil [479 510])
+            ("boost/operators.hpp" include (:system-flag t) nil [511 541])
+            ("boost/call_traits.hpp" include (:system-flag t) nil [542 574])
+            ("boost/serialization/nvp.hpp" include (:system-flag t) nil [618 658])
+            ("boost/functional/hash/hash.hpp" include (:system-flag t) nil [704 745])
+            ("boost/mpl/aux_/na.hpp" include (:system-flag t) nil [747 779])
+            ("boost/bimap/tags/tagged.hpp" include (:system-flag t) nil [796 834])
+            ("boost/bimap/tags/support/default_tagged.hpp" include (:system-flag t) nil [835 889])
+            ("boost/bimap/tags/support/tag_of.hpp" include (:system-flag t) nil [890 936])
+            ("boost/bimap/tags/support/value_type_of.hpp" include (:system-flag t) nil [937 990])
+            ("boost/bimap/relation/member_at.hpp" include (:system-flag t) nil [992 1037])
+            ("boost/bimap/relation/detail/mutant.hpp" include (:system-flag t) nil [1038 1087])
+            ("boost/bimap/relation/structured_pair.hpp" include (:system-flag t) nil [1088 1139])
+            ("boost/bimap/relation/symmetrical_base.hpp" include (:system-flag t) nil [1140 1192])
+            ("boost/bimap/relation/support/get.hpp" include (:system-flag t) nil [1193 1240])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("relation" type
+                               (:members 
+                                  ( ("detail" type
+                                       (:members 
+                                          ( ("relation_storage" type
+                                               (:template 
+                                                  ( ("LeftType" type (:type "class") nil nil)
+                                                    ("RightType" type (:type "class") nil nil)
+                                                    ("bool" type (:typevar "force_mutable") nil nil))                                                  
+                                                :type "class"
+                                                :members 
+                                                  ( ("base_" type
+                                                       (:typedef ("symmetrical_base" type
+                                                             (:template-specifier 
+                                                                ( ("LeftType" type nil nil nil)
+                                                                  ("RightType" type nil nil nil)
+                                                                  ("force_mutable" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1583 1648])
+                                                    ("storage_" type
+                                                       (:typedef ("relation_storage" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1654 1688])
+                                                    ("public" label nil (reparse-symbol classsubparts) [1694 1701])
+                                                    ("non_mutable_storage" type
+                                                       (:typedef ("relation_storage" type
+                                                             (:template-specifier 
+                                                                ( ("LeftType" type nil nil nil)
+                                                                  ("RightType" type nil nil nil)
+                                                                  ("false" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1707 1778])
+                                                    ("mutant_views" variable (:type ("boost::mpl::vector2" type
+                                                         (:template-specifier 
+                                                            ( ("relation_storage" type (:template-specifier 
+                                                                ( ("LeftType" type nil nil nil)
+                                                                  ("RightType" type nil nil nil)
+                                                                  ("true" type nil nil nil))                                                                ) nil nil)
+                                                              ("relation_storage" type (:template-specifier 
+                                                                ( ("LeftType" type nil nil nil)
+                                                                  ("RightType" type nil nil nil)
+                                                                  ("false" type nil nil nil))                                                                ) nil nil))                                                            
+                                                          :type "class")
+                                                          nil nil)) (reparse-symbol classsubparts) [1794 1951])
+                                                    ("left" variable (:type ("base_::left_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2010 2039])
+                                                    ("right" variable (:type ("base_::right_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2071 2101])
+                                                    ("relation_storage" function
+                                                       (:constructor-flag t
+                                                        :type ("relation_storage" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2116 2137])
+                                                    ("relation_storage" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("l" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2160 2313])
+                                                            ("r" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2335 2488]))                                                          
+                                                        :type ("relation_storage" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2143 2520])
+                                                    ("get_left" function (:type ("base_::left_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2555 2615])
+                                                    ("get_left" function
+                                                       (:methodconst-flag t
+                                                        :type ("base_::left_value_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2649 2709])
+                                                    ("get_right" function (:type ("base_::right_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2743 2803])
+                                                    ("get_right" function
+                                                       (:methodconst-flag t
+                                                        :type ("base_::right_value_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2837 2897]))                                                  
+                                                :superclasses 
+                                                  ( ("symmetrical_base" type
+                                                       (:protection "public"
+                                                        :type "class")
+                                                        nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [1426 2900])
+                                            ("public" label nil (reparse-symbol namespacesubparts) [2994 3003])
+                                            ("boost::bimaps::relation::detail::relation_storage" variable (:type "int") (reparse-symbol namespacesubparts) [3004 4851])
+                                            ("public" label nil (reparse-symbol namespacesubparts) [4972 4980])
+                                            ("boost::bimaps::relation::detail::relation_storage" variable (:type "int") (reparse-symbol namespacesubparts) [4981 6298]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1301 6302])
+                                    ("public" label nil (reparse-symbol namespacesubparts) [7198 7210])
+                                    ("boost::bimaps::relation::detail::relation_info_hook" variable (:type "int") (reparse-symbol namespacesubparts) [7211 11312])
+                                    ("hash_value" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "FM") nil nil))                                          
+                                        :type ("std::size_t" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("r" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11407 11467]))                                          )
+                                        (reparse-symbol namespacesubparts) [11329 11601])
+                                    ("==" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "FM1") nil nil)
+                                            ("bool" type (:typevar "FM2") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11723 11784])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11801 11862]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [11641 11944])
+                                    ("!=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "FM1") nil nil)
+                                            ("bool" type (:typevar "FM2") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12028 12089])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12106 12167]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [11946 12196])
+                                    ("<" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "FM1") nil nil)
+                                            ("bool" type (:typevar "FM2") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12279 12340])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12356 12417]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [12198 12524])
+                                    ("<=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "FM1") nil nil)
+                                            ("bool" type (:typevar "FM2") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12608 12669])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12686 12747]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [12526 12855])
+                                    (">" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "FM1") nil nil)
+                                            ("bool" type (:typevar "FM2") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12938 12999])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13015 13076]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [12857 13182])
+                                    (">=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "FM1") nil nil)
+                                            ("bool" type (:typevar "FM2") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13266 13327])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("detail::relation_storage" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("FM2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13344 13405]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [13184 13512])
+                                    ("detail" type
+                                       (:members 
+                                          ( ("copy_with_left_replaced" function
+                                               (:template 
+                                                  ( ("TA" type (:type "class") nil nil)
+                                                    ("TB" type (:type "class") nil nil)
+                                                    ("Info" type (:type "class") nil nil)
+                                                    ("bool" type (:typevar "force_mutable") nil nil))                                                  
+                                                :type ("mutant_relation" type
+                                                     (:template-specifier 
+                                                        ( ("TA" type nil nil nil)
+                                                          ("TB" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("force_mutable" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :arguments 
+                                                  ( ("rel" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("mutant_relation" type
+                                                             (:template-specifier 
+                                                                ( ("TA" type nil nil nil)
+                                                                  ("TB" type nil nil nil)
+                                                                  ("Info" type nil nil nil)
+                                                                  ("force_mutable" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [13667 13720])
+                                                    ("l" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13729 13901]))                                                  )
+                                                (reparse-symbol namespacesubparts) [13534 13981])
+                                            ("copy_with_left_replaced" function
+                                               (:arguments 
+                                                  ( ("" variable (:type ("mutant_relation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14119 14135])
+                                                    ("" variable (:type ("TA" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14135 14138])
+                                                    ("" variable (:type ("TB" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14138 14141])
+                                                    ("" variable (:type ("boost::mpl::na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14143 14158])
+                                                    ("" variable (:type ("force_mutable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14158 14172])
+                                                    ("" variable (:type ("rel" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14180 14184])
+                                                    ("" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14193 14237])
+                                                    ("mutant_relation" variable (:type ("BOOST_DEDUCED_TYPENAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14238 14290])
+                                                    ("" variable (:type ("TA" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14290 14293])
+                                                    ("" variable (:type ("TB" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14293 14296])
+                                                    ("" variable (:type ("boost::mpl::na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14298 14313])
+                                                    ("" variable (:type ("force_mutable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14313 14327])
+                                                    ("" variable (:type ("left_value_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14329 14345])
+                                                    ("l" variable (:type ("param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14364 14377]))                                                  
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [14095 14462])
+                                            ("copy_with_right_replaced" function
+                                               (:template 
+                                                  ( ("TA" type (:type "class") nil nil)
+                                                    ("TB" type (:type "class") nil nil)
+                                                    ("Info" type (:type "class") nil nil)
+                                                    ("bool" type (:typevar "force_mutable") nil nil))                                                  
+                                                :type ("mutant_relation" type
+                                                     (:template-specifier 
+                                                        ( ("TA" type nil nil nil)
+                                                          ("TB" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("force_mutable" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :arguments 
+                                                  ( ("rel" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("mutant_relation" type
+                                                             (:template-specifier 
+                                                                ( ("TA" type nil nil nil)
+                                                                  ("TB" type nil nil nil)
+                                                                  ("Info" type nil nil nil)
+                                                                  ("force_mutable" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [14602 14655])
+                                                    ("r" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14664 14837]))                                                  )
+                                                (reparse-symbol namespacesubparts) [14468 14916])
+                                            ("copy_with_right_replaced" function
+                                               (:arguments 
+                                                  ( ("" variable (:type ("mutant_relation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15055 15071])
+                                                    ("" variable (:type ("TA" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15071 15074])
+                                                    ("" variable (:type ("TB" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15074 15077])
+                                                    ("" variable (:type ("boost::mpl::na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15079 15094])
+                                                    ("" variable (:type ("force_mutable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15094 15108])
+                                                    ("" variable (:type ("rel" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15116 15120])
+                                                    ("" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15129 15173])
+                                                    ("mutant_relation" variable (:type ("BOOST_DEDUCED_TYPENAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15174 15226])
+                                                    ("" variable (:type ("TA" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15226 15229])
+                                                    ("" variable (:type ("TB" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15229 15232])
+                                                    ("" variable (:type ("boost::mpl::na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15234 15249])
+                                                    ("" variable (:type ("force_mutable" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15249 15263])
+                                                    ("" variable (:type ("right_value_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15265 15282])
+                                                    ("r" variable (:type ("param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15301 15314]))                                                  
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [15030 15398]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [13514 15401]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1279 15424]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1260 15448]))                  
+                :type "namespace")
+                nil [1242 15470]))          
+      :file "mutant_relation.hpp"
+      :pointmax 15546
+      :fsize 15545
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((punctuation 15300 . 15301) (punctuation 15299 . 15300) (punctuation 15281 . 15282) (punctuation 15264 . 15265) (punctuation 15263 . 15264) (punctuation 15262 . 15263) (punctuation 15233 . 15234) (punctuation 15232 . 15233) (punctuation 15225 . 15226) (punctuation 15172 . 15173) (punctuation 15114 . 15115) (CONST 15109 . 15114) (punctuation 15107 . 15108) (punctuation 15078 . 15079) (punctuation 15077 . 15078) (punctuation 15070 . 15071) (punctuation 15024 . 15025) (symbol 15011 . 15024) (punctuation 15010 . 15011) (symbol 15008 . 15010) (punctuation 15007 . 15008) (punctuation 15006 . 15007) (symbol 15003 . 15006) (punctuation 15002 . 15003) (punctuation 15001 . 15002) (symbol 14996 . 15001) (punctuation 14995 . 14996) (punctuation 14994 . 14995) (punctuation 14993 . 14994) (symbol 14991 . 14993) (punctuation 14990 . 14991) (symbol 14988 . 14990) (punctuation 14987 . 14988) (symbol 14972 . 14987) (punctuation 14970 . 14971) (symbol 14957 . 14970) (BOOL 14952 . 14956) (punctuation 14950 . 14951) (symbol 14948 . 14950) (CLASS 14942 . 14947) (punctuation 14940 . 14941) (symbol 14938 . 14940) (CLASS 14932 . 14937) (punctuation 14930 . 14931) (TEMPLATE 14922 . 14930) (punctuation 14363 . 14364) (punctuation 14362 . 14363) (punctuation 14344 . 14345) (punctuation 14328 . 14329) (punctuation 14327 . 14328) (punctuation 14326 . 14327) (punctuation 14297 . 14298) (punctuation 14296 . 14297) (punctuation 14289 . 14290) (punctuation 14236 . 14237) (punctuation 14178 . 14179) (CONST 14173 . 14178) (punctuation 14171 . 14172) (punctuation 14142 . 14143) (punctuation 14141 . 14142) (punctuation 14134 . 14135) (punctuation 14089 . 14090) (symbol 14076 . 14089) (punctuation 14075 . 14076) (symbol 14073 . 14075) (punctuation 14072 . 14073) (punctuation 14071 . 14072) (symbol 14068 . 14071) (punctuation 14067 . 14068) (punctuation 14066 . 14067) (symbol 14061 . 14066) (punctuation 14060 . 14061) (punctuation 14059 . 14060) (punctuation 14058 . 14059) (symbol 14056 . 14058) (punctuation 14055 . 14056) (symbol 14053 . 14055) (punctuation 14052 . 14053) (symbol 14037 . 14052) (punctuation 14035 . 14036) (symbol 14022 . 14035) (BOOL 14017 . 14021) (punctuation 14015 . 14016) (symbol 14013 . 14015) (CLASS 14007 . 14012) (punctuation 14005 . 14006) (symbol 14003 . 14005) (CLASS 13997 . 14002) (punctuation 13995 . 13996) (TEMPLATE 13987 . 13995) (punctuation 7210 . 7211) (punctuation 7196 . 7197) (symbol 7180 . 7195) (CLASS 7174 . 7179) (punctuation 7172 . 7173) (symbol 7166 . 7171) (punctuation 7164 . 7165) (symbol 7150 . 7163) (BOOL 7145 . 7149) (punctuation 7143 . 7144) (symbol 7141 . 7143) (punctuation 7140 . 7141) (punctuation 7139 . 7140) (symbol 7136 . 7139) (punctuation 7135 . 7136) (punctuation 7134 . 7135) (symbol 7129 . 7134) (punctuation 7128 . 7129) (punctuation 7127 . 7128) (punctuation 7125 . 7126) (symbol 7120 . 7124) (CLASS 7114 . 7119) (punctuation 7112 . 7113) (symbol 7110 . 7112) (CLASS 7104 . 7109) (punctuation 7102 . 7103) (symbol 7100 . 7102) (CLASS 7094 . 7099) (punctuation 7092 . 7093) (TEMPLATE 7084 . 7092) (punctuation 4980 . 4981) (punctuation 4966 . 4967) (punctuation 4964 . 4965) (symbol 4951 . 4964) (punctuation 4950 . 4951) (symbol 4948 . 4950) (punctuation 4947 . 4948) (punctuation 4946 . 4947) (symbol 4943 . 4946) (punctuation 4942 . 4943) (punctuation 4941 . 4942) (symbol 4936 . 4941) (punctuation 4935 . 4936) (punctuation 4934 . 4935) (punctuation 4933 . 4934) (symbol 4931 . 4933) (punctuation 4930 . 4931) (symbol 4928 . 4930) (punctuation 4927 . 4928) (symbol 4909 . 4927) (CLASS 4903 . 4908) (punctuation 4901 . 4902) (symbol 4888 . 4901) (BOOL 4883 . 4887) (punctuation 4881 . 4882) (symbol 4879 . 4881) (CLASS 4873 . 4878) (punctuation 4871 . 4872) (symbol 4869 . 4871) (CLASS 4863 . 4868) (punctuation 4861 . 4862) (TEMPLATE 4853 . 4861) (punctuation 3003 . 3004) (punctuation 2992 . 2993) (symbol 2973 . 2991) (CLASS 2967 . 2972) (punctuation 2965 . 2966) (symbol 2951 . 2964) (BOOL 2946 . 2950) (punctuation 2944 . 2945) (symbol 2940 . 2944) (CLASS 2934 . 2939) (punctuation 2932 . 2933) (symbol 2930 . 2932) (CLASS 2924 . 2929) (punctuation 2922 . 2923) (symbol 2920 . 2922) (CLASS 2914 . 2919) (punctuation 2912 . 2913) (TEMPLATE 2904 . 2912) (symbol 2814 . 2836) (CONST 2808 . 2813) (symbol 2720 . 2742) (symbol 2626 . 2648) (CONST 2620 . 2625) (symbol 2532 . 2554) (symbol 2048 . 2070) (symbol 1987 . 2009) (punctuation 1793 . 1794) (punctuation 1792 . 1793) (TYPEDEF 1784 . 1791))
+      :lexical-table 
+        '(("BOOST_BIMAP_RELATION_MUTANT_RELATION_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_RELATION_STRUCTURED_PAIR_HPP" variable (:constant-flag t) nil [366 406])
+            ("boost/config.hpp" include (:system-flag t) nil [451 478])
+            ("utility" include (:system-flag t) nil [480 498])
+            ("boost/type_traits/remove_const.hpp" include (:system-flag t) nil [500 545])
+            ("boost/mpl/aux_/na.hpp" include (:system-flag t) nil [547 579])
+            ("boost/call_traits.hpp" include (:system-flag t) nil [581 613])
+            ("boost/utility/enable_if.hpp" include (:system-flag t) nil [615 653])
+            ("boost/type_traits/is_same.hpp" include (:system-flag t) nil [654 694])
+            ("boost/mpl/if.hpp" include (:system-flag t) nil [695 722])
+            ("boost/mpl/vector.hpp" include (:system-flag t) nil [723 754])
+            ("boost/bimap/detail/debug/static_error.hpp" include (:system-flag t) nil [756 808])
+            ("boost/bimap/relation/pair_layout.hpp" include (:system-flag t) nil [809 856])
+            ("boost/bimap/relation/symmetrical_base.hpp" include (:system-flag t) nil [857 909])
+            ("boost/bimap/relation/support/get.hpp" include (:system-flag t) nil [910 957])
+            ("boost/bimap/tags/support/value_type_of.hpp" include (:system-flag t) nil [958 1011])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("relation" type
+                               (:members 
+                                  ( ("detail" type
+                                       (:members 
+                                          ( ("normal_storage" type
+                                               (:template 
+                                                  ( ("FirstType" type (:type "class") nil nil)
+                                                    ("SecondType" type (:type "class") nil nil))                                                  
+                                                :type "class"
+                                                :members 
+                                                  ( ("base_" type
+                                                       (:typedef ("symmetrical_base" type
+                                                             (:template-specifier 
+                                                                ( ("FirstType" type nil nil nil)
+                                                                  ("SecondType" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1415 1468])
+                                                    ("public" label nil (reparse-symbol classsubparts) [1474 1481])
+                                                    ("storage_" type
+                                                       (:typedef ("normal_storage" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1487 1519])
+                                                    ("first_type" variable (:type ("base_::left_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1556 1591])
+                                                    ("second_type" variable (:type ("base_::right_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1627 1663])
+                                                    ("first" variable (:type ("first_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1669 1688])
+                                                    ("second" variable (:type ("second_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1693 1713])
+                                                    ("normal_storage" function
+                                                       (:constructor-flag t
+                                                        :type ("normal_storage" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1719 1738])
+                                                    ("normal_storage" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("f" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1759 1855])
+                                                            ("s" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1875 1971]))                                                          
+                                                        :type ("normal_storage" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1744 2005])
+                                                    ("get_left" function (:type ("base_::left_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2040 2101])
+                                                    ("get_left" function
+                                                       (:methodconst-flag t
+                                                        :type ("base_::left_value_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2135 2196])
+                                                    ("get_right" function (:type ("base_::right_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2230 2291])
+                                                    ("get_right" function
+                                                       (:methodconst-flag t
+                                                        :type ("base_::right_value_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2325 2386]))                                                  
+                                                :superclasses 
+                                                  ( ("symmetrical_base" type
+                                                       (:protection "public"
+                                                        :type "class")
+                                                        nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [1290 2389])
+                                            ("mirror_storage" type
+                                               (:template 
+                                                  ( ("FirstType" type (:type "class") nil nil)
+                                                    ("SecondType" type (:type "class") nil nil))                                                  
+                                                :type "class"
+                                                :members 
+                                                  ( ("base_" type
+                                                       (:typedef ("symmetrical_base" type
+                                                             (:template-specifier 
+                                                                ( ("SecondType" type nil nil nil)
+                                                                  ("FirstType" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [2713 2766])
+                                                    ("public" label nil (reparse-symbol classsubparts) [2772 2779])
+                                                    ("storage_" type
+                                                       (:typedef ("mirror_storage" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [2785 2817])
+                                                    ("second_type" variable (:type ("base_::left_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2854 2891])
+                                                    ("first_type" variable (:type ("base_::right_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2927 2963])
+                                                    ("second" variable (:type ("second_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2969 2989])
+                                                    ("first" variable (:type ("first_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2994 3013])
+                                                    ("mirror_storage" function
+                                                       (:constructor-flag t
+                                                        :type ("mirror_storage" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3019 3038])
+                                                    ("mirror_storage" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("f" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3059 3131])
+                                                            ("s" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3151 3223]))                                                          
+                                                        :type ("mirror_storage" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3044 3258])
+                                                    ("get_left" function (:type ("base_::left_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3293 3354])
+                                                    ("get_left" function
+                                                       (:methodconst-flag t
+                                                        :type ("base_::left_value_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3388 3449])
+                                                    ("get_right" function (:type ("base_::right_value_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3483 3544])
+                                                    ("get_right" function
+                                                       (:methodconst-flag t
+                                                        :type ("base_::right_value_type" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3578 3639]))                                                  
+                                                :superclasses 
+                                                  ( ("symmetrical_base" type
+                                                       (:protection "public"
+                                                        :type "class")
+                                                        nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [2588 3642])
+                                            ("storage_finder" type
+                                               (:template 
+                                                  ( ("FirstType" type (:type "class") nil nil)
+                                                    ("SecondType" type (:type "class") nil nil)
+                                                    ("Layout" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("type" type
+                                                       (:typedef ("normal_storage" type
+                                                             (:template-specifier 
+                                                                ( ("FirstType" type nil nil nil)
+                                                                  ("SecondType" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [4202 4252]))                                                  )
+                                                (reparse-symbol namespacesubparts) [4101 4255])
+                                            ("storage_finder" type
+                                               (:template 
+                                                  ( ("FirstType" type (:type "class") nil nil)
+                                                    ("SecondType" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("type" type
+                                                       (:typedef ("mirror_storage" type
+                                                             (:template-specifier 
+                                                                ( ("FirstType" type nil nil nil)
+                                                                  ("SecondType" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [4376 4426]))                                                  
+                                                :template-specifier 
+                                                  ( ("FirstType" type nil nil nil)
+                                                    ("SecondType" type nil nil nil)
+                                                    ("mirror_layout" type nil nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [4257 4429])
+                                            ("public" label nil (reparse-symbol namespacesubparts) [4584 4592])
+                                            ("boost::bimaps::relation::detail::storage_finder::type" variable (:type "int") (reparse-symbol namespacesubparts) [4593 6025])
+                                            ("public" label nil (reparse-symbol namespacesubparts) [6129 6137])
+                                            ("boost::bimaps::relation::detail::storage_finder::type" variable (:type "int") (reparse-symbol namespacesubparts) [6138 7089]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1074 7094])
+                                    ("mutant_relation" type
+                                       (:template 
+                                          ( ("TA" type (:type "class") nil nil)
+                                            ("TB" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "FM") nil nil))                                          
+                                        :type "class"
+                                        :prototype t)
+                                        (reparse-symbol namespacesubparts) [7116 7190])
+                                    ("public" label nil (reparse-symbol namespacesubparts) [7628 7636])
+                                    ("boost::bimaps::relation::detail::pair_info_hook" variable (:type "int") (reparse-symbol namespacesubparts) [7637 10436])
+                                    ("==" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout1" type (:type "class") nil nil)
+                                            ("Layout2" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [10580 10641])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [10658 10719]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [10476 10805])
+                                    ("!=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout1" type (:type "class") nil nil)
+                                            ("Layout2" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [10911 10972])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [10989 11050]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [10807 11079])
+                                    ("<" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout1" type (:type "class") nil nil)
+                                            ("Layout2" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11184 11245])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11261 11322]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [11081 11435])
+                                    ("<=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout1" type (:type "class") nil nil)
+                                            ("Layout2" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11541 11602])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11619 11680]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [11437 11794])
+                                    (">" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout1" type (:type "class") nil nil)
+                                            ("Layout2" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11899 11960])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [11976 12037]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [11796 12149])
+                                    (">=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout1" type (:type "class") nil nil)
+                                            ("Layout2" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout1" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12255 12316])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout2" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12333 12394]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [12151 12507])
+                                    ("==" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12647 12707])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12724 12749]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [12541 12835])
+                                    ("!=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [12943 13003])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13020 13045]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [12837 13074])
+                                    ("<" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13181 13241])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13257 13282]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [13076 13395])
+                                    ("<=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13503 13563])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13580 13605]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [13397 13719])
+                                    (">" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13826 13886])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [13902 13927]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [13721 14039])
+                                    (">=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [14147 14207])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [14224 14249]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [14041 14362])
+                                    ("==" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [14502 14527])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [14544 14604]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [14396 14690])
+                                    ("!=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [14798 14823])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [14840 14900]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [14692 14929])
+                                    ("<" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [15036 15061])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [15077 15137]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [14931 15250])
+                                    ("<=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [15358 15383])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [15400 15460]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [15252 15574])
+                                    (">" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [15681 15706])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [15722 15782]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [15576 15894])
+                                    (">=" function
+                                       (:template 
+                                          ( ("FirstType" type (:type "class") nil nil)
+                                            ("SecondType" type (:type "class") nil nil)
+                                            ("Info" type (:type "class") nil nil)
+                                            ("Layout" type (:type "class") nil nil)
+                                            ("F" type (:type "class") nil nil)
+                                            ("S" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("a" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("std::pair" type
+                                                     (:template-specifier 
+                                                        ( ("F" type nil nil nil)
+                                                          ("S" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [16002 16027])
+                                            ("b" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [16044 16104]))                                          
+                                        :operator-flag t)
+                                        (reparse-symbol namespacesubparts) [15896 16217])
+                                    ("detail" type
+                                       (:members 
+                                          ( ("copy_with_first_replaced" function
+                                               (:template 
+                                                  ( ("FirstType" type (:type "class") nil nil)
+                                                    ("SecondType" type (:type "class") nil nil)
+                                                    ("Info" type (:type "class") nil nil)
+                                                    ("Layout" type (:type "class") nil nil))                                                  
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :arguments 
+                                                  ( ("p" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("structured_pair" type
+                                                             (:template-specifier 
+                                                                ( ("FirstType" type nil nil nil)
+                                                                  ("SecondType" type nil nil nil)
+                                                                  ("Info" type nil nil nil)
+                                                                  ("Layout" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [16391 16450])
+                                                    ("f" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16459 16634]))                                                  )
+                                                (reparse-symbol namespacesubparts) [16240 16719])
+                                            ("copy_with_first_replaced" function
+                                               (:arguments 
+                                                  ( ("" variable (:type ("structured_pair" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16876 16892])
+                                                    ("" variable (:type ("FirstType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16892 16902])
+                                                    ("" variable (:type ("SecondType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16902 16913])
+                                                    ("" variable (:type ("boost::mpl::na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16915 16930])
+                                                    ("" variable (:type ("Layout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16930 16937])
+                                                    ("" variable (:type ("p" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16945 16947])
+                                                    ("" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16956 17000])
+                                                    ("structured_pair" variable (:type ("BOOST_DEDUCED_TYPENAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17001 17053])
+                                                    ("" variable (:type ("FirstType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17053 17063])
+                                                    ("" variable (:type ("SecondType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17063 17074])
+                                                    ("" variable (:type ("boost::mpl::na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17076 17091])
+                                                    ("" variable (:type ("Layout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17091 17098])
+                                                    ("" variable (:type ("first_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17100 17111])
+                                                    ("f" variable (:type ("param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17130 17143]))                                                  
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [16851 17233])
+                                            ("copy_with_second_replaced" function
+                                               (:template 
+                                                  ( ("FirstType" type (:type "class") nil nil)
+                                                    ("SecondType" type (:type "class") nil nil)
+                                                    ("Info" type (:type "class") nil nil)
+                                                    ("Layout" type (:type "class") nil nil))                                                  
+                                                :type ("structured_pair" type
+                                                     (:template-specifier 
+                                                        ( ("FirstType" type nil nil nil)
+                                                          ("SecondType" type nil nil nil)
+                                                          ("Info" type nil nil nil)
+                                                          ("Layout" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil)
+                                                :arguments 
+                                                  ( ("p" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("structured_pair" type
+                                                             (:template-specifier 
+                                                                ( ("FirstType" type nil nil nil)
+                                                                  ("SecondType" type nil nil nil)
+                                                                  ("Info" type nil nil nil)
+                                                                  ("Layout" type nil nil nil))                                                                
+                                                              :type "class")
+                                                              nil nil))
+                                                        (reparse-symbol arg-sub-list) [17391 17450])
+                                                    ("s" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits::param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17459 17635]))                                                  )
+                                                (reparse-symbol namespacesubparts) [17239 17719])
+                                            ("copy_with_second_replaced" function
+                                               (:arguments 
+                                                  ( ("" variable (:type ("structured_pair" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17877 17893])
+                                                    ("" variable (:type ("FirstType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17893 17903])
+                                                    ("" variable (:type ("SecondType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17903 17914])
+                                                    ("" variable (:type ("boost::mpl::na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17916 17931])
+                                                    ("" variable (:type ("Layout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17931 17938])
+                                                    ("" variable (:type ("p" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17946 17948])
+                                                    ("" variable (:type ("BOOST_DEDUCED_TYPENAME::boost::call_traits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17957 18001])
+                                                    ("structured_pair" variable (:type ("BOOST_DEDUCED_TYPENAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18002 18054])
+                                                    ("" variable (:type ("FirstType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18054 18064])
+                                                    ("" variable (:type ("SecondType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18064 18075])
+                                                    ("" variable (:type ("boost::mpl::na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18077 18092])
+                                                    ("" variable (:type ("Layout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18092 18099])
+                                                    ("" variable (:type ("second_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18101 18113])
+                                                    ("s" variable (:type ("param_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18132 18145]))                                                  
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [17851 18234]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [16220 18237]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1052 18261]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1033 18285]))                  
+                :type "namespace")
+                nil [1015 18307]))          
+      :file "structured_pair.hpp"
+      :pointmax 18380
+      :fsize 18379
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((punctuation 18131 . 18132) (punctuation 18130 . 18131) (punctuation 18112 . 18113) (punctuation 18100 . 18101) (punctuation 18099 . 18100) (punctuation 18098 . 18099) (punctuation 18076 . 18077) (punctuation 18075 . 18076) (punctuation 18053 . 18054) (punctuation 18000 . 18001) (punctuation 17944 . 17945) (CONST 17939 . 17944) (punctuation 17937 . 17938) (punctuation 17915 . 17916) (punctuation 17914 . 17915) (punctuation 17892 . 17893) (punctuation 17844 . 17845) (symbol 17838 . 17844) (punctuation 17837 . 17838) (symbol 17835 . 17837) (punctuation 17834 . 17835) (punctuation 17833 . 17834) (symbol 17830 . 17833) (punctuation 17829 . 17830) (punctuation 17828 . 17829) (symbol 17823 . 17828) (punctuation 17822 . 17823) (punctuation 17821 . 17822) (punctuation 17820 . 17821) (symbol 17810 . 17820) (punctuation 17809 . 17810) (symbol 17800 . 17809) (punctuation 17799 . 17800) (symbol 17784 . 17799) (punctuation 17782 . 17783) (symbol 17776 . 17782) (CLASS 17770 . 17775) (punctuation 17768 . 17769) (symbol 17758 . 17768) (CLASS 17752 . 17757) (punctuation 17750 . 17751) (symbol 17741 . 17750) (CLASS 17735 . 17740) (punctuation 17733 . 17734) (TEMPLATE 17725 . 17733) (punctuation 17129 . 17130) (punctuation 17128 . 17129) (punctuation 17110 . 17111) (punctuation 17099 . 17100) (punctuation 17098 . 17099) (punctuation 17097 . 17098) (punctuation 17075 . 17076) (punctuation 17074 . 17075) (punctuation 17052 . 17053) (punctuation 16999 . 17000) (punctuation 16943 . 16944) (CONST 16938 . 16943) (punctuation 16936 . 16937) (punctuation 16914 . 16915) (punctuation 16913 . 16914) (punctuation 16891 . 16892) (punctuation 16844 . 16845) (symbol 16838 . 16844) (punctuation 16837 . 16838) (symbol 16835 . 16837) (punctuation 16834 . 16835) (punctuation 16833 . 16834) (symbol 16830 . 16833) (punctuation 16829 . 16830) (punctuation 16828 . 16829) (symbol 16823 . 16828) (punctuation 16822 . 16823) (punctuation 16821 . 16822) (punctuation 16820 . 16821) (symbol 16810 . 16820) (punctuation 16809 . 16810) (symbol 16800 . 16809) (punctuation 16799 . 16800) (symbol 16784 . 16799) (punctuation 16782 . 16783) (symbol 16776 . 16782) (CLASS 16770 . 16775) (punctuation 16768 . 16769) (symbol 16758 . 16768) (CLASS 16752 . 16757) (punctuation 16750 . 16751) (symbol 16741 . 16750) (CLASS 16735 . 16740) (punctuation 16733 . 16734) (TEMPLATE 16725 . 16733) (punctuation 7636 . 7637) (punctuation 7621 . 7622) (symbol 7605 . 7620) (CLASS 7599 . 7604) (punctuation 7597 . 7598) (symbol 7583 . 7596) (punctuation 7581 . 7582) (symbol 7574 . 7580) (CLASS 7568 . 7573) (punctuation 7566 . 7567) (symbol 7562 . 7566) (CLASS 7556 . 7561) (punctuation 7554 . 7555) (symbol 7544 . 7554) (CLASS 7538 . 7543) (punctuation 7536 . 7537) (symbol 7527 . 7536) (CLASS 7521 . 7526) (punctuation 7519 . 7520) (TEMPLATE 7511 . 7519) (punctuation 6137 . 6138) (punctuation 6123 . 6124) (punctuation 6121 . 6122) (symbol 6115 . 6121) (punctuation 6114 . 6115) (symbol 6112 . 6114) (punctuation 6111 . 6112) (punctuation 6110 . 6111) (symbol 6107 . 6110) (punctuation 6106 . 6107) (punctuation 6105 . 6106) (symbol 6100 . 6105) (punctuation 6099 . 6100) (punctuation 6098 . 6099) (punctuation 6097 . 6098) (symbol 6095 . 6097) (punctuation 6094 . 6095) (symbol 6092 . 6094) (punctuation 6091 . 6092) (symbol 6077 . 6091) (CLASS 6071 . 6076) (punctuation 6069 . 6070) (symbol 6063 . 6069) (CLASS 6057 . 6062) (punctuation 6055 . 6056) (symbol 6053 . 6055) (CLASS 6047 . 6052) (punctuation 6045 . 6046) (symbol 6043 . 6045) (CLASS 6037 . 6042) (punctuation 6035 . 6036) (TEMPLATE 6027 . 6035) (punctuation 4592 . 4593) (punctuation 4578 . 4579) (symbol 4563 . 4577) (CLASS 4557 . 4562) (punctuation 4555 . 4556) (symbol 4548 . 4554) (CLASS 4542 . 4547) (punctuation 4540 . 4541) (symbol 4536 . 4540) (CLASS 4530 . 4535) (punctuation 4528 . 4529) (symbol 4526 . 4528) (CLASS 4520 . 4525) (punctuation 4518 . 4519) (symbol 4516 . 4518) (CLASS 4510 . 4515) (punctuation 4508 . 4509) (TEMPLATE 4500 . 4508) (symbol 3555 . 3577) (CONST 3549 . 3554) (symbol 3460 . 3482) (symbol 3365 . 3387) (CONST 3359 . 3364) (symbol 3270 . 3292) (symbol 2904 . 2926) (TYPEDEF 2896 . 2903) (symbol 2831 . 2853) (TYPEDEF 2823 . 2830) (symbol 2302 . 2324) (CONST 2296 . 2301) (symbol 2207 . 2229) (symbol 2112 . 2134) (CONST 2106 . 2111) (symbol 2017 . 2039) (symbol 1604 . 1626) (TYPEDEF 1596 . 1603) (symbol 1533 . 1555) (TYPEDEF 1525 . 1532))
+      :lexical-table 
+        '(("BOOST_BIMAP_RELATION_STRUCTURED_PAIR_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_RELATION_SYMMETRICAL_BASE_HPP" variable (:constant-flag t) nil [366 407])
+            ("boost/config.hpp" include (:system-flag t) nil [452 479])
+            ("boost/mpl/if.hpp" include (:system-flag t) nil [481 508])
+            ("boost/type_traits/remove_const.hpp" include (:system-flag t) nil [509 554])
+            ("boost/bimap/tags/tagged.hpp" include (:system-flag t) nil [571 609])
+            ("boost/bimap/tags/support/default_tagged.hpp" include (:system-flag t) nil [610 664])
+            ("boost/bimap/relation/member_at.hpp" include (:system-flag t) nil [666 711])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("relation" type
+                               (:members 
+                                  ( ("symmetrical_base" type
+                                       (:template 
+                                          ( ("TA" type (:type "class") nil nil)
+                                            ("TB" type (:type "class") nil nil)
+                                            ("bool" type (:typevar "force_mutable") nil nil))                                          
+                                        :type "class"
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [975 982])
+                                            ("tagged_left_type" variable (:type ("tags::support::default_tagged::type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1019 1121])
+                                            ("tagged_right_type" variable (:type ("tags::support::default_tagged::type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1158 1262])
+                                            ("public" label nil (reparse-symbol classsubparts) [1268 1275])
+                                            ("left_value_type" type
+                                               (:typedef ("BOOST_DEDUCED_TYPENAME::boost::mpl::if_c::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1339 1638])
+                                            ("right_value_type" type
+                                               (:typedef ("BOOST_DEDUCED_TYPENAME::boost::mpl::if_c::type" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1648 1950])
+                                            ("left_tag" variable (:type ("tagged_left_type::tag" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2082 2115])
+                                            ("right_tag" variable (:type ("tagged_right_type::tag" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2155 2188]))                                          )
+                                        (reparse-symbol namespacesubparts) [886 2200]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [751 2205]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [732 2229]))                  
+                :type "namespace")
+                nil [714 2251]))          
+      :file "symmetrical_base.hpp"
+      :pointmax 2326
+      :fsize 2325
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((symbol 2132 . 2154) (TYPEDEF 2124 . 2131) (symbol 2059 . 2081) (TYPEDEF 2051 . 2058) (symbol 1135 . 1157) (TYPEDEF 1127 . 1134) (symbol 996 . 1018) (TYPEDEF 988 . 995))
+      :lexical-table 
+        '(("BOOST_BIMAP_RELATION_SYMMETRICAL_BASE_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_RELATION_PAIR_LAYOUT_HPP" variable (:constant-flag t) nil [345 381])
+            ("boost/config.hpp" include (:system-flag t) nil [426 453])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("relation" type
+                               (:members 
+                                  ( ("normal_layout" type (:type "struct") (reparse-symbol namespacesubparts) [570 594])
+                                    ("mirror_layout" type (:type "struct") (reparse-symbol namespacesubparts) [646 670])
+                                    ("inverse_layout" type
+                                       (:template 
+                                          ( ("Layout" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("type" type
+                                               (:typedef ("normal_layout" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1119 1146]))                                          )
+                                        (reparse-symbol namespacesubparts) [1066 1149])
+                                    ("inverse_layout" type
+                                       (:type "struct"
+                                        :members 
+                                          ( ("type" type
+                                               (:typedef ("mirror_layout" type (:type "class") nil nil)
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [1207 1234]))                                          
+                                        :template-specifier 
+                                          ( ("normal_layout" type nil nil nil))                                          )
+                                        (reparse-symbol namespacesubparts) [1151 1237]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [492 1308]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [473 1332]))                  
+                :type "namespace")
+                nil [455 1354]))          
+      :file "pair_layout.hpp"
+      :pointmax 1430
+      :fsize 1429
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_BIMAP_RELATION_PAIR_LAYOUT_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.67.0_1!include!boost!bimap!relation!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

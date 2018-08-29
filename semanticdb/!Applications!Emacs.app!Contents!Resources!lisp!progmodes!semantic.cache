@@ -1,0 +1,549 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags 
+        '( ("ansi-color" include nil nil [12247 12268])
+            ("cl-lib" include nil nil [12269 12286])
+            ("comint" include nil nil [12287 12304])
+            ("json" include nil nil [12305 12320])
+            ("tramp-sh" include nil nil [12321 12340])
+            ("view-return-to-alist" variable nil nil [12369 12398])
+            ("compilation-error-regexp-alist" variable nil nil [12399 12438])
+            ("outline-heading-end-regexp" variable nil nil [12439 12474])
+            ("comint-mode" function (:prototype-flag t) nil [12476 12508])
+            ("help-function-arglist" function (:prototype-flag t) nil [12509 12553])
+            ("add-to-list" code nil nil [12570 12647])
+            ("add-to-list" code nil nil [12663 12747])
+            ("python" customgroup (:user-visible-flag t) nil [12749 12905])
+            ("unless" code nil nil [12927 13001])
+            ("python-mode-map" variable (:default-value (let ((map (make-sparse-keymap))) (define-key map [remap backward-sentence] (quote python-nav-backward-block)) (define-key map [remap forward-sentence] (quote python-nav-forward-block)) (define-key map [remap backward-up-list] (quote python-nav-backward-up-list)) (define-key map [remap mark-defun] (quote python-mark-defun)) (define-key map "
+" (quote imenu)) (define-key map "" (quote python-indent-dedent-line-backspace)) (define-key map (kbd "<backtab>") (quote python-indent-dedent-line)) (define-key map "<" (quote python-indent-shift-left)) (define-key map ">" (quote python-indent-shift-right)) (define-key map "c" (quote python-skeleton-class)) (define-key map "d" (quote python-skeleton-def)) (define-key map "f" (quote python-skeleton-for)) (define-key map "i" (quote python-skeleton-if)) (define-key map "m" (quote python-skeleton-import)) (define-key map "t" (quote python-skeleton-try)) (define-key map "w" (quote python-skeleton-while)) (define-key map "" (quote run-python)) (define-key map "" (quote python-shell-send-string)) (define-key map "" (quote python-shell-send-region)) (define-key map "\230" (quote python-shell-send-defun)) (define-key map "" (quote python-shell-send-buffer)) (define-key map "" (quote python-shell-send-file)) (define-key map "" (quote python-shell-switch-to-shell)) (define-key map "" (quote python-check)) (define-key map "" (quote python-eldoc-at-point)) (define-key map "" (quote python-describe-at-point)) (substitute-key-definition (quote complete-symbol) (quote completion-at-point) map global-map) (easy-menu-define python-menu map "Python Mode menu" (\` ("Python" :help "Python-specific Features" ["Shift region left" python-indent-shift-left :active mark-active :help "Shift region left by a single indentation step"] ["Shift region right" python-indent-shift-right :active mark-active :help "Shift region right by a single indentation step"] "-" ["Start of def/class" beginning-of-defun :help "Go to start of outermost definition around point"] ["End of def/class" end-of-defun :help "Go to end of definition around point"] ["Mark def/class" mark-defun :help "Mark outermost definition around point"] ["Jump to def/class" imenu :help "Jump to a class or function definition"] "--" ("Skeletons") "---" ["Start interpreter" run-python :help "Run inferior Python process in a separate buffer"] ["Switch to shell" python-shell-switch-to-shell :help "Switch to running inferior Python process"] ["Eval string" python-shell-send-string :help "Eval string in inferior Python session"] ["Eval buffer" python-shell-send-buffer :help "Eval buffer in inferior Python session"] ["Eval region" python-shell-send-region :help "Eval region in inferior Python session"] ["Eval defun" python-shell-send-defun :help "Eval defun in inferior Python session"] ["Eval file" python-shell-send-file :help "Eval file in inferior Python session"] ["Debugger" pdb :help "Run pdb under GUD"] "----" ["Check file" python-check :help "Check file for errors"] ["Help on symbol" python-eldoc-at-point :help "Get help on symbol at point"] ["Complete symbol" completion-at-point :help "Complete symbol before point"]))) map)) nil [13019 16779])
+            ("python-rx" function (:arguments ("regexps")) nil [20634 21045])
+            ("python-rx-constituents" variable
+               (:constant-flag t
+                :default-value (\` ((block-start \, (rx symbol-start (or "def" "class" "if" "elif" "else" "try" "except" "finally" "for" "while" "with" (and "async" (+ space) (or "def" "for" "with"))) symbol-end)) (dedenter \, (rx symbol-start (or "elif" "else" "except" "finally") symbol-end)) (block-ender \, (rx symbol-start (or "break" "continue" "pass" "raise" "return") symbol-end)) (decorator \, (rx line-start (* space) 64 (any letter 95) (* (any word 95)))) (defun \, (rx symbol-start (or "def" "class" (and "async" (+ space) "def")) symbol-end)) (if-name-main \, (rx line-start "if" (+ space) "__name__" (+ space) "==" (+ space) (any 39 34) "__main__" (any 39 34) (* space) 58)) (symbol-name \, (rx (any letter 95) (* (any word 95)))) (open-paren \, (rx (or "{" "[" "("))) (close-paren \, (rx (or "}" "]" ")"))) (simple-operator \, (rx (any 43 45 47 38 94 126 124 42 60 62 61 37))) (not-simple-operator \, (rx (not (any 43 45 47 38 94 126 124 42 60 62 61 37)))) (operator \, (rx (or "+" "-" "/" "&" "^" "~" "|" "*" "<" ">" "=" "%" "**" "//" "<<" ">>" "<=" "!=" "==" ">=" "is" "not"))) (assignment-operator \, (rx (or "=" "+=" "-=" "*=" "/=" "//=" "%=" "**=" ">>=" "<<=" "&=" "^=" "|="))) (string-delimiter \, (rx (and (or (not (any 92 39 34)) point (and (or (not (any 92)) point) 92 (* 92 92) (any 39 34))) (* 92 92) (group (or "\"" "\"\"\"" "'" "'''"))))) (coding-cookie \, (rx line-start 35 (* space) (or (: "coding" (or 58 61) (* space) (group-n 1 (+ (or word 45)))) (: "-*-" (* space) "coding:" (* space) (group-n 1 (+ (or word 45))) (* space) "-*-") (: "vim:" (* space) "set" (+ space) "fileencoding" (* space) 61 (* space) (group-n 1 (+ (or word 45))) (* space) ":")))))))
+                nil [16830 20630])
+            ("python-syntax--context-compiler-macro" function (:arguments ("form" "type" "syntax-ppss")) nil [21096 21500])
+            ("python-syntax-context" function (:arguments ("type" "syntax-ppss")) nil [21503 21997])
+            ("python-syntax-context-type" function (:arguments ("syntax-ppss")) nil [21999 22302])
+            ("python-syntax-comment-or-string-p" function (:arguments ("ppss")) nil [22304 22455])
+            ("python-syntax-closing-paren-p" function nil nil [22457 22650])
+            ("define-obsolete-function-alias" code nil nil [22652 22743])
+            ("define-obsolete-function-alias" code nil nil [22745 22846])
+            ("define-obsolete-function-alias" code nil nil [22848 22965])
+            ("python-font-lock-syntactic-face-function" function (:arguments ("state")) nil [22967 23212])
+            ("python-font-lock-keywords" variable (:default-value (\` ((\, (rx symbol-start (or "and" "del" "from" "not" "while" "as" "elif" "global" "or" "with" "assert" "else" "if" "pass" "yield" "break" "except" "import" "class" "in" "raise" "continue" "finally" "is" "return" "def" "for" "lambda" "try" "print" "exec" "nonlocal" (and "async" (+ space) (or "def" "for" "with")) "await" "self") symbol-end)) ((\, (rx symbol-start "def" (1+ space) (group (1+ (or word 95))))) (1 font-lock-function-name-face)) ((\, (rx symbol-start "class" (1+ space) (group (1+ (or word 95))))) (1 font-lock-type-face)) ((\, (rx symbol-start (or "Ellipsis" "False" "None" "NotImplemented" "True" "__debug__" "copyright" "credits" "exit" "license" "quit") symbol-end)) . font-lock-constant-face) ((\, (rx line-start (* (any " 	")) (group "@" (1+ (or word 95)) (0+ "." (1+ (or word 95)))))) (1 font-lock-type-face)) ((\, (rx symbol-start (or "ArithmeticError" "AssertionError" "AttributeError" "BaseException" "BufferError" "BytesWarning" "DeprecationWarning" "EOFError" "EnvironmentError" "Exception" "FloatingPointError" "FutureWarning" "GeneratorExit" "IOError" "ImportError" "ImportWarning" "IndentationError" "IndexError" "KeyError" "KeyboardInterrupt" "LookupError" "MemoryError" "NameError" "NotImplementedError" "OSError" "OverflowError" "PendingDeprecationWarning" "ReferenceError" "RuntimeError" "RuntimeWarning" "StopIteration" "SyntaxError" "SyntaxWarning" "SystemError" "SystemExit" "TabError" "TypeError" "UnboundLocalError" "UnicodeDecodeError" "UnicodeEncodeError" "UnicodeError" "UnicodeTranslateError" "UnicodeWarning" "UserWarning" "ValueError" "Warning" "ZeroDivisionError" "StandardError" "BlockingIOError" "BrokenPipeError" "ChildProcessError" "ConnectionAbortedError" "ConnectionError" "ConnectionRefusedError" "ConnectionResetError" "FileExistsError" "FileNotFoundError" "InterruptedError" "IsADirectoryError" "NotADirectoryError" "PermissionError" "ProcessLookupError" "RecursionError" "ResourceWarning" "StopAsyncIteration" "TimeoutError" "VMSError" "WindowsError") symbol-end)) . font-lock-type-face) ((\, (rx symbol-start (or "abs" "all" "any" "bin" "bool" "callable" "chr" "classmethod" "compile" "complex" "delattr" "dict" "dir" "divmod" "enumerate" "eval" "filter" "float" "format" "frozenset" "getattr" "globals" "hasattr" "hash" "help" "hex" "id" "input" "int" "isinstance" "issubclass" "iter" "len" "list" "locals" "map" "max" "memoryview" "min" "next" "object" "oct" "open" "ord" "pow" "print" "property" "range" "repr" "reversed" "round" "set" "setattr" "slice" "sorted" "staticmethod" "str" "sum" "super" "tuple" "type" "vars" "zip" "__import__" "basestring" "cmp" "execfile" "file" "long" "raw_input" "reduce" "reload" "unichr" "unicode" "xrange" "apply" "buffer" "coerce" "intern" "ascii" "bytearray" "bytes" "exec" "__all__" "__doc__" "__name__" "__package__") symbol-end)) . font-lock-builtin-face) ((\, (lambda (limit) (let ((re (python-rx (group (+ (any word 46 95))) (32 91 (+ (not (any 93))) 93) (* space) assignment-operator)) (res nil)) (while (and (setq res (re-search-forward re limit t)) (or (python-syntax-context (quote paren)) (equal (char-after (point)) 61)))) res))) (1 font-lock-variable-name-face nil nil)) ((\, (lambda (limit) (let ((re (python-rx (group (+ (any word 46 95))) (* space) (* 44 (* space) (+ (any word 46 95)) (* space)) 44 (* space) (+ (any word 46 95)) (* space) assignment-operator)) (res nil)) (while (and (setq res (re-search-forward re limit t)) (goto-char (match-end 1)) (python-syntax-context (quote paren)))) res))) (1 font-lock-variable-name-face nil nil))))) nil [23214 28663])
+            ("python-syntax-propertize-function" variable
+               (:constant-flag t
+                :default-value (syntax-propertize-rules ((python-rx string-delimiter) (0 (ignore (python-syntax-stringify))))))
+                nil [28665 28814])
+            ("python-prettify-symbols-alist" variable (:default-value (quote (("lambda" . 955) ("and" . 8743) ("or" . 8744)))) nil [28816 28966])
+            ("define-obsolete-variable-alias" code nil nil [28968 29072])
+            ("python-syntax-count-quotes" function (:arguments ("quote-char" "point" "limit")) nil [29074 29541])
+            ("python-syntax-stringify" function nil nil [29543 31173])
+            ("python-mode-syntax-table" variable (:default-value (let ((table (make-syntax-table))) (let ((symbol (string-to-syntax "_")) (sst (standard-syntax-table))) (dotimes (i 128) (unless (= i 95) (if (equal symbol (aref sst i)) (modify-syntax-entry i "." table))))) (modify-syntax-entry 36 "." table) (modify-syntax-entry 37 "." table) (modify-syntax-entry 35 "<" table) (modify-syntax-entry 10 ">" table) (modify-syntax-entry 39 "\"" table) (modify-syntax-entry 96 "$" table) table)) nil [31175 31888])
+            ("python-dotty-syntax-table" variable (:default-value (let ((table (make-syntax-table python-mode-syntax-table))) (modify-syntax-entry 46 "w" table) (modify-syntax-entry 95 "w" table) table)) nil [31890 32170])
+            ("define-obsolete-variable-alias" code nil nil [32191 32269])
+            ("python-indent-offset" variable (:default-value 4) nil [32271 32400])
+            ("define-obsolete-variable-alias" code nil nil [32402 32499])
+            ("python-indent-guess-indent-offset" variable (:default-value t) nil [32501 32669])
+            ("python-indent-guess-indent-offset-verbose" variable (:default-value t) nil [32671 32865])
+            ("python-indent-trigger-commands" variable (:default-value (quote (indent-for-tab-command yas-expand yas/expand))) nil [32867 33062])
+            ("python-indent-def-block-scale" variable (:default-value 2) nil [33064 33227])
+            ("python-indent-current-level" variable nil nil [33229 33315])
+            ("python-indent-levels" variable (:default-value (quote (0))) nil [33317 33399])
+            ("make-obsolete-variable" code nil nil [33401 33758])
+            ("make-obsolete-variable" code nil nil [33760 34110])
+            ("python-indent-guess-indent-offset" function (:user-visible-flag t) nil [34112 35721])
+            ("python-indent-context" function nil nil [35723 44353])
+            ("python-indent--calculate-indentation" function nil nil [44355 46938])
+            ("python-indent--calculate-levels" function (:arguments ("indentation")) nil [46940 47429])
+            ("python-indent--previous-level" function (:arguments ("levels" "indentation")) nil [47431 47781])
+            ("python-indent-calculate-indentation" function (:arguments ("previous")) nil [47783 48298])
+            ("python-indent-line" function (:arguments ("previous")) nil [48300 49071])
+            ("python-indent-calculate-levels" function nil nil [49073 49232])
+            ("python-indent-line-function" function nil nil [49234 49600])
+            ("python-indent-dedent-line" function (:user-visible-flag t) nil [49602 49858])
+            ("python-indent-dedent-line-backspace" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [49860 50141])
+            ("put" code nil nil [50143 50214])
+            ("python-indent-region" function (:arguments ("start" "end")) nil [50216 52112])
+            ("python-indent-shift-left" function
+               (:user-visible-flag t
+                :arguments ("start" "end" "count"))
+                nil [52114 53142])
+            ("python-indent-shift-right" function
+               (:user-visible-flag t
+                :arguments ("start" "end" "count"))
+                nil [53144 53788])
+            ("python-indent-post-self-insert-function" function nil nil [53790 56132])
+            ("python-mark-defun" function
+               (:user-visible-flag t
+                :arguments ("allow-extend"))
+                nil [56146 56619])
+            ("python-nav-beginning-of-defun-regexp" variable (:default-value (python-rx line-start (* space) defun (+ space) (group symbol-name))) nil [56639 56888])
+            ("python-nav--beginning-of-defun" function (:arguments ("arg")) nil [56890 58893])
+            ("python-nav-beginning-of-defun" function (:arguments ("arg")) nil [58895 59625])
+            ("python-nav-end-of-defun" function (:user-visible-flag t) nil [59627 60393])
+            ("python-nav--syntactically" function (:arguments ("fn" "poscompfn" "contextfn")) nil [60395 61618])
+            ("python-nav--forward-defun" function (:arguments ("arg")) nil [61620 62445])
+            ("python-nav-backward-defun" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [62447 62696])
+            ("python-nav-forward-defun" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [62698 62941])
+            ("python-nav-beginning-of-statement" function (:user-visible-flag t) nil [62943 63570])
+            ("python-nav-end-of-statement" function
+               (:user-visible-flag t
+                :arguments ("noend"))
+                nil [63572 65838])
+            ("python-nav-backward-statement" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [65840 66075])
+            ("python-nav-forward-statement" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [66077 66613])
+            ("python-nav-beginning-of-block" function (:user-visible-flag t) nil [66615 67587])
+            ("python-nav-end-of-block" function (:user-visible-flag t) nil [67589 68189])
+            ("python-nav-backward-block" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [68191 68418])
+            ("python-nav-forward-block" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [68420 69372])
+            ("python-nav--lisp-forward-sexp" function (:arguments ("arg")) nil [69374 69749])
+            ("python-nav--lisp-forward-sexp-safe" function (:arguments ("arg")) nil [69751 70452])
+            ("python-nav--forward-sexp" function (:arguments ("dir" "safe" "skip-parens-p")) nil [70454 75379])
+            ("python-nav-forward-sexp" function
+               (:user-visible-flag t
+                :arguments ("arg" "safe" "skip-parens-p"))
+                nil [75381 76948])
+            ("python-nav-backward-sexp" function
+               (:user-visible-flag t
+                :arguments ("arg" "safe" "skip-parens-p"))
+                nil [76950 77500])
+            ("python-nav-forward-sexp-safe" function
+               (:user-visible-flag t
+                :arguments ("arg" "skip-parens-p"))
+                nil [77502 77929])
+            ("python-nav-backward-sexp-safe" function
+               (:user-visible-flag t
+                :arguments ("arg" "skip-parens-p"))
+                nil [77931 78360])
+            ("python-nav--up-list" function (:arguments ("dir")) nil [78362 79945])
+            ("python-nav-up-list" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [79947 80405])
+            ("python-nav-backward-up-list" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [80407 80760])
+            ("python-nav-if-name-main" function (:user-visible-flag t) nil [80762 81674])
+            ("python-shell-buffer-name" variable (:default-value "Python") nil [81701 81844])
+            ("python-shell-interpreter" variable (:default-value "python") nil [81846 81966])
+            ("python-shell-internal-buffer-name" variable (:default-value "Python Internal") nil [81968 82142])
+            ("python-shell-interpreter-args" variable (:default-value "-i") nil [82144 82273])
+            ("python-shell-interpreter-interactive-arg" variable (:default-value "-i") nil [82275 82425])
+            ("python-shell-prompt-detect-enabled" variable (:default-value t) nil [82427 82586])
+            ("python-shell-prompt-detect-failure-warning" variable (:default-value t) nil [82588 82758])
+            ("python-shell-prompt-input-regexps" variable (:default-value (quote (">>> " "\\.\\.\\. " "In \\[[0-9]+\\]: " "   \\.\\.\\.: " "In : " "\\.\\.\\.: "))) nil [82760 83220])
+            ("python-shell-prompt-output-regexps" variable (:default-value (quote ("" "Out\\[[0-9]+\\]: " "Out :"))) nil [83222 83524])
+            ("python-shell-prompt-regexp" variable (:default-value ">>> ") nil [83526 83711])
+            ("python-shell-prompt-block-regexp" variable (:default-value "\\.\\.\\. ") nil [83713 83906])
+            ("python-shell-prompt-output-regexp" variable nil nil [83908 84087])
+            ("python-shell-prompt-pdb-regexp" variable (:default-value "[(<]*[Ii]?[Pp]db[>)]+ ") nil [84089 84290])
+            ("define-obsolete-variable-alias" code nil nil [84292 84395])
+            ("python-shell-font-lock-enable" variable (:default-value t) nil [84397 84639])
+            ("python-shell-unbuffered" variable (:default-value t) nil [84641 84878])
+            ("python-shell-process-environment" variable nil nil [84880 85302])
+            ("python-shell-extra-pythonpaths" variable nil nil [85304 85699])
+            ("python-shell-exec-path" variable nil nil [85701 86077])
+            ("python-shell-remote-exec-path" variable nil nil [86079 86595])
+            ("define-obsolete-variable-alias" code nil nil [86597 86698])
+            ("python-shell-virtualenv-root" variable nil nil [86700 86963])
+            ("python-shell-setup-codes" variable nil nil [86965 87104])
+            ("python-shell-compilation-regexp-alist" variable (:default-value (\` (((\, (rx line-start (1+ (any " 	")) "File \"" (group (1+ (not (any "\"<")))) "\", line " (group (1+ digit)))) 1 2) ((\, (rx " in file " (group (1+ not-newline)) " on line " (group (1+ digit)))) 1 2) ((\, (rx line-start "> " (group (1+ (not (any "(\"<")))) "(" (group (1+ digit)) ")" (1+ (not (any "("))) "()")) 1 2)))) nil [87106 87648])
+            ("python-shell--add-to-path-with-priority" function (:arguments ("pathvar" "paths")) nil [87650 87917])
+            ("python-shell-calculate-pythonpath" function nil nil [87919 88285])
+            ("python-shell-calculate-process-environment" function nil nil [88287 89501])
+            ("python-shell-calculate-exec-path" function nil nil [89503 90556])
+            ("python-shell-tramp-refresh-remote-path" function (:arguments ("vec" "paths")) nil [90558 90937])
+            ("python-shell-tramp-refresh-process-environment" function (:arguments ("vec" "env")) nil [90939 92134])
+            ("python-shell-with-environment" function (:arguments ("body")) nil [92136 94185])
+            ("python-shell--prompt-calculated-input-regexp" variable nil nil [94187 94399])
+            ("python-shell--block-prompt" variable nil nil [94401 94583])
+            ("python-shell--prompt-calculated-output-regexp" variable nil nil [94585 94787])
+            ("python-shell-prompt-detect" function nil nil [94789 98863])
+            ("python-shell-prompt-validate-regexps" function nil nil [98865 99906])
+            ("python-shell-prompt-set-calculated-regexps" function nil nil [99908 102705])
+            ("python-shell-get-process-name" function (:arguments ("dedicated")) nil [102707 103082])
+            ("python-shell-internal-get-process-name" function nil nil [103084 103358])
+            ("python-shell-calculate-command" function nil nil [103360 103731])
+            ("define-obsolete-function-alias" code nil nil [103733 103837])
+            ("python-shell--package-depth" variable (:default-value 10) nil [103839 103878])
+            ("python-shell-package-enable" function
+               (:user-visible-flag t
+                :arguments ("directory" "package"))
+                nil [103880 104663])
+            ("python-shell-accept-process-output" function (:arguments ("process" "timeout" "regexp")) nil [104665 105649])
+            ("python-shell-comint-end-of-output-p" function (:arguments ("output")) nil [105651 106099])
+            ("define-obsolete-function-alias" code nil nil [106101 106209])
+            ("python-comint-postoutput-scroll-to-bottom" function (:arguments ("output")) nil [106211 106582])
+            ("python-shell--parent-buffer" variable nil nil [106584 106624])
+            ("python-shell-with-shell-buffer" function (:arguments ("body")) nil [106626 107054])
+            ("python-shell--font-lock-buffer" variable nil nil [107056 107099])
+            ("python-shell-font-lock-get-or-create-buffer" function nil nil [107101 107510])
+            ("python-shell-font-lock-kill-buffer" function nil nil [107512 107848])
+            ("python-shell-font-lock-with-font-lock-buffer" function (:arguments ("body")) nil [107850 108709])
+            ("python-shell-font-lock-cleanup-buffer" function (:user-visible-flag t) nil [108711 109043])
+            ("python-shell-font-lock-comint-output-filter-function" function (:arguments ("output")) nil [109045 109749])
+            ("python-shell-font-lock-post-command-hook" function nil nil [109751 111799])
+            ("python-shell-font-lock-turn-on" function
+               (:user-visible-flag t
+                :arguments ("msg"))
+                nil [111801 112493])
+            ("python-shell-font-lock-turn-off" function
+               (:user-visible-flag t
+                :arguments ("msg"))
+                nil [112495 113422])
+            ("python-shell-font-lock-toggle" function
+               (:user-visible-flag t
+                :arguments ("msg"))
+                nil [113424 113890])
+            ("python-shell--first-prompt-received-output-buffer" variable nil nil [113892 113954])
+            ("python-shell--first-prompt-received" variable nil nil [113955 114003])
+            ("python-shell-first-prompt-hook" variable nil nil [114005 114430])
+            ("python-shell-comint-watch-for-first-prompt-output-filter" function (:arguments ("output")) nil [114432 115519])
+            ("python-shell--interpreter" variable nil nil [115694 115728])
+            ("python-shell--interpreter-args" variable nil nil [115729 115768])
+            ("define-derived-mode" code nil nil [115770 118831])
+            ("python-shell-make-comint" function (:arguments ("cmd" "proc-name" "show" "internal")) nil [118833 120797])
+            ("run-python" function
+               (:user-visible-flag t
+                :arguments ("cmd" "dedicated" "show"))
+                nil [120814 122015])
+            ("run-python-internal" function nil nil [122017 122953])
+            ("python-shell-get-buffer" function nil nil [122955 123753])
+            ("python-shell-get-process" function nil nil [123755 123894])
+            ("python-shell-get-process-or-error" function (:arguments ("interactivep")) nil [123896 124496])
+            ("python-shell-get-or-create-process" function (:arguments ("cmd" "dedicated" "show")) nil [124498 125214])
+            ("make-obsolete" code nil nil [125216 125351])
+            ("python-shell-internal-buffer" variable nil nil [125353 125554])
+            ("python-shell-internal-last-output" variable nil nil [125556 125752])
+            ("python-shell-internal-get-or-create-process" function nil nil [125754 126022])
+            ("define-obsolete-function-alias" code nil nil [126024 126123])
+            ("define-obsolete-variable-alias" code nil nil [126125 126211])
+            ("define-obsolete-variable-alias" code nil nil [126213 126314])
+            ("python-shell--save-temp-file" function (:arguments ("string")) nil [126316 126767])
+            ("python-shell-send-string" function
+               (:user-visible-flag t
+                :arguments ("string" "process" "msg"))
+                nil [126769 127622])
+            ("python-shell-output-filter-in-progress" variable nil nil [127624 127675])
+            ("python-shell-output-filter-buffer" variable nil nil [127676 127722])
+            ("python-shell-output-filter" function (:arguments ("string")) nil [127724 128957])
+            ("python-shell-send-string-no-output" function (:arguments ("string" "process")) nil [128959 129864])
+            ("python-shell-internal-send-string" function (:arguments ("string")) nil [129866 130451])
+            ("define-obsolete-function-alias" code nil nil [130453 130550])
+            ("define-obsolete-function-alias" code nil nil [130552 130648])
+            ("python-shell-buffer-substring" function (:arguments ("start" "end" "nomain")) nil [130650 133970])
+            ("python-shell-send-region" function
+               (:user-visible-flag t
+                :arguments ("start" "end" "send-main" "msg"))
+                nil [133972 134950])
+            ("python-shell-send-buffer" function
+               (:user-visible-flag t
+                :arguments ("send-main" "msg"))
+                nil [134952 135592])
+            ("python-shell-send-defun" function
+               (:user-visible-flag t
+                :arguments ("arg" "msg"))
+                nil [135594 136486])
+            ("python-shell-send-file" function
+               (:user-visible-flag t
+                :arguments ("file-name" "process" "temp-file-name" "delete" "msg"))
+                nil [136488 138263])
+            ("python-shell-switch-to-shell" function
+               (:user-visible-flag t
+                :arguments ("msg"))
+                nil [138265 138620])
+            ("python-shell-send-setup-code" function nil nil [138622 139302])
+            ("add-hook" code nil nil [139304 139387])
+            ("python-shell-completion-setup-code" variable (:default-value "
+def __PYTHON_EL_get_completions(text):
+    completions = []
+    completer = None
+
+    try:
+        import readline
+
+        try:
+            import __builtin__
+        except ImportError:
+            # Python 3
+            import builtins as __builtin__
+        builtins = dir(__builtin__)
+
+        is_ipython = ('__IPYTHON__' in builtins or
+                      '__IPYTHON__active' in builtins)
+        splits = text.split()
+        is_module = splits and splits[0] in ('from', 'import')
+
+        if is_ipython and is_module:
+            from IPython.core.completerlib import module_completion
+            completions = module_completion(text.strip())
+        elif is_ipython and '__IP' in builtins:
+            completions = __IP.complete(text)
+        elif is_ipython and 'get_ipython' in builtins:
+            completions = get_ipython().Completer.all_completions(text)
+        else:
+            # Try to reuse current completer.
+            completer = readline.get_completer()
+            if not completer:
+                # importing rlcompleter sets the completer, use it as a
+                # last resort to avoid breaking customizations.
+                import rlcompleter
+                completer = readline.get_completer()
+            if getattr(completer, 'PYTHON_EL_WRAPPED', False):
+                completer.print_mode = False
+            i = 0
+            while True:
+                completion = completer(text, i)
+                if not completion:
+                    break
+                i += 1
+                completions.append(completion)
+    except:
+        pass
+    finally:
+        if getattr(completer, 'PYTHON_EL_WRAPPED', False):
+            completer.print_mode = True
+    return completions") nil [139413 141288])
+            ("define-obsolete-variable-alias" code nil nil [141290 141475])
+            ("define-obsolete-variable-alias" code nil nil [141477 141649])
+            ("python-shell-completion-string-code" variable (:default-value "';'.join(__PYTHON_EL_get_completions('''%s'''))") nil [141651 141967])
+            ("python-shell-completion-native-disabled-interpreters" variable (:default-value (if (eq system-type (quote windows-nt)) (quote ("")) (quote ("pypy" "ipython")))) nil [141969 142434])
+            ("python-shell-completion-native-enable" variable (:default-value t) nil [142436 142567])
+            ("python-shell-completion-native-output-timeout" variable (:default-value 5.0) nil [142569 142731])
+            ("python-shell-completion-native-try-output-timeout" variable (:default-value 1.0) nil [142733 142898])
+            ("python-shell-completion-native-redirect-buffer" variable (:default-value " *Python completions redirect*") nil [142900 143053])
+            ("python-shell-completion-native-interpreter-disabled-p" function nil nil [143055 143392])
+            ("python-shell-completion-native-try" function nil nil [143394 143768])
+            ("python-shell-completion-native-setup" function nil nil [143770 149076])
+            ("python-shell-completion-native-turn-off" function
+               (:user-visible-flag t
+                :arguments ("msg"))
+                nil [149078 149440])
+            ("python-shell-completion-native-turn-on" function
+               (:user-visible-flag t
+                :arguments ("msg"))
+                nil [149442 149770])
+            ("python-shell-completion-native-turn-on-maybe" function
+               (:user-visible-flag t
+                :arguments ("msg"))
+                nil [149772 150900])
+            ("python-shell-completion-native-turn-on-maybe-with-msg" function nil nil [150902 151093])
+            ("add-hook" code nil nil [151095 151203])
+            ("python-shell-completion-native-toggle" function
+               (:user-visible-flag t
+                :arguments ("msg"))
+                nil [151205 151607])
+            ("python-shell-completion-native-get-completions" function (:arguments ("process" "import" "input")) nil [151609 154640])
+            ("python-shell-completion-get-completions" function (:arguments ("process" "import" "input")) nil [154642 155343])
+            ("python-shell-completion-at-point" function (:arguments ("process")) nil [155345 158327])
+            ("define-obsolete-function-alias" code nil nil [158329 158451])
+            ("python-shell-completion-complete-or-indent" function (:user-visible-flag t) nil [158453 158862])
+            ("python-pdbtrack-activate" variable (:default-value t) nil [158893 159034])
+            ("python-pdbtrack-stacktrace-info-regexp" variable (:default-value "> \\([^\"(<]+\\)(\\([0-9]+\\))\\([?a-zA-Z0-9_<>]+\\)()") nil [159036 159312])
+            ("python-pdbtrack-tracked-buffer" variable nil nil [159314 159506])
+            ("python-pdbtrack-buffers-to-kill" variable nil nil [159508 159611])
+            ("python-pdbtrack-set-tracked-buffer" function (:arguments ("file-name")) nil [159613 160575])
+            ("python-pdbtrack-comint-output-filter-function" function (:arguments ("output")) nil [160577 163441])
+            ("python-completion-at-point" function nil nil [163468 163844])
+            ("define-obsolete-function-alias" code nil nil [163846 163956])
+            ("python-fill-comment-function" variable (:default-value (quote python-fill-comment)) nil [163980 164176])
+            ("python-fill-string-function" variable (:default-value (quote python-fill-string)) nil [164178 164370])
+            ("python-fill-decorator-function" variable (:default-value (quote python-fill-decorator)) nil [164372 164576])
+            ("python-fill-paren-function" variable (:default-value (quote python-fill-paren)) nil [164578 164766])
+            ("python-fill-docstring-style" variable (:default-value (quote pep-257)) nil [164768 166488])
+            ("python-fill-paragraph" function
+               (:user-visible-flag t
+                :arguments ("justify"))
+                nil [166490 167755])
+            ("python-fill-comment" function (:arguments ("justify")) nil [167757 167957])
+            ("python-fill-string" function (:arguments ("justify")) nil [167959 170929])
+            ("python-fill-decorator" function (:arguments ("_justify")) nil [170931 171105])
+            ("python-fill-paren" function (:arguments ("justify")) nil [171107 172243])
+            ("define-obsolete-variable-alias" code nil nil [172262 172353])
+            ("python-skeleton-autoinsert" variable nil nil [172355 172605])
+            ("python-skeleton-available" variable (:default-value (quote nil)) nil [172607 172687])
+            ("define-abbrev-table" code nil nil [172689 173088])
+            ("python-skeleton-define" function (:arguments ("name" "doc" "skel")) nil [173090 173784])
+            ("define-abbrev-table" code nil nil [173786 173922])
+            ("python-define-auxiliary-skeleton" function (:arguments ("name" "doc" "skel")) nil [173924 174690])
+            ("python-define-auxiliary-skeleton" code nil nil [174692 174731])
+            ("python-define-auxiliary-skeleton" code nil nil [174733 174774])
+            ("python-define-auxiliary-skeleton" code nil nil [174776 174818])
+            ("python-skeleton-define" code nil nil [174820 174993])
+            ("python-skeleton-define" code nil nil [174995 175107])
+            ("python-skeleton-define" code nil nil [175109 175222])
+            ("python-skeleton-define" code nil nil [175224 175357])
+            ("python-skeleton-define" code nil nil [175359 175583])
+            ("python-skeleton-define" code nil nil [175585 175828])
+            ("python-skeleton-define" code nil nil [175830 176062])
+            ("python-skeleton-add-menu-items" function nil nil [176064 176425])
+            ("python-ffap-setup-code" variable (:default-value "
+def __FFAP_get_module_path(objstr):
+    try:
+        import inspect
+        import os.path
+        # NameError exceptions are delayed until this point.
+        obj = eval(objstr)
+        module = inspect.getmodule(obj)
+        filename = module.__file__
+        ext = os.path.splitext(filename)[1]
+        if ext in ('.pyc', '.pyo'):
+            # Point to the source file.
+            filename = filename[:-1]
+        if os.path.exists(filename):
+            return filename
+        return ''
+    except:
+        return ''") nil [176438 177072])
+            ("python-ffap-string-code" variable (:default-value "__FFAP_get_module_path('''%s''')") nil [177074 177243])
+            ("python-ffap-module-path" function (:arguments ("module")) nil [177245 177898])
+            ("ffap-alist" variable nil nil [177900 177919])
+            ("eval-after-load" code nil nil [177921 178093])
+            ("python-check-command" variable (:default-value (or (executable-find "pyflakes") (executable-find "epylint") "install pyflakes, pylint or something else")) nil [178113 178340])
+            ("python-check-buffer-name" variable (:default-value "*Python check: %s*") nil [178342 178475])
+            ("python-check-custom-command" variable nil nil [178477 178535])
+            ("make-variable-buffer-local" code nil nil [178592 178649])
+            ("python-check" function
+               (:user-visible-flag t
+                :arguments ("command"))
+                nil [178651 179619])
+            ("python-eldoc-setup-code" variable (:default-value "def __PYDOC_get_help(obj):
+    try:
+        import inspect
+        try:
+            str_type = basestring
+            argspec_function = inspect.getargspec
+        except NameError:
+            str_type = str
+            argspec_function = inspect.getfullargspec
+        if isinstance(obj, str_type):
+            obj = eval(obj, globals())
+        doc = inspect.getdoc(obj)
+        if not doc and callable(obj):
+            target = None
+            if inspect.isclass(obj) and hasattr(obj, '__init__'):
+                target = obj.__init__
+                objtype = 'class'
+            else:
+                target = obj
+                objtype = 'def'
+            if target:
+                args = inspect.formatargspec(*argspec_function(target))
+                name = obj.__name__
+                doc = '{objtype} {name}{args}'.format(
+                    objtype=objtype, name=name, args=args
+                )
+        else:
+            doc = doc.splitlines()[0]
+    except:
+        doc = ''
+    return doc") nil [179634 180769])
+            ("python-eldoc-string-code" variable (:default-value "__PYDOC_get_help('''%s''')") nil [180771 180945])
+            ("python-eldoc--get-symbol-at-point" function nil nil [180947 181444])
+            ("python-eldoc--get-doc-at-point" function (:arguments ("force-input" "force-process")) nil [181446 182433])
+            ("defvar-local" code nil nil [182435 182681])
+            ("python-eldoc-function-timeout" variable (:default-value 1) nil [182683 182830])
+            ("python-eldoc-function-timeout-permanent" variable (:default-value t) nil [182832 183041])
+            ("python-eldoc-function" function nil nil [183043 184101])
+            ("python-eldoc-at-point" function
+               (:user-visible-flag t
+                :arguments ("symbol"))
+                nil [184103 184578])
+            ("python-describe-at-point" function (:arguments ("symbol" "process")) nil [184580 184792])
+            ("python-hideshow-forward-sexp-function" function (:arguments ("arg")) nil [184810 185078])
+            ("python-imenu-format-item-label-function" variable (:default-value (quote python-imenu-format-item-label)) nil [185093 185281])
+            ("python-imenu-format-parent-item-label-function" variable (:default-value (quote python-imenu-format-parent-item-label)) nil [185283 185491])
+            ("python-imenu-format-parent-item-jump-label-function" variable (:default-value (quote python-imenu-format-parent-item-jump-label)) nil [185493 185716])
+            ("python-imenu-format-item-label" function (:arguments ("type" "name")) nil [185718 185859])
+            ("python-imenu-format-parent-item-label" function (:arguments ("type" "name")) nil [185861 186040])
+            ("python-imenu-format-parent-item-jump-label" function (:arguments ("type" "_name")) nil [186042 186255])
+            ("python-imenu--get-defun-type-name" function nil nil [186257 186612])
+            ("python-imenu--put-parent" function (:arguments ("type" "name" "pos" "tree")) nil [186614 187006])
+            ("python-imenu--build-tree" function (:arguments ("min-indent" "prev-indent" "tree")) nil [187008 188886])
+            ("python-imenu-create-index" function nil nil [188888 189333])
+            ("python-imenu-create-flat-index" function (:arguments ("alist" "prefix")) nil [189335 190970])
+            ("python-info-current-defun" function (:arguments ("include-type")) nil [190992 194025])
+            ("python-info-current-symbol" function (:arguments ("replace-self")) nil [194027 194951])
+            ("python-info-statement-starts-block-p" function nil nil [194953 195155])
+            ("python-info-statement-ends-block-p" function nil nil [195157 195559])
+            ("python-info-beginning-of-statement-p" function nil nil [195561 195771])
+            ("python-info-end-of-statement-p" function nil nil [195773 195965])
+            ("python-info-beginning-of-block-p" function nil nil [195967 196157])
+            ("python-info-end-of-block-p" function nil nil [196159 196329])
+            ("define-obsolete-function-alias" code nil nil [196331 196446])
+            ("python-info-dedenter-opening-block-position" function nil nil [196448 197132])
+            ("python-info-dedenter-opening-block-positions" function nil nil [197134 199918])
+            ("define-obsolete-function-alias" code nil nil [199920 200042])
+            ("python-info-dedenter-opening-block-message" function nil nil [200044 200455])
+            ("python-info-dedenter-statement-p" function nil nil [200457 200796])
+            ("python-info-line-ends-backslash-p" function (:arguments ("line-number")) nil [200798 201345])
+            ("python-info-beginning-of-backslash" function (:arguments ("line-number")) nil [201347 201894])
+            ("python-info-continuation-line-p" function nil nil [201896 203415])
+            ("python-info-block-continuation-line-p" function nil nil [203417 203719])
+            ("python-info-assignment-statement-p" function (:arguments ("current-line-only")) nil [203721 204706])
+            ("python-info-assignment-continuation-line-p" function nil nil [204842 205232])
+            ("python-info-looking-at-beginning-of-defun" function (:arguments ("syntax-ppss")) nil [205234 205560])
+            ("python-info-current-line-comment-p" function nil nil [205562 205758])
+            ("python-info-current-line-empty-p" function nil nil [205760 206107])
+            ("python-info-docstring-p" function (:arguments ("syntax-ppss")) nil [206109 208303])
+            ("python-info-encoding-from-cookie" function nil nil [208305 208839])
+            ("python-info-encoding" function nil nil [208841 209309])
+            ("python-util-goto-line" function (:arguments ("line-number")) nil [209336 209470])
+            ("python-util-clone-local-variables" function (:arguments ("from-buffer" "regexp")) nil [209496 209966])
+            ("comint-last-prompt-overlay" variable nil nil [209968 210003])
+            ("python-util-comint-last-prompt" function nil nil [210035 210438])
+            ("python-util-forward-comment" function (:arguments ("direction")) nil [210440 210855])
+            ("python-util-list-directories" function (:arguments ("directory" "predicate" "max-depth")) nil [210857 212062])
+            ("python-util-list-files" function (:arguments ("dir" "predicate")) nil [212064 212783])
+            ("python-util-list-packages" function (:arguments ("dir" "max-depth")) nil [212785 213570])
+            ("python-util-popn" function (:arguments ("lst" "n")) nil [213572 214002])
+            ("python-util-strip-string" function (:arguments ("string")) nil [214004 214269])
+            ("python-util-valid-regexp-p" function (:arguments ("regexp")) nil [214271 214398])
+            ("python-flymake" customgroup (:user-visible-flag t) nil [214427 214587])
+            ("python-flymake-command" variable (:default-value (quote ("pyflakes"))) nil [214589 215013])
+            ("python-flymake-command-output-pattern" variable (:default-value (list "^\\(?:<?stdin>?\\):\\(?1:[0-9]+\\):\\(?:\\(?2:[0-9]+\\):\\)? \\(?3:.*\\)$" 1 2 nil 3)) nil [215233 216270])
+            ("python-flymake-msg-alist" variable (:default-value (quote (("\\(^redefinition\\|.*unused.*\\|used$\\)" . :warning)))) nil [216272 216899])
+            ("defvar-local" code nil nil [216901 216940])
+            ("python--flymake-parse-output" function (:arguments ("source" "proc" "report-fn")) nil [216942 218537])
+            ("python-flymake" function (:arguments ("report-fn" "_args")) nil [218539 219834])
+            ("python-electric-pair-string-delimiter" function nil nil [219838 220255])
+            ("electric-indent-inhibit" variable nil nil [220257 220289])
+            ("define-derived-mode" code nil nil [220306 224011])
+            ("python" package nil nil [224014 224031]))          
+      :file "python.el.gz"
+      :pointmax 224111
+      :fsize 52003
+      :lastmodtime '(23261 60174 0 0)
+      :unmatched-syntax '((close-paren 21500 . 21501) (symbol 21077 . 21093) (open-paren 21076 . 21077) (close-paren 21045 . 21046) (symbol 16811 . 16827) (open-paren 16810 . 16811))))
+  :file "!Applications!Emacs.app!Contents!Resources!lisp!progmodes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

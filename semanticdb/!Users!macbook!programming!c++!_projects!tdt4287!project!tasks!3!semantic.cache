@@ -361,7 +361,26 @@
       :pointmax 26602
       :fsize 26602
       :lastmodtime '(23031 31135 75617 656000)
-      :unmatched-syntax nil))
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-bsdmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("/usr/local/Cellar/llvm/5.0.0/bin/clang++")) nil [1 47])
+            ("CFLAGS" variable (:default-value ("-g" "-std=c++11" "-Wall" "-fopenmp" "-Werror" "-Ofast")) nil [56 109])
+            ("EXE" variable (:default-value ("task3")) nil [110 122])
+            ("HDRS" variable (:default-value ("../2/output_buffer.h" "../1/kmp.h" "../4/hash.h")) nil [123 174])
+            ("INCLUDE" variable (:default-value ("-I/usr/local/Cellar/llvm/5.0.0/lib/clang/5.0.0/include/")) nil [175 241])
+            ("LIBS" variable (:default-value ("-L/usr/local/opt/llvm/lib")) nil [241 274])
+            ("SRCS" variable (:default-value ("main.cpp" "../2/output_buffer.cpp" "../1/kmp.cpp" "../4/hash.cpp")) nil [276 342])
+            ("OBJS" variable (:default-value ("$(SRCS:.c=.o)")) nil [343 364])
+            ("$(EXE)" function (:arguments ("$(OBJS)" "$(HDRS)" "Makefile")) nil [365 448])
+            ("$(OBJS)" function (:arguments ("$(HDRS)" "Makefile")) nil [449 475])
+            ("clean" function nil nil [476 506]))          
+      :file "Makefile"
+      :pointmax 506
+      :fsize 505
+      :lastmodtime '(23030 8642 787124 518000)
+      :unmatched-syntax '((shell-command 484 . 505) (bol 483 . 483))))
   :file "!Users!macbook!programming!c++!_projects!tdt4287!project!tasks!3!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

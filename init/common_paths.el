@@ -5,3 +5,4 @@
 (global-set-key (kbd "<f2> t") '(lambda () (interactive) (insert "~/bioinformatics/thesis/R/TargetScanTools")))
 (global-set-key (kbd "<f2> l") '(lambda () (interactive) (insert "~/bioinformatics/thesis/latex")))
 (global-set-key (kbd "<f2> c") '(lambda () (interactive) (insert "~/bioinformatics/thesis/R/TargetScanTools")))
+(global-set-key (kbd "<f2> m") '(lambda () (interactive) (insert "~/bioinformatics/thesis/simulations/expression_profiles/data/")))

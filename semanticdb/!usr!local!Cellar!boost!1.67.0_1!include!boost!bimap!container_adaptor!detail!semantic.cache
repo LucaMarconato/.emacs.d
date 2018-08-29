@@ -1,0 +1,498 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_CONTAINER_ADAPTOR_DETAIL_COMPARISON_ADAPTOR_HPP" variable (:constant-flag t) nil [389 448])
+            ("boost/config.hpp" include (:system-flag t) nil [493 520])
+            ("boost/call_traits.hpp" include (:system-flag t) nil [522 554])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("container_adaptor" type
+                               (:members 
+                                  ( ("detail" type
+                                       (:members 
+                                          ( ("comparison_adaptor" type
+                                               (:template 
+                                                  ( ("Compare" type (:type "class") nil nil)
+                                                    ("NewType" type (:type "class") nil nil)
+                                                    ("Converter" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("first_argument_type" type
+                                                       (:typedef ("NewType" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [887 923])
+                                                    ("second_argument_type" type
+                                                       (:typedef ("NewType" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [928 965])
+                                                    ("result_type" type
+                                                       (:typedef ("bool")
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [970 995])
+                                                    ("comparison_adaptor" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("comp" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Compare" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1021 1042])
+                                                            ("conv" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Converter" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1043 1066]))                                                          
+                                                        :type ("comparison_adaptor" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [1001 1110])
+                                                    ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("call_traits::param_type" variable (:type ("BOOST_DEDUCED_TYPENAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1133 1190])
+                                                            ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1189 1191])
+                                                            ("call_traits::param_type" variable (:type ("BOOST_DEDUCED_TYPENAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1213 1270])
+                                                            ("" variable (:type ("y" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1269 1271]))                                                          
+                                                        :type "bool")
+                                                        (reparse-symbol classsubparts) [1116 1343])
+                                                    ("private" label nil (reparse-symbol classsubparts) [1349 1357])
+                                                    ("compare" variable (:type ("Compare" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1362 1382])
+                                                    ("converter" variable (:type ("Converter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1387 1409]))                                                  )
+                                                (reparse-symbol namespacesubparts) [796 1412])
+                                            ("compatible_comparison_adaptor" type
+                                               (:template 
+                                                  ( ("Compare" type (:type "class") nil nil)
+                                                    ("NewType" type (:type "class") nil nil)
+                                                    ("Converter" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("first_argument_type" type
+                                                       (:typedef ("NewType" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1516 1552])
+                                                    ("second_argument_type" type
+                                                       (:typedef ("NewType" type (:type "class") nil nil)
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1557 1594])
+                                                    ("result_type" type
+                                                       (:typedef ("bool")
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [1599 1624])
+                                                    ("compatible_comparison_adaptor" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("comp" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Compare" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1661 1682])
+                                                            ("conv" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Converter" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1683 1706]))                                                          
+                                                        :type ("compatible_comparison_adaptor" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [1630 1750])
+                                                    ("()" function
+                                                       (:template 
+                                                          ( ("CompatibleTypeLeft" type (:type "class") nil nil)
+                                                            ("CompatibleTypeRight" type (:type "class") nil nil))                                                          
+                                                        :type "bool"
+                                                        :arguments 
+                                                          ( ("x" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("CompatibleTypeLeft" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1841 1871])
+                                                            ("y" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("CompatibleTypeRight" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [1893 1923]))                                                          
+                                                        :operator-flag t
+                                                        :methodconst-flag t)
+                                                        (reparse-symbol classsubparts) [1756 1995])
+                                                    ("private" label nil (reparse-symbol classsubparts) [2001 2009])
+                                                    ("compare" variable (:type ("Compare" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2014 2034])
+                                                    ("converter" variable (:type ("Converter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2039 2061]))                                                  )
+                                                (reparse-symbol namespacesubparts) [1414 2064])
+                                            ("unary_check_adaptor" type
+                                               (:template 
+                                                  ( ("Compare" type (:type "class") nil nil)
+                                                    ("NewType" type (:type "class") nil nil)
+                                                    ("Converter" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("argument_type" variable (:type ("param_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2367 2392])
+                                                    ("result_type" type
+                                                       (:typedef ("bool")
+                                                        :type "typedef")
+                                                        (reparse-symbol classsubparts) [2397 2422])
+                                                    ("unary_check_adaptor" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("comp" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Compare" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2449 2470])
+                                                            ("conv" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Converter" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2471 2495]))                                                          
+                                                        :type ("unary_check_adaptor" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [2428 2539])
+                                                    ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("call_traits::param_type" variable (:type ("BOOST_DEDUCED_TYPENAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2562 2619])
+                                                            ("" variable (:type ("x" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2618 2620]))                                                          
+                                                        :type "bool")
+                                                        (reparse-symbol classsubparts) [2545 2678])
+                                                    ("private" label nil (reparse-symbol classsubparts) [2684 2692])
+                                                    ("compare" variable (:type ("Compare" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2697 2715])
+                                                    ("converter" variable (:type ("Converter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2720 2740]))                                                  )
+                                                (reparse-symbol namespacesubparts) [2222 2743]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [623 2746]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [593 2768]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [574 2801]))                  
+                :type "namespace")
+                nil [556 2823]))          
+      :file "comparison_adaptor.hpp"
+      :pointmax 2917
+      :fsize 2916
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((punctuation 2366 . 2367) (punctuation 2365 . 2366) (punctuation 2364 . 2365) (symbol 2357 . 2364) (punctuation 2356 . 2357) (symbol 2345 . 2356) (symbol 2322 . 2344) (TYPEDEF 2314 . 2321))
+      :lexical-table 
+        '(("BOOST_BIMAP_CONTAINER_ADAPTOR_DETAIL_COMPARISON_ADAPTOR_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_CONTAINER_ADAPTOR_DETAIL_IDENTITY_CONVERTERS_HPP" variable (:constant-flag t) nil [412 472])
+            ("boost/config.hpp" include (:system-flag t) nil [517 544])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("container_adaptor" type
+                               (:members 
+                                  ( ("detail" type
+                                       (:members 
+                                          ( ("iterator_to_base_identity" type
+                                               (:template 
+                                                  ( ("BaseIterator" type (:type "class") nil nil)
+                                                    ("Iterator" type (:type "class") nil nil)
+                                                    ("BaseConstIterator" type (:type "class") nil nil)
+                                                    ("ConstIterator" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("Iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1142 1156]))                                                          
+                                                        :type ("BaseIterator" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1118 1209])
+                                                    ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("ConstIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1244 1263]))                                                          
+                                                        :type ("BaseConstIterator" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1215 1321]))                                                  )
+                                                (reparse-symbol namespacesubparts) [954 1324])
+                                            ("iterator_to_base_identity" type
+                                               (:template 
+                                                  ( ("BaseIterator" type (:type "class") nil nil)
+                                                    ("Iterator" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("Iterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1547 1561]))                                                          
+                                                        :type ("BaseIterator" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1523 1614]))                                                  
+                                                :template-specifier 
+                                                  ( ("BaseIterator" type nil nil nil)
+                                                    ("Iterator" type nil nil nil)
+                                                    ("BaseIterator" type nil nil nil)
+                                                    ("Iterator" type nil nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [1392 1617])
+                                            ("iterator_from_base_identity" type
+                                               (:template 
+                                                  ( ("BaseIterator" type (:type "class") nil nil)
+                                                    ("Iterator" type (:type "class") nil nil)
+                                                    ("BaseConstIterator" type (:type "class") nil nil)
+                                                    ("ConstIterator" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("BaseIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2150 2168]))                                                          
+                                                        :type ("Iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2130 2217])
+                                                    ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("BaseConstIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2247 2270]))                                                          
+                                                        :type ("ConstIterator" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2222 2324]))                                                  )
+                                                (reparse-symbol namespacesubparts) [1964 2327])
+                                            ("iterator_from_base_identity" type
+                                               (:template 
+                                                  ( ("BaseIterator" type (:type "class") nil nil)
+                                                    ("Iterator" type (:type "class") nil nil)
+                                                    ("ConstIterator" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("iter" variable (:type ("BaseIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2574 2592]))                                                          
+                                                        :type ("Iterator" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2554 2641]))                                                  
+                                                :template-specifier 
+                                                  ( ("BaseIterator" type nil nil nil)
+                                                    ("Iterator" type nil nil nil)
+                                                    ("BaseIterator" type nil nil nil)
+                                                    ("ConstIterator" type nil nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [2395 2644])
+                                            ("value_to_base_identity" type
+                                               (:template 
+                                                  ( ("BaseValue" type (:type "class") nil nil)
+                                                    ("Value" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("val" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Value" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [2896 2914]))                                                          
+                                                        :type ("BaseValue" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [2875 2963]))                                                  )
+                                                (reparse-symbol namespacesubparts) [2798 2966])
+                                            ("value_to_base_identity" type
+                                               (:template 
+                                                  ( ("Value" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :constant-flag t
+                                                        :arguments 
+                                                          ( ("val" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Value" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3135 3153]))                                                          
+                                                        :type ("Value" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3110 3191]))                                                  
+                                                :template-specifier 
+                                                  ( ("Value" type nil nil nil)
+                                                    ("Value" type nil nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [3034 3194])
+                                            ("value_from_base_identity" type
+                                               (:template 
+                                                  ( ("BaseValue" type (:type "class") nil nil)
+                                                    ("Value" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("val" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("BaseValue" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3446 3468]))                                                          
+                                                        :type ("Value" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3429 3513]))                                                  )
+                                                (reparse-symbol namespacesubparts) [3350 3516])
+                                            ("value_from_base_identity" type
+                                               (:template 
+                                                  ( ("Value" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("val" variable
+                                                               (:reference 1
+                                                                :type ("Value" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3678 3690]))                                                          
+                                                        :type ("Value" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3659 3728])
+                                                    ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :constant-flag t
+                                                        :arguments 
+                                                          ( ("val" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Value" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [3759 3777]))                                                          
+                                                        :type ("Value" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [3734 3815]))                                                  
+                                                :template-specifier 
+                                                  ( ("Value" type nil nil nil)
+                                                    ("Value" type nil nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [3584 3818])
+                                            ("key_to_base_identity" type
+                                               (:template 
+                                                  ( ("BaseKey" type (:type "class") nil nil)
+                                                    ("Key" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:methodconst-flag t
+                                                        :operator-flag t
+                                                        :arguments 
+                                                          ( ("k" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("Key" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4060 4074]))                                                          
+                                                        :type ("BaseKey" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [4041 4119]))                                                  )
+                                                (reparse-symbol namespacesubparts) [3970 4122])
+                                            ("key_to_base_identity" type
+                                               (:template 
+                                                  ( ("Key" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("()" function
+                                                       (:template 
+                                                          ( ("CompatibleKey" type (:type "class") nil nil))                                                          
+                                                        :type ("CompatibleKey" type (:type "class") nil nil)
+                                                        :arguments 
+                                                          ( ("k" variable
+                                                               (:reference 1
+                                                                :constant-flag t
+                                                                :type ("CompatibleKey" type (:type "class") nil nil))
+                                                                (reparse-symbol arg-sub-list) [4447 4471]))                                                          
+                                                        :constant-flag t
+                                                        :operator-flag t
+                                                        :methodconst-flag t)
+                                                        (reparse-symbol classsubparts) [4378 4507]))                                                  
+                                                :template-specifier 
+                                                  ( ("Key" type nil nil nil)
+                                                    ("Key" type nil nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [4190 4510]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [667 4581]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [583 4603]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [564 4636]))                  
+                :type "namespace")
+                nil [546 4658]))          
+      :file "identity_converters.hpp"
+      :pointmax 4753
+      :fsize 4752
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_BIMAP_CONTAINER_ADAPTOR_DETAIL_IDENTITY_CONVERTERS_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_CONTAINER_ADAPTOR_DETAIL_FUNCTOR_BAG_HPP" variable (:constant-flag t) nil [403 455])
+            ("boost/config.hpp" include (:system-flag t) nil [500 527])
+            ("boost/mpl/placeholders.hpp" include (:system-flag t) nil [839 876])
+            ("boost/type_traits/add_reference.hpp" include (:system-flag t) nil [878 924])
+            ("boost/type_traits/is_base_of.hpp" include (:system-flag t) nil [925 968])
+            ("boost/mpl/inherit_linearly.hpp" include (:system-flag t) nil [970 1011])
+            ("boost/mpl/inherit.hpp" include (:system-flag t) nil [1012 1044])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("container_adaptor" type
+                               (:members 
+                                  ( ("detail" type
+                                       (:members 
+                                          ( ("data_with_functor_bag" type
+                                               (:template 
+                                                  ( ("Data" type (:type "class") nil nil)
+                                                    ("FunctorList" type (:type "class") nil nil))                                                  
+                                                :type "struct"
+                                                :members 
+                                                  ( ("data" variable (:type ("Data" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1787 1797])
+                                                    ("data_with_functor_bag" function
+                                                       (:constructor-flag t
+                                                        :type ("data_with_functor_bag" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [1803 1829])
+                                                    ("data_with_functor_bag" function
+                                                       (:constructor-flag t
+                                                        :arguments 
+                                                          ( ("add_reference::type" variable (:type ("BOOST_DEDUCED_TYPENAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1857 1907])
+                                                            ("" variable (:type ("d" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1906 1908]))                                                          
+                                                        :type ("data_with_functor_bag" type (:type "struct") nil nil))
+                                                        (reparse-symbol classsubparts) [1835 1929])
+                                                    ("functor" function
+                                                       (:template 
+                                                          ( ("Functor" type (:type "class") nil nil))                                                          
+                                                        :type ("Functor" type (:type "class") nil nil))
+                                                        (reparse-symbol classsubparts) [1935 2042])
+                                                    ("functor" function
+                                                       (:template 
+                                                          ( ("Functor" type (:type "class") nil nil))                                                          
+                                                        :type ("Functor" type (:type "class") nil nil)
+                                                        :constant-flag t
+                                                        :methodconst-flag t)
+                                                        (reparse-symbol classsubparts) [2048 2174]))                                                  
+                                                :superclasses 
+                                                  ( ("mpl::inherit_linearly::type" type
+                                                       (:protection "public"
+                                                        :type "class")
+                                                        nil nil))                                                  )
+                                                (reparse-symbol namespacesubparts) [1423 2177]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [1113 2180]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1083 2202]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1064 2235]))                  
+                :type "namespace")
+                nil [1046 2257]))          
+      :file "functor_bag.hpp"
+      :pointmax 2399
+      :fsize 2398
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_BIMAP_CONTAINER_ADAPTOR_DETAIL_FUNCTOR_BAG_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.67.0_1!include!boost!bimap!container_adaptor!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

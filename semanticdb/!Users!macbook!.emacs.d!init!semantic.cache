@@ -7,58 +7,63 @@
       :major-mode emacs-lisp-mode
       :tags 
         '( ("setq-default" code nil nil [1 32])
-            ("global-set-key" code nil nil [2690 2729])
-            ("my_compile" function (:arguments ("command")) nil [2730 3143])
-            ("my-compilation-finish-function" function (:arguments ("buffer" "desc")) nil [3144 3705])
-            ("my_compile2" function nil nil [3707 3791])
-            ("global-set-key" code nil nil [3792 3877])
-            ("global-set-key" code nil nil [3878 3959])
-            ("global-set-key" code nil nil [3960 4043])
-            ("global-set-key" code nil nil [4044 4087])
-            ("my_swap" function nil nil [4089 4340])
-            ("my_swap2" function nil nil [4341 4480])
-            ("rtags" include nil nil [4627 4643])
-            ("define-key" code nil nil [4997 5079])
-            ("define-key" code nil nil [5082 5168])
-            ("rtags-enable-standard-keybindings" code nil nil [5416 5451])
-            ("add-hook" code nil nil [6176 6217])
-            ("add-to-list" code nil nil [6952 7035])
-            ("auto-complete-config" include nil nil [7036 7067])
-            ("add-to-list" code nil nil [7068 7172])
-            ("auto-complete-clang" include nil nil [7174 7204])
-            ("setq" code nil nil [7206 7230])
-            ("setq" code nil nil [7231 7261])
-            ("define-key" code nil nil [7352 7408])
-            ("my-ac-config" function nil nil [7409 7836])
-            ("my-ac-cc-mode-setup" function nil nil [7837 7946])
-            ("add-hook" code nil nil [7947 7998])
-            ("my-ac-config" code nil nil [8018 8032])
-            ("company-clang" include nil nil [8066 8090])
-            ("add-hook" code nil nil [8117 8154])
-            ("add-hook" code nil nil [8155 8190])
-            ("add-hook" code nil nil [8191 8229])
-            ("add-hook" code nil nil [8231 8295])
-            ("eval-after-load" code nil nil [8350 8426])
-            ("eval-after-load" code nil nil [8427 8511])
-            ("rtags" include nil nil [8541 8557])
-            ("subr-x" include nil nil [8597 8614])
-            ("cmake-ide-setup" code nil nil [8615 8632])
-            ("global-set-key" code nil nil [8657 8709])
+            ("add-hook" code nil nil [1003 1041])
+            ("add-hook" code nil nil [1042 1082])
+            ("setup-flycheck-rtags" function nil nil [1084 1310])
+            ("global-set-key" code nil nil [2607 2646])
+            ("my_compile" function (:arguments ("command")) nil [2647 3060])
+            ("my-compilation-finish-function" function (:arguments ("buffer" "desc")) nil [3061 3622])
+            ("my_compile2" function nil nil [3624 3708])
+            ("global-set-key" code nil nil [3709 3794])
+            ("global-set-key" code nil nil [3795 3876])
+            ("global-set-key" code nil nil [3877 3960])
+            ("global-set-key" code nil nil [3961 4004])
+            ("my_swap" function nil nil [4006 4257])
+            ("my_swap2" function nil nil [4258 4397])
+            ("rtags" include nil nil [4544 4560])
+            ("define-key" code nil nil [4914 4996])
+            ("define-key" code nil nil [4999 5085])
+            ("rtags-enable-standard-keybindings" code nil nil [5333 5368])
+            ("setq-default" code nil nil [6005 6061])
+            ("add-to-list" code nil nil [7084 7167])
+            ("auto-complete-config" include nil nil [7168 7199])
+            ("add-to-list" code nil nil [7200 7304])
+            ("auto-complete-clang" include nil nil [7306 7336])
+            ("setq" code nil nil [7338 7362])
+            ("setq" code nil nil [7363 7393])
+            ("define-key" code nil nil [7484 7540])
+            ("my-ac-config" function nil nil [7541 7968])
+            ("my-ac-cc-mode-setup" function nil nil [7969 8078])
+            ("add-hook" code nil nil [8079 8130])
+            ("my-ac-config" code nil nil [8150 8164])
+            ("company-clang" include nil nil [8198 8222])
+            ("add-hook" code nil nil [8249 8286])
+            ("add-hook" code nil nil [8287 8322])
+            ("add-hook" code nil nil [8323 8361])
+            ("add-hook" code nil nil [8363 8427])
+            ("eval-after-load" code nil nil [8482 8558])
+            ("eval-after-load" code nil nil [8559 8643])
+            ("rtags" include nil nil [8673 8689])
+            ("subr-x" include nil nil [8729 8746])
+            ("setq" code nil nil [8747 8792])
+            ("setq" code nil nil [8793 8843])
+            ("cmake-ide-setup" code nil nil [8844 8861])
+            ("global-set-key" code nil nil [8886 8938])
             ("expand-member-functions" function
                (:prototype-flag t
                 :user-visible-flag t)
-                nil [8710 8808])
-            ("delete" code nil nil [8809 8851])
-            ("delete" code nil nil [8852 8891])
-            ("srefactor" include nil nil [8929 8949])
-            ("srefactor-lisp" include nil nil [8950 8975])
-            ("semantic-mode" code nil nil [9021 9038])
-            ("define-key" code nil nil [9072 9138])
-            ("define-key" code nil nil [9139 9207]))          
+                nil [8939 9037])
+            ("delete" code nil nil [9038 9080])
+            ("delete" code nil nil [9081 9120])
+            ("srefactor" include nil nil [9158 9178])
+            ("srefactor-lisp" include nil nil [9179 9204])
+            ("semantic-mode" code nil nil [9250 9267])
+            ("define-key" code nil nil [9301 9367])
+            ("define-key" code nil nil [9368 9436]))          
       :file "c++_irony_flycheck.el"
-      :pointmax 9464
-      :fsize 9463
-      :lastmodtime '(23286 45903 820822 142000)
+      :pointmax 9693
+      :fsize 9692
+      :lastmodtime '(23430 49757 76014 101000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode emacs-lisp-mode
@@ -138,45 +143,47 @@
             ("global-set-key" code nil nil [299 389])
             ("global-set-key" code nil nil [390 501])
             ("global-set-key" code nil nil [502 601])
-            ("global-set-key" code nil nil [602 713]))          
+            ("global-set-key" code nil nil [602 713])
+            ("global-set-key" code nil nil [714 845]))          
       :file "common_paths.el"
-      :pointmax 714
-      :fsize 713
-      :lastmodtime '(23282 61409 525644 840000)
+      :pointmax 846
+      :fsize 845
+      :lastmodtime '(23427 60937 11333 19000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode emacs-lisp-mode
       :tags 
         '( ("define-prefix-command" code nil nil [26 61])
             ("add-hook" code nil nil [62 140])
-            ("define-key" code nil nil [230 303])
-            ("define-key" code nil nil [304 377])
-            ("define-key" code nil nil [378 451])
-            ("define-key" code nil nil [452 525])
-            ("define-key" code nil nil [526 599])
-            ("define-key" code nil nil [600 673])
-            ("define-key" code nil nil [674 749])
-            ("define-key" code nil nil [750 825])
-            ("define-key" code nil nil [826 901])
-            ("define-key" code nil nil [902 977])
-            ("define-key" code nil nil [978 1053])
-            ("define-key" code nil nil [1054 1129])
-            ("define-key" code nil nil [1130 1203])
-            ("define-key" code nil nil [1204 1277])
-            ("define-key" code nil nil [1278 1351])
-            ("define-key" code nil nil [1352 1425])
-            ("define-key" code nil nil [1426 1499])
-            ("define-key" code nil nil [1500 1573])
-            ("define-key" code nil nil [1574 1649])
-            ("define-key" code nil nil [1650 1725])
-            ("define-key" code nil nil [1726 1801])
-            ("define-key" code nil nil [1802 1877])
-            ("define-key" code nil nil [1878 1953])
-            ("define-key" code nil nil [1954 2029]))          
+            ("add-hook" code nil nil [141 219])
+            ("define-key" code nil nil [220 293])
+            ("define-key" code nil nil [294 367])
+            ("define-key" code nil nil [368 441])
+            ("define-key" code nil nil [442 515])
+            ("define-key" code nil nil [516 589])
+            ("define-key" code nil nil [590 663])
+            ("define-key" code nil nil [664 739])
+            ("define-key" code nil nil [740 815])
+            ("define-key" code nil nil [816 891])
+            ("define-key" code nil nil [892 967])
+            ("define-key" code nil nil [968 1043])
+            ("define-key" code nil nil [1044 1119])
+            ("define-key" code nil nil [1120 1193])
+            ("define-key" code nil nil [1194 1267])
+            ("define-key" code nil nil [1268 1341])
+            ("define-key" code nil nil [1342 1415])
+            ("define-key" code nil nil [1416 1489])
+            ("define-key" code nil nil [1490 1563])
+            ("define-key" code nil nil [1564 1639])
+            ("define-key" code nil nil [1640 1715])
+            ("define-key" code nil nil [1716 1791])
+            ("define-key" code nil nil [1792 1867])
+            ("define-key" code nil nil [1868 1943])
+            ("define-key" code nil nil [1944 2019]))          
       :file "accents.el"
-      :pointmax 2030
-      :fsize 2055
-      :lastmodtime '(23309 42504 997029 248000)
+      :pointmax 2020
+      :fsize 2045
+      :lastmodtime '(23384 44914 105646 197000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode emacs-lisp-mode
@@ -296,11 +303,12 @@
             ("setq" code nil nil [6761 7418])
             ("sync-with-el" function (:arguments ("name")) nil [8053 8379])
             ("sync-with-el-compilation-finish-function" function (:arguments ("file")) nil [8382 8628])
-            ("global-set-key" code nil nil [8630 8964]))          
+            ("global-set-key" code nil nil [8630 8964])
+            ("eval-after-load" code nil nil [9139 9768]))          
       :file "latex.el"
-      :pointmax 9138
-      :fsize 9137
-      :lastmodtime '(23248 46649 272049 855000)
+      :pointmax 9769
+      :fsize 9768
+      :lastmodtime '(23322 46957 906101 325000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode emacs-lisp-mode
@@ -339,8 +347,8 @@
             ("global-set-key" code nil nil [3258 3305]))          
       :file "layouts.el"
       :pointmax 3306
-      :fsize 3305
-      :lastmodtime '(23309 15730 10438 17000)
+      :fsize 4112
+      :lastmodtime '(23422 28311 215252 481000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode emacs-lisp-mode
@@ -419,11 +427,12 @@
             ("setq" code nil nil [705 735])
             ("setq" code nil nil [736 777])
             ("global-set-key" code nil nil [778 873])
-            ("with-eval-after-load" code nil nil [1007 1428]))          
+            ("global-set-key" code nil nil [874 955])
+            ("with-eval-after-load" code nil nil [1089 1510]))          
       :file "python.el"
-      :pointmax 1868
-      :fsize 1867
-      :lastmodtime '(23248 42767 155150 97000)
+      :pointmax 1950
+      :fsize 1949
+      :lastmodtime '(23427 60307 914703 824000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode emacs-lisp-mode
@@ -441,11 +450,13 @@
         '( ("visit-shell2" function (:user-visible-flag t) nil [215 535])
             ("global-set-key" code nil nil [536 573])
             ("global-set-key" code nil nil [666 739])
-            ("setq" code nil nil [740 772]))          
+            ("setq" code nil nil [2620 2652])
+            ("my-comint-preoutput-turn-buffer-read-only" function (:arguments ("text")) nil [2654 2743])
+            ("add-hook" code nil nil [2745 2833]))          
       :file "shell.el"
-      :pointmax 773
-      :fsize 772
-      :lastmodtime '(23279 6310 791666 883000)
+      :pointmax 2834
+      :fsize 2839
+      :lastmodtime '(23425 33234 941202 940000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode emacs-lisp-mode
@@ -531,6 +542,14 @@
       :pointmax 1416
       :fsize 1415
       :lastmodtime '(23248 43919 249687 643000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "ralee.el"
+      :pointmax 322
+      :fsize 321
+      :lastmodtime '(23422 47536 438710 589000)
       :unmatched-syntax nil))
   :file "!Users!macbook!.emacs.d!init!semantic.cache"
   :semantic-tag-version "2.0"

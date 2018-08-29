@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: note
+# key: note
+# --
+\ttfamily\footnotesize ${1:}\normalsize\rmfamily ${0:}

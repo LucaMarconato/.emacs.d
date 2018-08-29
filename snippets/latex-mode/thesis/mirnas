@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mirnas
+# key: mirnas
+# --
+\mathpzc{miRNA}^{*}

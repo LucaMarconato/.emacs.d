@@ -1,0 +1,56 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-jsx-mode
+      :tags 
+        '( ("main" function nil nil [373 1302])
+            ("myDisplayDialog" function (:arguments 
+              ( ("myObjectList" variable nil (reparse-symbol FormalParameterList) [1328 1340]))              ) nil [1303 3735])
+            ("myChangeCorners" function (:arguments 
+              ( ("myObject" variable nil (reparse-symbol FormalParameterList) [3761 3769])
+                ("myCornerType" variable nil (reparse-symbol FormalParameterList) [3771 3783])
+                ("myOffset" variable nil (reparse-symbol FormalParameterList) [3785 3793])
+                ("myPattern" variable nil (reparse-symbol FormalParameterList) [3795 3804]))              ) nil [3736 9793])
+            ("myAddPoints" function (:arguments 
+              ( ("myX1" variable nil (reparse-symbol FormalParameterList) [9815 9819])
+                ("myY1" variable nil (reparse-symbol FormalParameterList) [9821 9825])
+                ("myX2" variable nil (reparse-symbol FormalParameterList) [9827 9831])
+                ("myY2" variable nil (reparse-symbol FormalParameterList) [9833 9837])
+                ("myX3" variable nil (reparse-symbol FormalParameterList) [9839 9843])
+                ("myY3" variable nil (reparse-symbol FormalParameterList) [9845 9849])
+                ("myOffset" variable nil (reparse-symbol FormalParameterList) [9851 9859]))              ) nil [9794 10971])
+            ("myPointTest" function (:arguments 
+              ( ("myPathPointCounter" variable nil (reparse-symbol FormalParameterList) [10993 11011])
+                ("myPath" variable nil (reparse-symbol FormalParameterList) [11013 11019])
+                ("myPattern" variable nil (reparse-symbol FormalParameterList) [11021 11030]))              ) nil [10972 13129]))          
+      :file "CornerEffects.jsx"
+      :pointmax 13129
+      :fsize 13131
+      :lastmodtime '(23359 28593 228955 13000)
+      :unmatched-syntax '((PAREN_BLOCK 369 . 371)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-jsx-mode
+      :tags 
+        '( ("main" function nil nil [656 1461])
+            ("myAddPoints" function (:arguments 
+              ( ("myPath" variable nil (reparse-symbol FormalParameterList) [1483 1489]))              ) nil [1462 3716])
+            ("myCalculatePoints" function (:arguments 
+              ( ("myBx0" variable nil (reparse-symbol FormalParameterList) [3744 3749])
+                ("myBy0" variable nil (reparse-symbol FormalParameterList) [3751 3756])
+                ("myBx1" variable nil (reparse-symbol FormalParameterList) [3758 3763])
+                ("myBy1" variable nil (reparse-symbol FormalParameterList) [3765 3770])
+                ("myBx2" variable nil (reparse-symbol FormalParameterList) [3772 3777])
+                ("myBy2" variable nil (reparse-symbol FormalParameterList) [3779 3784])
+                ("myBx3" variable nil (reparse-symbol FormalParameterList) [3786 3791])
+                ("myBy3" variable nil (reparse-symbol FormalParameterList) [3793 3798]))              ) nil [3717 6153]))          
+      :file "AddPoints.jsx"
+      :pointmax 6153
+      :fsize 6155
+      :lastmodtime '(23359 28593 226295 5000)
+      :unmatched-syntax '((PAREN_BLOCK 652 . 654))))
+  :file "!Applications!Adobe InDesign CC 2018!Scripts!Scripts Panel!Samples!JavaScript!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

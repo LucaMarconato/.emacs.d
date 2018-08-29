@@ -1,0 +1,154 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_SUPPORT_KEY_TYPE_BY_HPP" variable (:constant-flag t) nil [369 404])
+            ("boost/config.hpp" include (:system-flag t) nil [449 476])
+            ("boost/bimap/relation/detail/metadata_access_builder.hpp" include (:system-flag t) nil [478 544])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("support" type (:type "namespace") (reparse-symbol namespacesubparts) [1091 1272]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1072 1295]))                  
+                :type "namespace")
+                nil [1054 1317]))          
+      :file "key_type_by.hpp"
+      :pointmax 1385
+      :fsize 1384
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((semantic-list 1210 . 1268) (symbol 1164 . 1209))
+      :lexical-table 
+        '(("BOOST_BIMAP_SUPPORT_KEY_TYPE_BY_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_SUPPORT_DATA_TYPE_BY_HPP" variable (:constant-flag t) nil [372 408])
+            ("boost/config.hpp" include (:system-flag t) nil [453 480])
+            ("boost/bimap/relation/detail/metadata_access_builder.hpp" include (:system-flag t) nil [482 548])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("support" type (:type "namespace") (reparse-symbol namespacesubparts) [1221 1400]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1202 1423]))                  
+                :type "namespace")
+                nil [1184 1445]))          
+      :file "data_type_by.hpp"
+      :pointmax 1515
+      :fsize 1514
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((semantic-list 1336 . 1397) (symbol 1290 . 1335))
+      :lexical-table 
+        '(("BOOST_BIMAP_SUPPORT_DATA_TYPE_BY_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_SUPPORT_VALUE_TYPE_BY_HPP" variable (:constant-flag t) nil [399 436])
+            ("boost/config.hpp" include (:system-flag t) nil [481 508])
+            ("boost/bimap/relation/detail/metadata_access_builder.hpp" include (:system-flag t) nil [510 576])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("support" type (:type "namespace") (reparse-symbol namespacesubparts) [1132 1317]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1113 1340]))                  
+                :type "namespace")
+                nil [1095 1362]))          
+      :file "value_type_by.hpp"
+      :pointmax 1433
+      :fsize 1432
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((semantic-list 1248 . 1312) (symbol 1202 . 1247))
+      :lexical-table 
+        '(("BOOST_BIMAP_SUPPORT_VALUE_TYPE_BY_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_SUPPORT_MAP_TYPE_BY_HPP" variable (:constant-flag t) nil [374 409])
+            ("boost/config.hpp" include (:system-flag t) nil [454 481])
+            ("boost/bimap/relation/detail/metadata_access_builder.hpp" include (:system-flag t) nil [483 549])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("support" type (:type "namespace") (reparse-symbol namespacesubparts) [1102 1269]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1083 1292]))                  
+                :type "namespace")
+                nil [1065 1314]))          
+      :file "map_type_by.hpp"
+      :pointmax 1383
+      :fsize 1382
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((semantic-list 1216 . 1264) (symbol 1170 . 1215))
+      :lexical-table 
+        '(("BOOST_BIMAP_SUPPORT_MAP_TYPE_BY_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_SUPPORT_MAP_BY_HPP" variable (:constant-flag t) nil [335 365])
+            ("boost/config.hpp" include (:system-flag t) nil [410 437])
+            ("boost/bimap/support/map_type_by.hpp" include (:system-flag t) nil [439 485])
+            ("boost/bimap/relation/detail/access_builder.hpp" include (:system-flag t) nil [486 543])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("support" type (:type "namespace") (reparse-symbol namespacesubparts) [1596 3083]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1577 3106]))                  
+                :type "namespace")
+                nil [1559 3128]))          
+      :file "map_by.hpp"
+      :pointmax 3259
+      :fsize 3258
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((semantic-list 3066 . 3080) (symbol 3019 . 3065) (semantic-list 2854 . 2925) (symbol 2802 . 2853) (punctuation 2917 . 2918) (RETURN 2909 . 2915) (punctuation 2898 . 2899) (RETURN 2890 . 2896) (semantic-list 2673 . 2704) (symbol 2626 . 2672))
+      :lexical-table 
+        '(("BOOST_BIMAP_SUPPORT_MAP_BY_HPP")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOST_BIMAP_SUPPORT_ITERATOR_TYPE_BY_HPP" variable (:constant-flag t) nil [385 425])
+            ("boost/config.hpp" include (:system-flag t) nil [470 497])
+            ("boost/bimap/relation/detail/metadata_access_builder.hpp" include (:system-flag t) nil [499 565])
+            ("boost/bimap/relation/detail/static_access_builder.hpp" include (:system-flag t) nil [566 630])
+            ("boost" type
+               (:members 
+                  ( ("bimaps" type
+                       (:members 
+                          ( ("support" type (:type "namespace") (reparse-symbol namespacesubparts) [1740 2926]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1721 2949]))                  
+                :type "namespace")
+                nil [1703 2971]))          
+      :file "iterator_type_by.hpp"
+      :pointmax 3112
+      :fsize 3111
+      :lastmodtime '(23246 7102 0 0)
+      :unmatched-syntax '((semantic-list 2824 . 2923) (symbol 2778 . 2823) (semantic-list 2631 . 2712) (symbol 2585 . 2630) (semantic-list 2419 . 2524) (symbol 2373 . 2418) (semantic-list 2218 . 2305) (symbol 2172 . 2217) (semantic-list 2028 . 2109) (symbol 1982 . 2027) (semantic-list 1859 . 1922) (symbol 1813 . 1858))
+      :lexical-table 
+        '(("BOOST_BIMAP_SUPPORT_ITERATOR_TYPE_BY_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.67.0_1!include!boost!bimap!support!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

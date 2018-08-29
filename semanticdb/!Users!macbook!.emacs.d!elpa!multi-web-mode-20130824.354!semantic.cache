@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "multi-web-mode-autoloads.el"
+      :pointmax 367
+      :fsize 1675
+      :lastmodtime '(23422 27689 550015 180000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!.emacs.d!elpa!multi-web-mode-20130824.354!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

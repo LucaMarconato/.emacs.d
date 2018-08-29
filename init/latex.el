@@ -234,3 +234,20 @@
 ;; (eval-after-load "tex-mode"
 ;;   '(add-to-list 'tex-compile-commands
                 ;; '(sync-with-el) t))
+
+(eval-after-load "tex"
+  '(progn
+     ;; Define a new safe buffer-local variable to change its value on a
+     ;; per-file basis
+     (defvar mg-TeX-index-options "")
+     (make-variable-buffer-local 'mg-TeX-index-options)
+     (put 'mg-TeX-index-options 'safe-local-variable 'stringp)
+     ;; Add new expansion string
+     (add-to-list 'TeX-expand-list
+          '("%(indexopts)" (lambda () mg-TeX-index-options)))
+     ;; Add new command.
+     (add-to-list 'TeX-command-list
+          '("MyIndex"
+            "makeindex %(indexopts) %s"
+            TeX-run-index nil t
+            :help "Run makeindex to create index file"))))

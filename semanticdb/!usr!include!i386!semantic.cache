@@ -60,7 +60,7 @@
       :file "types.h"
       :pointmax 4647
       :fsize 4646
-      :lastmodtime '(23045 2506 0 0)
+      :lastmodtime '(23198 13259 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("CAST_USER_ADDR_T" (spp-arg-list ("a_ptr") 4360 . 4367) . ((semantic-list "((user_addr_t)((uintptr_t)(a_ptr)))" 4370 . 4405)))
@@ -175,7 +175,7 @@
       :file "_types.h"
       :pointmax 4497
       :fsize 4496
-      :lastmodtime '(23045 2506 0 0)
+      :lastmodtime '(23198 13259 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_BSD_I386__TYPES_H_")
@@ -200,7 +200,7 @@
       :file "endian.h"
       :pointmax 4315
       :fsize 4314
-      :lastmodtime '(23045 2505 0 0)
+      :lastmodtime '(23198 13258 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("BYTE_ORDER" . ((symbol "__DARWIN_BYTE_ORDER" 4148 . 4167)))
@@ -228,7 +228,7 @@
       :file "signal.h"
       :pointmax 1576
       :fsize 1575
-      :lastmodtime '(23045 2505 0 0)
+      :lastmodtime '(23198 13259 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_I386_SIGNAL_H_" . ((number "1" 1441 . 1442)))
@@ -286,7 +286,7 @@
       :file "_mcontext.h"
       :pointmax 4645
       :fsize 4644
-      :lastmodtime '(23045 2506 0 0)
+      :lastmodtime '(23198 13259 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_STRUCT_MCONTEXT64" . ((STRUCT "struct" 2994 . 3000) (symbol "__darwin_mcontext64" 3001 . 3020)))
@@ -334,7 +334,7 @@
       :file "limits.h"
       :pointmax 4711
       :fsize 4710
-      :lastmodtime '(23045 2505 0 0)
+      :lastmodtime '(23198 13259 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("UINT_MAX" . ((number "0xffffffff" 3368 . 3378)))
@@ -368,9 +368,20 @@
           )
 )
     (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_I386__LIMITS_H_" variable (:constant-flag t) nil [968 984])
+            ("__DARWIN_CLK_TCK" variable (:constant-flag t) nil [994 1010]))          
       :file "_limits.h"
+      :pointmax 1070
       :fsize 1069
-      :lastmodtime '(23045 2506 0 0)))
+      :lastmodtime '(23198 13259 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_I386__LIMITS_H_")
+          ("__DARWIN_CLK_TCK" . ((number "100" 1012 . 1015)))
+          )
+))
   :file "!usr!include!i386!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

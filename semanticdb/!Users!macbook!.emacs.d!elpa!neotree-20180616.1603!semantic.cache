@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "neotree-autoloads.el"
+      :pointmax 353
+      :fsize 1510
+      :lastmodtime '(23422 27686 716825 415000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!.emacs.d!elpa!neotree-20180616.1603!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

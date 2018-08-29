@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/macbook/.emacs.d/rtags-2.14/src/rct/cJSON/cJSON.c
+cJSON.h
+/Users/macbook/.emacs.d/rtags-2.14/src/rct/cJSON/cJSON.h
+ctype.h
+-
+float.h
+-
+limits.h
+-
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/Users/macbook/.emacs.d/rtags-2.14/src/rct/cJSON/cJSON.h
+stddef.h
+-
+

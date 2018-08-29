@@ -1,0 +1,23 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("subprocess" include nil nil [19 46])
+            ("RPi.GPIO" include nil nil [47 70])
+            ("time" include nil nil [71 82])
+            ("pin" variable nil nil [84 92])
+            ("GPIO" code nil nil [93 117])
+            ("GPIO" code nil nil [118 170])
+            ("try" code nil nil [172 380]))          
+      :file "detect_open_close.py"
+      :pointmax 613
+      :fsize 612
+      :lastmodtime '(23334 21475 801978 957000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!programming!raspberry_pi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

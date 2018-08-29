@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "jedi-autoloads.el"
+      :pointmax 347
+      :fsize 1210
+      :lastmodtime '(23422 27708 263511 33000)
+      :unmatched-syntax nil))
+  :file "!Users!macbook!.emacs.d!elpa!jedi-20160426.456!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

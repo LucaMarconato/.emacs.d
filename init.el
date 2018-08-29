@@ -14,7 +14,7 @@
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (srefactor cmake-ide flymake-json cmake-mode elmacro helm pdf-tools epc jedi evil vlf multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess icicles avy highlight-symbol company-irony flycheck-irony irony swift-mode auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (company-rtags srefactor cmake-ide flymake-json cmake-mode elmacro helm pdf-tools epc jedi evil vlf multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess icicles avy highlight-symbol company-irony flycheck-irony irony swift-mode auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.mail.me.com")
@@ -101,8 +101,6 @@
 (global-set-key (kbd "M-F") 'forward-whitespace) 
 (global-set-key (kbd "M-B") '(lambda () (interactive) (forward-whitespace -1))) 
 
-(global-visual-line-mode 1) 
-
 (load-library "dired-x")
 
 (setq ring-bell-function 'ignore)
@@ -130,7 +128,19 @@
 (load-file "~/.emacs.d/lisp/emacs-grammarly/emacs-grammarly.el")
 (global-set-key (kbd "C-c C-;") 'grammarly-save-region-and-run)
 
-(global-visual-line-mode 1)
+;; (setq mark-even-if-inactive t)
+
+;; (defun paste-to-osx (text &optional push)
+;;   (let ((process-connection-type nil)
+;;         (lang (getenv "LANG"))
+;;         (default-directory "~"))
+;;     (setenv "LANG" "en_US.UTF-8")
+;;     (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+;;       (process-send-string proc text)
+;;       (process-send-eof proc))
+;;     (setenv "LANG" lang)))
+
+;; (setq interprogram-cut-function 'paste-to-osx)
 
 (load-user-file "init/timestamp.el")
 (load-user-file "init/parenthesis.el")
@@ -159,7 +169,9 @@
 (load-user-file "init/common_paths.el")
 (load-user-file "init/json.el")
 (load-user-file "init/perl.el")
+(load-user-file "init/ralee.el")
 
+(global-visual-line-mode 1)
 ;
 ;(server-start); start emacs in server mode so that skim can talk to it
 
@@ -168,3 +180,9 @@
 ;(setq auto-mode-alist (append '(("\\.exp$" . my-expenses-mode))
 ;      auto-mode-alist))
 ;
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

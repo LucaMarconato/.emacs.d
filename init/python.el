@@ -27,6 +27,7 @@
 (setq py-shell-name "python3")
 (setq python-shell-interpreter "python3")
 (global-set-key (kbd "C-c C-<backspace>") '(lambda () (interactive) (kill-process "*Python*")))
+(global-set-key (kbd "C-c C-o") '(lambda () (interactive) (run-python-internal)))
 ;; (global-set-key (kbd "C-c <backspace>") '(lambda () (interactive) (kill-process "*Python*") (run-python (python-shell-calculate-
 
 (with-eval-after-load 'python
