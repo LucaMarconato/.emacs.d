@@ -24,13 +24,6 @@
 (add-hook 'c-mode-hook 'flycheck-mode)
 (add-hook 'c++-mode-hook 'flycheck-mode)
 
-(defun setup-flycheck-rtags ()
-  (interactive)
-  (flycheck-select-checker 'rtags)
-  ;; RTags creates more accurate overlays.
-  (setq-local flycheck-highlighting-mode nil)
-  (setq-local flycheck-check-syntax-automatically nil))
-
 ;; ;; only run this if rtags is installed
 ;; (when (require 'rtags nil :noerror)
 ;;   ;; make sure you have company-mode installed
@@ -105,6 +98,13 @@
 ;--------RTAGS--------
 
 (require 'rtags)
+(defun setup-flycheck-rtags ()
+  (interactive)
+  (flycheck-select-checker 'rtags)
+  ;; RTags creates more accurate overlays.
+  (setq-local flycheck-highlighting-mode nil)
+  (setq-local flycheck-check-syntax-automatically nil))
+(setq rtags-path "~/.emacs.d/elpa/rtags-20180829.449/rtags-2.19/bin")
 ;; (global-set-key (kbd "M-.") #'rtags-find-symbol-at-point) ;TODO: this shoule be set only for C/C++ mode
 ;; (add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "M-.") #'rtags-find-symbol-at-point)))
 

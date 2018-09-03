@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sw
+# key: sw
+# --
+std::swap(obj1.${1:}, obj2.$1);${2:}

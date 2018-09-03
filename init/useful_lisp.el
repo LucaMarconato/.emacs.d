@@ -106,3 +106,22 @@ will be killed."
             (kill-buffer buf)
             (message "Killed non-existing/unreadable file buffer: %s" filename))))))
   (message "Finished reverting buffers containing unmodified files."))
+
+(defun last-message (&optional num)
+  (or num (setq num 1))
+  (if (= num 0)
+      (current-message)
+    (save-excursion
+      (set-buffer "*Messages*")
+      (save-excursion
+    (forward-line (- 1 num))
+    (backward-char)
+    (let ((end (point)))
+      (forward-line 0)
+      (buffer-substring-no-properties (point) end))))))
+
+(defun insert-last-message (&optional num)
+  (interactive "*p")
+  (insert (last-message num)))
+
+(global-set-key (kbd "C-c /") 'insert-last-message)
