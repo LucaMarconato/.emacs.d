@@ -3,3 +3,5 @@ elpa
 .emacs.desktop.lock
 .emacs.desktop
 srecode-map.el
+semanticdb
+rtags-2.14/src/librtags.a

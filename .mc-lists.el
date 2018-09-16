@@ -26,6 +26,7 @@
         comment-dwim
         comment-line
         comment-set-column
+        dabbrev-expand
         delete-horizontal-space
         delete-indentation
         electric-newline-and-maybe-indent
@@ -36,6 +37,7 @@
         ess-smart-comma
         ess-yank
         eval-last-sexp
+        forward-sentence
         forward-whitespace
         iconify-frame
         indent-for-tab-command
@@ -55,11 +57,14 @@
         org-kill-line
         org-meta-return
         org-shiftright
+        python-indent-dedent-line
+        python-indent-shift-right
         reindent-then-newline-and-indent
         repeat
         replace-last-sexp
         sh-assignment
         shell-command-on-region
+        skeleton-pair-insert-maybe
         table-widen-cell
         toggle-input-method
         xah-insert-random-uuid
@@ -78,10 +83,13 @@
         c-electric-pound
         comint-clear-buffer
         comint-interrupt-subjob
+        comint-next-input
         comint-previous-input
         comint-send-input
         compile
         count-words-region
+        cpp-layout-1
+        delete-window
         dired-jump
         end-of-buffer
         eval-expression
@@ -105,6 +113,7 @@
         set-goal-column
         shell
         switch-to-buffer
+        undo-tree-visualize
         window-configuration-to-register
         winner-undo
         xref-pop-marker-stack
