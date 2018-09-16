@@ -95,7 +95,7 @@
 ;; (global-set-key (kbd "C-c /") '(lambda () (my_swap) (my_swap) (my_swap)))
 ;; (global-set-key (kbd "C-c .") 'my_swap2)
 
-;--------RTAGS--------
+;; --------RTAGS--------
 
 (require 'rtags)
 (defun setup-flycheck-rtags ()
@@ -104,12 +104,12 @@
   ;; RTags creates more accurate overlays.
   (setq-local flycheck-highlighting-mode nil)
   (setq-local flycheck-check-syntax-automatically nil))
-(setq rtags-path "~/.emacs.d/elpa/rtags-20180829.449/rtags-2.19/bin")
+(setq rtags-path "~/.emacs.d/elpa/rtags-20180909.1749/rtags-2.19/bin")
 ;; (global-set-key (kbd "M-.") #'rtags-find-symbol-at-point) ;TODO: this shoule be set only for C/C++ mode
 ;; (add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "M-.") #'rtags-find-symbol-at-point)))
 
 ;; only run this if rtags is installed
-;(when (require 'rtags nil :noerror)
+;; ;(when (require 'rtags nil :noerror)
   ;; make sure you have company-mode installed
 ;  (require 'company)
   (define-key c-mode-base-map (kbd "M-.")
@@ -130,7 +130,7 @@
 ;  (push 'company-rtags company-backends)
 ;  (global-company-mode)
 ;  (define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
-  ;; use rtags flycheck mode -- clang warnings shown inline
+  ;; use rtags flycheck mode -- cla,ng warnings shown inline
 ;  (require 'flycheck-rtags)
   ;; c-mode-common-hook is also called by c++-mode
 ;  (add-hook 'c-mode-common-hook #'setup-flycheck-rtags))
@@ -224,7 +224,7 @@
 
 ;--------SEMANTIC-REFACTOR--------
 
-(require 'srefactor)
+;; (require 'srefactor) ;; maybe I need this one
 (require 'srefactor-lisp)
 
 ;; OPTIONAL: ADD IT ONLY IF YOU USE C/C++. 

@@ -14,7 +14,8 @@
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (company-rtags srefactor cmake-ide flymake-json cmake-mode elmacro helm pdf-tools epc jedi evil vlf multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess icicles avy highlight-symbol company-irony flycheck-irony irony swift-mode auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (srefactor company-rtags cmake-ide flymake-json cmake-mode elmacro helm pdf-tools epc jedi evil vlf multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess icicles avy highlight-symbol company-irony flycheck-irony irony swift-mode auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+ '(safe-local-variable-values (quote ((cmake-ide-dir . "build"))))
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.mail.me.com")
