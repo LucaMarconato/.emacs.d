@@ -19,10 +19,10 @@
 ;; (add-hook 'c++-mode-hook (lambda () (local-set-key "\C-ce" #'expand-member-functions)))
 
 ;; ;; ;--------FLYCHECK--------
-;; ;; ensure that we use only rtags checking
-;; ;; https://github.com/Andersbakken/rtags#optional-1
-(add-hook 'c-mode-hook 'flycheck-mode)
-(add-hook 'c++-mode-hook 'flycheck-mode)
+;; ;; ;; ensure that we use only rtags checking
+;; ;; ;; https://github.com/Andersbakken/rtags#optional-1
+;; (add-hook 'c-mode-hook 'flycheck-mode)
+;; (add-hook 'c++-mode-hook 'flycheck-mode)
 
 ;; ;; only run this if rtags is installed
 ;; (when (require 'rtags nil :noerror)
@@ -98,13 +98,13 @@
 ;; --------RTAGS--------
 
 (require 'rtags)
-(defun setup-flycheck-rtags ()
-  (interactive)
-  (flycheck-select-checker 'rtags)
-  ;; RTags creates more accurate overlays.
-  (setq-local flycheck-highlighting-mode nil)
-  (setq-local flycheck-check-syntax-automatically nil))
-(setq rtags-path "~/.emacs.d/elpa/rtags-20180909.1749/rtags-2.19/bin")
+;; (defun setup-flycheck-rtags ()
+;;   (interactive)
+;;   (flycheck-select-checker 'rtags)
+;;   ;; RTags creates more accurate overlays.
+;;   (setq-local flycheck-highlighting-mode nil)
+;;   (setq-local flycheck-check-syntax-automatically nil))
+;; (setq rtags-path "~/.emacs.d/elpa/rtags-20180925.641/rtags-2.20/bin")
 ;; (global-set-key (kbd "M-.") #'rtags-find-symbol-at-point) ;TODO: this shoule be set only for C/C++ mode
 ;; (add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "M-.") #'rtags-find-symbol-at-point)))
 
@@ -122,24 +122,24 @@
   ;; jump to definition and see the keybindings.
   (rtags-enable-standard-keybindings)
   ;; comment this out if you don't have or don't use helm
-;  (setq rtags-use-helm t)
+ ;; (setq rtags-use-helm t)
   ;; company completion setup
-;  (setq rtags-autostart-diagnostics t)
-;  (rtags-diagnostics)
-;  (setq rtags-completions-enabled t)
-;  (push 'company-rtags company-backends)
-;  (global-company-mode)
-;  (define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
-  ;; use rtags flycheck mode -- cla,ng warnings shown inline
-;  (require 'flycheck-rtags)
-  ;; c-mode-common-hook is also called by c++-mode
-;  (add-hook 'c-mode-common-hook #'setup-flycheck-rtags))
+ ;; (setq rtags-autostart-diagnostics t)
+ ;; (rtags-diagnostics)
+ ;; (setq rtags-completions-enabled t)
+ ;; (push 'company-rtags company-backends)
+ ;; (global-company-mode)
+ ;; (define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
+ ;;  ;; use rtags flycheck mode -- cla,ng warnings shown inline
+ ;; ;; (require 'flycheck-rtags)
+ ;;  ;; c-mode-common-hook is also called by c++-mode
+ ;; (add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
 
 ;--------FLYCHECK--------
 ; unfortunately it gives me an error with cmake-ide
-(setq-default flycheck-disabled-checkers '(c/c++-clang))
+;; (setq-default flycheck-disabled-checkers '(c/c++-clang))
 ;; (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++11")))
-;(add-hook 'after-init-hook #'global-flycheck-mode)
+;; (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; (add-hook 'c++-mode-hook #'global-flycheck-mode)
 ;; (global-flycheck-mode)
 ;; (use-package flycheck
@@ -165,9 +165,9 @@
 
 ;--------AUTO-COMPLETE-CLANG--------
 
-(add-to-list 'load-path "/Users/macbook/.emacs.d/elpa/auto-complete-20170124.1845")
+(add-to-list 'load-path "/Users/macbook/.emacs.d/elpa/auto-complete-20170125.245")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/Users/macbook/.emacs.d/elpa/auto-complete-20170124.1845/dict")
+(add-to-list 'ac-dictionary-directories "/Users/macbook/.emacs.d/elpa/auto-complete-20170125.245/dict")
 
 (require 'auto-complete-clang)
 
@@ -236,3 +236,5 @@
 ;; (global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
 ;; (global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
 ;; (global-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
+
+;; (add-hook 'c++-mode-hook 'visual-line-mode)

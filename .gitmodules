@@ -1,0 +1,3 @@
+[submodule "lisp/flycheck-pycodestyle"]
+	path = lisp/flycheck-pycodestyle
+	url = https://github.com/piger/flycheck-pycodestyle.git

@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: constructorsc
+# key: constructorsc
+# --
+${1:Class_name}::$1(const $1 & obj)
+{
+    
+}
+
+void swap($1 & obj1, $1 & obj2)
+{
+    
+}
+    
+$1 & $1::operator=($1 obj)
+{
+    swap(*this, obj);
+    return *this;
+}

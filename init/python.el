@@ -1,11 +1,22 @@
-;--------PYTHON, IPYTHON--------
+ ;--------PYTHON, IPYTHON--------
 (require 'python)
 (setq python-indent-offset 4)
 (add-hook 'python-mode-hook
       (lambda ()
-        (setq indent-tabs-mode t)
+        (setq indent-tabs-mode nil)
         (setq tab-width 4)
-        (setq python-indent 4)))
+        (setq python-indent 4)
+        (flycheck-mode))
+      (untabify (point-min) (point-max)))
+
+;; (require 'flycheck-pycodestyle)
+(use-package flycheck
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode)
+  ;; flycheck looks for libraries in load-path variable
+  ;; (setq-default flycheck-emacs-lisp-load-path 'inherit)
+  (setq-default flycheck-flake8-maximum-line-length 120))
 
 (setq scroll-down-aggressively 1)
 
@@ -27,8 +38,20 @@
 (setq py-shell-name "python3")
 (setq python-shell-interpreter "python3")
 (global-set-key (kbd "C-c C-<backspace>") '(lambda () (interactive) (kill-process "*Python*")))
-(global-set-key (kbd "C-c C-o") '(lambda () (interactive) (run-python-internal)))
-;; (global-set-key (kbd "C-c <backspace>") '(lambda () (interactive) (kill-process "*Python*") (run-python (python-shell-calculate-
+;; (global-set-key (kbd "C-c C-o") '(lambda () (interactive) (run-python-internal)))
+(global-set-key (kbd "C-c C-o") '(lambda ()
+                                   (interactive)
+                                   (if-let ((win (get-buffer-window "*Python*")))
+                                       (progn
+                                         (bookmark-set "my_python_bookmark")
+                                         (select-window win)
+                                         (python3)
+                                         (switch-to-buffer "*Python*")
+                                         (bookmark-jump-other-window "my_python_bookmark")
+                                         (bookmark-delete "my_python_bookmark"))
+                                     (progn
+                                       (python3)))))
+;; (GLOBAL-set-key (kbd "C-c <backspace>") '(lambda () (interactive) (kill-process "*Python*") (run-python (python-shell-calculate-
 
 (with-eval-after-load 'python
   (defun python-shell-completion-native-try ()

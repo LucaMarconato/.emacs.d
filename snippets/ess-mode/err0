@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: err0
+# key: err0
+# --
+print("error: ${1:}")${0:}

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: p1
+# key: p1
+# --
+print(paste("${1:} = ", $1, ${0:}sep = ""))

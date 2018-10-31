@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: constructorsh
+# key: constructorsh
+# --
+${1:Class_name}(const $1 & obj);
+    friend void swap($1 & obj1, $1 & obj2);
+    $1 & operator=($1 obj);

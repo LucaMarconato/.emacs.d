@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: err1
+# key: err1
+# --
+print(paste("error: ${1:} = ", $1, ${0:}sep = ""))

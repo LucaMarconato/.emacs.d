@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: unll
+# key: unll
+# --
+unsigned long long

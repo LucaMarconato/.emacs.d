@@ -3,10 +3,15 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("my_compile"
- (filename . "~/bioinformatics/github/mirna_target_prediction/data/analyze_interactions.r")
- (front-context-string . "    \n    hist(lo")
- (rear-context-string . "ximized_device()")
- (position . 13834))
+ (filename . "~/bioinformatics/github/mirna_target_prediction/main.cpp")
+ (front-context-string . "1)),\n           ")
+ (rear-context-string . "e_perturbation(-")
+ (position . 2787))
+("my_pyhton_bookmark"
+ (filename . "~/.emacs.d/init/python.el")
+ (front-context-string . "\n               ")
+ (rear-context-string . "yhton_bookmark\")")
+ (position . 1357))
 ("my_jumping_bookmark0"
  (filename . "~/.emacs.d/init.el")
  (front-context-string . "\n               ")

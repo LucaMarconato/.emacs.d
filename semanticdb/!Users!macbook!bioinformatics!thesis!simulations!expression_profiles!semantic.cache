@@ -638,7 +638,115 @@
     (semanticdb-table "semanticdb-table"
       :file "mirna.hpp"
       :fsize 1188
-      :lastmodtime '(23433 34646 638215 256000)))
+      :lastmodtime '(23433 34646 638215 256000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("mirna.hpp" include nil nil [22 42])
+            ("gene.hpp" include nil nil [43 62])
+            ("site.hpp" include nil nil [63 82])
+            ("patient.hpp" include nil nil [83 105])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [152 161])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [162 176]))                  
+                :type "int")
+                nil [143 431]))          
+      :file "main.cpp"
+      :pointmax 433
+      :fsize 432
+      :lastmodtime '(23435 63824 260769 276000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("mirna.hpp" include nil nil [1 21])
+            ("iostream" include (:system-flag t) nil [23 42])
+            ("fstream" include (:system-flag t) nil [43 61])
+            ("algorithm" include (:system-flag t) nil [62 82])
+            ("boost/archive/binary_oarchive.hpp" include (:system-flag t) nil [84 128])
+            ("boost/archive/binary_iarchive.hpp" include (:system-flag t) nil [129 173])
+            ("boost/filesystem.hpp" include (:system-flag t) nil [174 205])
+            ("timer.hpp" include nil nil [207 227])
+            ("Mirna::mirna_id_dictionary" variable (:type ("boost::bimap" type
+                 (:template-specifier 
+                    ( ("Mirna" type nil nil nil)
+                      ("Mirna_id" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [229 286])
+            ("Mirna" function
+               (:constructor-flag t
+                :parent "Mirna"
+                :type ("Mirna" type (:type "class") nil nil))
+                nil [288 305])
+            ("Mirna" function
+               (:constructor-flag t
+                :parent "Mirna"
+                :arguments 
+                  ( ("mirna_family" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [320 345]))                  
+                :type ("Mirna" type (:type "class") nil nil))
+                nil [307 377])
+            ("initialize_mirna_dictionary" function
+               (:parent "Mirna"
+                :type "void")
+                nil [379 1722])
+            ("print_mirna_dictionary" function
+               (:parent "Mirna"
+                :arguments 
+                  ( ("max_rows" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1759 1781]))                  
+                :type "void")
+                nil [1724 2225])
+            ("<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("lhs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mirna" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2242 2260])
+                    ("rhs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mirna" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2261 2279]))                  
+                :type "bool")
+                nil [2227 2331])
+            ("<<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("stream" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2359 2381])
+                    ("o" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Mirna" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2382 2398]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [2333 2468]))          
+      :file "mirna.cpp"
+      :pointmax 3325
+      :fsize 3324
+      :lastmodtime '(23434 53947 788135 915000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "site.hpp"
+      :fsize 2610
+      :lastmodtime '(23434 38828 652284 676000))
+    (semanticdb-table "semanticdb-table"
+      :file "patient.hpp"
+      :fsize 506
+      :lastmodtime '(23435 64511 798536 492000))
+    (semanticdb-table "semanticdb-table"
+      :file "timer.hpp"
+      :fsize 423
+      :lastmodtime '(23433 20129 5693 558000)))
   :file "!Users!macbook!bioinformatics!thesis!simulations!expression_profiles!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

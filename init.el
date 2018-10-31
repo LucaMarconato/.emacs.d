@@ -14,7 +14,7 @@
  '(font-latex-fontify-sectioning 1 t)
  '(package-selected-packages
    (quote
-    (srefactor company-rtags cmake-ide flymake-json cmake-mode elmacro helm pdf-tools epc jedi evil vlf multi-web-mode ipython-shell-send elpy python-mode bm cuda-mode persp-mode-projectile-bridge projectile all-the-icons dired+ buffer-move workgroups2 flycheck-rtags rtags sx smart-mode-line-powerline-theme smart-mode-line powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling ess icicles avy highlight-symbol company-irony flycheck-irony irony swift-mode auto-complete company-auctex flycheck-swift yasnippet matlab-mode free-keys flyspell-correct-ivy shift-text multiple-cursors company-statistics company-shell company-math)))
+    (gist flycheck-irony srefactor company-rtags cmake-ide flymake-json cmake-mode elmacro helm epc jedi evil vlf multi-web-mode ipython-shell-send elpy bm cuda-mode persp-mode-projectile-bridge all-the-icons dired+ buffer-move workgroups2 sx smart-mode-line-powerline-theme powerline monokai-theme benchmark-init cl-print cl-lib smooth-scrolling icicles avy highlight-symbol company-irony irony swift-mode auto-complete company-auctex matlab-mode free-keys shift-text multiple-cursors company-statistics company-shell company-math)))
  '(safe-local-variable-values (quote ((cmake-ide-dir . "build"))))
  '(save-place t nil (saveplace))
  '(send-mail-function (quote smtpmail-send-it))
@@ -126,8 +126,8 @@
 (when (string= system-type "darwin")       
   (setq dired-use-ls-dired nil))
 
-(load-file "~/.emacs.d/lisp/emacs-grammarly/emacs-grammarly.el")
-(global-set-key (kbd "C-c C-;") 'grammarly-save-region-and-run)
+;; (load-file "~/.emacs.d/lisp/emacs-grammarly/emacs-grammarly.el")
+;; (global-set-key (kbd "C-c C-;") 'grammarly-save-region-and-run)
 
 ;; (setq mark-even-if-inactive t)
 
@@ -142,6 +142,19 @@
 ;;     (setenv "LANG" lang)))
 
 ;; (setq interprogram-cut-function 'paste-to-osx)
+
+;; (require 'flycheck-pycodestyle/flycheck-pycodestyle)
+;; (load-user-file "lisp/flycheck-pycodestyle/flycheck-pycodestyle.el")
+
+;; (global-set-key (kbd "C-E") 'end-of-visual-line)
+;; (global-set-key (kbd "C-A") 'beginning-of-visual-line)
+
+;; (global-set-key (kbd "<s-mouse-1>") #'(lambda ()
+;;                                        (interactive)
+;;                                        (browse-url)
+;;                                        (kbd "<return>")))
+
+(global-set-key (kbd "<s-mouse-1>") '(browse-url))
 
 (load-user-file "init/timestamp.el")
 (load-user-file "init/parenthesis.el")
@@ -171,8 +184,6 @@
 (load-user-file "init/json.el")
 (load-user-file "init/perl.el")
 (load-user-file "init/ralee.el")
-
-(global-visual-line-mode 1)
 ;
 ;(server-start); start emacs in server mode so that skim can talk to it
 
